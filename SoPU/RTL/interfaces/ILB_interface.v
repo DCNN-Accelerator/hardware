@@ -54,6 +54,7 @@ output reg sop_to_ilb_rts_I,
 
 /* From Master FSM controller */
 output reg bytes_recieved, 
+output reg byte_sent, 
 
 input ilb_read_enable, 
 input ilb_send_enable, 
@@ -148,7 +149,8 @@ begin
                     sop_to_ilb_rtr_II <= 0; 
                     sop_to_ilb_rts_I  <= 0;
                     
-                    bytes_recieved    <= 0; 
+                    bytes_recieved    <= 0;
+                    byte_sent         <= 0; 
                 
                     byte_0 <= 0; 
                     byte_1 <= 0; 
@@ -178,6 +180,7 @@ begin
                                 sop_to_ilb_rts_I  <= 1; 
                                 sop_to_ilb_rtr_II <= 0; 
                                 bytes_recieved    <= 0; 
+                                byte_sent         <= 0; 
                                 output_byte       <= uart_byte; 
                                 ctr               <= 0; 
 
@@ -192,8 +195,10 @@ begin
                                 
                                 if (sop_to_ilb_rtr_I)
                                     begin
-                                        state <= READ_ILB_BYTES; 
+                                        state     <= READ_ILB_BYTES;
+                                        byte_sent <= 1;  
                                     end 
+                                    
                                 else    
                                     state <= SEND_BYTE_ILB; 
                                     
@@ -205,7 +210,8 @@ begin
                                 
                                 sop_to_ilb_rts_I  <= 0;
                                 sop_to_ilb_rtr_II <= 1; 
-                                bytes_recieved    <= 0;  
+                                bytes_recieved    <= 0;
+                                byte_sent         <= 0;   
                                 output_byte       <= 0;
                                 ctr               <= 0; 
 
@@ -231,8 +237,9 @@ begin
               LATCH_BYTES:    begin
               
                                  sop_to_ilb_rts_I  <= 0;
-                                 sop_to_ilb_rtr_II <= 1; 
-                                 bytes_recieved    <= 1;  
+                                 sop_to_ilb_rtr_II <= 0 ; 
+                                 bytes_recieved    <= 1;
+                                 byte_sent         <= 0;  
                                  output_byte       <= 0;
                                                              
                                  byte_0 <= ilb_byte_0; 
