@@ -11,7 +11,6 @@
 # Replace the quote marks with your filepath with the HLS source files before running the script 
 # i.e. C:/Users/genericUser/sopu_prj/HLS/source, etc.
 
-set working_pth "C:\\Users\\hkhaj\\Desktop\\Senior-Project\\hardware\\SoPU\\HLS"
 
 set src_pth "C:\\Users\\hkhaj\\Desktop\\Senior-Project\\hardware\\SoPU\\HLS\\source"
 
