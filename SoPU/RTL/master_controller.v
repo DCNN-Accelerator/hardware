@@ -41,20 +41,22 @@ output reg ilb_send_enable,
 output reg im_window_shift_enable, 
 output reg conv_enable,
 
-output reg new_kernel
+output     new_kernel
 
 
 );
 
 
-localparam [2:0] IDLE            = 3'b0; 
-localparam [2:0] LOAD_KERNEL     = 3'd1; 
-localparam [2:0] READ_UART_PIXEL = 3'd2; 
-localparam [2:0] SEND_ILB        = 3'd3; 
-localparam [2:0] READ_ILB        = 3'd4; 
-localparam [2:0] IM_WINDOW_SHIFT = 3'd5; 
-localparam [2:0] CONV_ENABLE     = 3'd6; 
-localparam [2:0] SEND_UART       = 3'd7; 
+localparam [2:0]    IDLE             = 3'b0; 
+localparam [2:0]    LOAD_KERNEL      = 3'd1; 
+localparam [2:0]    READ_UART_PIXEL  = 3'd2; 
+localparam [2:0]    SEND_ILB         = 3'd3; 
+localparam [2:0]    READ_ILB         = 3'd4; 
+localparam [2:0]    IM_WINDOW_SHIFT  = 3'd5; 
+localparam [2:0]    CONV_ENABLE      = 3'd6; 
+localparam [2:0]    SEND_UART        = 3'd7; 
+localparam [8:0]    KERNEL_SIZE      = 8'd49;
+
 
 reg kernel_loaded; 
 
@@ -64,6 +66,8 @@ reg [11:0] conv_ctr;
 
 reg [1:0] im_window_delay_ctr; 
 reg [1:0] conv_delay_ctr; 
+
+assign new_kernel = uart_byte_recieved; 
 
 
 always @ (posedge clk) 
@@ -86,9 +90,7 @@ begin
         im_window_shift_enable <= 0; 
         conv_enable <= 0; 
         
-        //Misc Signals 
-        new_kernel <= 0; 
-        
+                
         //SoPU Status Signals
         kernel_loaded <= 0;
         
@@ -112,7 +114,7 @@ begin
                     
                 IDLE: begin
                         
-                       if (!kernel_loaded) 
+                       if (kernel_ctr != KERNEL_SIZE) 
                           master_state <= LOAD_KERNEL; 
                           
                        else 
@@ -136,43 +138,41 @@ begin
             LOAD_KERNEL: 
                           begin
                           
-                          if (kernel_loaded)
-                              master_state <= IDLE; 
-                          else 
-                              master_state <= LOAD_KERNEL;
-                          
-                          
+
+                          // Input UART signal handling
                           if (uart_byte_recieved)
                              begin
                                 
-                                if (kernel_ctr == 3072)
+                                if (kernel_ctr == KERNEL_SIZE)
                                   begin
-                                   kernel_loaded <= 1; 
-                                   new_kernel <= 0; 
+                                    kernel_ctr   <= kernel_ctr; 
                                   end
                                   
                                 else
                                    begin
-                                    kernel_ctr <= kernel_ctr + 1; 
-                                    new_kernel <= 1;
+                                    kernel_ctr    <= kernel_ctr + 1; 
                                    end  
                              
                              
                              end
+                         
+                         // Define State Transition    
+                          if (kernel_ctr == KERNEL_SIZE)
+                          
+                              master_state  <= READ_UART_PIXEL; 
+                          else 
+                          
+                              master_state  <= LOAD_KERNEL; 
                               
                                
-                          uart_read_enable <= 1; 
-                          uart_send_enable <= 0; 
+                          uart_read_enable        <= 1; 
+                          uart_send_enable        <= 0; 
                           
-                          ilb_read_enable <= 0; 
-                          ilb_send_enable <= 0; 
+                          ilb_read_enable         <= 0; 
+                          ilb_send_enable         <= 0; 
                           
-                          im_window_shift_enable <= 0; 
-                          conv_enable <= 0;
-                                                       
-                          new_kernel <= 0;
-                          
-                          
+                          im_window_shift_enable  <= 0; 
+                          conv_enable             <= 0;
                           
                           
                           end //load kernel block end
@@ -187,14 +187,14 @@ begin
                                 
                                 
                                 
-                                    uart_read_enable <= 1; 
-                                    uart_send_enable <= 0; 
+                                    uart_read_enable        <= 1; 
+                                    uart_send_enable        <= 0; 
                                     
-                                    ilb_read_enable <= 0; 
-                                    ilb_send_enable <= 0; 
+                                    ilb_read_enable         <= 0; 
+                                    ilb_send_enable         <= 0; 
                                     
-                                    im_window_shift_enable <= 0; 
-                                    conv_enable <= 0; 
+                                    im_window_shift_enable  <= 0; 
+                                    conv_enable             <= 0; 
                                 
                             
                             

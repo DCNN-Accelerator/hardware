@@ -25,6 +25,7 @@
 *.log
 *.sql
 *.sqlite
+*.jou
 
 # OS generated files #
 ######################
@@ -35,3 +36,18 @@
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Vivado Project Files #
+######################## 
+*.wpc 
+*.lpr 
+*.hw 
+*.xpr
+*.xml 
+*.app
+
+# Generated directories for multipliers HLS ip and the Vivado Project # 
+#######################################################################
+
+fp_multipliers/
+sopu_bd/ 

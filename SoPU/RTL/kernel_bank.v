@@ -112,6 +112,7 @@ always @ (posedge clk or negedge rst)
             begin
                 
                 kernel_write_ptr <= 0; 
+                kernel_full      <= 0; 
                 
                 for (i = 0; i < 49; i = i +1)
                     begin
@@ -144,7 +145,7 @@ always @ (posedge clk or negedge rst)
         if (kernel_write_enable)
             begin
             
-                if (kernel_write_ptr == 48)
+                if (kernel_write_ptr == 49)
                     kernel_full <= 1; 
                 else
                     begin

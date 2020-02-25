@@ -54,6 +54,7 @@ begin
 
     if (!rst) 
         begin
+        
         sop_to_uart_rtr <= 0; 
         byte_recieved <= 0; 
         
@@ -104,15 +105,18 @@ begin
                                end //Wait for data case end
                 LATCH_BYTE:    begin
                                 
-                               sop_to_uart_rtr <= 0; 
-                               byte_recieved <= 1;  
+                               sop_to_uart_rtr  <= 0; 
+                               byte_recieved    <= 1;  
                                
-                               uart_byte_out <= uart_byte_in;  
-                
-                              if (ctr == 1) 
-                                 state <= IDLE; 
-                              else 
-                                 ctr <= ctr + 1;   
+                               uart_byte_out    <= uart_byte_in;  
+                               
+                               
+                               state            <= IDLE; 
+                               
+//                              if (ctr == 1) 
+//                                 state <= IDLE; 
+//                              else 
+//                                 ctr <= ctr + 1;   
                                        
                 
                 
