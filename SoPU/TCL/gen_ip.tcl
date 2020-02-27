@@ -12,7 +12,7 @@
 # i.e. C:/Users/genericUser/sopu_prj/HLS/source, etc.
 
 
-set src_pth "C:\\Users\\hkhaj\\Desktop\\Senior-Project\\hardware\\SoPU\\HLS\\source"
+set src_pth "..\\HLS\\source"
 
 # Create Project and add files 
 file mkdir fp_multipliers
