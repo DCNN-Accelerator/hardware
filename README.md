@@ -3,7 +3,7 @@ All FPGA source files
 
 
 # To build the SoPU module, you'll first need to add Vivado to your PowerShell Path
-    $env:PATH = $env:PATH + "C:\Xilinx\Vivado\2018.2\bin" //something like this
+    $env:PATH = $env:PATH + ";C:\Xilinx\Vivado\2018.2\bin" //something like this
 
     run echo $env:PATH to make sure that it added the Vivado path correctly 
 
