@@ -3,10 +3,14 @@
 
 #include "ap_fixed.h"
 
-typedef ap_fixed<8,1,AP_RND> kernel_t;
-typedef ap_ufixed<8,8,AP_RND> pixel_t;
+typedef ap_fixed  <8,1,  AP_RND> kernel_t;
+typedef ap_ufixed <8,8, AP_RND>  pixel_t;
 
-typedef ap_fixed<16,14,AP_RND> fm_t;
+typedef ap_fixed  <16,16, AP_RND,AP_SAT>  fm_t;
+
+typedef ap_fixed  <16,9, AP_RND, AP_SAT> mult_t;
+
+typedef ap_fixed  <32,16, AP_RND, AP_SAT> acc_t;
 
 
 void fp_sop
@@ -113,9 +117,6 @@ void fp_sop
 		pixel_t pixel_window_48,
 
 
-		bool sop_enable,
-
-		bool &out_valid,
 
 		fm_t &out_val
 		);

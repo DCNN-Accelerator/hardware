@@ -8,23 +8,28 @@
 #include <direct.h>
 
 #include "cstdlib"
+#include "vector"
+#include "bits/stdc++.h"
 
 
-double* generate_kernel(int size)
+
+
+std::vector<double> generate_kernel(int size, int seed)
 {
 
-	double *kernel_arr  = new double[size];
+	std::vector<double> kernel_arr;
 
 	/*Create randomized array of floats between [-1 1) in a [Size x 1] array (should be one-dimensional)
 	 */
 
-	srand(1);
+	srand(seed);
 
+	std::cout << "In kernel generation.." << "\n";
 
 	for (int i = 0; i < size; i++)
 	{
 		double c = (double) rand() / (RAND_MAX + 1) * (1 - (-1)) + -1;
-		kernel_arr[i] = c;
+		kernel_arr.push_back(c);
 	}
 
 
@@ -33,19 +38,20 @@ double* generate_kernel(int size)
 
 }
 
-int* generate_pix_array(int size)
+std::vector<int> generate_pix_array(int size, int seed)
 {
-	int *pix_array = new int[size];
+	std::vector<int> pix_array;
 
 
 	/*Create randomized array of integers between [0,255] in a [Size x 1] array (should be one-dimensional)
 	 */
 
-	srand(1); //seeding the random number
+	srand(seed); //seeding the random number
+	std::cout << "In pixel generation.." << "\n";
 
 	for (int i = 0; i < size; i ++)
 	{
-		pix_array[i] = rand() % 255;
+		pix_array.push_back ( rand() % 255 );
 	}
 
 	return pix_array;
@@ -53,10 +59,11 @@ int* generate_pix_array(int size)
 
 }
 
-double dot_prod_benchmark(const double* kernel, const int* pixels, int size)
+int16_t dot_prod_benchmark(const std::vector<double> kernel, const std::vector<int> pixels, int size)
 {
 
-	double output = 0.0;
+	int16_t buf = 0;
+	double output = 0;
 
 
 	for (int i = 0; i < size; i++)
@@ -65,7 +72,10 @@ double dot_prod_benchmark(const double* kernel, const int* pixels, int size)
 	}
 
 
-	return output;
+	/* implement rounding */
+	buf = static_cast<int16_t> (round(output));
+
+	return buf;
 
 }
 
@@ -137,183 +147,177 @@ int main()
 // Generate Benchmark Kernel and Pixels with C++ Double Precision and compute SOP
 
 	int test_size = 49;
+	int seed = time(NULL);
 
-	double* kernel_patch = generate_kernel(test_size);
-	int*    pixel_array  = generate_pix_array(test_size);
-
-
-	double test_output = dot_prod_benchmark(kernel_patch, pixel_array, test_size);
-
-	std::cout << "Test Output Value (Benchmark) : " << test_output << "\n" ;
+	std::vector<double> errors;
 
 
-
-// Cast Double Kernel and Pixel values to FP precision types
-
-	kernel_t *fp_kernel = new kernel_t[test_size];
-	pixel_t  *fp_pixels = new pixel_t [test_size];
+		for (int i = 0; i < 100; i++) {
 
 
-	for (int i = 0; i < test_size; i++ )
-	{
-		fp_kernel[i] = kernel_patch[i];
-		fp_pixels[i] = pixel_array[i];
-
-	}
-
-// Write to CSV for MATLAB debugging, if needed
-//	write_to_csv(kernel_patch, pixel_array, fp_kernel, fp_pixels, test_size);
-
-
-//Call UUT for Fixed Point SOP Computation
-
-	fm_t fp_test_out;
-	bool sop_valid;
-
-	bool sop_enable = true;
+			std::vector<double> kernel_patch = generate_kernel(test_size,seed);
+			std::vector<int>   pixel_array   = generate_pix_array(test_size,seed);
 
 
 
+			int16_t test_output = dot_prod_benchmark(kernel_patch, pixel_array, test_size);
 
-	fp_sop
-	(
-			fp_kernel[0],
-			fp_kernel[1],
-			fp_kernel[2],
-			fp_kernel[3],
-			fp_kernel[4],
-			fp_kernel[5],
-			fp_kernel[6],
-			fp_kernel[7],
-			fp_kernel[8],
-			fp_kernel[9],
-			fp_kernel[10],
-			fp_kernel[11],
-			fp_kernel[12],
-			fp_kernel[13],
-			fp_kernel[14],
-			fp_kernel[15],
-			fp_kernel[16],
-			fp_kernel[17],
-			fp_kernel[18],
-			fp_kernel[19],
-			fp_kernel[20],
-			fp_kernel[21],
-			fp_kernel[22],
-			fp_kernel[23],
-			fp_kernel[24],
-			fp_kernel[25],
-			fp_kernel[26],
-			fp_kernel[27],
-			fp_kernel[28],
-			fp_kernel[29],
-			fp_kernel[30],
-			fp_kernel[31],
-			fp_kernel[32],
-			fp_kernel[33],
-			fp_kernel[34],
-			fp_kernel[35],
-			fp_kernel[36],
-			fp_kernel[37],
-			fp_kernel[38],
-			fp_kernel[39],
-			fp_kernel[40],
-			fp_kernel[41],
-			fp_kernel[42],
-			fp_kernel[43],
-			fp_kernel[44],
-			fp_kernel[45],
-			fp_kernel[46],
-			fp_kernel[47],
-			fp_kernel[48],
-
-			fp_pixels[0],
-			fp_pixels[1],
-			fp_pixels[2],
-			fp_pixels[3],
-			fp_pixels[4],
-			fp_pixels[5],
-			fp_pixels[6],
-			fp_pixels[7],
-			fp_pixels[8],
-			fp_pixels[9],
-			fp_pixels[10],
-			fp_pixels[11],
-			fp_pixels[12],
-			fp_pixels[13],
-			fp_pixels[14],
-			fp_pixels[15],
-			fp_pixels[16],
-			fp_pixels[17],
-			fp_pixels[18],
-			fp_pixels[19],
-			fp_pixels[20],
-			fp_pixels[21],
-			fp_pixels[22],
-			fp_pixels[23],
-			fp_pixels[24],
-			fp_pixels[25],
-			fp_pixels[26],
-			fp_pixels[27],
-			fp_pixels[28],
-			fp_pixels[29],
-			fp_pixels[30],
-			fp_pixels[31],
-			fp_pixels[32],
-			fp_pixels[33],
-			fp_pixels[34],
-			fp_pixels[35],
-			fp_pixels[36],
-			fp_pixels[37],
-			fp_pixels[38],
-			fp_pixels[39],
-			fp_pixels[40],
-			fp_pixels[41],
-			fp_pixels[42],
-			fp_pixels[43],
-			fp_pixels[44],
-			fp_pixels[45],
-			fp_pixels[46],
-			fp_pixels[47],
-			fp_pixels[48],
-
-			sop_enable,
-
-			sop_valid,
-			fp_test_out
-	);
+			std::cout << "Test Output Value (Benchmark) : " << test_output << "\n" ;
 
 
 
-	assert(sop_valid == true);
+		// Cast Double Kernel and Pixel values to FP precision types
 
-	std::cout << "Fixed Point SOP Value: " << fp_test_out << "\n";
-
-// Deallocate memory
-
-	delete[] fp_kernel, fp_pixels, kernel_patch, pixel_array;
+			std::vector<kernel_t>  fp_kernel;
+			std::vector<pixel_t>   fp_pixels;
 
 
-// Compare against Benchmark SOP Value
+			for (int i = 0; i < test_size; i++ )
+			{
+				kernel_t buf_k  = kernel_patch.at(i);
+				pixel_t  buf_p  = pixel_array.at(i);
 
-	double tolerance = 5.0;
-
-	double fm_error = abs(fp_test_out.to_double() - test_output);
-
-	std::cout << "Error: " << fm_error << "\n";
+				fp_kernel.push_back(buf_k);
+				fp_pixels.push_back(buf_p);
 
 
-//	Check Error
-	if (fm_error < tolerance)
-	{
-		std::cout << "Test Passed!" << "\n";
-		return 0;
-	}
+			}
 
-	else
-	{
-		std::cout << "Test Failed!" << "\n";
-		return -1;
-	}
+		// Write to CSV for MATLAB debugging, if needed
+		//	write_to_csv(kernel_patch, pixel_array, fp_kernel, fp_pixels, test_size);
+
+
+		//Call UUT for Fixed Point SOP Computation
+
+			fm_t fp_test_out;
+
+
+
+			fp_sop
+			(
+					fp_kernel[0],
+					fp_kernel[1],
+					fp_kernel[2],
+					fp_kernel[3],
+					fp_kernel[4],
+					fp_kernel[5],
+					fp_kernel[6],
+					fp_kernel[7],
+					fp_kernel[8],
+					fp_kernel[9],
+					fp_kernel[10],
+					fp_kernel[11],
+					fp_kernel[12],
+					fp_kernel[13],
+					fp_kernel[14],
+					fp_kernel[15],
+					fp_kernel[16],
+					fp_kernel[17],
+					fp_kernel[18],
+					fp_kernel[19],
+					fp_kernel[20],
+					fp_kernel[21],
+					fp_kernel[22],
+					fp_kernel[23],
+					fp_kernel[24],
+					fp_kernel[25],
+					fp_kernel[26],
+					fp_kernel[27],
+					fp_kernel[28],
+					fp_kernel[29],
+					fp_kernel[30],
+					fp_kernel[31],
+					fp_kernel[32],
+					fp_kernel[33],
+					fp_kernel[34],
+					fp_kernel[35],
+					fp_kernel[36],
+					fp_kernel[37],
+					fp_kernel[38],
+					fp_kernel[39],
+					fp_kernel[40],
+					fp_kernel[41],
+					fp_kernel[42],
+					fp_kernel[43],
+					fp_kernel[44],
+					fp_kernel[45],
+					fp_kernel[46],
+					fp_kernel[47],
+					fp_kernel[48],
+
+					fp_pixels[0],
+					fp_pixels[1],
+					fp_pixels[2],
+					fp_pixels[3],
+					fp_pixels[4],
+					fp_pixels[5],
+					fp_pixels[6],
+					fp_pixels[7],
+					fp_pixels[8],
+					fp_pixels[9],
+					fp_pixels[10],
+					fp_pixels[11],
+					fp_pixels[12],
+					fp_pixels[13],
+					fp_pixels[14],
+					fp_pixels[15],
+					fp_pixels[16],
+					fp_pixels[17],
+					fp_pixels[18],
+					fp_pixels[19],
+					fp_pixels[20],
+					fp_pixels[21],
+					fp_pixels[22],
+					fp_pixels[23],
+					fp_pixels[24],
+					fp_pixels[25],
+					fp_pixels[26],
+					fp_pixels[27],
+					fp_pixels[28],
+					fp_pixels[29],
+					fp_pixels[30],
+					fp_pixels[31],
+					fp_pixels[32],
+					fp_pixels[33],
+					fp_pixels[34],
+					fp_pixels[35],
+					fp_pixels[36],
+					fp_pixels[37],
+					fp_pixels[38],
+					fp_pixels[39],
+					fp_pixels[40],
+					fp_pixels[41],
+					fp_pixels[42],
+					fp_pixels[43],
+					fp_pixels[44],
+					fp_pixels[45],
+					fp_pixels[46],
+					fp_pixels[47],
+					fp_pixels[48],
+
+
+					fp_test_out
+			);
+
+
+
+			std::cout << "Fixed Point SOP Value: " << fp_test_out << "\n";
+
+
+		// Compare against Benchmark SOP Value
+
+			double fm_error = abs(fp_test_out.to_double() - test_output);
+
+
+			errors.push_back(fm_error);
+
+			seed++;
+		}
+
+	// Calculate the error over all the runs
+	double mean_error = accumulate(errors.begin(),errors.end(), 0)/100;
+
+	std::cout << "average error: " << mean_error << "\n";
+
 
 }
