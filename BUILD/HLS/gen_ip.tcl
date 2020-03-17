@@ -15,15 +15,15 @@
 
 namespace eval _tcl {
 proc get_script_folder {} {
-   set script_path [file normalize [info script]]
-   set script_folder [file dirname $script_path]
+   set script_path_1 [file normalize [info script]]
+   set script_folder_1 [file dirname $script_path_1]
    return $script_folder
 }
 }
-variable script_folder
-set script_folder [_tcl::get_script_folder]
+variable script_folder_1
+set script_folder_1 [_tcl::get_script_folder]
 
-set src_pth [concat $script_folder/source]
+set src_pth [concat $script_folder_1/source]
 
 # Create Project and add files 
 file mkdir fp_multipliers
@@ -45,5 +45,4 @@ create_clock -period 10 -name default
 csynth_design
 export_design -flow impl -rtl verilog -format ip_catalog
 
-cd $script_folder
 exit 

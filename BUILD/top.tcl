@@ -37,17 +37,20 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 # Creates the project
 cd $script_folder
 create_project -part xc7a100tcsg324-1 -force bdprj dccn_proj
+set script_path [file normalize [info script]]
+set script_folder [file dirname $script_path]
 
 # Adds FP_SOP IP to project
 set fp_sop_src [concat $script_folder/HLS]
 cd $fp_sop_src
 exec cmd /c vivado_hls gen_ip.tcl
 set fp_sop_ip_src [concat $fp_sop_src/fp_multipliers/solution_1/impl/ip]
+
+set_property  ip_repo_paths  {fp_multipliers/solution_1/impl/ip} [current_project]
+update_ip_catalog
 update_ip_catalog
 
 # Adds RTL modules to project
-set script_path [file normalize [info script]]
-set script_folder [file dirname $script_path]
 set rtl_hdl_src [concat $script_folder/RTL]
 cd $rtl_hdl_src
 set file_ls [glob *]
@@ -603,6 +606,28 @@ proc create_root_design { parentCell } {
 ##################################################################
 
 create_root_design ""
+
+# Create wrapper for block design
+set proj_src [concat $script_folder/dccn_proj/bdprj.srcs/sources_1/bd/top/top.bd]
+set my_proj_path [concat $script_folder/dccn_proj]
+cd $my_proj_path
+make_wrapper -files [get_files $proj_src] -top
+add_files -norecurse [concat $script_folder/dccn_proj/bdprj.srcs/sources_1/bd/top/hdl/top_wrapper.v]
+update_compile_order -fileset sources_1
+
+# Set block design as top
+set_property top top_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+
+# Add constraint file
+add_files -fileset constrs_1 -norecurse [concat $script_folder/Constraints/nexy4ddr.xdc]
+import_files -fileset constrs_1 [concat $script_folder/Constraints/nexy4ddr.xdc]
+
+# Add simulation file
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+import_files -fileset sim_1 -norecurse [concat $script_folder/Simulation/final_test.vhd]
+update_compile_order -fileset sim_1
+
 
 
 common::send_msg_id "BD_TCL-1000" "WARNING" "This Tcl script was generated from a block design that has not been validated. It is possible that design <$design_name> may result in errors during validation."

@@ -8,8 +8,8 @@ set hls_src  "..\\HLS\\source"
 set tcl_src  "..\\TCL\\"
 
 # Build the HLS-based multipliers IP 
-# cd $tcl_src
-# exec cmd /c vivado_hls gen_ip.tcl
+cd $tcl_src
+exec cmd /c vivado_hls gen_ip.tcl
 
 # Create Vivado project and SoPU Block Design file
 create_project -part xc7a100tcsg324-1 -force bdprj sopu_bd
