@@ -3,7 +3,7 @@
 
 #include "ap_fixed.h"
 
-typedef ap_fixed  <8,1,  AP_RND> kernel_t;
+typedef ap_fixed  <8,1,  AP_RND, AP_SAT> kernel_t;
 typedef ap_ufixed <8,8, AP_RND>  pixel_t;
 
 typedef ap_fixed  <16,16, AP_RND,AP_SAT>  fm_t;
@@ -11,6 +11,9 @@ typedef ap_fixed  <16,16, AP_RND,AP_SAT>  fm_t;
 typedef ap_fixed  <16,9, AP_RND, AP_SAT> mult_t;
 
 typedef ap_fixed  <32,16, AP_RND, AP_SAT> acc_t;
+
+
+void fp_test (kernel_t test_kernel, pixel_t test_pixel, fm_t &output_val);
 
 
 void fp_sop

@@ -28,8 +28,8 @@ std::vector<double> generate_kernel(int size, int seed)
 
 	for (int i = 0; i < size; i++)
 	{
-		double c = (double) rand() / (RAND_MAX + 1) * (1 - (-1)) + -1;
-		kernel_arr.push_back(c);
+//		double c = (double) rand() / (RAND_MAX + 1) * (1 - (-1)) + -1;
+		kernel_arr.push_back(0);
 	}
 
 
@@ -51,7 +51,8 @@ std::vector<int> generate_pix_array(int size, int seed)
 
 	for (int i = 0; i < size; i ++)
 	{
-		pix_array.push_back ( rand() % 255 );
+//		pix_array.push_back ( rand() % 255 );
+		pix_array.push_back(255);
 	}
 
 	return pix_array;
@@ -127,7 +128,7 @@ void write_to_csv (const double* kernel, const int* pixel, const kernel_t* fp_ke
 }
 
 
-int main()
+void run_mults_test()
 {
 
 	/*
@@ -321,3 +322,42 @@ int main()
 
 
 }
+
+
+
+void run_fp_single_test()
+{
+
+	int pre_quant_pixel = 255;
+	double pre_quant_kernel = 0.99;
+
+
+
+	pixel_t test_pixel = pre_quant_pixel;
+	kernel_t test_kernel = pre_quant_kernel;
+
+	fm_t test_output;
+
+	std::cout << "Prequantized pixel value" << test_pixel << "\n";
+	std::cout << "prequant kernel val: " << test_kernel << "\n";
+
+	fp_test(test_kernel, test_pixel, test_output);
+
+
+	std::cout << "output returned from fp unit: "  << test_output << "\n";
+
+
+
+}
+
+int main()
+{
+
+	run_mults_test();
+
+}
+
+
+
+
+

@@ -141,6 +141,7 @@ void fp_sop
 	 buf_mult[17] = pixel_window_17 * kernel_patch_17;
 	 buf_mult[18] = pixel_window_18 * kernel_patch_18;
 	 buf_mult[19] = pixel_window_19 * kernel_patch_19;
+
 	 buf_mult[20] = pixel_window_20 * kernel_patch_20;
 	 buf_mult[21] = pixel_window_21 * kernel_patch_21;
 	 buf_mult[22] = pixel_window_22 * kernel_patch_22;
@@ -151,6 +152,7 @@ void fp_sop
 	 buf_mult[27] = pixel_window_27 * kernel_patch_27;
 	 buf_mult[28] = pixel_window_28 * kernel_patch_28;
 	 buf_mult[29] = pixel_window_29 * kernel_patch_29;
+
 	 buf_mult[30] = pixel_window_30 * kernel_patch_30;
 	 buf_mult[31] = pixel_window_31 * kernel_patch_31;
 	 buf_mult[32] = pixel_window_32 * kernel_patch_32;
@@ -161,6 +163,7 @@ void fp_sop
 	 buf_mult[37] = pixel_window_37 * kernel_patch_37;
 	 buf_mult[38] = pixel_window_38 * kernel_patch_38;
 	 buf_mult[39] = pixel_window_39 * kernel_patch_39;
+
 	 buf_mult[40] = pixel_window_40 * kernel_patch_40;
 	 buf_mult[41] = pixel_window_41 * kernel_patch_41;
 	 buf_mult[42] = pixel_window_42 * kernel_patch_42;
@@ -182,6 +185,7 @@ void fp_sop
 			 buf_mult[7] +
 			 buf_mult[8] +
 			 buf_mult[9] +
+
 			 buf_mult[10] +
 			 buf_mult[11] +
 			 buf_mult[12] +
@@ -192,6 +196,7 @@ void fp_sop
 			 buf_mult[17] +
 			 buf_mult[18] +
 			 buf_mult[19] +
+
 			 buf_mult[20] +
 			 buf_mult[21] +
 			 buf_mult[22] +
@@ -202,6 +207,7 @@ void fp_sop
 			 buf_mult[27] +
 			 buf_mult[28] +
 			 buf_mult[29] +
+
 			 buf_mult[30] +
 			 buf_mult[31] +
 			 buf_mult[32] +
@@ -212,6 +218,7 @@ void fp_sop
 			 buf_mult[37] +
 			 buf_mult[38] +
 			 buf_mult[39] +
+
 			 buf_mult[40] +
 			 buf_mult[41] +
 			 buf_mult[42] +
