@@ -114,6 +114,7 @@ void fp_sop
 
 {
 
+#pragma HLS pipeline II = 1
 
 	mult_t buf_mult [49];
 	acc_t acc;
