@@ -621,7 +621,7 @@ update_compile_order -fileset sources_1
 
 # Add constraint file
 add_files -fileset constrs_1 -norecurse [concat $script_folder/Constraint/nexy4ddr.xdc]
-import_files -fileset constrs_1 [concat $script_folder/Constraints/nexy4ddr.xdc]
+import_files -fileset constrs_1 [concat $script_folder/Constraint/nexy4ddr.xdc]
 
 # Add simulation file
 set_property SOURCE_SET sources_1 [get_filesets sim_1]
