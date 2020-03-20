@@ -17,7 +17,7 @@ namespace eval _tcl {
 proc get_script_folder {} {
    set script_path_1 [file normalize [info script]]
    set script_folder_1 [file dirname $script_path_1]
-   return $script_folder
+   return $script_folder_1
 }
 }
 variable script_folder_1

@@ -620,7 +620,7 @@ set_property top top_wrapper [current_fileset]
 update_compile_order -fileset sources_1
 
 # Add constraint file
-add_files -fileset constrs_1 -norecurse [concat $script_folder/Constraints/nexy4ddr.xdc]
+add_files -fileset constrs_1 -norecurse [concat $script_folder/Constraint/nexy4ddr.xdc]
 import_files -fileset constrs_1 [concat $script_folder/Constraints/nexy4ddr.xdc]
 
 # Add simulation file
