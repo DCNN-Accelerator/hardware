@@ -13,6 +13,13 @@
 
 #set src_pth "..\\HLS\\source"
 
+
+# Gathers parameters
+set my_clk [lindex $argv 0]
+set my_baud [lindex $argv 1]
+set my_iSize [lindex $argv 2]
+set my_kSize [lindex $argv 3]
+
 namespace eval _tcl {
 proc get_script_folder {} {
    set script_path_1 [file normalize [info script]]
@@ -24,6 +31,79 @@ variable script_folder_1
 set script_folder_1 [_tcl::get_script_folder]
 
 set src_pth [concat $script_folder_1/source]
+
+cd $src_pth
+
+# Create fp_mults.cpp
+set fp [open "fp_mults.cpp" w+]
+puts $fp {#include "fp_mults.hpp"}
+puts $fp {#include "iostream"}
+puts $fp "\n\nusing namespace std;\n" 
+puts $fp "void fp_sop" 
+puts $fp "(" 
+# Dynamically generates ports needed for kernel
+for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+    puts $fp "		kernel_t kernel_patch_$i," 
+}
+puts $fp " \n"
+# Dynamically generates ports needed for img window
+for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+    puts $fp "		pixel_t pixel_window_$i," 
+}
+puts $fp "\n		fm_t &out_val" 
+puts $fp "		)" 
+puts $fp "{\n" 
+puts $fp "#pragma HLS pipeline II = 1" 
+puts $fp "\n	mult_t buf_mult [49];" 
+puts $fp "	acc_t acc;\n"
+# Dynamically generates multiplications
+for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+    puts $fp "	 buf_mult[$i] = pixel_window_$i * kernel_patch_$i;" 
+}
+
+puts $fp "	 acc =   buf_mult[0] +" 
+for {set i 1} {$i < $my_kSize * $my_kSize - 1} {incr i} {
+    puts $fp "	         buf_mult[$i] +" 
+}
+puts -nonewline $fp {	         buf_mult[}
+puts -nonewline $fp [expr {$my_kSize * $my_kSize - 1}]
+puts $fp "];\n"
+puts $fp "	 out_val = acc;" 
+puts $fp "}" 
+
+# File is done
+close $fp
+
+# Create fp_mults.hpp
+set fp [open "fp_mults.hpp" w+]
+puts $fp "#ifndef fp_mults_h" 
+puts $fp "#define fp_mults_h" 
+puts $fp {#include "ap_fixed.h"} 
+puts $fp "typedef ap_fixed  <8,1,  AP_RND, AP_SAT> kernel_t;" 
+puts $fp "typedef ap_ufixed <8,8, AP_RND>  pixel_t;" 
+puts $fp "typedef ap_fixed  <16,16, AP_RND,AP_SAT>  fm_t;" 
+puts $fp "typedef ap_fixed  <16,9, AP_RND, AP_SAT> mult_t;" 
+puts $fp "typedef ap_fixed  <32,16, AP_RND, AP_SAT> acc_t;" 
+puts $fp "void fp_test (kernel_t test_kernel, pixel_t test_pixel, fm_t &output_val);" 
+puts $fp "void fp_sop" 
+puts $fp "(" 
+# Dynamically generates ports needed for kernel
+for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+    puts $fp "		kernel_t kernel_patch_$i," 
+}
+puts $fp "\n"
+# Dynamically generates ports needed for img window
+for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+    puts $fp "		pixel_t pixel_window_$i," 
+}
+puts $fp "		fm_t &out_val" 
+puts $fp "		);" 
+puts $fp "#endif" 
+
+# File is done
+close $fp
+
+cd $script_folder_1
 
 # Create Project and add files 
 file mkdir fp_multipliers

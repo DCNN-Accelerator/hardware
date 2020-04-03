@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Apr  3 13:47:06 2020
+# Process ID: 81408
+# Current directory: C:/Users/ryanm/Downloads/dynamic/BUILD
+# Command line: vivado.exe -mode tcl
+# Log file: C:/Users/ryanm/Downloads/dynamic/BUILD/vivado.log
+# Journal file: C:/Users/ryanm/Downloads/dynamic/BUILD\vivado.jou
+#-----------------------------------------------------------
+set argv {100000000 6000000 512 7}
+cd \HLS
+source gen_ip.tcl
+source gen_ip.tcl
+source gen_ip.tcl

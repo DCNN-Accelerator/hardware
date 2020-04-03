@@ -160,55 +160,56 @@ begin
         variable read_delay_1   : std_logic := '0';
         variable read_delay_2   : std_logic := '0';
     begin
-        if(receive_counter /= 512 * 512 * 2) then
-            --opens the text files
-            file_open(readstatus, file_read, "C:/Users/ryanm/Downloads/testing/BUILD/matlab/uart_input_bytes.txt", READ_MODE);
-            file_open(checkstatus, file_check, "C:/Users/ryanm/Desktop/checkFile.txt", WRITE_MODE);
-            --continues to process until  all bytes have been written back
-            while (receive_counter < 512*512*2) loop
-                wait until clock = '1';
-                
-                --not in reset
-                if (reset = '1') then
-                    prev_uart_pc_rts <= uart_pc_rts;
-                
-                    --checks to see if TX FIFO is full
-                    if (pc_uart_rtr = '1' and read_delay_1 = '0' and read_delay_2 = '0') then
-                        counter <= counter + 1;
-                        read_delay_1 := '1';
-                        read_delay_2 := '1';
-                        --checks to see if it file_write is not used completely
-                        if not ENDFILE(file_read) then
-                            --reads in a value from the file
-                            readline(file_read, line_read);
-                            hread(line_read, temp_read);
-                            --set the data to match that in the file
-                            pc_uart_data <= std_logic_vector(temp_read);
-                        else
-                            --read file is empty, set data to 0's
-                            pc_uart_data <= (others => '0');
-                        end if;
-                        --set rts to high
-                        pc_uart_rts <= '1';
-                        
+        --opens the text files
+        file_open(readstatus, file_read, "C:/Users/ryanm/Desktop/readFile.txt", READ_MODE);
+        file_open(checkstatus, file_check, "C:/Users/ryanm/Desktop/checkFile.txt", WRITE_MODE);
+        --continues to process until  all bytes have been written back
+        while (receive_counter < 512*512) loop
+            wait until clock = '1';
+            
+            --not in reset
+            if (reset = '1') then
+                prev_uart_pc_rts <= uart_pc_rts;
+            
+                --checks to see if TX FIFO is full
+                if (pc_uart_rtr = '1' and read_delay_1 = '0' and read_delay_2 = '0') then
+                    counter <= counter + 1;
+                    read_delay_1 := '1';
+                    read_delay_2 := '1';
+                    --checks to see if it file_write is not used completely
+                    if not ENDFILE(file_read) then
+                        --reads in a value from the file
+                        readline(file_read, line_read);
+                        hread(line_read, temp_read);
+                        --set the data to match that in the file
+                        pc_uart_data <= std_logic_vector(temp_read);
                     else
-                        if(read_delay_1 = '0') then
-                            read_delay_2 := '0';
-                        end if;
-                        read_delay_1 := '0';
-                        --fifo is full, set rts to low
-                        pc_uart_rts <= '0';
+                        --read file is empty, set data to 0's
+                        pc_uart_data <= (others => '0');
                     end if;
+                    --set rts to high
+                    pc_uart_rts <= '1';
                     
-                    --checks the values read back to make sure they match
-                    if (uart_pc_rts = '1' and prev_uart_pc_rts = '1') then
-                        receive_counter <= receive_counter + 1;
-                        hwrite(line_check,uart_pc_data, left, 15);
-                        writeline(file_check,line_check);
+                else
+                    if(read_delay_1 = '0') then
+                        read_delay_2 := '0';
                     end if;
+                    read_delay_1 := '0';
+                    --fifo is full, set rts to low
+                    pc_uart_rts <= '0';
                 end if;
-            end loop;
-        end if;
+                
+                --checks the values read back to make sure they match
+                if (uart_pc_rts = '1' and prev_uart_pc_rts = '1') then
+                    receive_counter <= receive_counter + 1;
+                    hwrite(line_check,uart_pc_data, left, 15);
+                    writeline(file_check,line_check);
+                end if;
+            end if;
+        end loop;
+
+        --ends the simulation
+        wait;
             
     end process;
 

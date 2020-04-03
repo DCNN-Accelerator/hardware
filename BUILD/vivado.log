@@ -1,0 +1,243 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Fri Apr  3 13:47:06 2020
+# Process ID: 81408
+# Current directory: C:/Users/ryanm/Downloads/dynamic/BUILD
+# Command line: vivado.exe -mode tcl
+# Log file: C:/Users/ryanm/Downloads/dynamic/BUILD/vivado.log
+# Journal file: C:/Users/ryanm/Downloads/dynamic/BUILD\vivado.jou
+#-----------------------------------------------------------
+Vivado% set argv {100000000 6000000 512 7}
+100000000 6000000 512 7
+Vivado% cd \HLS
+Vivado% source gen_ip.tcl
+# set my_clk [lindex $argv 0]
+# set my_baud [lindex $argv 1]
+# set my_iSize [lindex $argv 2]
+# set my_kSize [lindex $argv 3]
+# namespace eval _tcl {
+# proc get_script_folder {} {
+#    set script_path_1 [file normalize [info script]]
+#    set script_folder_1 [file dirname $script_path_1]
+#    return $script_folder_1
+# }
+# }
+# variable script_folder_1
+# set script_folder_1 [_tcl::get_script_folder]
+# set src_pth [concat $script_folder_1/source]
+# cd $src_pth
+# set fp [open "fp_mults.cpp" w+]
+# puts $fp {#include "fp_mults.hpp"}
+# puts $fp {#include "iostream"}
+# puts $fp "\n\nusing namespace std;\n" 
+# puts $fp "void fp_sop" 
+# puts $fp "(" 
+# for {set i 0} {$i < $my_kSize * $my_kSize - 1} {incr i} {
+#     puts $fp "		kernel_t kernel_patch_$i," 
+# }
+# puts $fp " \n"
+# for {set i 0} {$i < $my_kSize * $my_kSize - 1} {incr i} {
+#     puts $fp "		pixel_t pixel_window_$i," 
+# }
+# puts $fp "\n		fm_t &out_val" 
+# puts $fp "		)" 
+# puts $fp "{\n" 
+# puts $fp "#pragma HLS pipeline II = 1" 
+# puts $fp "\n	mult_t buf_mult [49];" 
+# puts $fp "	acc_t acc;\n"
+# for {set i 0} {$i < $my_kSize * $my_kSize - 1} {incr i} {
+#     puts $fp "	 buf_mult[$i] = pixel_window_$i * kernel_patch_$i;" 
+# }
+# puts $fp "	 acc =   buf_mult[0] +" 
+# for {set i 1} {$i < $my_kSize * $my_kSize - 2} {incr i} {
+#     puts $fp "	         buf_mult[$i] +" 
+# }
+# puts -nonewline $fp {	         buf_mult[}
+# puts -nonewline $fp [expr {$my_kSize * $my_kSize - 1}]
+# puts $fp "];\n"
+# puts $fp "	 out_val = acc;" 
+# puts $fp "}" 
+# close $fp
+# set fp [open "fp_mults.hpp" w+]
+# puts $fp "#ifndef fp_mults_h" 
+# puts $fp "#define fp_mults_h" 
+# puts $fp {#include "ap_fixed.h"} 
+# puts $fp "typedef ap_fixed  <8,1,  AP_RND, AP_SAT> kernel_t;" 
+# puts $fp "typedef ap_ufixed <8,8, AP_RND>  pixel_t;" 
+# puts $fp "typedef ap_fixed  <16,16, AP_RND,AP_SAT>  fm_t;" 
+# puts $fp "typedef ap_fixed  <16,9, AP_RND, AP_SAT> mult_t;" 
+# puts $fp "typedef ap_fixed  <32,16, AP_RND, AP_SAT> acc_t;" 
+# puts $fp "void fp_test (kernel_t test_kernel, pixel_t test_pixel, fm_t &output_val);" 
+# puts $fp "void fp_sop" 
+# puts $fp "(" 
+# for {set i 0} {$i < $my_kSize - 1} {incr i} {
+#     puts $fp "		kernel_t kernel_patch_$i," 
+# }
+# puts $fp "\n"
+# for {set i 0} {$i < $my_kSize - 1} {incr i} {
+#     puts $fp "		pixel_t pixel_window_$i," 
+# }
+# puts $fp "		fm_t &out_val" 
+# puts $fp "		);" 
+# puts $fp "#endif" 
+# close $fp
+# cd $script_folder_1
+# file mkdir fp_multipliers
+# open_project -reset fp_multipliers
+ERROR: [Common 17-170] Unknown option '-reset', please type 'open_project -help' for usage info.
+
+Vivado% source gen_ip.tcl
+# set my_clk [lindex $argv 0]
+# set my_baud [lindex $argv 1]
+# set my_iSize [lindex $argv 2]
+# set my_kSize [lindex $argv 3]
+# namespace eval _tcl {
+# proc get_script_folder {} {
+#    set script_path_1 [file normalize [info script]]
+#    set script_folder_1 [file dirname $script_path_1]
+#    return $script_folder_1
+# }
+# }
+# variable script_folder_1
+# set script_folder_1 [_tcl::get_script_folder]
+# set src_pth [concat $script_folder_1/source]
+# cd $src_pth
+# set fp [open "fp_mults.cpp" w+]
+# puts $fp {#include "fp_mults.hpp"}
+# puts $fp {#include "iostream"}
+# puts $fp "\n\nusing namespace std;\n" 
+# puts $fp "void fp_sop" 
+# puts $fp "(" 
+# for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+#     puts $fp "		kernel_t kernel_patch_$i," 
+# }
+# puts $fp " \n"
+# for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+#     puts $fp "		pixel_t pixel_window_$i," 
+# }
+# puts $fp "\n		fm_t &out_val" 
+# puts $fp "		)" 
+# puts $fp "{\n" 
+# puts $fp "#pragma HLS pipeline II = 1" 
+# puts $fp "\n	mult_t buf_mult [49];" 
+# puts $fp "	acc_t acc;\n"
+# for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+#     puts $fp "	 buf_mult[$i] = pixel_window_$i * kernel_patch_$i;" 
+# }
+# puts $fp "	 acc =   buf_mult[0] +" 
+# for {set i 1} {$i < $my_kSize * $my_kSize - 1} {incr i} {
+#     puts $fp "	         buf_mult[$i] +" 
+# }
+# puts -nonewline $fp {	         buf_mult[}
+# puts -nonewline $fp [expr {$my_kSize * $my_kSize - 1}]
+# puts $fp "];\n"
+# puts $fp "	 out_val = acc;" 
+# puts $fp "}" 
+# close $fp
+# set fp [open "fp_mults.hpp" w+]
+# puts $fp "#ifndef fp_mults_h" 
+# puts $fp "#define fp_mults_h" 
+# puts $fp {#include "ap_fixed.h"} 
+# puts $fp "typedef ap_fixed  <8,1,  AP_RND, AP_SAT> kernel_t;" 
+# puts $fp "typedef ap_ufixed <8,8, AP_RND>  pixel_t;" 
+# puts $fp "typedef ap_fixed  <16,16, AP_RND,AP_SAT>  fm_t;" 
+# puts $fp "typedef ap_fixed  <16,9, AP_RND, AP_SAT> mult_t;" 
+# puts $fp "typedef ap_fixed  <32,16, AP_RND, AP_SAT> acc_t;" 
+# puts $fp "void fp_test (kernel_t test_kernel, pixel_t test_pixel, fm_t &output_val);" 
+# puts $fp "void fp_sop" 
+# puts $fp "(" 
+# for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+#     puts $fp "		kernel_t kernel_patch_$i," 
+# }
+# puts $fp "\n"
+# for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+#     puts $fp "		pixel_t pixel_window_$i," 
+# }
+# puts $fp "		fm_t &out_val" 
+# puts $fp "		);" 
+# puts $fp "#endif" 
+# close $fp
+# cd $script_folder_1
+# file mkdir fp_multipliers
+# open_project -reset fp_multipliers
+ERROR: [Common 17-170] Unknown option '-reset', please type 'open_project -help' for usage info.
+
+Vivado% source gen_ip.tcl
+# set my_clk [lindex $argv 0]
+# set my_baud [lindex $argv 1]
+# set my_iSize [lindex $argv 2]
+# set my_kSize [lindex $argv 3]
+# namespace eval _tcl {
+# proc get_script_folder {} {
+#    set script_path_1 [file normalize [info script]]
+#    set script_folder_1 [file dirname $script_path_1]
+#    return $script_folder_1
+# }
+# }
+# variable script_folder_1
+# set script_folder_1 [_tcl::get_script_folder]
+# set src_pth [concat $script_folder_1/source]
+# cd $src_pth
+# set fp [open "fp_mults.cpp" w+]
+# puts $fp {#include "fp_mults.hpp"}
+# puts $fp {#include "iostream"}
+# puts $fp "\n\nusing namespace std;\n" 
+# puts $fp "void fp_sop" 
+# puts $fp "(" 
+# for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+#     puts $fp "		kernel_t kernel_patch_$i," 
+# }
+# puts $fp " \n"
+# for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+#     puts $fp "		pixel_t pixel_window_$i," 
+# }
+# puts $fp "\n		fm_t &out_val" 
+# puts $fp "		)" 
+# puts $fp "{\n" 
+# puts $fp "#pragma HLS pipeline II = 1" 
+# puts $fp "\n	mult_t buf_mult [49];" 
+# puts $fp "	acc_t acc;\n"
+# for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+#     puts $fp "	 buf_mult[$i] = pixel_window_$i * kernel_patch_$i;" 
+# }
+# puts $fp "	 acc =   buf_mult[0] +" 
+# for {set i 1} {$i < $my_kSize * $my_kSize - 1} {incr i} {
+#     puts $fp "	         buf_mult[$i] +" 
+# }
+# puts -nonewline $fp {	         buf_mult[}
+# puts -nonewline $fp [expr {$my_kSize * $my_kSize - 1}]
+# puts $fp "];\n"
+# puts $fp "	 out_val = acc;" 
+# puts $fp "}" 
+# close $fp
+# set fp [open "fp_mults.hpp" w+]
+# puts $fp "#ifndef fp_mults_h" 
+# puts $fp "#define fp_mults_h" 
+# puts $fp {#include "ap_fixed.h"} 
+# puts $fp "typedef ap_fixed  <8,1,  AP_RND, AP_SAT> kernel_t;" 
+# puts $fp "typedef ap_ufixed <8,8, AP_RND>  pixel_t;" 
+# puts $fp "typedef ap_fixed  <16,16, AP_RND,AP_SAT>  fm_t;" 
+# puts $fp "typedef ap_fixed  <16,9, AP_RND, AP_SAT> mult_t;" 
+# puts $fp "typedef ap_fixed  <32,16, AP_RND, AP_SAT> acc_t;" 
+# puts $fp "void fp_test (kernel_t test_kernel, pixel_t test_pixel, fm_t &output_val);" 
+# puts $fp "void fp_sop" 
+# puts $fp "(" 
+# for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+#     puts $fp "		kernel_t kernel_patch_$i," 
+# }
+# puts $fp "\n"
+# for {set i 0} {$i < $my_kSize * $my_kSize} {incr i} {
+#     puts $fp "		pixel_t pixel_window_$i," 
+# }
+# puts $fp "		fm_t &out_val" 
+# puts $fp "		);" 
+# puts $fp "#endif" 
+# close $fp
+# cd $script_folder_1
+# file mkdir fp_multipliers
+# open_project -reset fp_multipliers
+ERROR: [Common 17-170] Unknown option '-reset', please type 'open_project -help' for usage info.
+
+Vivado% 
