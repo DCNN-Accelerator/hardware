@@ -14,28 +14,25 @@
 
 
 
-std::vector<double> generate_kernel(int size, int seed)
+std::vector<int8_t> generate_kernel(int size, int seed)
 {
 
-	std::vector<double> kernel_arr;
+	std::vector<int8_t> kernel_arr;
 
 	/*Create randomized array of floats between [-1 1) in a [Size x 1] array (should be one-dimensional)
 	 */
 
 	srand(seed);
-
 	std::cout << "In kernel generation.." << "\n";
 
 	for (int i = 0; i < size; i++)
 	{
-//		double c = (double) rand() / (RAND_MAX + 1) * (1 - (-1)) + -1;
-		kernel_arr.push_back(0);
+		//double c = (double) rand() / (RAND_MAX + 1) * (1 - (-1)) + -1;
+		int8_t c = rand() % 127;
+		kernel_arr.push_back(c);
 	}
 
-
 	return kernel_arr;
-
-
 }
 
 std::vector<int> generate_pix_array(int size, int seed)
@@ -51,21 +48,17 @@ std::vector<int> generate_pix_array(int size, int seed)
 
 	for (int i = 0; i < size; i ++)
 	{
-//		pix_array.push_back ( rand() % 255 );
-		pix_array.push_back(255);
+		pix_array.push_back ( rand() % 255 );
 	}
 
 	return pix_array;
-
-
 }
 
-int16_t dot_prod_benchmark(const std::vector<double> kernel, const std::vector<int> pixels, int size)
+int16_t dot_prod_benchmark(const std::vector<int8_t> kernel, const std::vector<int> pixels, int size)
 {
 
 	int16_t buf = 0;
 	double output = 0;
-
 
 	for (int i = 0; i < size; i++)
 	{
@@ -74,9 +67,8 @@ int16_t dot_prod_benchmark(const std::vector<double> kernel, const std::vector<i
 
 
 	/* implement rounding */
-	buf = static_cast<int16_t> (round(output));
-
-	return buf;
+//	buf = static_cast<int16_t> (round(output));
+	return output;
 
 }
 
@@ -156,22 +148,15 @@ void run_mults_test()
 		for (int i = 0; i < 100; i++) {
 
 
-			std::vector<double> kernel_patch = generate_kernel(test_size,seed);
+			std::vector<int8_t> kernel_patch = generate_kernel(test_size,seed);
 			std::vector<int>   pixel_array   = generate_pix_array(test_size,seed);
-
-
-
 			int16_t test_output = dot_prod_benchmark(kernel_patch, pixel_array, test_size);
-
 			std::cout << "Test Output Value (Benchmark) : " << test_output << "\n" ;
-
-
 
 		// Cast Double Kernel and Pixel values to FP precision types
 
 			std::vector<kernel_t>  fp_kernel;
 			std::vector<pixel_t>   fp_pixels;
-
 
 			for (int i = 0; i < test_size; i++ )
 			{
@@ -180,20 +165,13 @@ void run_mults_test()
 
 				fp_kernel.push_back(buf_k);
 				fp_pixels.push_back(buf_p);
-
-
 			}
 
 		// Write to CSV for MATLAB debugging, if needed
 		//	write_to_csv(kernel_patch, pixel_array, fp_kernel, fp_pixels, test_size);
-
-
 		//Call UUT for Fixed Point SOP Computation
 
 			fm_t fp_test_out;
-
-
-
 			fp_sop
 			(
 					fp_kernel[0],
@@ -296,22 +274,15 @@ void run_mults_test()
 					fp_pixels[47],
 					fp_pixels[48],
 
-
 					fp_test_out
 			);
 
-
-
 			std::cout << "Fixed Point SOP Value: " << fp_test_out << "\n";
 
-
 		// Compare against Benchmark SOP Value
-
-			double fm_error = abs(fp_test_out.to_double() - test_output);
-
-
+		//	double fm_error = abs(fp_test_out.to_double() - test_output);
+			double fm_error = abs(fp_test_out - test_output);
 			errors.push_back(fm_error);
-
 			seed++;
 		}
 
@@ -341,10 +312,6 @@ void run_fp_single_test()
 	std::cout << "Prequantized pixel value" << test_pixel << "\n";
 	std::cout << "prequant kernel val: " << test_kernel << "\n";
 
-	fp_test(test_kernel, test_pixel, test_output);
-
-
-	std::cout << "output returned from fp unit: "  << test_output << "\n";
 
 
 
