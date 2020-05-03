@@ -2,7 +2,7 @@
 #define fp_mults_h
 
 #include "ap_fixed.h"
-
+#include "stdint.h"
 // Refactored all datatypes to be signed integers
 
 /*

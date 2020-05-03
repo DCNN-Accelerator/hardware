@@ -1,0 +1,643 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Sat May  2 18:07:28 2020
+# Process ID: 24184
+# Current directory: C:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1
+# Command line: vivado.exe -log bd_0_hls_inst_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_0_hls_inst_0.tcl
+# Log file: C:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.vds
+# Journal file: C:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source bd_0_hls_inst_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.cache/ip 
+Command: synth_design -top bd_0_hls_inst_0 -part xc7a100tcsg324-1 -directive sdx_optimization_effort_high -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 23188 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 976.254 ; gain = 235.590
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_0_hls_inst_0' [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'fp_sop' [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop.v:12]
+	Parameter ap_ST_fsm_pp0_stage0 bound to: 1'b1 
+INFO: [Synth 8-5534] Detected attribute (* fsm_encoding = "none" *) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop.v:235]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop.v:315]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop.v:321]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop.v:323]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop.v:325]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop.v:331]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop.v:384]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop.v:386]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop.v:387]
+INFO: [Synth 8-5534] Detected attribute (* use_dsp48 = "no" *) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop.v:388]
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+WARNING: [Synth 8-5974] attribute "use_dsp48" has been deprecated, please use "use_dsp" instead 
+INFO: [Synth 8-6157] synthesizing module 'fp_sop_mac_muladdbkb' [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop_mac_muladdbkb.v:30]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fp_sop_mac_muladdbkb_DSP48_0' [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop_mac_muladdbkb.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'fp_sop_mac_muladdbkb_DSP48_0' (1#1) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop_mac_muladdbkb.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'fp_sop_mac_muladdbkb' (2#1) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop_mac_muladdbkb.v:30]
+INFO: [Synth 8-6157] synthesizing module 'fp_sop_mac_muladdcud' [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop_mac_muladdcud.v:30]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fp_sop_mac_muladdcud_DSP48_1' [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop_mac_muladdcud.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'fp_sop_mac_muladdcud_DSP48_1' (3#1) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop_mac_muladdcud.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'fp_sop_mac_muladdcud' (4#1) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop_mac_muladdcud.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'fp_sop' (5#1) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ipshared/3e3c/hdl/verilog/fp_sop.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'bd_0_hls_inst_0' (6#1) [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/synth/bd_0_hls_inst_0.v:58]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1052.711 ; gain = 312.047
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1052.711 ; gain = 312.047
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1052.711 ; gain = 312.047
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1052.711 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/fp_sop_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [c:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.srcs/sources_1/bd/bd_0/ip/bd_0_hls_inst_0/constraints/fp_sop_ooc.xdc] for cell 'inst'
+Parsing XDC File [C:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [C:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1149.598 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1160.727 ; gain = 11.129
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1160.727 ; gain = 420.063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1160.727 ; gain = 420.063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for inst. (constraint file  C:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1160.727 ; gain = 420.063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1160.727 ; gain = 420.063
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 9     
+	   3 Input     16 Bit       Adders := 2     
+	   4 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 31    
+	                8 Bit    Registers := 30    
+	                1 Bit    Registers := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module fp_sop 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     16 Bit       Adders := 9     
+	   3 Input     16 Bit       Adders := 2     
+	   4 Input     16 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 31    
+	                8 Bit    Registers := 30    
+	                1 Bit    Registers := 4     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U1/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U1/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U1/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_reg_1747_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_reg_1747_reg is absorbed into DSP add_ln178_reg_1747_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U1/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_reg_1747_reg.
+DSP Report: operator grp_fu_1347_p2 is absorbed into DSP add_ln178_reg_1747_reg.
+DSP Report: Generating DSP add_ln178_1_reg_1832_reg, operation Mode is: (PCIN+A2*B2)'.
+DSP Report: register kernel_patch_1_read_reg_1742_reg is absorbed into DSP add_ln178_1_reg_1832_reg.
+DSP Report: register add_ln178_1_reg_1832_reg is absorbed into DSP add_ln178_1_reg_1832_reg.
+DSP Report: register add_ln178_1_reg_1832_reg is absorbed into DSP add_ln178_1_reg_1832_reg.
+DSP Report: operator fp_sop_mac_muladdcud_U18/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP add_ln178_1_reg_1832_reg.
+DSP Report: operator fp_sop_mac_muladdcud_U18/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP add_ln178_1_reg_1832_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U2/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U2/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U2/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_2_reg_1752_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_2_reg_1752_reg is absorbed into DSP add_ln178_2_reg_1752_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U2/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_2_reg_1752_reg.
+DSP Report: operator grp_fu_1355_p2 is absorbed into DSP add_ln178_2_reg_1752_reg.
+DSP Report: Generating DSP add_ln178_3_reg_1837_reg, operation Mode is: (PCIN+A2*B2)'.
+DSP Report: register kernel_patch_3_read_reg_1737_reg is absorbed into DSP add_ln178_3_reg_1837_reg.
+DSP Report: register add_ln178_3_reg_1837_reg is absorbed into DSP add_ln178_3_reg_1837_reg.
+DSP Report: register add_ln178_3_reg_1837_reg is absorbed into DSP add_ln178_3_reg_1837_reg.
+DSP Report: operator fp_sop_mac_muladdcud_U19/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP add_ln178_3_reg_1837_reg.
+DSP Report: operator fp_sop_mac_muladdcud_U19/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP add_ln178_3_reg_1837_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U3/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U3/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U3/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_5_reg_1757_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_5_reg_1757_reg is absorbed into DSP add_ln178_5_reg_1757_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U3/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_5_reg_1757_reg.
+DSP Report: operator grp_fu_1363_p2 is absorbed into DSP add_ln178_5_reg_1757_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdcud_U20/fp_sop_mac_muladdcud_DSP48_1_U/p, operation Mode is: PCIN+A2*B2.
+DSP Report: register kernel_patch_6_read_reg_1732_reg is absorbed into DSP fp_sop_mac_muladdcud_U20/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: register fp_sop_mac_muladdcud_U20/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U20/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U20/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U20/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U20/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP fp_sop_mac_muladdcud_U20/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U4/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U4/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U4/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_7_reg_1762_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_7_reg_1762_reg is absorbed into DSP add_ln178_7_reg_1762_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U4/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_7_reg_1762_reg.
+DSP Report: operator grp_fu_1371_p2 is absorbed into DSP add_ln178_7_reg_1762_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdcud_U21/fp_sop_mac_muladdcud_DSP48_1_U/p, operation Mode is: PCIN+A2*B2.
+DSP Report: register kernel_patch_9_read_reg_1727_reg is absorbed into DSP fp_sop_mac_muladdcud_U21/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: register fp_sop_mac_muladdcud_U21/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U21/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U21/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U21/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U21/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP fp_sop_mac_muladdcud_U21/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U5/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U5/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U5/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_11_reg_1767_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_11_reg_1767_reg is absorbed into DSP add_ln178_11_reg_1767_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U5/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_11_reg_1767_reg.
+DSP Report: operator grp_fu_1379_p2 is absorbed into DSP add_ln178_11_reg_1767_reg.
+DSP Report: Generating DSP add_ln178_12_reg_1847_reg, operation Mode is: (PCIN+A2*B2)'.
+DSP Report: register kernel_patch_12_read_reg_1722_reg is absorbed into DSP add_ln178_12_reg_1847_reg.
+DSP Report: register add_ln178_12_reg_1847_reg is absorbed into DSP add_ln178_12_reg_1847_reg.
+DSP Report: register add_ln178_12_reg_1847_reg is absorbed into DSP add_ln178_12_reg_1847_reg.
+DSP Report: operator fp_sop_mac_muladdcud_U22/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP add_ln178_12_reg_1847_reg.
+DSP Report: operator fp_sop_mac_muladdcud_U22/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP add_ln178_12_reg_1847_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U6/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U6/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U6/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_13_reg_1772_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_13_reg_1772_reg is absorbed into DSP add_ln178_13_reg_1772_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U6/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_13_reg_1772_reg.
+DSP Report: operator grp_fu_1387_p2 is absorbed into DSP add_ln178_13_reg_1772_reg.
+DSP Report: Generating DSP add_ln178_14_reg_1852_reg, operation Mode is: (PCIN+A2*B2)'.
+DSP Report: register kernel_patch_15_read_reg_1717_reg is absorbed into DSP add_ln178_14_reg_1852_reg.
+DSP Report: register add_ln178_14_reg_1852_reg is absorbed into DSP add_ln178_14_reg_1852_reg.
+DSP Report: register add_ln178_14_reg_1852_reg is absorbed into DSP add_ln178_14_reg_1852_reg.
+DSP Report: operator fp_sop_mac_muladdcud_U23/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP add_ln178_14_reg_1852_reg.
+DSP Report: operator fp_sop_mac_muladdcud_U23/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP add_ln178_14_reg_1852_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U7/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U7/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U7/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_16_reg_1777_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_16_reg_1777_reg is absorbed into DSP add_ln178_16_reg_1777_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U7/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_16_reg_1777_reg.
+DSP Report: operator grp_fu_1395_p2 is absorbed into DSP add_ln178_16_reg_1777_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdcud_U24/fp_sop_mac_muladdcud_DSP48_1_U/p, operation Mode is: PCIN+A2*B2.
+DSP Report: register kernel_patch_18_read_reg_1712_reg is absorbed into DSP fp_sop_mac_muladdcud_U24/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: register fp_sop_mac_muladdcud_U24/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U24/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U24/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U24/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U24/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP fp_sop_mac_muladdcud_U24/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U8/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U8/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U8/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_18_reg_1782_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_18_reg_1782_reg is absorbed into DSP add_ln178_18_reg_1782_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U8/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_18_reg_1782_reg.
+DSP Report: operator grp_fu_1403_p2 is absorbed into DSP add_ln178_18_reg_1782_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdcud_U25/fp_sop_mac_muladdcud_DSP48_1_U/p, operation Mode is: PCIN+A2*B2.
+DSP Report: register kernel_patch_21_read_reg_1707_reg is absorbed into DSP fp_sop_mac_muladdcud_U25/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: register fp_sop_mac_muladdcud_U25/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U25/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U25/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U25/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U25/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP fp_sop_mac_muladdcud_U25/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U13/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U13/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U13/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_34_reg_1807_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_34_reg_1807_reg is absorbed into DSP add_ln178_34_reg_1807_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U13/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_34_reg_1807_reg.
+DSP Report: operator grp_fu_1443_p2 is absorbed into DSP add_ln178_34_reg_1807_reg.
+DSP Report: Generating DSP add_ln178_35_reg_1872_reg, operation Mode is: (PCIN+A2*B2)'.
+DSP Report: register kernel_patch_36_read_reg_1682_reg is absorbed into DSP add_ln178_35_reg_1872_reg.
+DSP Report: register add_ln178_35_reg_1872_reg is absorbed into DSP add_ln178_35_reg_1872_reg.
+DSP Report: register add_ln178_35_reg_1872_reg is absorbed into DSP add_ln178_35_reg_1872_reg.
+DSP Report: operator fp_sop_mac_muladdcud_U30/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP add_ln178_35_reg_1872_reg.
+DSP Report: operator fp_sop_mac_muladdcud_U30/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP add_ln178_35_reg_1872_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U14/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U14/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U14/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_36_reg_1812_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_36_reg_1812_reg is absorbed into DSP add_ln178_36_reg_1812_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U14/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_36_reg_1812_reg.
+DSP Report: operator grp_fu_1451_p2 is absorbed into DSP add_ln178_36_reg_1812_reg.
+DSP Report: Generating DSP add_ln178_37_reg_1877_reg, operation Mode is: (PCIN+A2*B2)'.
+DSP Report: register kernel_patch_39_read_reg_1677_reg is absorbed into DSP add_ln178_37_reg_1877_reg.
+DSP Report: register add_ln178_37_reg_1877_reg is absorbed into DSP add_ln178_37_reg_1877_reg.
+DSP Report: register add_ln178_37_reg_1877_reg is absorbed into DSP add_ln178_37_reg_1877_reg.
+DSP Report: operator fp_sop_mac_muladdcud_U31/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP add_ln178_37_reg_1877_reg.
+DSP Report: operator fp_sop_mac_muladdcud_U31/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP add_ln178_37_reg_1877_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U9/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U9/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U9/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_23_reg_1787_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_23_reg_1787_reg is absorbed into DSP add_ln178_23_reg_1787_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U9/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_23_reg_1787_reg.
+DSP Report: operator grp_fu_1411_p2 is absorbed into DSP add_ln178_23_reg_1787_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdcud_U26/fp_sop_mac_muladdcud_DSP48_1_U/p, operation Mode is: PCIN+A2*B2.
+DSP Report: register kernel_patch_24_read_reg_1702_reg is absorbed into DSP fp_sop_mac_muladdcud_U26/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: register fp_sop_mac_muladdcud_U26/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U26/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U26/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U26/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U26/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP fp_sop_mac_muladdcud_U26/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U10/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U10/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U10/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_25_reg_1792_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_25_reg_1792_reg is absorbed into DSP add_ln178_25_reg_1792_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U10/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_25_reg_1792_reg.
+DSP Report: operator grp_fu_1419_p2 is absorbed into DSP add_ln178_25_reg_1792_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdcud_U27/fp_sop_mac_muladdcud_DSP48_1_U/p, operation Mode is: PCIN+A2*B2.
+DSP Report: register kernel_patch_27_read_reg_1697_reg is absorbed into DSP fp_sop_mac_muladdcud_U27/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: register fp_sop_mac_muladdcud_U27/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U27/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U27/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U27/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U27/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP fp_sop_mac_muladdcud_U27/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U11/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U11/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U11/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_28_reg_1797_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_28_reg_1797_reg is absorbed into DSP add_ln178_28_reg_1797_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U11/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_28_reg_1797_reg.
+DSP Report: operator grp_fu_1427_p2 is absorbed into DSP add_ln178_28_reg_1797_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdcud_U28/fp_sop_mac_muladdcud_DSP48_1_U/p, operation Mode is: PCIN+A2*B2.
+DSP Report: register kernel_patch_30_read_reg_1692_reg is absorbed into DSP fp_sop_mac_muladdcud_U28/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: register fp_sop_mac_muladdcud_U28/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U28/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U28/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U28/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U28/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP fp_sop_mac_muladdcud_U28/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U12/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U12/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U12/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_30_reg_1802_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_30_reg_1802_reg is absorbed into DSP add_ln178_30_reg_1802_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U12/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_30_reg_1802_reg.
+DSP Report: operator grp_fu_1435_p2 is absorbed into DSP add_ln178_30_reg_1802_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdcud_U29/fp_sop_mac_muladdcud_DSP48_1_U/p, operation Mode is: PCIN+A2*B2.
+DSP Report: register kernel_patch_33_read_reg_1687_reg is absorbed into DSP fp_sop_mac_muladdcud_U29/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: register fp_sop_mac_muladdcud_U29/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U29/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U29/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U29/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U29/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP fp_sop_mac_muladdcud_U29/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U16/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U16/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U16/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_41_reg_1822_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_41_reg_1822_reg is absorbed into DSP add_ln178_41_reg_1822_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U16/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_41_reg_1822_reg.
+DSP Report: operator grp_fu_1467_p2 is absorbed into DSP add_ln178_41_reg_1822_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U15/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U15/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U15/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_39_reg_1817_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_39_reg_1817_reg is absorbed into DSP add_ln178_39_reg_1817_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U15/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_39_reg_1817_reg.
+DSP Report: operator grp_fu_1459_p2 is absorbed into DSP add_ln178_39_reg_1817_reg.
+DSP Report: Generating DSP fp_sop_mac_muladdcud_U32/fp_sop_mac_muladdcud_DSP48_1_U/p, operation Mode is: PCIN+A2*B2.
+DSP Report: register kernel_patch_42_read_reg_1672_reg is absorbed into DSP fp_sop_mac_muladdcud_U32/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: register fp_sop_mac_muladdcud_U32/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U32/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U32/fp_sop_mac_muladdcud_DSP48_1_U/p is absorbed into DSP fp_sop_mac_muladdcud_U32/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: operator fp_sop_mac_muladdcud_U32/fp_sop_mac_muladdcud_DSP48_1_U/m is absorbed into DSP fp_sop_mac_muladdcud_U32/fp_sop_mac_muladdcud_DSP48_1_U/p.
+DSP Report: Generating DSP fp_sop_mac_muladdbkb_U17/fp_sop_mac_muladdbkb_DSP48_0_U/m, operation Mode is: A*B.
+DSP Report: operator fp_sop_mac_muladdbkb_U17/fp_sop_mac_muladdbkb_DSP48_0_U/m is absorbed into DSP fp_sop_mac_muladdbkb_U17/fp_sop_mac_muladdbkb_DSP48_0_U/m.
+DSP Report: Generating DSP add_ln178_42_reg_1827_reg, operation Mode is: (C+A*B)'.
+DSP Report: register add_ln178_42_reg_1827_reg is absorbed into DSP add_ln178_42_reg_1827_reg.
+DSP Report: operator fp_sop_mac_muladdbkb_U17/fp_sop_mac_muladdbkb_DSP48_0_U/p is absorbed into DSP add_ln178_42_reg_1827_reg.
+DSP Report: operator grp_fu_1475_p2 is absorbed into DSP add_ln178_42_reg_1827_reg.
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (inst/\ap_CS_fsm_reg[0] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1160.727 ; gain = 420.063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+DSP: Preliminary Mapping	Report (see note below)
++-----------------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                  | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-----------------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | (PCIN+A2*B2)' | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | (PCIN+A2*B2)' | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | PCIN+A2*B2    | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | PCIN+A2*B2    | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | (PCIN+A2*B2)' | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | (PCIN+A2*B2)' | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | PCIN+A2*B2    | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | PCIN+A2*B2    | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | (PCIN+A2*B2)' | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | (PCIN+A2*B2)' | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | PCIN+A2*B2    | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | PCIN+A2*B2    | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | PCIN+A2*B2    | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | PCIN+A2*B2    | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
+|fp_sop                       | PCIN+A2*B2    | 9      | 8      | -      | -      | 16     | 1    | 1    | -    | -    | -     | 0    | 0    | 
+|fp_sop_mac_muladdbkb_DSP48_0 | A*B           | 9      | 8      | -      | -      | 17     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|fp_sop                       | (C+A*B)'      | 9      | 8      | 16     | -      | 16     | 0    | 0    | 0    | -    | -     | 0    | 1    | 
++-----------------------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1183.609 ; gain = 442.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1191.398 ; gain = 450.734
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1208.734 ; gain = 468.070
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1221.543 ; gain = 480.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1221.543 ; gain = 480.879
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1221.543 ; gain = 480.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1221.543 ; gain = 480.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1221.543 ; gain = 480.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1221.543 ; gain = 480.879
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |CARRY4    |    48|
+|2     |DSP48E1   |    17|
+|3     |DSP48E1_1 |    17|
+|4     |DSP48E1_2 |     6|
+|5     |DSP48E1_3 |     9|
+|6     |LUT2      |   147|
+|7     |LUT3      |    38|
+|8     |LUT4      |    30|
+|9     |LUT5      |    15|
+|10    |LUT6      |    20|
+|11    |FDRE      |   131|
++------+----------+------+
+
+Report Instance Areas: 
++------+-------------------------------------+--------------------------------+------+
+|      |Instance                             |Module                          |Cells |
++------+-------------------------------------+--------------------------------+------+
+|1     |top                                  |                                |   478|
+|2     |  inst                               |fp_sop                          |   478|
+|3     |    fp_sop_mac_muladdbkb_U1          |fp_sop_mac_muladdbkb            |     1|
+|4     |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_47 |     1|
+|5     |    fp_sop_mac_muladdbkb_U10         |fp_sop_mac_muladdbkb_0          |     1|
+|6     |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_46 |     1|
+|7     |    fp_sop_mac_muladdbkb_U11         |fp_sop_mac_muladdbkb_1          |     1|
+|8     |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_45 |     1|
+|9     |    fp_sop_mac_muladdbkb_U12         |fp_sop_mac_muladdbkb_2          |     1|
+|10    |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_44 |     1|
+|11    |    fp_sop_mac_muladdbkb_U13         |fp_sop_mac_muladdbkb_3          |     1|
+|12    |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_43 |     1|
+|13    |    fp_sop_mac_muladdbkb_U14         |fp_sop_mac_muladdbkb_4          |     1|
+|14    |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_42 |     1|
+|15    |    fp_sop_mac_muladdbkb_U15         |fp_sop_mac_muladdbkb_5          |     1|
+|16    |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_41 |     1|
+|17    |    fp_sop_mac_muladdbkb_U16         |fp_sop_mac_muladdbkb_6          |     1|
+|18    |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_40 |     1|
+|19    |    fp_sop_mac_muladdbkb_U17         |fp_sop_mac_muladdbkb_7          |     1|
+|20    |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_39 |     1|
+|21    |    fp_sop_mac_muladdbkb_U2          |fp_sop_mac_muladdbkb_8          |     1|
+|22    |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_38 |     1|
+|23    |    fp_sop_mac_muladdbkb_U3          |fp_sop_mac_muladdbkb_9          |     1|
+|24    |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_37 |     1|
+|25    |    fp_sop_mac_muladdbkb_U4          |fp_sop_mac_muladdbkb_10         |     1|
+|26    |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_36 |     1|
+|27    |    fp_sop_mac_muladdbkb_U5          |fp_sop_mac_muladdbkb_11         |     1|
+|28    |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_35 |     1|
+|29    |    fp_sop_mac_muladdbkb_U6          |fp_sop_mac_muladdbkb_12         |     1|
+|30    |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_34 |     1|
+|31    |    fp_sop_mac_muladdbkb_U7          |fp_sop_mac_muladdbkb_13         |     1|
+|32    |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_33 |     1|
+|33    |    fp_sop_mac_muladdbkb_U8          |fp_sop_mac_muladdbkb_14         |     1|
+|34    |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0_32 |     1|
+|35    |    fp_sop_mac_muladdbkb_U9          |fp_sop_mac_muladdbkb_15         |     1|
+|36    |      fp_sop_mac_muladdbkb_DSP48_0_U |fp_sop_mac_muladdbkb_DSP48_0    |     1|
+|37    |    fp_sop_mac_muladdcud_U20         |fp_sop_mac_muladdcud            |     1|
+|38    |      fp_sop_mac_muladdcud_DSP48_1_U |fp_sop_mac_muladdcud_DSP48_1_31 |     1|
+|39    |    fp_sop_mac_muladdcud_U21         |fp_sop_mac_muladdcud_16         |    21|
+|40    |      fp_sop_mac_muladdcud_DSP48_1_U |fp_sop_mac_muladdcud_DSP48_1_30 |    21|
+|41    |    fp_sop_mac_muladdcud_U24         |fp_sop_mac_muladdcud_17         |     1|
+|42    |      fp_sop_mac_muladdcud_DSP48_1_U |fp_sop_mac_muladdcud_DSP48_1_29 |     1|
+|43    |    fp_sop_mac_muladdcud_U25         |fp_sop_mac_muladdcud_18         |    21|
+|44    |      fp_sop_mac_muladdcud_DSP48_1_U |fp_sop_mac_muladdcud_DSP48_1_28 |    21|
+|45    |    fp_sop_mac_muladdcud_U26         |fp_sop_mac_muladdcud_19         |     1|
+|46    |      fp_sop_mac_muladdcud_DSP48_1_U |fp_sop_mac_muladdcud_DSP48_1_27 |     1|
+|47    |    fp_sop_mac_muladdcud_U27         |fp_sop_mac_muladdcud_20         |    21|
+|48    |      fp_sop_mac_muladdcud_DSP48_1_U |fp_sop_mac_muladdcud_DSP48_1_26 |    21|
+|49    |    fp_sop_mac_muladdcud_U28         |fp_sop_mac_muladdcud_21         |     1|
+|50    |      fp_sop_mac_muladdcud_DSP48_1_U |fp_sop_mac_muladdcud_DSP48_1_25 |     1|
+|51    |    fp_sop_mac_muladdcud_U29         |fp_sop_mac_muladdcud_22         |    21|
+|52    |      fp_sop_mac_muladdcud_DSP48_1_U |fp_sop_mac_muladdcud_DSP48_1_24 |    21|
+|53    |    fp_sop_mac_muladdcud_U32         |fp_sop_mac_muladdcud_23         |    29|
+|54    |      fp_sop_mac_muladdcud_DSP48_1_U |fp_sop_mac_muladdcud_DSP48_1    |    29|
++------+-------------------------------------+--------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 1221.543 ; gain = 480.879
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1221.543 ; gain = 372.863
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1221.543 ; gain = 480.879
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1233.602 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 97 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1233.609 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+37 Infos, 10 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1233.609 ; gain = 779.285
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1233.609 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_0_hls_inst_0, cache-ID = 314e5a808d4f0797
+INFO: [Coretcl 2-1174] Renamed 53 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1233.609 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/hkhaj/Documents/senior-project/hardware/BUILD/HLS/source/fp_multipliers/solution2/impl/verilog/project.runs/bd_0_hls_inst_0_synth_1/bd_0_hls_inst_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_0_hls_inst_0_utilization_synth.rpt -pb bd_0_hls_inst_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat May  2 18:08:12 2020...

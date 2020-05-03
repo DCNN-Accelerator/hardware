@@ -28,8 +28,8 @@ set src_pth [concat $script_folder_1/source]
 # Create Project and add files 
 file mkdir fp_multipliers
 
-open_project -reset fp_multipliers
-set_top fp_sop 
+# open_project -reset fp_multipliers
+# set_top fp_sop 
 
 cd $src_pth
 add_file fp_mults.cpp

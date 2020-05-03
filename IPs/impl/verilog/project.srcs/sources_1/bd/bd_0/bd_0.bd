@@ -1,0 +1,1880 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x62B54063EDE63013",
+      "device": "xc7a100tcsg324-1",
+      "name": "bd_0",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2019.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "hls_inst": ""
+    },
+    "interface_ports": {
+      "ap_ctrl": {
+        "mode": "Slave",
+        "vlnv": "xilinx.com:interface:acc_handshake_rtl:1.0"
+      }
+    },
+    "ports": {
+      "ap_clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "ASSOCIATED_RESET": {
+            "value": "ap_rst",
+            "value_src": "default"
+          },
+          "CLK_DOMAIN": {
+            "value": "bd_0_ap_clk_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000.0"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "ap_rst": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_HIGH"
+          }
+        }
+      },
+      "kernel_patch_0": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_1": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_10": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_11": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_12": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_13": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_14": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_15": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_16": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_17": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_18": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_19": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_2": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_20": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_21": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_22": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_23": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_24": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_25": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_26": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_27": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_28": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_29": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_3": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_30": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_31": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_32": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_33": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_34": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_35": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_36": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_37": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_38": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_39": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_4": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_40": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_41": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_42": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_43": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_44": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_45": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_46": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_47": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_48": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_5": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_6": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_7": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_8": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "kernel_patch_9": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "out_val": {
+        "type": "data",
+        "direction": "O",
+        "left": "15",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "out_val_ap_vld": {
+        "direction": "O"
+      },
+      "pixel_window_0": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_1": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_10": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_11": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_12": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_13": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_14": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_15": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_16": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_17": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_18": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_19": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_2": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_20": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_21": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_22": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_23": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_24": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_25": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_26": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_27": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_28": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_29": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_3": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_30": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_31": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_32": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_33": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_34": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_35": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_36": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_37": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_38": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_39": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_4": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_40": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_41": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_42": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_43": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_44": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_45": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_46": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_47": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_48": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_5": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_6": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_7": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_8": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      },
+      "pixel_window_9": {
+        "type": "data",
+        "direction": "I",
+        "left": "7",
+        "right": "0",
+        "parameters": {
+          "LAYERED_METADATA": {
+            "value": "undef",
+            "value_src": "default"
+          }
+        }
+      }
+    },
+    "components": {
+      "hls_inst": {
+        "vlnv": "xilinx.com:hls:fp_sop:1.0",
+        "xci_name": "bd_0_hls_inst_0"
+      }
+    },
+    "interface_nets": {
+      "ap_ctrl_0_1": {
+        "interface_ports": [
+          "ap_ctrl",
+          "hls_inst/ap_ctrl"
+        ]
+      }
+    },
+    "nets": {
+      "ap_clk_0_1": {
+        "ports": [
+          "ap_clk",
+          "hls_inst/ap_clk"
+        ]
+      },
+      "ap_rst_0_1": {
+        "ports": [
+          "ap_rst",
+          "hls_inst/ap_rst"
+        ]
+      },
+      "kernel_patch_0_0_1": {
+        "ports": [
+          "kernel_patch_0",
+          "hls_inst/kernel_patch_0"
+        ]
+      },
+      "kernel_patch_1_0_1": {
+        "ports": [
+          "kernel_patch_1",
+          "hls_inst/kernel_patch_1"
+        ]
+      },
+      "kernel_patch_10_0_1": {
+        "ports": [
+          "kernel_patch_10",
+          "hls_inst/kernel_patch_10"
+        ]
+      },
+      "kernel_patch_11_0_1": {
+        "ports": [
+          "kernel_patch_11",
+          "hls_inst/kernel_patch_11"
+        ]
+      },
+      "kernel_patch_12_0_1": {
+        "ports": [
+          "kernel_patch_12",
+          "hls_inst/kernel_patch_12"
+        ]
+      },
+      "kernel_patch_13_0_1": {
+        "ports": [
+          "kernel_patch_13",
+          "hls_inst/kernel_patch_13"
+        ]
+      },
+      "kernel_patch_14_0_1": {
+        "ports": [
+          "kernel_patch_14",
+          "hls_inst/kernel_patch_14"
+        ]
+      },
+      "kernel_patch_15_0_1": {
+        "ports": [
+          "kernel_patch_15",
+          "hls_inst/kernel_patch_15"
+        ]
+      },
+      "kernel_patch_16_0_1": {
+        "ports": [
+          "kernel_patch_16",
+          "hls_inst/kernel_patch_16"
+        ]
+      },
+      "kernel_patch_17_0_1": {
+        "ports": [
+          "kernel_patch_17",
+          "hls_inst/kernel_patch_17"
+        ]
+      },
+      "kernel_patch_18_0_1": {
+        "ports": [
+          "kernel_patch_18",
+          "hls_inst/kernel_patch_18"
+        ]
+      },
+      "kernel_patch_19_0_1": {
+        "ports": [
+          "kernel_patch_19",
+          "hls_inst/kernel_patch_19"
+        ]
+      },
+      "kernel_patch_2_0_1": {
+        "ports": [
+          "kernel_patch_2",
+          "hls_inst/kernel_patch_2"
+        ]
+      },
+      "kernel_patch_20_0_1": {
+        "ports": [
+          "kernel_patch_20",
+          "hls_inst/kernel_patch_20"
+        ]
+      },
+      "kernel_patch_21_0_1": {
+        "ports": [
+          "kernel_patch_21",
+          "hls_inst/kernel_patch_21"
+        ]
+      },
+      "kernel_patch_22_0_1": {
+        "ports": [
+          "kernel_patch_22",
+          "hls_inst/kernel_patch_22"
+        ]
+      },
+      "kernel_patch_23_0_1": {
+        "ports": [
+          "kernel_patch_23",
+          "hls_inst/kernel_patch_23"
+        ]
+      },
+      "kernel_patch_24_0_1": {
+        "ports": [
+          "kernel_patch_24",
+          "hls_inst/kernel_patch_24"
+        ]
+      },
+      "kernel_patch_25_0_1": {
+        "ports": [
+          "kernel_patch_25",
+          "hls_inst/kernel_patch_25"
+        ]
+      },
+      "kernel_patch_26_0_1": {
+        "ports": [
+          "kernel_patch_26",
+          "hls_inst/kernel_patch_26"
+        ]
+      },
+      "kernel_patch_27_0_1": {
+        "ports": [
+          "kernel_patch_27",
+          "hls_inst/kernel_patch_27"
+        ]
+      },
+      "kernel_patch_28_0_1": {
+        "ports": [
+          "kernel_patch_28",
+          "hls_inst/kernel_patch_28"
+        ]
+      },
+      "kernel_patch_29_0_1": {
+        "ports": [
+          "kernel_patch_29",
+          "hls_inst/kernel_patch_29"
+        ]
+      },
+      "kernel_patch_3_0_1": {
+        "ports": [
+          "kernel_patch_3",
+          "hls_inst/kernel_patch_3"
+        ]
+      },
+      "kernel_patch_30_0_1": {
+        "ports": [
+          "kernel_patch_30",
+          "hls_inst/kernel_patch_30"
+        ]
+      },
+      "kernel_patch_31_0_1": {
+        "ports": [
+          "kernel_patch_31",
+          "hls_inst/kernel_patch_31"
+        ]
+      },
+      "kernel_patch_32_0_1": {
+        "ports": [
+          "kernel_patch_32",
+          "hls_inst/kernel_patch_32"
+        ]
+      },
+      "kernel_patch_33_0_1": {
+        "ports": [
+          "kernel_patch_33",
+          "hls_inst/kernel_patch_33"
+        ]
+      },
+      "kernel_patch_34_0_1": {
+        "ports": [
+          "kernel_patch_34",
+          "hls_inst/kernel_patch_34"
+        ]
+      },
+      "kernel_patch_35_0_1": {
+        "ports": [
+          "kernel_patch_35",
+          "hls_inst/kernel_patch_35"
+        ]
+      },
+      "kernel_patch_36_0_1": {
+        "ports": [
+          "kernel_patch_36",
+          "hls_inst/kernel_patch_36"
+        ]
+      },
+      "kernel_patch_37_0_1": {
+        "ports": [
+          "kernel_patch_37",
+          "hls_inst/kernel_patch_37"
+        ]
+      },
+      "kernel_patch_38_0_1": {
+        "ports": [
+          "kernel_patch_38",
+          "hls_inst/kernel_patch_38"
+        ]
+      },
+      "kernel_patch_39_0_1": {
+        "ports": [
+          "kernel_patch_39",
+          "hls_inst/kernel_patch_39"
+        ]
+      },
+      "kernel_patch_4_0_1": {
+        "ports": [
+          "kernel_patch_4",
+          "hls_inst/kernel_patch_4"
+        ]
+      },
+      "kernel_patch_40_0_1": {
+        "ports": [
+          "kernel_patch_40",
+          "hls_inst/kernel_patch_40"
+        ]
+      },
+      "kernel_patch_41_0_1": {
+        "ports": [
+          "kernel_patch_41",
+          "hls_inst/kernel_patch_41"
+        ]
+      },
+      "kernel_patch_42_0_1": {
+        "ports": [
+          "kernel_patch_42",
+          "hls_inst/kernel_patch_42"
+        ]
+      },
+      "kernel_patch_43_0_1": {
+        "ports": [
+          "kernel_patch_43",
+          "hls_inst/kernel_patch_43"
+        ]
+      },
+      "kernel_patch_44_0_1": {
+        "ports": [
+          "kernel_patch_44",
+          "hls_inst/kernel_patch_44"
+        ]
+      },
+      "kernel_patch_45_0_1": {
+        "ports": [
+          "kernel_patch_45",
+          "hls_inst/kernel_patch_45"
+        ]
+      },
+      "kernel_patch_46_0_1": {
+        "ports": [
+          "kernel_patch_46",
+          "hls_inst/kernel_patch_46"
+        ]
+      },
+      "kernel_patch_47_0_1": {
+        "ports": [
+          "kernel_patch_47",
+          "hls_inst/kernel_patch_47"
+        ]
+      },
+      "kernel_patch_48_0_1": {
+        "ports": [
+          "kernel_patch_48",
+          "hls_inst/kernel_patch_48"
+        ]
+      },
+      "kernel_patch_5_0_1": {
+        "ports": [
+          "kernel_patch_5",
+          "hls_inst/kernel_patch_5"
+        ]
+      },
+      "kernel_patch_6_0_1": {
+        "ports": [
+          "kernel_patch_6",
+          "hls_inst/kernel_patch_6"
+        ]
+      },
+      "kernel_patch_7_0_1": {
+        "ports": [
+          "kernel_patch_7",
+          "hls_inst/kernel_patch_7"
+        ]
+      },
+      "kernel_patch_8_0_1": {
+        "ports": [
+          "kernel_patch_8",
+          "hls_inst/kernel_patch_8"
+        ]
+      },
+      "kernel_patch_9_0_1": {
+        "ports": [
+          "kernel_patch_9",
+          "hls_inst/kernel_patch_9"
+        ]
+      },
+      "hls_inst_out_val": {
+        "ports": [
+          "hls_inst/out_val",
+          "out_val"
+        ]
+      },
+      "hls_inst_out_val_ap_vld": {
+        "ports": [
+          "hls_inst/out_val_ap_vld",
+          "out_val_ap_vld"
+        ]
+      },
+      "pixel_window_0_0_1": {
+        "ports": [
+          "pixel_window_0",
+          "hls_inst/pixel_window_0"
+        ]
+      },
+      "pixel_window_1_0_1": {
+        "ports": [
+          "pixel_window_1",
+          "hls_inst/pixel_window_1"
+        ]
+      },
+      "pixel_window_10_0_1": {
+        "ports": [
+          "pixel_window_10",
+          "hls_inst/pixel_window_10"
+        ]
+      },
+      "pixel_window_11_0_1": {
+        "ports": [
+          "pixel_window_11",
+          "hls_inst/pixel_window_11"
+        ]
+      },
+      "pixel_window_12_0_1": {
+        "ports": [
+          "pixel_window_12",
+          "hls_inst/pixel_window_12"
+        ]
+      },
+      "pixel_window_13_0_1": {
+        "ports": [
+          "pixel_window_13",
+          "hls_inst/pixel_window_13"
+        ]
+      },
+      "pixel_window_14_0_1": {
+        "ports": [
+          "pixel_window_14",
+          "hls_inst/pixel_window_14"
+        ]
+      },
+      "pixel_window_15_0_1": {
+        "ports": [
+          "pixel_window_15",
+          "hls_inst/pixel_window_15"
+        ]
+      },
+      "pixel_window_16_0_1": {
+        "ports": [
+          "pixel_window_16",
+          "hls_inst/pixel_window_16"
+        ]
+      },
+      "pixel_window_17_0_1": {
+        "ports": [
+          "pixel_window_17",
+          "hls_inst/pixel_window_17"
+        ]
+      },
+      "pixel_window_18_0_1": {
+        "ports": [
+          "pixel_window_18",
+          "hls_inst/pixel_window_18"
+        ]
+      },
+      "pixel_window_19_0_1": {
+        "ports": [
+          "pixel_window_19",
+          "hls_inst/pixel_window_19"
+        ]
+      },
+      "pixel_window_2_0_1": {
+        "ports": [
+          "pixel_window_2",
+          "hls_inst/pixel_window_2"
+        ]
+      },
+      "pixel_window_20_0_1": {
+        "ports": [
+          "pixel_window_20",
+          "hls_inst/pixel_window_20"
+        ]
+      },
+      "pixel_window_21_0_1": {
+        "ports": [
+          "pixel_window_21",
+          "hls_inst/pixel_window_21"
+        ]
+      },
+      "pixel_window_22_0_1": {
+        "ports": [
+          "pixel_window_22",
+          "hls_inst/pixel_window_22"
+        ]
+      },
+      "pixel_window_23_0_1": {
+        "ports": [
+          "pixel_window_23",
+          "hls_inst/pixel_window_23"
+        ]
+      },
+      "pixel_window_24_0_1": {
+        "ports": [
+          "pixel_window_24",
+          "hls_inst/pixel_window_24"
+        ]
+      },
+      "pixel_window_25_0_1": {
+        "ports": [
+          "pixel_window_25",
+          "hls_inst/pixel_window_25"
+        ]
+      },
+      "pixel_window_26_0_1": {
+        "ports": [
+          "pixel_window_26",
+          "hls_inst/pixel_window_26"
+        ]
+      },
+      "pixel_window_27_0_1": {
+        "ports": [
+          "pixel_window_27",
+          "hls_inst/pixel_window_27"
+        ]
+      },
+      "pixel_window_28_0_1": {
+        "ports": [
+          "pixel_window_28",
+          "hls_inst/pixel_window_28"
+        ]
+      },
+      "pixel_window_29_0_1": {
+        "ports": [
+          "pixel_window_29",
+          "hls_inst/pixel_window_29"
+        ]
+      },
+      "pixel_window_3_0_1": {
+        "ports": [
+          "pixel_window_3",
+          "hls_inst/pixel_window_3"
+        ]
+      },
+      "pixel_window_30_0_1": {
+        "ports": [
+          "pixel_window_30",
+          "hls_inst/pixel_window_30"
+        ]
+      },
+      "pixel_window_31_0_1": {
+        "ports": [
+          "pixel_window_31",
+          "hls_inst/pixel_window_31"
+        ]
+      },
+      "pixel_window_32_0_1": {
+        "ports": [
+          "pixel_window_32",
+          "hls_inst/pixel_window_32"
+        ]
+      },
+      "pixel_window_33_0_1": {
+        "ports": [
+          "pixel_window_33",
+          "hls_inst/pixel_window_33"
+        ]
+      },
+      "pixel_window_34_0_1": {
+        "ports": [
+          "pixel_window_34",
+          "hls_inst/pixel_window_34"
+        ]
+      },
+      "pixel_window_35_0_1": {
+        "ports": [
+          "pixel_window_35",
+          "hls_inst/pixel_window_35"
+        ]
+      },
+      "pixel_window_36_0_1": {
+        "ports": [
+          "pixel_window_36",
+          "hls_inst/pixel_window_36"
+        ]
+      },
+      "pixel_window_37_0_1": {
+        "ports": [
+          "pixel_window_37",
+          "hls_inst/pixel_window_37"
+        ]
+      },
+      "pixel_window_38_0_1": {
+        "ports": [
+          "pixel_window_38",
+          "hls_inst/pixel_window_38"
+        ]
+      },
+      "pixel_window_39_0_1": {
+        "ports": [
+          "pixel_window_39",
+          "hls_inst/pixel_window_39"
+        ]
+      },
+      "pixel_window_4_0_1": {
+        "ports": [
+          "pixel_window_4",
+          "hls_inst/pixel_window_4"
+        ]
+      },
+      "pixel_window_40_0_1": {
+        "ports": [
+          "pixel_window_40",
+          "hls_inst/pixel_window_40"
+        ]
+      },
+      "pixel_window_41_0_1": {
+        "ports": [
+          "pixel_window_41",
+          "hls_inst/pixel_window_41"
+        ]
+      },
+      "pixel_window_42_0_1": {
+        "ports": [
+          "pixel_window_42",
+          "hls_inst/pixel_window_42"
+        ]
+      },
+      "pixel_window_43_0_1": {
+        "ports": [
+          "pixel_window_43",
+          "hls_inst/pixel_window_43"
+        ]
+      },
+      "pixel_window_44_0_1": {
+        "ports": [
+          "pixel_window_44",
+          "hls_inst/pixel_window_44"
+        ]
+      },
+      "pixel_window_45_0_1": {
+        "ports": [
+          "pixel_window_45",
+          "hls_inst/pixel_window_45"
+        ]
+      },
+      "pixel_window_46_0_1": {
+        "ports": [
+          "pixel_window_46",
+          "hls_inst/pixel_window_46"
+        ]
+      },
+      "pixel_window_47_0_1": {
+        "ports": [
+          "pixel_window_47",
+          "hls_inst/pixel_window_47"
+        ]
+      },
+      "pixel_window_48_0_1": {
+        "ports": [
+          "pixel_window_48",
+          "hls_inst/pixel_window_48"
+        ]
+      },
+      "pixel_window_5_0_1": {
+        "ports": [
+          "pixel_window_5",
+          "hls_inst/pixel_window_5"
+        ]
+      },
+      "pixel_window_6_0_1": {
+        "ports": [
+          "pixel_window_6",
+          "hls_inst/pixel_window_6"
+        ]
+      },
+      "pixel_window_7_0_1": {
+        "ports": [
+          "pixel_window_7",
+          "hls_inst/pixel_window_7"
+        ]
+      },
+      "pixel_window_8_0_1": {
+        "ports": [
+          "pixel_window_8",
+          "hls_inst/pixel_window_8"
+        ]
+      },
+      "pixel_window_9_0_1": {
+        "ports": [
+          "pixel_window_9",
+          "hls_inst/pixel_window_9"
+        ]
+      }
+    }
+  }
+}

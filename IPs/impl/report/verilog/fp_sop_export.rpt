@@ -1,0 +1,20 @@
+
+
+Implementation tool: Xilinx Vivado v.2019.2
+Project:             fp_multipliers
+Solution:            solution2
+Device target:       xc7a100t-csg324-1
+Report date:         Sat May 02 18:10:36 -0400 2020
+
+#=== Post-Implementation Resource usage ===
+SLICE:           58
+LUT:            216
+FF:             131
+DSP:             49
+BRAM:             0
+SRL:              0
+#=== Final timing ===
+CP required:    10.000
+CP achieved post-synthesis:    6.498
+CP achieved post-implementation:    7.388
+Timing met

@@ -1,0 +1,180 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.192593",
+   "Default View_TopLeft":"-4284,-10",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port RX -pg 1 -lvl 0 -x 0 -y 1600 -defaultsOSRD
+preplace port cts -pg 1 -lvl 0 -x 0 -y 1630 -defaultsOSRD
+preplace port reset -pg 1 -lvl 0 -x 0 -y 1350 -defaultsOSRD
+preplace port sys_clock -pg 1 -lvl 0 -x 0 -y 1380 -defaultsOSRD
+preplace port TX -pg 1 -lvl 7 -x 2810 -y 1550 -defaultsOSRD
+preplace port rts -pg 1 -lvl 7 -x 2810 -y 1520 -defaultsOSRD
+preplace inst bram_controller_v2_0 -pg 1 -lvl 2 -x 660 -y 1070 -defaultsOSRD
+preplace inst fp_sop_0 -pg 1 -lvl 4 -x 1690 -y 2700 -defaultsOSRD
+preplace inst img_window_v2_0 -pg 1 -lvl 3 -x 1290 -y 3230 -defaultsOSRD
+preplace inst kernel_bank_v2_0 -pg 1 -lvl 2 -x 660 -y 2240 -defaultsOSRD
+preplace inst master_controller_v2_0 -pg 1 -lvl 5 -x 2180 -y 1350 -defaultsOSRD
+preplace inst uart_0 -pg 1 -lvl 6 -x 2610 -y 1510 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 3 -x 1290 -y 110 -defaultsOSRD
+preplace inst blk_mem_gen_1 -pg 1 -lvl 3 -x 1290 -y 330 -defaultsOSRD
+preplace inst blk_mem_gen_2 -pg 1 -lvl 3 -x 1290 -y 550 -defaultsOSRD
+preplace inst blk_mem_gen_3 -pg 1 -lvl 3 -x 1290 -y 770 -defaultsOSRD
+preplace inst blk_mem_gen_4 -pg 1 -lvl 3 -x 1290 -y 990 -defaultsOSRD
+preplace inst blk_mem_gen_5 -pg 1 -lvl 3 -x 1290 -y 1210 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 200 -y 1370 -defaultsOSRD
+preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 200 -y 1520 -defaultsOSRD
+preplace netloc Net 1 1 5 430 2790 1090 1580 NJ 1580 NJ 1580 2380
+preplace netloc RX_1 1 0 6 30J 1620 NJ 1620 1030J 1590 NJ 1590 NJ 1590 2410J
+preplace netloc blk_mem_gen_0_douta 1 1 2 410 130 NJ
+preplace netloc blk_mem_gen_1_douta 1 1 2 420 350 NJ
+preplace netloc blk_mem_gen_2_douta 1 1 2 430 570 NJ
+preplace netloc blk_mem_gen_3_douta 1 1 2 440 790 NJ
+preplace netloc blk_mem_gen_4_douta 1 1 2 430 1340 850J
+preplace netloc blk_mem_gen_5_douta 1 1 2 440 1350 870J
+preplace netloc bram_controller_v2_0_addr 1 2 1 1110 70n
+preplace netloc bram_controller_v2_0_bram_conv_data_0 1 2 3 1010 1340 NJ 1340 N
+preplace netloc bram_controller_v2_0_bram_conv_data_1 1 2 3 1000 1360 NJ 1360 NJ
+preplace netloc bram_controller_v2_0_bram_conv_data_2 1 2 3 980 1380 NJ 1380 NJ
+preplace netloc bram_controller_v2_0_bram_conv_data_3 1 2 3 950 1400 NJ 1400 NJ
+preplace netloc bram_controller_v2_0_bram_conv_data_4 1 2 3 920 1420 NJ 1420 NJ
+preplace netloc bram_controller_v2_0_bram_conv_data_5 1 2 3 890 1440 NJ 1440 NJ
+preplace netloc bram_controller_v2_0_bram_conv_rts 1 2 3 970 1390 NJ 1390 1910
+preplace netloc bram_controller_v2_0_bram_write_data 1 2 1 1120 110n
+preplace netloc bram_controller_v2_0_conv_bram_rtr 1 2 3 1090J 1330 NJ 1330 1890
+preplace netloc bram_controller_v2_0_ena_0 1 2 1 840 150n
+preplace netloc bram_controller_v2_0_ena_1 1 2 1 860 370n
+preplace netloc bram_controller_v2_0_ena_2 1 2 1 880 590n
+preplace netloc bram_controller_v2_0_ena_3 1 2 1 910 810n
+preplace netloc bram_controller_v2_0_ena_4 1 2 1 960 1030n
+preplace netloc bram_controller_v2_0_ena_5 1 2 1 1080 1160n
+preplace netloc bram_controller_v2_0_wena_0 1 2 1 870 170n
+preplace netloc bram_controller_v2_0_wena_1 1 2 1 900 390n
+preplace netloc bram_controller_v2_0_wena_2 1 2 1 930 610n
+preplace netloc bram_controller_v2_0_wena_3 1 2 1 990 830n
+preplace netloc bram_controller_v2_0_wena_4 1 2 1 1050 1050n
+preplace netloc bram_controller_v2_0_wena_5 1 2 1 1080 1270n
+preplace netloc clk_1 1 1 5 370 1380 940 1560 1480 1560 1880 1560 2360
+preplace netloc cts_1 1 0 6 NJ 1630 NJ 1630 1040J 1600 NJ 1600 NJ 1600 2420J
+preplace netloc fp_sop_0_out_val_V 1 4 1 1940 1500n
+preplace netloc fp_sop_0_out_val_V_ap_vld 1 4 1 1910 1480n
+preplace netloc img_window_v2_0_img_wd_reg0 1 3 1 N 2750
+preplace netloc img_window_v2_0_img_wd_reg1 1 3 1 N 2770
+preplace netloc img_window_v2_0_img_wd_reg2 1 3 1 N 2790
+preplace netloc img_window_v2_0_img_wd_reg3 1 3 1 N 2810
+preplace netloc img_window_v2_0_img_wd_reg4 1 3 1 N 2830
+preplace netloc img_window_v2_0_img_wd_reg5 1 3 1 N 2850
+preplace netloc img_window_v2_0_img_wd_reg6 1 3 1 N 2870
+preplace netloc img_window_v2_0_img_wd_reg7 1 3 1 N 2890
+preplace netloc img_window_v2_0_img_wd_reg8 1 3 1 N 2910
+preplace netloc img_window_v2_0_img_wd_reg9 1 3 1 N 2930
+preplace netloc img_window_v2_0_img_wd_reg10 1 3 1 N 2950
+preplace netloc img_window_v2_0_img_wd_reg11 1 3 1 N 2970
+preplace netloc img_window_v2_0_img_wd_reg12 1 3 1 N 2990
+preplace netloc img_window_v2_0_img_wd_reg13 1 3 1 N 3010
+preplace netloc img_window_v2_0_img_wd_reg14 1 3 1 N 3030
+preplace netloc img_window_v2_0_img_wd_reg15 1 3 1 N 3050
+preplace netloc img_window_v2_0_img_wd_reg16 1 3 1 N 3070
+preplace netloc img_window_v2_0_img_wd_reg17 1 3 1 N 3090
+preplace netloc img_window_v2_0_img_wd_reg18 1 3 1 N 3110
+preplace netloc img_window_v2_0_img_wd_reg19 1 3 1 N 3130
+preplace netloc img_window_v2_0_img_wd_reg20 1 3 1 N 3150
+preplace netloc img_window_v2_0_img_wd_reg21 1 3 1 N 3170
+preplace netloc img_window_v2_0_img_wd_reg22 1 3 1 N 3190
+preplace netloc img_window_v2_0_img_wd_reg23 1 3 1 N 3210
+preplace netloc img_window_v2_0_img_wd_reg24 1 3 1 N 3230
+preplace netloc img_window_v2_0_img_wd_reg25 1 3 1 N 3250
+preplace netloc img_window_v2_0_img_wd_reg26 1 3 1 N 3270
+preplace netloc img_window_v2_0_img_wd_reg27 1 3 1 N 3290
+preplace netloc img_window_v2_0_img_wd_reg28 1 3 1 N 3310
+preplace netloc img_window_v2_0_img_wd_reg29 1 3 1 N 3330
+preplace netloc img_window_v2_0_img_wd_reg30 1 3 1 N 3350
+preplace netloc img_window_v2_0_img_wd_reg31 1 3 1 N 3370
+preplace netloc img_window_v2_0_img_wd_reg32 1 3 1 N 3390
+preplace netloc img_window_v2_0_img_wd_reg33 1 3 1 N 3410
+preplace netloc img_window_v2_0_img_wd_reg34 1 3 1 N 3430
+preplace netloc img_window_v2_0_img_wd_reg35 1 3 1 N 3450
+preplace netloc img_window_v2_0_img_wd_reg36 1 3 1 N 3470
+preplace netloc img_window_v2_0_img_wd_reg37 1 3 1 N 3490
+preplace netloc img_window_v2_0_img_wd_reg38 1 3 1 N 3510
+preplace netloc img_window_v2_0_img_wd_reg39 1 3 1 N 3530
+preplace netloc img_window_v2_0_img_wd_reg40 1 3 1 N 3550
+preplace netloc img_window_v2_0_img_wd_reg41 1 3 1 N 3570
+preplace netloc img_window_v2_0_img_wd_reg42 1 3 1 N 3590
+preplace netloc img_window_v2_0_img_wd_reg43 1 3 1 N 3610
+preplace netloc img_window_v2_0_img_wd_reg44 1 3 1 N 3630
+preplace netloc img_window_v2_0_img_wd_reg45 1 3 1 N 3650
+preplace netloc img_window_v2_0_img_wd_reg46 1 3 1 N 3670
+preplace netloc img_window_v2_0_img_wd_reg47 1 3 1 N 3690
+preplace netloc img_window_v2_0_img_wd_reg48 1 3 1 N 3710
+preplace netloc kernel_bank_v2_0_kernel_full 1 2 3 1050 1460 NJ 1460 NJ
+preplace netloc kernel_bank_v2_0_kernel_reg0 1 2 2 NJ 1770 N
+preplace netloc kernel_bank_v2_0_kernel_reg1 1 2 2 NJ 1790 N
+preplace netloc kernel_bank_v2_0_kernel_reg2 1 2 2 NJ 1810 N
+preplace netloc kernel_bank_v2_0_kernel_reg3 1 2 2 NJ 1830 N
+preplace netloc kernel_bank_v2_0_kernel_reg4 1 2 2 NJ 1850 N
+preplace netloc kernel_bank_v2_0_kernel_reg5 1 2 2 NJ 1870 N
+preplace netloc kernel_bank_v2_0_kernel_reg6 1 2 2 NJ 1890 N
+preplace netloc kernel_bank_v2_0_kernel_reg7 1 2 2 NJ 1910 N
+preplace netloc kernel_bank_v2_0_kernel_reg8 1 2 2 NJ 1930 N
+preplace netloc kernel_bank_v2_0_kernel_reg9 1 2 2 NJ 1950 N
+preplace netloc kernel_bank_v2_0_kernel_reg10 1 2 2 NJ 1970 N
+preplace netloc kernel_bank_v2_0_kernel_reg11 1 2 2 NJ 1990 N
+preplace netloc kernel_bank_v2_0_kernel_reg12 1 2 2 NJ 2010 N
+preplace netloc kernel_bank_v2_0_kernel_reg13 1 2 2 NJ 2030 N
+preplace netloc kernel_bank_v2_0_kernel_reg14 1 2 2 NJ 2050 N
+preplace netloc kernel_bank_v2_0_kernel_reg15 1 2 2 NJ 2070 N
+preplace netloc kernel_bank_v2_0_kernel_reg16 1 2 2 NJ 2090 N
+preplace netloc kernel_bank_v2_0_kernel_reg17 1 2 2 NJ 2110 N
+preplace netloc kernel_bank_v2_0_kernel_reg18 1 2 2 NJ 2130 N
+preplace netloc kernel_bank_v2_0_kernel_reg19 1 2 2 NJ 2150 N
+preplace netloc kernel_bank_v2_0_kernel_reg20 1 2 2 NJ 2170 N
+preplace netloc kernel_bank_v2_0_kernel_reg21 1 2 2 NJ 2190 N
+preplace netloc kernel_bank_v2_0_kernel_reg22 1 2 2 NJ 2210 N
+preplace netloc kernel_bank_v2_0_kernel_reg23 1 2 2 NJ 2230 N
+preplace netloc kernel_bank_v2_0_kernel_reg24 1 2 2 NJ 2250 N
+preplace netloc kernel_bank_v2_0_kernel_reg25 1 2 2 NJ 2270 N
+preplace netloc kernel_bank_v2_0_kernel_reg26 1 2 2 NJ 2290 N
+preplace netloc kernel_bank_v2_0_kernel_reg27 1 2 2 NJ 2310 N
+preplace netloc kernel_bank_v2_0_kernel_reg28 1 2 2 NJ 2330 N
+preplace netloc kernel_bank_v2_0_kernel_reg29 1 2 2 NJ 2350 N
+preplace netloc kernel_bank_v2_0_kernel_reg30 1 2 2 NJ 2370 N
+preplace netloc kernel_bank_v2_0_kernel_reg31 1 2 2 NJ 2390 N
+preplace netloc kernel_bank_v2_0_kernel_reg32 1 2 2 NJ 2410 N
+preplace netloc kernel_bank_v2_0_kernel_reg33 1 2 2 NJ 2430 N
+preplace netloc kernel_bank_v2_0_kernel_reg34 1 2 2 NJ 2450 N
+preplace netloc kernel_bank_v2_0_kernel_reg35 1 2 2 NJ 2470 N
+preplace netloc kernel_bank_v2_0_kernel_reg36 1 2 2 NJ 2490 N
+preplace netloc kernel_bank_v2_0_kernel_reg37 1 2 2 NJ 2510 N
+preplace netloc kernel_bank_v2_0_kernel_reg38 1 2 2 NJ 2530 N
+preplace netloc kernel_bank_v2_0_kernel_reg39 1 2 2 NJ 2550 N
+preplace netloc kernel_bank_v2_0_kernel_reg40 1 2 2 NJ 2570 N
+preplace netloc kernel_bank_v2_0_kernel_reg41 1 2 2 NJ 2590 N
+preplace netloc kernel_bank_v2_0_kernel_reg42 1 2 2 NJ 2610 N
+preplace netloc kernel_bank_v2_0_kernel_reg43 1 2 2 NJ 2630 N
+preplace netloc kernel_bank_v2_0_kernel_reg44 1 2 2 NJ 2650 N
+preplace netloc kernel_bank_v2_0_kernel_reg45 1 2 2 NJ 2670 N
+preplace netloc kernel_bank_v2_0_kernel_reg46 1 2 2 1060J 2660 1490
+preplace netloc kernel_bank_v2_0_kernel_reg47 1 2 2 1070J 2680 1470
+preplace netloc kernel_bank_v2_0_kernel_reg48 1 2 2 1080J 2690 1460
+preplace netloc master_controller_v2_0_fake_sopu_rts 1 2 4 1120 1410 1490J 1120 NJ 1120 2360
+preplace netloc master_controller_v2_0_fp_enable 1 3 3 1500 1620 NJ 1620 2350
+preplace netloc master_controller_v2_0_sopu_ilb_data 1 1 5 390 1360 900J 1350 1460J 1130 NJ 1130 2370
+preplace netloc master_controller_v2_0_sopu_ilb_rts 1 1 5 400 1370 NJ 1370 1500J 1140 NJ 1140 2350
+preplace netloc master_controller_v2_0_sopu_uart_data 1 5 1 2390 1350n
+preplace netloc master_controller_v2_0_sopu_uart_rts 1 5 1 2410 1330n
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 5 380 1570 1020 1570 NJ 1570 1900 1570 2400J
+preplace netloc proc_sys_reset_0_peripheral_reset 1 1 3 NJ 1520 NJ 1520 1460
+preplace netloc reset_1 1 0 1 20 1350n
+preplace netloc sys_clock_1 1 0 1 30 1380n
+preplace netloc uart_0_TX 1 6 1 NJ 1550
+preplace netloc uart_0_rts 1 6 1 2790J 1520n
+preplace netloc uart_0_uart_x_data 1 1 6 440 2800 1100 2640 1490J 1630 1930 1630 NJ 1630 2780
+preplace netloc uart_0_uart_x_rts 1 1 6 420 2810 1110 2580 1470J 1610 1920 1640 NJ 1640 2770
+preplace netloc uart_0_x_uart_rtr 1 4 3 1950 1650 NJ 1650 2760
+levelinfo -pg 1 0 200 660 1290 1690 2180 2610 2810
+pagesize -pg 1 -db -bbox -sgen -110 -10 2880 3770
+"
+}
+
