@@ -426,8 +426,8 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: proc_sys_reset_0, and set properties
-  set proc_sys_reset_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_0 ]
+  # Create instance: proc_sys_reset_1, and set properties
+  set proc_sys_reset_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 proc_sys_reset_1 ]
 
   # Create instance: uart_0, and set properties
   set block_name uart
@@ -439,7 +439,10 @@ proc create_root_design { parentCell } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
-  
+    set_property -dict [ list \
+   CONFIG.BAUD_RATE {1000000} \
+ ] $uart_0
+
   # Create port connections
   connect_bd_net -net Net [get_bd_pins img_window_v2_0/uart_sopu_rtr] [get_bd_pins kernel_bank_v2_0/uart_sopu_rtr] [get_bd_pins master_controller_v2_0/uart_sopu_rtr] [get_bd_pins uart_0/uart_x_rtr]
   connect_bd_net -net RX_1 [get_bd_ports RX] [get_bd_pins uart_0/RX]
@@ -580,10 +583,10 @@ proc create_root_design { parentCell } {
   connect_bd_net -net master_controller_v2_0_sopu_ilb_rts [get_bd_pins bram_controller_v2_0/conv_bram_rts] [get_bd_pins master_controller_v2_0/sopu_ilb_rts]
   connect_bd_net -net master_controller_v2_0_sopu_uart_data [get_bd_pins master_controller_v2_0/sopu_uart_data] [get_bd_pins uart_0/x_uart_data]
   connect_bd_net -net master_controller_v2_0_sopu_uart_rts [get_bd_pins master_controller_v2_0/sopu_uart_rts] [get_bd_pins uart_0/x_uart_rts]
-  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins bram_controller_v2_0/rst] [get_bd_pins img_window_v2_0/rst] [get_bd_pins kernel_bank_v2_0/rst] [get_bd_pins master_controller_v2_0/rst] [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins uart_0/rst]
-  connect_bd_net -net proc_sys_reset_0_peripheral_reset [get_bd_pins fp_sop_0/ap_rst] [get_bd_pins proc_sys_reset_0/peripheral_reset]
-  connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins clk_wiz_0/resetn] [get_bd_pins proc_sys_reset_0/ext_reset_in]
-  connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins proc_sys_reset_0/slowest_sync_clk]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins bram_controller_v2_0/rst] [get_bd_pins img_window_v2_0/rst] [get_bd_pins kernel_bank_v2_0/rst] [get_bd_pins master_controller_v2_0/rst] [get_bd_pins proc_sys_reset_1/peripheral_aresetn] [get_bd_pins uart_0/rst]
+  connect_bd_net -net proc_sys_reset_1_peripheral_reset [get_bd_pins fp_sop_0/ap_rst] [get_bd_pins proc_sys_reset_1/peripheral_reset]
+  connect_bd_net -net reset_1 [get_bd_ports reset] [get_bd_pins clk_wiz_0/resetn] [get_bd_pins proc_sys_reset_1/ext_reset_in]
+  connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins proc_sys_reset_1/slowest_sync_clk]
   connect_bd_net -net uart_0_TX [get_bd_ports TX] [get_bd_pins uart_0/TX]
   connect_bd_net -net uart_0_rts [get_bd_ports rts] [get_bd_pins uart_0/rts]
   connect_bd_net -net uart_0_uart_x_data [get_bd_pins img_window_v2_0/uart_sopu_data] [get_bd_pins kernel_bank_v2_0/uart_sopu_data] [get_bd_pins master_controller_v2_0/uart_sopu_data] [get_bd_pins uart_0/uart_x_data]
@@ -596,6 +599,7 @@ proc create_root_design { parentCell } {
   # Restore current instance
   current_bd_instance $oldCurInst
 
+  validate_bd_design
   save_bd_design
 }
 # End of create_root_design()
