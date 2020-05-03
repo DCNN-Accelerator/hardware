@@ -47,7 +47,7 @@ entity bram_controller_v2 is
                 --connections to each bram block
                 bram_write_data     : out std_logic_vector(7 downto 0);
                 --address sent to the bram
-                addr                : out std_logic_vector(8 downto 0);
+                addr                : out std_logic_vector(9 downto 0);
                 --enable for each BRAM block
                 ena_0               : out std_logic;
                 ena_1               : out std_logic;
