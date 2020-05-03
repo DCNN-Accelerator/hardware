@@ -131,7 +131,7 @@ begin
                         ena_4 <= '1';
                         ena_5 <= '1';
                         --outputs address to BRAM
-                        addr <= std_logic_vector(to_unsigned(bram_addr, 9));
+                        addr <= std_logic_vector(to_unsigned(bram_addr, 10));
                         --determines which write enable to turn on
                         case(bram_counter) is
                             when 0 =>
