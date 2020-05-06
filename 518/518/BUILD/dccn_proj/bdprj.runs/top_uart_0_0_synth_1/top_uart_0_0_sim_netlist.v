@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Thu Apr 30 13:00:42 2020
+// Date        : Sun May  3 23:05:59 2020
 // Host        : DESKTOP-BJ5EQ9A running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ top_uart_0_0_sim_netlist.v
@@ -38,7 +38,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
   wire delay;
   wire delay_i_1_n_0;
   wire fifo_rtr_i_1_n_0;
-  wire fifo_rts_i_2_n_0;
+  wire fifo_rts_i_1_n_0;
   wire \fifo_x_data[0]_i_2_n_0 ;
   wire \fifo_x_data[0]_i_3_n_0 ;
   wire \fifo_x_data[1]_i_2_n_0 ;
@@ -53,9 +53,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
   wire \fifo_x_data[5]_i_3_n_0 ;
   wire \fifo_x_data[6]_i_2_n_0 ;
   wire \fifo_x_data[6]_i_3_n_0 ;
-  wire \fifo_x_data[7]_i_1_n_0 ;
-  wire \fifo_x_data[7]_i_4_n_0 ;
   wire \fifo_x_data[7]_i_5_n_0 ;
+  wire \fifo_x_data[7]_i_6_n_0 ;
   wire [2:0]head;
   wire \head[0]_i_1_n_0 ;
   wire \head[1]_i_1_n_0 ;
@@ -83,11 +82,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
   wire [7:0]\memory_reg[6] ;
   wire [7:0]\memory_reg[7] ;
   wire p_0_in;
+  wire [2:0]p_1_in;
   wire rst;
   wire [2:0]tail;
-  wire \tail[0]_i_1_n_0 ;
-  wire \tail[1]_i_1_n_0 ;
-  wire \tail[2]_i_1_n_0 ;
   wire tail_0;
   wire uart_fifo_rtr;
   wire [7:0]uart_x_data;
@@ -107,7 +104,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .D(delay_i_1_n_0),
         .Q(delay),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h8A)) 
     fifo_rtr_i_1
@@ -121,27 +118,16 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .D(fifo_rtr_i_1_n_0),
         .Q(uart_fifo_rtr),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'hE)) 
-    fifo_rts_i_2
+    fifo_rts_i_1
        (.I0(looped),
         .I1(p_0_in),
-        .O(fifo_rts_i_2_n_0));
-  LUT6 #(
-    .INIT(64'h6FF6FFFFFFFF6FF6)) 
-    fifo_rts_i_3
-       (.I0(tail[1]),
-        .I1(head[1]),
-        .I2(head[0]),
-        .I3(tail[0]),
-        .I4(head[2]),
-        .I5(tail[2]),
-        .O(p_0_in));
+        .O(fifo_rts_i_1_n_0));
   FDRE fifo_rts_reg
        (.C(clk),
         .CE(1'b1),
-        .D(fifo_rts_i_2_n_0),
+        .D(fifo_rts_i_1_n_0),
         .Q(uart_x_rts),
         .R(SR));
   LUT6 #(
@@ -284,16 +270,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .I4(tail[0]),
         .I5(\memory_reg[4] [6]),
         .O(\fifo_x_data[6]_i_3_n_0 ));
-  LUT2 #(
-    .INIT(4'h7)) 
-    \fifo_x_data[7]_i_1 
-       (.I0(rst),
-        .I1(tail_0),
-        .O(\fifo_x_data[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT5 #(
     .INIT(32'h00E00000)) 
-    \fifo_x_data[7]_i_3 
+    \fifo_x_data[7]_i_2 
        (.I0(p_0_in),
         .I1(looped),
         .I2(uart_x_rtr),
@@ -301,31 +280,41 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .I4(uart_x_rts),
         .O(tail_0));
   LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    .INIT(64'h6FF6FFFFFFFF6FF6)) 
     \fifo_x_data[7]_i_4 
+       (.I0(tail[1]),
+        .I1(head[1]),
+        .I2(head[0]),
+        .I3(tail[0]),
+        .I4(head[2]),
+        .I5(tail[2]),
+        .O(p_0_in));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \fifo_x_data[7]_i_5 
        (.I0(\memory_reg[3] [7]),
         .I1(\memory_reg[2] [7]),
         .I2(tail[1]),
         .I3(\memory_reg[1] [7]),
         .I4(tail[0]),
         .I5(\memory_reg[0] [7]),
-        .O(\fifo_x_data[7]_i_4_n_0 ));
+        .O(\fifo_x_data[7]_i_5_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \fifo_x_data[7]_i_5 
+    \fifo_x_data[7]_i_6 
        (.I0(\memory_reg[7] [7]),
         .I1(\memory_reg[6] [7]),
         .I2(tail[1]),
         .I3(\memory_reg[5] [7]),
         .I4(tail[0]),
         .I5(\memory_reg[4] [7]),
-        .O(\fifo_x_data[7]_i_5_n_0 ));
+        .O(\fifo_x_data[7]_i_6_n_0 ));
   FDRE \fifo_x_data_reg[0] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail_0),
         .D(\memory[7]_14 [0]),
         .Q(uart_x_data[0]),
-        .R(\fifo_x_data[7]_i_1_n_0 ));
+        .R(SR));
   MUXF7 \fifo_x_data_reg[0]_i_1 
        (.I0(\fifo_x_data[0]_i_2_n_0 ),
         .I1(\fifo_x_data[0]_i_3_n_0 ),
@@ -333,10 +322,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .S(tail[2]));
   FDRE \fifo_x_data_reg[1] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail_0),
         .D(\memory[7]_14 [1]),
         .Q(uart_x_data[1]),
-        .R(\fifo_x_data[7]_i_1_n_0 ));
+        .R(SR));
   MUXF7 \fifo_x_data_reg[1]_i_1 
        (.I0(\fifo_x_data[1]_i_2_n_0 ),
         .I1(\fifo_x_data[1]_i_3_n_0 ),
@@ -344,10 +333,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .S(tail[2]));
   FDRE \fifo_x_data_reg[2] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail_0),
         .D(\memory[7]_14 [2]),
         .Q(uart_x_data[2]),
-        .R(\fifo_x_data[7]_i_1_n_0 ));
+        .R(SR));
   MUXF7 \fifo_x_data_reg[2]_i_1 
        (.I0(\fifo_x_data[2]_i_2_n_0 ),
         .I1(\fifo_x_data[2]_i_3_n_0 ),
@@ -355,10 +344,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .S(tail[2]));
   FDRE \fifo_x_data_reg[3] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail_0),
         .D(\memory[7]_14 [3]),
         .Q(uart_x_data[3]),
-        .R(\fifo_x_data[7]_i_1_n_0 ));
+        .R(SR));
   MUXF7 \fifo_x_data_reg[3]_i_1 
        (.I0(\fifo_x_data[3]_i_2_n_0 ),
         .I1(\fifo_x_data[3]_i_3_n_0 ),
@@ -366,10 +355,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .S(tail[2]));
   FDRE \fifo_x_data_reg[4] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail_0),
         .D(\memory[7]_14 [4]),
         .Q(uart_x_data[4]),
-        .R(\fifo_x_data[7]_i_1_n_0 ));
+        .R(SR));
   MUXF7 \fifo_x_data_reg[4]_i_1 
        (.I0(\fifo_x_data[4]_i_2_n_0 ),
         .I1(\fifo_x_data[4]_i_3_n_0 ),
@@ -377,10 +366,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .S(tail[2]));
   FDRE \fifo_x_data_reg[5] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail_0),
         .D(\memory[7]_14 [5]),
         .Q(uart_x_data[5]),
-        .R(\fifo_x_data[7]_i_1_n_0 ));
+        .R(SR));
   MUXF7 \fifo_x_data_reg[5]_i_1 
        (.I0(\fifo_x_data[5]_i_2_n_0 ),
         .I1(\fifo_x_data[5]_i_3_n_0 ),
@@ -388,10 +377,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .S(tail[2]));
   FDRE \fifo_x_data_reg[6] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail_0),
         .D(\memory[7]_14 [6]),
         .Q(uart_x_data[6]),
-        .R(\fifo_x_data[7]_i_1_n_0 ));
+        .R(SR));
   MUXF7 \fifo_x_data_reg[6]_i_1 
        (.I0(\fifo_x_data[6]_i_2_n_0 ),
         .I1(\fifo_x_data[6]_i_3_n_0 ),
@@ -399,23 +388,23 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .S(tail[2]));
   FDRE \fifo_x_data_reg[7] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail_0),
         .D(\memory[7]_14 [7]),
         .Q(uart_x_data[7]),
-        .R(\fifo_x_data[7]_i_1_n_0 ));
-  MUXF7 \fifo_x_data_reg[7]_i_2 
-       (.I0(\fifo_x_data[7]_i_4_n_0 ),
-        .I1(\fifo_x_data[7]_i_5_n_0 ),
+        .R(SR));
+  MUXF7 \fifo_x_data_reg[7]_i_3 
+       (.I0(\fifo_x_data[7]_i_5_n_0 ),
+        .I1(\fifo_x_data[7]_i_6_n_0 ),
         .O(\memory[7]_14 [7]),
         .S(tail[2]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \head[0]_i_1 
        (.I0(\head[2]_i_2_n_0 ),
         .I1(head[0]),
         .O(\head[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT3 #(
     .INIT(8'hD2)) 
     \head[1]_i_1 
@@ -423,7 +412,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .I1(\head[2]_i_2_n_0 ),
         .I2(head[1]),
         .O(\head[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
     .INIT(16'hF708)) 
     \head[2]_i_1 
@@ -432,7 +421,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .I2(\head[2]_i_2_n_0 ),
         .I3(head[2]),
         .O(\head[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT4 #(
     .INIT(16'h4FFF)) 
     \head[2]_i_2 
@@ -469,15 +458,15 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .I4(head[2]),
         .I5(looped),
         .O(looped_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     looped_i_2
-       (.I0(tail[1]),
-        .I1(tail[0]),
-        .I2(tail[2]),
+       (.I0(tail[2]),
+        .I1(tail[1]),
+        .I2(tail[0]),
         .O(looped_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h8)) 
     looped_i_3
@@ -939,45 +928,42 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO
         .Q(\memory_reg[7] [7]),
         .R(SR));
   (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT1 #(
+    .INIT(2'h1)) 
+    \tail[0]_i_1 
+       (.I0(tail[0]),
+        .O(p_1_in[0]));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h6)) 
-    \tail[0]_i_1 
-       (.I0(tail_0),
-        .I1(tail[0]),
-        .O(\tail[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT3 #(
-    .INIT(8'h78)) 
     \tail[1]_i_1 
        (.I0(tail[0]),
-        .I1(tail_0),
-        .I2(tail[1]),
-        .O(\tail[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT4 #(
-    .INIT(16'h7F80)) 
-    \tail[2]_i_1 
-       (.I0(tail[1]),
-        .I1(tail[0]),
-        .I2(tail_0),
-        .I3(tail[2]),
-        .O(\tail[2]_i_1_n_0 ));
+        .I1(tail[1]),
+        .O(p_1_in[1]));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT3 #(
+    .INIT(8'h6A)) 
+    \tail[2]_i_1__0 
+       (.I0(tail[2]),
+        .I1(tail[1]),
+        .I2(tail[0]),
+        .O(p_1_in[2]));
   FDRE \tail_reg[0] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\tail[0]_i_1_n_0 ),
+        .CE(tail_0),
+        .D(p_1_in[0]),
         .Q(tail[0]),
         .R(SR));
   FDRE \tail_reg[1] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\tail[1]_i_1_n_0 ),
+        .CE(tail_0),
+        .D(p_1_in[1]),
         .Q(tail[1]),
         .R(SR));
   FDRE \tail_reg[2] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\tail[2]_i_1_n_0 ),
+        .CE(tail_0),
+        .D(p_1_in[2]),
         .Q(tail[2]),
         .R(SR));
 endmodule
@@ -1026,9 +1012,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
   wire \fifo_x_data[5]_i_3__0_n_0 ;
   wire \fifo_x_data[6]_i_2__0_n_0 ;
   wire \fifo_x_data[6]_i_3__0_n_0 ;
-  wire \fifo_x_data[7]_i_1__0_n_0 ;
-  wire \fifo_x_data[7]_i_3__0_n_0 ;
-  wire \fifo_x_data[7]_i_4__0_n_0 ;
+  wire \fifo_x_data[7]_i_2__0_n_0 ;
+  wire \fifo_x_data[7]_i_3_n_0 ;
   wire fifo_x_rtr;
   wire \head[0]_i_1_n_0 ;
   wire \head[1]_i_1_n_0 ;
@@ -1116,9 +1101,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
   wire \memory_reg_n_0_[7][7] ;
   wire rst;
   wire tail;
-  wire \tail[0]_i_1_n_0 ;
-  wire \tail[1]_i_1_n_0 ;
-  wire \tail[2]_i_1_n_0 ;
+  wire \tail[0]_i_1__0_n_0 ;
+  wire \tail[1]_i_1__0_n_0 ;
+  wire \tail[2]_i_2_n_0 ;
   wire \tail_reg_n_0_[0] ;
   wire \tail_reg_n_0_[1] ;
   wire \tail_reg_n_0_[2] ;
@@ -1138,7 +1123,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .D(delay_i_1__0_n_0),
         .Q(delay),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT3 #(
     .INIT(8'h8A)) 
     fifo_rtr_i_1__0
@@ -1162,12 +1147,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .D(fifo_rtr_i_1__0_n_0),
         .Q(x_uart_rtr),
         .R(1'b0));
-  LUT1 #(
-    .INIT(2'h1)) 
-    fifo_rts_i_1
-       (.I0(rst),
-        .O(SR));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'hE)) 
     fifo_rts_i_1__0
@@ -1320,38 +1299,37 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .I4(\tail_reg_n_0_[0] ),
         .I5(\memory_reg_n_0_[4][6] ),
         .O(\fifo_x_data[6]_i_3__0_n_0 ));
-  LUT2 #(
-    .INIT(4'h7)) 
-    \fifo_x_data[7]_i_1__0 
+  LUT1 #(
+    .INIT(2'h1)) 
+    \fifo_x_data[7]_i_1 
        (.I0(rst),
-        .I1(tail),
-        .O(\fifo_x_data[7]_i_1__0_n_0 ));
+        .O(SR));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \fifo_x_data[7]_i_3__0 
+    \fifo_x_data[7]_i_2__0 
        (.I0(\memory_reg_n_0_[3][7] ),
         .I1(\memory_reg_n_0_[2][7] ),
         .I2(\tail_reg_n_0_[1] ),
         .I3(\memory_reg_n_0_[1][7] ),
         .I4(\tail_reg_n_0_[0] ),
         .I5(\memory_reg_n_0_[0][7] ),
-        .O(\fifo_x_data[7]_i_3__0_n_0 ));
+        .O(\fifo_x_data[7]_i_2__0_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \fifo_x_data[7]_i_4__0 
+    \fifo_x_data[7]_i_3 
        (.I0(\memory_reg_n_0_[7][7] ),
         .I1(\memory_reg_n_0_[6][7] ),
         .I2(\tail_reg_n_0_[1] ),
         .I3(\memory_reg_n_0_[5][7] ),
         .I4(\tail_reg_n_0_[0] ),
         .I5(\memory_reg_n_0_[4][7] ),
-        .O(\fifo_x_data[7]_i_4__0_n_0 ));
+        .O(\fifo_x_data[7]_i_3_n_0 ));
   FDRE \fifo_x_data_reg[0] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail),
         .D(\memory[7]_15 [0]),
         .Q(Q[0]),
-        .R(\fifo_x_data[7]_i_1__0_n_0 ));
+        .R(SR));
   MUXF7 \fifo_x_data_reg[0]_i_1__0 
        (.I0(\fifo_x_data[0]_i_2__0_n_0 ),
         .I1(\fifo_x_data[0]_i_3__0_n_0 ),
@@ -1359,10 +1337,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .S(\tail_reg_n_0_[2] ));
   FDRE \fifo_x_data_reg[1] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail),
         .D(\memory[7]_15 [1]),
         .Q(Q[1]),
-        .R(\fifo_x_data[7]_i_1__0_n_0 ));
+        .R(SR));
   MUXF7 \fifo_x_data_reg[1]_i_1__0 
        (.I0(\fifo_x_data[1]_i_2__0_n_0 ),
         .I1(\fifo_x_data[1]_i_3__0_n_0 ),
@@ -1370,10 +1348,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .S(\tail_reg_n_0_[2] ));
   FDRE \fifo_x_data_reg[2] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail),
         .D(\memory[7]_15 [2]),
         .Q(Q[2]),
-        .R(\fifo_x_data[7]_i_1__0_n_0 ));
+        .R(SR));
   MUXF7 \fifo_x_data_reg[2]_i_1__0 
        (.I0(\fifo_x_data[2]_i_2__0_n_0 ),
         .I1(\fifo_x_data[2]_i_3__0_n_0 ),
@@ -1381,10 +1359,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .S(\tail_reg_n_0_[2] ));
   FDRE \fifo_x_data_reg[3] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail),
         .D(\memory[7]_15 [3]),
         .Q(Q[3]),
-        .R(\fifo_x_data[7]_i_1__0_n_0 ));
+        .R(SR));
   MUXF7 \fifo_x_data_reg[3]_i_1__0 
        (.I0(\fifo_x_data[3]_i_2__0_n_0 ),
         .I1(\fifo_x_data[3]_i_3__0_n_0 ),
@@ -1392,10 +1370,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .S(\tail_reg_n_0_[2] ));
   FDRE \fifo_x_data_reg[4] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail),
         .D(\memory[7]_15 [4]),
         .Q(Q[4]),
-        .R(\fifo_x_data[7]_i_1__0_n_0 ));
+        .R(SR));
   MUXF7 \fifo_x_data_reg[4]_i_1__0 
        (.I0(\fifo_x_data[4]_i_2__0_n_0 ),
         .I1(\fifo_x_data[4]_i_3__0_n_0 ),
@@ -1403,10 +1381,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .S(\tail_reg_n_0_[2] ));
   FDRE \fifo_x_data_reg[5] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail),
         .D(\memory[7]_15 [5]),
         .Q(Q[5]),
-        .R(\fifo_x_data[7]_i_1__0_n_0 ));
+        .R(SR));
   MUXF7 \fifo_x_data_reg[5]_i_1__0 
        (.I0(\fifo_x_data[5]_i_2__0_n_0 ),
         .I1(\fifo_x_data[5]_i_3__0_n_0 ),
@@ -1414,10 +1392,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .S(\tail_reg_n_0_[2] ));
   FDRE \fifo_x_data_reg[6] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail),
         .D(\memory[7]_15 [6]),
         .Q(Q[6]),
-        .R(\fifo_x_data[7]_i_1__0_n_0 ));
+        .R(SR));
   MUXF7 \fifo_x_data_reg[6]_i_1__0 
        (.I0(\fifo_x_data[6]_i_2__0_n_0 ),
         .I1(\fifo_x_data[6]_i_3__0_n_0 ),
@@ -1425,23 +1403,23 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .S(\tail_reg_n_0_[2] ));
   FDRE \fifo_x_data_reg[7] 
        (.C(clk),
-        .CE(1'b1),
+        .CE(tail),
         .D(\memory[7]_15 [7]),
         .Q(Q[7]),
-        .R(\fifo_x_data[7]_i_1__0_n_0 ));
-  MUXF7 \fifo_x_data_reg[7]_i_2__0 
-       (.I0(\fifo_x_data[7]_i_3__0_n_0 ),
-        .I1(\fifo_x_data[7]_i_4__0_n_0 ),
+        .R(SR));
+  MUXF7 \fifo_x_data_reg[7]_i_1 
+       (.I0(\fifo_x_data[7]_i_2__0_n_0 ),
+        .I1(\fifo_x_data[7]_i_3_n_0 ),
         .O(\memory[7]_15 [7]),
         .S(\tail_reg_n_0_[2] ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h9)) 
     \head[0]_i_1 
        (.I0(\head[2]_i_2__0_n_0 ),
         .I1(\head_reg_n_0_[0] ),
         .O(\head[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT3 #(
     .INIT(8'hD2)) 
     \head[1]_i_1 
@@ -1449,7 +1427,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .I1(\head[2]_i_2__0_n_0 ),
         .I2(\head_reg_n_0_[1] ),
         .O(\head[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT4 #(
     .INIT(16'hF708)) 
     \head[2]_i_1 
@@ -1458,7 +1436,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .I2(\head[2]_i_2__0_n_0 ),
         .I3(\head_reg_n_0_[2] ),
         .O(\head[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT4 #(
     .INIT(16'h4FFF)) 
     \head[2]_i_2__0 
@@ -1495,7 +1473,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .I4(\head_reg_n_0_[2] ),
         .I5(looped),
         .O(looped_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     looped_i_2__0
@@ -1503,7 +1481,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .I1(\tail_reg_n_0_[0] ),
         .I2(\tail_reg_n_0_[2] ),
         .O(looped_i_2__0_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h8)) 
     looped_i_3__0
@@ -1964,56 +1942,52 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_STD_FIFO_0
         .D(x_uart_data[7]),
         .Q(\memory_reg_n_0_[7][7] ),
         .R(SR));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT1 #(
+    .INIT(2'h1)) 
+    \tail[0]_i_1__0 
+       (.I0(\tail_reg_n_0_[0] ),
+        .O(\tail[0]_i_1__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h6)) 
-    \tail[0]_i_1 
-       (.I0(tail),
-        .I1(\tail_reg_n_0_[0] ),
-        .O(\tail[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT3 #(
-    .INIT(8'h78)) 
-    \tail[1]_i_1 
+    \tail[1]_i_1__0 
        (.I0(\tail_reg_n_0_[0] ),
-        .I1(tail),
-        .I2(\tail_reg_n_0_[1] ),
-        .O(\tail[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT4 #(
-    .INIT(16'h7F80)) 
-    \tail[2]_i_1 
-       (.I0(\tail_reg_n_0_[1] ),
-        .I1(\tail_reg_n_0_[0] ),
-        .I2(tail),
-        .I3(\tail_reg_n_0_[2] ),
-        .O(\tail[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+        .I1(\tail_reg_n_0_[1] ),
+        .O(\tail[1]_i_1__0_n_0 ));
   LUT5 #(
     .INIT(32'h0000E000)) 
-    \tail[2]_i_2 
+    \tail[2]_i_1 
        (.I0(fifo_rtr_i_2_n_0),
         .I1(looped),
         .I2(fifo_uart_rts),
         .I3(fifo_x_rtr),
         .I4(delay),
         .O(tail));
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  LUT3 #(
+    .INIT(8'h6A)) 
+    \tail[2]_i_2 
+       (.I0(\tail_reg_n_0_[2] ),
+        .I1(\tail_reg_n_0_[1] ),
+        .I2(\tail_reg_n_0_[0] ),
+        .O(\tail[2]_i_2_n_0 ));
   FDRE \tail_reg[0] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\tail[0]_i_1_n_0 ),
+        .CE(tail),
+        .D(\tail[0]_i_1__0_n_0 ),
         .Q(\tail_reg_n_0_[0] ),
         .R(SR));
   FDRE \tail_reg[1] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\tail[1]_i_1_n_0 ),
+        .CE(tail),
+        .D(\tail[1]_i_1__0_n_0 ),
         .Q(\tail_reg_n_0_[1] ),
         .R(SR));
   FDRE \tail_reg[2] 
        (.C(clk),
-        .CE(1'b1),
-        .D(\tail[2]_i_1_n_0 ),
+        .CE(tail),
+        .D(\tail[2]_i_2_n_0 ),
         .Q(\tail_reg_n_0_[2] ),
         .R(SR));
 endmodule
@@ -2034,8 +2008,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
     rts,
     TX,
     cts);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *) input clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW" *) input rst;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rst;
   input uart_x_rtr;
   output [7:0]uart_x_data;
   output uart_x_rts;

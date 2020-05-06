@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-| Date         : Thu Apr 30 13:00:42 2020
+| Date         : Sun May  3 23:06:00 2020
 | Host         : DESKTOP-BJ5EQ9A running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_uart_0_0_utilization_synth.rpt -pb top_uart_0_0_utilization_synth.pb
 | Design       : top_uart_0_0
@@ -148,13 +148,13 @@ Table of Contents
 +----------+------+---------------------+
 | FDRE     |  213 |        Flop & Latch |
 | LUT6     |   57 |                 LUT |
-| LUT4     |   38 |                 LUT |
-| LUT2     |   22 |                 LUT |
+| LUT4     |   36 |                 LUT |
+| LUT2     |   20 |                 LUT |
 | MUXF7    |   16 |               MuxFx |
 | LUT5     |   12 |                 LUT |
 | LUT3     |   11 |                 LUT |
+| LUT1     |    3 |                 LUT |
 | FDSE     |    3 |        Flop & Latch |
-| LUT1     |    1 |                 LUT |
 +----------+------+---------------------+
 
 

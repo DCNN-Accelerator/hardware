@@ -1,0 +1,1846 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="final_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="final_test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="5729067930fs"></ZoomStartTime>
+      <ZoomEndTime time="5735520414fs"></ZoomEndTime>
+      <Cursor1Time time="5734445000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="649"></NameColumnWidth>
+      <ValueColumnWidth column_width="155"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wvobject fp_name="group255" type="group">
+      <obj_property name="label">Data</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/final_test/clock" type="logic">
+         <obj_property name="ElementShortName">clock</obj_property>
+         <obj_property name="ObjectShortName">clock</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/reset" type="logic">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/pc_fpga_TX" type="logic">
+         <obj_property name="ElementShortName">pc_fpga_TX</obj_property>
+         <obj_property name="ObjectShortName">pc_fpga_TX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/pc_fpga_cts" type="logic">
+         <obj_property name="ElementShortName">pc_fpga_cts</obj_property>
+         <obj_property name="ObjectShortName">pc_fpga_cts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/pc_fpga_RX" type="logic">
+         <obj_property name="ElementShortName">pc_fpga_RX</obj_property>
+         <obj_property name="ObjectShortName">pc_fpga_RX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/pc_fpga_rts" type="logic">
+         <obj_property name="ElementShortName">pc_fpga_rts</obj_property>
+         <obj_property name="ObjectShortName">pc_fpga_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/pc_uart_data" type="array">
+         <obj_property name="ElementShortName">pc_uart_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pc_uart_data[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/pc_uart_rts" type="logic">
+         <obj_property name="ElementShortName">pc_uart_rts</obj_property>
+         <obj_property name="ObjectShortName">pc_uart_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/pc_uart_rtr" type="logic">
+         <obj_property name="ElementShortName">pc_uart_rtr</obj_property>
+         <obj_property name="ObjectShortName">pc_uart_rtr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/uart_pc_rts" type="logic">
+         <obj_property name="ElementShortName">uart_pc_rts</obj_property>
+         <obj_property name="ObjectShortName">uart_pc_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/uart_pc_rtr" type="logic">
+         <obj_property name="ElementShortName">uart_pc_rtr</obj_property>
+         <obj_property name="ObjectShortName">uart_pc_rtr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/counter" type="other">
+         <obj_property name="ElementShortName">counter</obj_property>
+         <obj_property name="ObjectShortName">counter</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/prev_uart_pc_rts" type="logic">
+         <obj_property name="ElementShortName">prev_uart_pc_rts</obj_property>
+         <obj_property name="ObjectShortName">prev_uart_pc_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/index" type="other">
+         <obj_property name="ElementShortName">index</obj_property>
+         <obj_property name="ObjectShortName">index</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/receive_counter" type="other">
+         <obj_property name="ElementShortName">receive_counter</obj_property>
+         <obj_property name="ObjectShortName">receive_counter</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider1109">
+   </wvobject>
+   <wvobject fp_name="group1107" type="group">
+      <obj_property name="label">PC-UART</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="group1108" type="group">
+         <obj_property name="label">rx_fifo</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/final_test/pc/rx_fifo/clk" type="logic">
+            <obj_property name="ElementShortName">clk</obj_property>
+            <obj_property name="ObjectShortName">clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/rst" type="logic">
+            <obj_property name="ElementShortName">rst</obj_property>
+            <obj_property name="ObjectShortName">rst</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/x_fifo_rts" type="logic">
+            <obj_property name="ElementShortName">x_fifo_rts</obj_property>
+            <obj_property name="ObjectShortName">x_fifo_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/x_fifo_rtr" type="logic">
+            <obj_property name="ElementShortName">x_fifo_rtr</obj_property>
+            <obj_property name="ObjectShortName">x_fifo_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/x_fifo_data" type="array">
+            <obj_property name="ElementShortName">x_fifo_data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">x_fifo_data[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/fifo_x_rts" type="logic">
+            <obj_property name="ElementShortName">fifo_x_rts</obj_property>
+            <obj_property name="ObjectShortName">fifo_x_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/fifo_x_rtr" type="logic">
+            <obj_property name="ElementShortName">fifo_x_rtr</obj_property>
+            <obj_property name="ObjectShortName">fifo_x_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/fifo_x_data" type="array">
+            <obj_property name="ElementShortName">fifo_x_data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">fifo_x_data[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/memory" type="array">
+            <obj_property name="ElementShortName">memory[7:0][7:0]</obj_property>
+            <obj_property name="ObjectShortName">memory[7:0][7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/head" type="other">
+            <obj_property name="ElementShortName">head</obj_property>
+            <obj_property name="ObjectShortName">head</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/tail" type="other">
+            <obj_property name="ElementShortName">tail</obj_property>
+            <obj_property name="ObjectShortName">tail</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/looped" type="logic">
+            <obj_property name="ElementShortName">looped</obj_property>
+            <obj_property name="ObjectShortName">looped</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/fifo_rts" type="logic">
+            <obj_property name="ElementShortName">fifo_rts</obj_property>
+            <obj_property name="ObjectShortName">fifo_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/fifo_rtr" type="logic">
+            <obj_property name="ElementShortName">fifo_rtr</obj_property>
+            <obj_property name="ObjectShortName">fifo_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/delay" type="logic">
+            <obj_property name="ElementShortName">delay</obj_property>
+            <obj_property name="ObjectShortName">delay</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/DATA_WIDTH" type="other">
+            <obj_property name="ElementShortName">DATA_WIDTH</obj_property>
+            <obj_property name="ObjectShortName">DATA_WIDTH</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/rx_fifo/FIFO_DEPTH" type="other">
+            <obj_property name="ElementShortName">FIFO_DEPTH</obj_property>
+            <obj_property name="ObjectShortName">FIFO_DEPTH</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1110" type="group">
+         <obj_property name="label">my_uart_rx</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/final_test/pc/my_uart_rx/clk" type="logic">
+            <obj_property name="ElementShortName">clk</obj_property>
+            <obj_property name="ObjectShortName">clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_rx/rst" type="logic">
+            <obj_property name="ElementShortName">rst</obj_property>
+            <obj_property name="ObjectShortName">rst</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_rx/rx" type="logic">
+            <obj_property name="ElementShortName">rx</obj_property>
+            <obj_property name="ObjectShortName">rx</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_rx/rts" type="logic">
+            <obj_property name="ElementShortName">rts</obj_property>
+            <obj_property name="ObjectShortName">rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_rx/uart_fifo_data" type="array">
+            <obj_property name="ElementShortName">uart_fifo_data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">uart_fifo_data[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_rx/uart_fifo_rts" type="logic">
+            <obj_property name="ElementShortName">uart_fifo_rts</obj_property>
+            <obj_property name="ObjectShortName">uart_fifo_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_rx/uart_fifo_rtr" type="logic">
+            <obj_property name="ElementShortName">uart_fifo_rtr</obj_property>
+            <obj_property name="ObjectShortName">uart_fifo_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_rx/state" type="other">
+            <obj_property name="ElementShortName">state</obj_property>
+            <obj_property name="ObjectShortName">state</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_rx/counter" type="other">
+            <obj_property name="ElementShortName">counter</obj_property>
+            <obj_property name="ObjectShortName">counter</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_rx/bits" type="other">
+            <obj_property name="ElementShortName">bits</obj_property>
+            <obj_property name="ObjectShortName">bits</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_rx/data_in" type="array">
+            <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+            <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_rx/CLK_SPEED" type="other">
+            <obj_property name="ElementShortName">CLK_SPEED</obj_property>
+            <obj_property name="ObjectShortName">CLK_SPEED</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_rx/BAUD_RATE" type="other">
+            <obj_property name="ElementShortName">BAUD_RATE</obj_property>
+            <obj_property name="ObjectShortName">BAUD_RATE</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1111" type="group">
+         <obj_property name="label">tx_fifo</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/final_test/pc/tx_fifo/clk" type="logic">
+            <obj_property name="ElementShortName">clk</obj_property>
+            <obj_property name="ObjectShortName">clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/rst" type="logic">
+            <obj_property name="ElementShortName">rst</obj_property>
+            <obj_property name="ObjectShortName">rst</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/x_fifo_rts" type="logic">
+            <obj_property name="ElementShortName">x_fifo_rts</obj_property>
+            <obj_property name="ObjectShortName">x_fifo_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/x_fifo_rtr" type="logic">
+            <obj_property name="ElementShortName">x_fifo_rtr</obj_property>
+            <obj_property name="ObjectShortName">x_fifo_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/x_fifo_data" type="array">
+            <obj_property name="ElementShortName">x_fifo_data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">x_fifo_data[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/fifo_x_rts" type="logic">
+            <obj_property name="ElementShortName">fifo_x_rts</obj_property>
+            <obj_property name="ObjectShortName">fifo_x_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/fifo_x_rtr" type="logic">
+            <obj_property name="ElementShortName">fifo_x_rtr</obj_property>
+            <obj_property name="ObjectShortName">fifo_x_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/fifo_x_data" type="array">
+            <obj_property name="ElementShortName">fifo_x_data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">fifo_x_data[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/memory" type="array">
+            <obj_property name="ElementShortName">memory[7:0][7:0]</obj_property>
+            <obj_property name="ObjectShortName">memory[7:0][7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/head" type="other">
+            <obj_property name="ElementShortName">head</obj_property>
+            <obj_property name="ObjectShortName">head</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/tail" type="other">
+            <obj_property name="ElementShortName">tail</obj_property>
+            <obj_property name="ObjectShortName">tail</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/looped" type="logic">
+            <obj_property name="ElementShortName">looped</obj_property>
+            <obj_property name="ObjectShortName">looped</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/fifo_rts" type="logic">
+            <obj_property name="ElementShortName">fifo_rts</obj_property>
+            <obj_property name="ObjectShortName">fifo_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/fifo_rtr" type="logic">
+            <obj_property name="ElementShortName">fifo_rtr</obj_property>
+            <obj_property name="ObjectShortName">fifo_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/delay" type="logic">
+            <obj_property name="ElementShortName">delay</obj_property>
+            <obj_property name="ObjectShortName">delay</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/DATA_WIDTH" type="other">
+            <obj_property name="ElementShortName">DATA_WIDTH</obj_property>
+            <obj_property name="ObjectShortName">DATA_WIDTH</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/tx_fifo/FIFO_DEPTH" type="other">
+            <obj_property name="ElementShortName">FIFO_DEPTH</obj_property>
+            <obj_property name="ObjectShortName">FIFO_DEPTH</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1112" type="group">
+         <obj_property name="label">my_uart_tx</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/clk" type="logic">
+            <obj_property name="ElementShortName">clk</obj_property>
+            <obj_property name="ObjectShortName">clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/rst" type="logic">
+            <obj_property name="ElementShortName">rst</obj_property>
+            <obj_property name="ObjectShortName">rst</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/tx" type="logic">
+            <obj_property name="ElementShortName">tx</obj_property>
+            <obj_property name="ObjectShortName">tx</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/cts" type="logic">
+            <obj_property name="ElementShortName">cts</obj_property>
+            <obj_property name="ObjectShortName">cts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/fifo_uart_rts" type="logic">
+            <obj_property name="ElementShortName">fifo_uart_rts</obj_property>
+            <obj_property name="ObjectShortName">fifo_uart_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/fifo_uart_rtr" type="logic">
+            <obj_property name="ElementShortName">fifo_uart_rtr</obj_property>
+            <obj_property name="ObjectShortName">fifo_uart_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/fifo_uart_data" type="array">
+            <obj_property name="ElementShortName">fifo_uart_data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">fifo_uart_data[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/state" type="other">
+            <obj_property name="ElementShortName">state</obj_property>
+            <obj_property name="ObjectShortName">state</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/counter" type="other">
+            <obj_property name="ElementShortName">counter</obj_property>
+            <obj_property name="ObjectShortName">counter</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/bits" type="other">
+            <obj_property name="ElementShortName">bits</obj_property>
+            <obj_property name="ObjectShortName">bits</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/latch" type="array">
+            <obj_property name="ElementShortName">latch[7:0]</obj_property>
+            <obj_property name="ObjectShortName">latch[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/cts_prev" type="logic">
+            <obj_property name="ElementShortName">cts_prev</obj_property>
+            <obj_property name="ObjectShortName">cts_prev</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/uart_rtr" type="logic">
+            <obj_property name="ElementShortName">uart_rtr</obj_property>
+            <obj_property name="ObjectShortName">uart_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/CLK_SPEED" type="other">
+            <obj_property name="ElementShortName">CLK_SPEED</obj_property>
+            <obj_property name="ObjectShortName">CLK_SPEED</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/pc/my_uart_tx/BAUD_RATE" type="other">
+            <obj_property name="ElementShortName">BAUD_RATE</obj_property>
+            <obj_property name="ObjectShortName">BAUD_RATE</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1175" type="group">
+      <obj_property name="label">UART</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="group1176" type="group">
+         <obj_property name="label">rx</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/clk" type="logic">
+            <obj_property name="ElementShortName">clk</obj_property>
+            <obj_property name="ObjectShortName">clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/rst" type="logic">
+            <obj_property name="ElementShortName">rst</obj_property>
+            <obj_property name="ObjectShortName">rst</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/x_fifo_rts" type="logic">
+            <obj_property name="ElementShortName">x_fifo_rts</obj_property>
+            <obj_property name="ObjectShortName">x_fifo_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/x_fifo_rtr" type="logic">
+            <obj_property name="ElementShortName">x_fifo_rtr</obj_property>
+            <obj_property name="ObjectShortName">x_fifo_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/x_fifo_data" type="array">
+            <obj_property name="ElementShortName">x_fifo_data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">x_fifo_data[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/fifo_x_rts" type="logic">
+            <obj_property name="ElementShortName">fifo_x_rts</obj_property>
+            <obj_property name="ObjectShortName">fifo_x_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/fifo_x_rtr" type="logic">
+            <obj_property name="ElementShortName">fifo_x_rtr</obj_property>
+            <obj_property name="ObjectShortName">fifo_x_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/fifo_x_data" type="array">
+            <obj_property name="ElementShortName">fifo_x_data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">fifo_x_data[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/memory" type="array">
+            <obj_property name="ElementShortName">memory[7:0][7:0]</obj_property>
+            <obj_property name="ObjectShortName">memory[7:0][7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/head" type="other">
+            <obj_property name="ElementShortName">head</obj_property>
+            <obj_property name="ObjectShortName">head</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/tail" type="other">
+            <obj_property name="ElementShortName">tail</obj_property>
+            <obj_property name="ObjectShortName">tail</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/looped" type="logic">
+            <obj_property name="ElementShortName">looped</obj_property>
+            <obj_property name="ObjectShortName">looped</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/fifo_rts" type="logic">
+            <obj_property name="ElementShortName">fifo_rts</obj_property>
+            <obj_property name="ObjectShortName">fifo_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/fifo_rtr" type="logic">
+            <obj_property name="ElementShortName">fifo_rtr</obj_property>
+            <obj_property name="ObjectShortName">fifo_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/delay" type="logic">
+            <obj_property name="ElementShortName">delay</obj_property>
+            <obj_property name="ObjectShortName">delay</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/DATA_WIDTH" type="other">
+            <obj_property name="ElementShortName">DATA_WIDTH</obj_property>
+            <obj_property name="ObjectShortName">DATA_WIDTH</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/rx_fifo/FIFO_DEPTH" type="other">
+            <obj_property name="ElementShortName">FIFO_DEPTH</obj_property>
+            <obj_property name="ObjectShortName">FIFO_DEPTH</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1177" type="group">
+         <obj_property name="label">my_uart_rx</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_rx/clk" type="logic">
+            <obj_property name="ElementShortName">clk</obj_property>
+            <obj_property name="ObjectShortName">clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_rx/rst" type="logic">
+            <obj_property name="ElementShortName">rst</obj_property>
+            <obj_property name="ObjectShortName">rst</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_rx/rx" type="logic">
+            <obj_property name="ElementShortName">rx</obj_property>
+            <obj_property name="ObjectShortName">rx</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_rx/rts" type="logic">
+            <obj_property name="ElementShortName">rts</obj_property>
+            <obj_property name="ObjectShortName">rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_rx/uart_fifo_data" type="array">
+            <obj_property name="ElementShortName">uart_fifo_data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">uart_fifo_data[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_rx/uart_fifo_rts" type="logic">
+            <obj_property name="ElementShortName">uart_fifo_rts</obj_property>
+            <obj_property name="ObjectShortName">uart_fifo_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_rx/uart_fifo_rtr" type="logic">
+            <obj_property name="ElementShortName">uart_fifo_rtr</obj_property>
+            <obj_property name="ObjectShortName">uart_fifo_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_rx/state" type="other">
+            <obj_property name="ElementShortName">state</obj_property>
+            <obj_property name="ObjectShortName">state</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_rx/counter" type="other">
+            <obj_property name="ElementShortName">counter</obj_property>
+            <obj_property name="ObjectShortName">counter</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_rx/bits" type="other">
+            <obj_property name="ElementShortName">bits</obj_property>
+            <obj_property name="ObjectShortName">bits</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_rx/data_in" type="array">
+            <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+            <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_rx/CLK_SPEED" type="other">
+            <obj_property name="ElementShortName">CLK_SPEED</obj_property>
+            <obj_property name="ObjectShortName">CLK_SPEED</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_rx/BAUD_RATE" type="other">
+            <obj_property name="ElementShortName">BAUD_RATE</obj_property>
+            <obj_property name="ObjectShortName">BAUD_RATE</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1180" type="group">
+         <obj_property name="label">tx_fifo</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="group1178" type="group">
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/clk" type="logic">
+            <obj_property name="ElementShortName">clk</obj_property>
+            <obj_property name="ObjectShortName">clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/rst" type="logic">
+            <obj_property name="ElementShortName">rst</obj_property>
+            <obj_property name="ObjectShortName">rst</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/x_fifo_rts" type="logic">
+            <obj_property name="ElementShortName">x_fifo_rts</obj_property>
+            <obj_property name="ObjectShortName">x_fifo_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/x_fifo_rtr" type="logic">
+            <obj_property name="ElementShortName">x_fifo_rtr</obj_property>
+            <obj_property name="ObjectShortName">x_fifo_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/x_fifo_data" type="array">
+            <obj_property name="ElementShortName">x_fifo_data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">x_fifo_data[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/fifo_x_rts" type="logic">
+            <obj_property name="ElementShortName">fifo_x_rts</obj_property>
+            <obj_property name="ObjectShortName">fifo_x_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/fifo_x_rtr" type="logic">
+            <obj_property name="ElementShortName">fifo_x_rtr</obj_property>
+            <obj_property name="ObjectShortName">fifo_x_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/fifo_x_data" type="array">
+            <obj_property name="ElementShortName">fifo_x_data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">fifo_x_data[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/memory" type="array">
+            <obj_property name="ElementShortName">memory[7:0][7:0]</obj_property>
+            <obj_property name="ObjectShortName">memory[7:0][7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/head" type="other">
+            <obj_property name="ElementShortName">head</obj_property>
+            <obj_property name="ObjectShortName">head</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/tail" type="other">
+            <obj_property name="ElementShortName">tail</obj_property>
+            <obj_property name="ObjectShortName">tail</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/looped" type="logic">
+            <obj_property name="ElementShortName">looped</obj_property>
+            <obj_property name="ObjectShortName">looped</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/fifo_rts" type="logic">
+            <obj_property name="ElementShortName">fifo_rts</obj_property>
+            <obj_property name="ObjectShortName">fifo_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/fifo_rtr" type="logic">
+            <obj_property name="ElementShortName">fifo_rtr</obj_property>
+            <obj_property name="ObjectShortName">fifo_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/delay" type="logic">
+            <obj_property name="ElementShortName">delay</obj_property>
+            <obj_property name="ObjectShortName">delay</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/DATA_WIDTH" type="other">
+            <obj_property name="ElementShortName">DATA_WIDTH</obj_property>
+            <obj_property name="ObjectShortName">DATA_WIDTH</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/tx_fifo/FIFO_DEPTH" type="other">
+            <obj_property name="ElementShortName">FIFO_DEPTH</obj_property>
+            <obj_property name="ObjectShortName">FIFO_DEPTH</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="group1179" type="group">
+         <obj_property name="label">my_uart_tx</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/clk" type="logic">
+            <obj_property name="ElementShortName">clk</obj_property>
+            <obj_property name="ObjectShortName">clk</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/rst" type="logic">
+            <obj_property name="ElementShortName">rst</obj_property>
+            <obj_property name="ObjectShortName">rst</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/tx" type="logic">
+            <obj_property name="ElementShortName">tx</obj_property>
+            <obj_property name="ObjectShortName">tx</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/cts" type="logic">
+            <obj_property name="ElementShortName">cts</obj_property>
+            <obj_property name="ObjectShortName">cts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/fifo_uart_rts" type="logic">
+            <obj_property name="ElementShortName">fifo_uart_rts</obj_property>
+            <obj_property name="ObjectShortName">fifo_uart_rts</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/fifo_uart_rtr" type="logic">
+            <obj_property name="ElementShortName">fifo_uart_rtr</obj_property>
+            <obj_property name="ObjectShortName">fifo_uart_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/fifo_uart_data" type="array">
+            <obj_property name="ElementShortName">fifo_uart_data[7:0]</obj_property>
+            <obj_property name="ObjectShortName">fifo_uart_data[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/state" type="other">
+            <obj_property name="ElementShortName">state</obj_property>
+            <obj_property name="ObjectShortName">state</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/counter" type="other">
+            <obj_property name="ElementShortName">counter</obj_property>
+            <obj_property name="ObjectShortName">counter</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/bits" type="other">
+            <obj_property name="ElementShortName">bits</obj_property>
+            <obj_property name="ObjectShortName">bits</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/latch" type="array">
+            <obj_property name="ElementShortName">latch[7:0]</obj_property>
+            <obj_property name="ObjectShortName">latch[7:0]</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/cts_prev" type="logic">
+            <obj_property name="ElementShortName">cts_prev</obj_property>
+            <obj_property name="ObjectShortName">cts_prev</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/uart_rtr" type="logic">
+            <obj_property name="ElementShortName">uart_rtr</obj_property>
+            <obj_property name="ObjectShortName">uart_rtr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/CLK_SPEED" type="other">
+            <obj_property name="ElementShortName">CLK_SPEED</obj_property>
+            <obj_property name="ObjectShortName">CLK_SPEED</obj_property>
+         </wvobject>
+         <wvobject fp_name="/final_test/fpga/top_i/uart_0/inst/my_uart_tx/BAUD_RATE" type="other">
+            <obj_property name="ElementShortName">BAUD_RATE</obj_property>
+            <obj_property name="ObjectShortName">BAUD_RATE</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1363" type="group">
+      <obj_property name="label">Image Window</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/uart_sopu_rts" type="logic">
+         <obj_property name="ElementShortName">uart_sopu_rts</obj_property>
+         <obj_property name="ObjectShortName">uart_sopu_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/uart_sopu_rtr" type="logic">
+         <obj_property name="ElementShortName">uart_sopu_rtr</obj_property>
+         <obj_property name="ObjectShortName">uart_sopu_rtr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/uart_sopu_data" type="array">
+         <obj_property name="ElementShortName">uart_sopu_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_sopu_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/fake_sopu_rts" type="logic">
+         <obj_property name="ElementShortName">fake_sopu_rts</obj_property>
+         <obj_property name="ObjectShortName">fake_sopu_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/ilb_sopu_rts" type="logic">
+         <obj_property name="ElementShortName">ilb_sopu_rts</obj_property>
+         <obj_property name="ObjectShortName">ilb_sopu_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/ilb_sopu_data0" type="array">
+         <obj_property name="ElementShortName">ilb_sopu_data0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ilb_sopu_data0[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/ilb_sopu_data1" type="array">
+         <obj_property name="ElementShortName">ilb_sopu_data1[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ilb_sopu_data1[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/ilb_sopu_data2" type="array">
+         <obj_property name="ElementShortName">ilb_sopu_data2[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ilb_sopu_data2[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/ilb_sopu_data3" type="array">
+         <obj_property name="ElementShortName">ilb_sopu_data3[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ilb_sopu_data3[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/ilb_sopu_data4" type="array">
+         <obj_property name="ElementShortName">ilb_sopu_data4[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ilb_sopu_data4[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/ilb_sopu_data5" type="array">
+         <obj_property name="ElementShortName">ilb_sopu_data5[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ilb_sopu_data5[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/kernel_full" type="logic">
+         <obj_property name="ElementShortName">kernel_full</obj_property>
+         <obj_property name="ObjectShortName">kernel_full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg0" type="array">
+         <obj_property name="ElementShortName">img_wd_reg0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg0[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg1" type="array">
+         <obj_property name="ElementShortName">img_wd_reg1[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg1[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg2" type="array">
+         <obj_property name="ElementShortName">img_wd_reg2[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg2[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg3" type="array">
+         <obj_property name="ElementShortName">img_wd_reg3[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg3[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg4" type="array">
+         <obj_property name="ElementShortName">img_wd_reg4[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg4[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg5" type="array">
+         <obj_property name="ElementShortName">img_wd_reg5[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg5[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg6" type="array">
+         <obj_property name="ElementShortName">img_wd_reg6[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg6[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg7" type="array">
+         <obj_property name="ElementShortName">img_wd_reg7[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg7[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg8" type="array">
+         <obj_property name="ElementShortName">img_wd_reg8[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg8[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg9" type="array">
+         <obj_property name="ElementShortName">img_wd_reg9[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg9[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg10" type="array">
+         <obj_property name="ElementShortName">img_wd_reg10[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg10[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg11" type="array">
+         <obj_property name="ElementShortName">img_wd_reg11[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg11[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg12" type="array">
+         <obj_property name="ElementShortName">img_wd_reg12[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg12[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg13" type="array">
+         <obj_property name="ElementShortName">img_wd_reg13[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg13[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg14" type="array">
+         <obj_property name="ElementShortName">img_wd_reg14[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg14[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg15" type="array">
+         <obj_property name="ElementShortName">img_wd_reg15[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg15[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg16" type="array">
+         <obj_property name="ElementShortName">img_wd_reg16[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg16[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg17" type="array">
+         <obj_property name="ElementShortName">img_wd_reg17[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg17[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg18" type="array">
+         <obj_property name="ElementShortName">img_wd_reg18[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg18[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg19" type="array">
+         <obj_property name="ElementShortName">img_wd_reg19[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg19[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg20" type="array">
+         <obj_property name="ElementShortName">img_wd_reg20[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg20[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg21" type="array">
+         <obj_property name="ElementShortName">img_wd_reg21[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg21[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg22" type="array">
+         <obj_property name="ElementShortName">img_wd_reg22[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg22[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg23" type="array">
+         <obj_property name="ElementShortName">img_wd_reg23[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg23[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg24" type="array">
+         <obj_property name="ElementShortName">img_wd_reg24[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg24[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg25" type="array">
+         <obj_property name="ElementShortName">img_wd_reg25[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg25[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg26" type="array">
+         <obj_property name="ElementShortName">img_wd_reg26[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg26[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg27" type="array">
+         <obj_property name="ElementShortName">img_wd_reg27[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg27[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg28" type="array">
+         <obj_property name="ElementShortName">img_wd_reg28[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg28[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg29" type="array">
+         <obj_property name="ElementShortName">img_wd_reg29[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg29[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg30" type="array">
+         <obj_property name="ElementShortName">img_wd_reg30[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg30[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg31" type="array">
+         <obj_property name="ElementShortName">img_wd_reg31[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg31[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg32" type="array">
+         <obj_property name="ElementShortName">img_wd_reg32[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg32[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg33" type="array">
+         <obj_property name="ElementShortName">img_wd_reg33[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg33[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg34" type="array">
+         <obj_property name="ElementShortName">img_wd_reg34[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg34[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg35" type="array">
+         <obj_property name="ElementShortName">img_wd_reg35[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg35[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg36" type="array">
+         <obj_property name="ElementShortName">img_wd_reg36[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg36[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg37" type="array">
+         <obj_property name="ElementShortName">img_wd_reg37[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg37[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg38" type="array">
+         <obj_property name="ElementShortName">img_wd_reg38[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg38[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg39" type="array">
+         <obj_property name="ElementShortName">img_wd_reg39[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg39[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg40" type="array">
+         <obj_property name="ElementShortName">img_wd_reg40[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg40[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg41" type="array">
+         <obj_property name="ElementShortName">img_wd_reg41[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg41[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg42" type="array">
+         <obj_property name="ElementShortName">img_wd_reg42[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg42[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg43" type="array">
+         <obj_property name="ElementShortName">img_wd_reg43[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg43[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg44" type="array">
+         <obj_property name="ElementShortName">img_wd_reg44[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg44[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg45" type="array">
+         <obj_property name="ElementShortName">img_wd_reg45[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg45[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg46" type="array">
+         <obj_property name="ElementShortName">img_wd_reg46[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg46[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg47" type="array">
+         <obj_property name="ElementShortName">img_wd_reg47[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg47[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_wd_reg48" type="array">
+         <obj_property name="ElementShortName">img_wd_reg48[7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_wd_reg48[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/img_array" type="array">
+         <obj_property name="ElementShortName">img_array[48:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">img_array[48:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/delay_uart" type="logic">
+         <obj_property name="ElementShortName">delay_uart</obj_property>
+         <obj_property name="ObjectShortName">delay_uart</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/img_window_v2_0/inst/delay_ilb" type="logic">
+         <obj_property name="ElementShortName">delay_ilb</obj_property>
+         <obj_property name="ObjectShortName">delay_ilb</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1430" type="group">
+      <obj_property name="label">Kernel Bank</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/uart_sopu_rts" type="logic">
+         <obj_property name="ElementShortName">uart_sopu_rts</obj_property>
+         <obj_property name="ObjectShortName">uart_sopu_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/uart_sopu_rtr" type="logic">
+         <obj_property name="ElementShortName">uart_sopu_rtr</obj_property>
+         <obj_property name="ObjectShortName">uart_sopu_rtr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/uart_sopu_data" type="array">
+         <obj_property name="ElementShortName">uart_sopu_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_sopu_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_full" type="logic">
+         <obj_property name="ElementShortName">kernel_full</obj_property>
+         <obj_property name="ObjectShortName">kernel_full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg0" type="array">
+         <obj_property name="ElementShortName">kernel_reg0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg0[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg1" type="array">
+         <obj_property name="ElementShortName">kernel_reg1[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg1[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg2" type="array">
+         <obj_property name="ElementShortName">kernel_reg2[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg2[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg3" type="array">
+         <obj_property name="ElementShortName">kernel_reg3[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg3[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg4" type="array">
+         <obj_property name="ElementShortName">kernel_reg4[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg4[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg5" type="array">
+         <obj_property name="ElementShortName">kernel_reg5[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg5[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg6" type="array">
+         <obj_property name="ElementShortName">kernel_reg6[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg6[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg7" type="array">
+         <obj_property name="ElementShortName">kernel_reg7[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg7[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg8" type="array">
+         <obj_property name="ElementShortName">kernel_reg8[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg8[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg9" type="array">
+         <obj_property name="ElementShortName">kernel_reg9[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg9[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg10" type="array">
+         <obj_property name="ElementShortName">kernel_reg10[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg10[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg11" type="array">
+         <obj_property name="ElementShortName">kernel_reg11[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg11[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg12" type="array">
+         <obj_property name="ElementShortName">kernel_reg12[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg12[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg13" type="array">
+         <obj_property name="ElementShortName">kernel_reg13[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg13[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg14" type="array">
+         <obj_property name="ElementShortName">kernel_reg14[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg14[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg15" type="array">
+         <obj_property name="ElementShortName">kernel_reg15[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg15[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg16" type="array">
+         <obj_property name="ElementShortName">kernel_reg16[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg16[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg17" type="array">
+         <obj_property name="ElementShortName">kernel_reg17[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg17[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg18" type="array">
+         <obj_property name="ElementShortName">kernel_reg18[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg18[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg19" type="array">
+         <obj_property name="ElementShortName">kernel_reg19[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg19[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg20" type="array">
+         <obj_property name="ElementShortName">kernel_reg20[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg20[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg21" type="array">
+         <obj_property name="ElementShortName">kernel_reg21[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg21[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg22" type="array">
+         <obj_property name="ElementShortName">kernel_reg22[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg22[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg23" type="array">
+         <obj_property name="ElementShortName">kernel_reg23[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg23[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg24" type="array">
+         <obj_property name="ElementShortName">kernel_reg24[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg24[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg25" type="array">
+         <obj_property name="ElementShortName">kernel_reg25[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg25[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg26" type="array">
+         <obj_property name="ElementShortName">kernel_reg26[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg26[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg27" type="array">
+         <obj_property name="ElementShortName">kernel_reg27[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg27[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg28" type="array">
+         <obj_property name="ElementShortName">kernel_reg28[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg28[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg29" type="array">
+         <obj_property name="ElementShortName">kernel_reg29[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg29[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg30" type="array">
+         <obj_property name="ElementShortName">kernel_reg30[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg30[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg31" type="array">
+         <obj_property name="ElementShortName">kernel_reg31[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg31[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg32" type="array">
+         <obj_property name="ElementShortName">kernel_reg32[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg32[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg33" type="array">
+         <obj_property name="ElementShortName">kernel_reg33[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg33[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg34" type="array">
+         <obj_property name="ElementShortName">kernel_reg34[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg34[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg35" type="array">
+         <obj_property name="ElementShortName">kernel_reg35[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg35[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg36" type="array">
+         <obj_property name="ElementShortName">kernel_reg36[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg36[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg37" type="array">
+         <obj_property name="ElementShortName">kernel_reg37[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg37[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg38" type="array">
+         <obj_property name="ElementShortName">kernel_reg38[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg38[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg39" type="array">
+         <obj_property name="ElementShortName">kernel_reg39[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg39[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg40" type="array">
+         <obj_property name="ElementShortName">kernel_reg40[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg40[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg41" type="array">
+         <obj_property name="ElementShortName">kernel_reg41[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg41[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg42" type="array">
+         <obj_property name="ElementShortName">kernel_reg42[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg42[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg43" type="array">
+         <obj_property name="ElementShortName">kernel_reg43[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg43[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg44" type="array">
+         <obj_property name="ElementShortName">kernel_reg44[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg44[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg45" type="array">
+         <obj_property name="ElementShortName">kernel_reg45[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg45[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg46" type="array">
+         <obj_property name="ElementShortName">kernel_reg46[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg46[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg47" type="array">
+         <obj_property name="ElementShortName">kernel_reg47[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg47[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_reg48" type="array">
+         <obj_property name="ElementShortName">kernel_reg48[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_reg48[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/kernel_array" type="array">
+         <obj_property name="ElementShortName">kernel_array[48:0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_array[48:0][7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/delay" type="logic">
+         <obj_property name="ElementShortName">delay</obj_property>
+         <obj_property name="ObjectShortName">delay</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/kernel_bank_v2_0/inst/counter" type="other">
+         <obj_property name="ElementShortName">counter</obj_property>
+         <obj_property name="ObjectShortName">counter</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1489" type="group">
+      <obj_property name="label">Master Controller </obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/uart_sopu_rts" type="logic">
+         <obj_property name="ElementShortName">uart_sopu_rts</obj_property>
+         <obj_property name="ObjectShortName">uart_sopu_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/fake_sopu_rts" type="logic">
+         <obj_property name="ElementShortName">fake_sopu_rts</obj_property>
+         <obj_property name="ObjectShortName">fake_sopu_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/uart_sopu_rtr" type="logic">
+         <obj_property name="ElementShortName">uart_sopu_rtr</obj_property>
+         <obj_property name="ObjectShortName">uart_sopu_rtr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/uart_sopu_data" type="array">
+         <obj_property name="ElementShortName">uart_sopu_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">uart_sopu_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/sopu_uart_rts" type="logic">
+         <obj_property name="ElementShortName">sopu_uart_rts</obj_property>
+         <obj_property name="ObjectShortName">sopu_uart_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/sopu_uart_rtr" type="logic">
+         <obj_property name="ElementShortName">sopu_uart_rtr</obj_property>
+         <obj_property name="ObjectShortName">sopu_uart_rtr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/sopu_uart_data" type="array">
+         <obj_property name="ElementShortName">sopu_uart_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">sopu_uart_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/sopu_ilb_rts" type="logic">
+         <obj_property name="ElementShortName">sopu_ilb_rts</obj_property>
+         <obj_property name="ObjectShortName">sopu_ilb_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/sopu_ilb_rtr" type="logic">
+         <obj_property name="ElementShortName">sopu_ilb_rtr</obj_property>
+         <obj_property name="ObjectShortName">sopu_ilb_rtr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/sopu_ilb_data" type="array">
+         <obj_property name="ElementShortName">sopu_ilb_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">sopu_ilb_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/ilb_sopu_rts" type="logic">
+         <obj_property name="ElementShortName">ilb_sopu_rts</obj_property>
+         <obj_property name="ObjectShortName">ilb_sopu_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/ilb_sopu_data0" type="array">
+         <obj_property name="ElementShortName">ilb_sopu_data0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ilb_sopu_data0[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/ilb_sopu_data1" type="array">
+         <obj_property name="ElementShortName">ilb_sopu_data1[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ilb_sopu_data1[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/ilb_sopu_data2" type="array">
+         <obj_property name="ElementShortName">ilb_sopu_data2[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ilb_sopu_data2[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/ilb_sopu_data3" type="array">
+         <obj_property name="ElementShortName">ilb_sopu_data3[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ilb_sopu_data3[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/ilb_sopu_data4" type="array">
+         <obj_property name="ElementShortName">ilb_sopu_data4[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ilb_sopu_data4[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/ilb_sopu_data5" type="array">
+         <obj_property name="ElementShortName">ilb_sopu_data5[7:0]</obj_property>
+         <obj_property name="ObjectShortName">ilb_sopu_data5[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/kernel_full" type="logic">
+         <obj_property name="ElementShortName">kernel_full</obj_property>
+         <obj_property name="ObjectShortName">kernel_full</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/fp_enable" type="logic">
+         <obj_property name="ElementShortName">fp_enable</obj_property>
+         <obj_property name="ObjectShortName">fp_enable</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/fp_out_valid" type="logic">
+         <obj_property name="ElementShortName">fp_out_valid</obj_property>
+         <obj_property name="ObjectShortName">fp_out_valid</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/fp_out_data" type="array">
+         <obj_property name="ElementShortName">fp_out_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">fp_out_data[15:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/state" type="other">
+         <obj_property name="ElementShortName">state</obj_property>
+         <obj_property name="ObjectShortName">state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/uart_sopu_rtr_int" type="logic">
+         <obj_property name="ElementShortName">uart_sopu_rtr_int</obj_property>
+         <obj_property name="ObjectShortName">uart_sopu_rtr_int</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/sopu_uart_rts_int" type="logic">
+         <obj_property name="ElementShortName">sopu_uart_rts_int</obj_property>
+         <obj_property name="ObjectShortName">sopu_uart_rts_int</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/fp_sop_data" type="array">
+         <obj_property name="ElementShortName">fp_sop_data[15:0]</obj_property>
+         <obj_property name="ObjectShortName">fp_sop_data[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/fp_sop_counter" type="logic">
+         <obj_property name="ElementShortName">fp_sop_counter</obj_property>
+         <obj_property name="ObjectShortName">fp_sop_counter</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/delay" type="logic">
+         <obj_property name="ElementShortName">delay</obj_property>
+         <obj_property name="ObjectShortName">delay</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/rx_counter" type="other">
+         <obj_property name="ElementShortName">rx_counter</obj_property>
+         <obj_property name="ObjectShortName">rx_counter</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/tx_counter" type="other">
+         <obj_property name="ElementShortName">tx_counter</obj_property>
+         <obj_property name="ObjectShortName">tx_counter</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group1521" type="group">
+      <obj_property name="label">BRAM Controller</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/clk" type="logic">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/rst" type="logic">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/conv_bram_data" type="array">
+         <obj_property name="ElementShortName">conv_bram_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">conv_bram_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/conv_bram_rtr" type="logic">
+         <obj_property name="ElementShortName">conv_bram_rtr</obj_property>
+         <obj_property name="ObjectShortName">conv_bram_rtr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/conv_bram_rts" type="logic">
+         <obj_property name="ElementShortName">conv_bram_rts</obj_property>
+         <obj_property name="ObjectShortName">conv_bram_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/bram_conv_data_0" type="array">
+         <obj_property name="ElementShortName">bram_conv_data_0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_conv_data_0[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/bram_conv_data_1" type="array">
+         <obj_property name="ElementShortName">bram_conv_data_1[7:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_conv_data_1[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/bram_conv_data_2" type="array">
+         <obj_property name="ElementShortName">bram_conv_data_2[7:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_conv_data_2[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/bram_conv_data_3" type="array">
+         <obj_property name="ElementShortName">bram_conv_data_3[7:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_conv_data_3[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/bram_conv_data_4" type="array">
+         <obj_property name="ElementShortName">bram_conv_data_4[7:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_conv_data_4[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/bram_conv_data_5" type="array">
+         <obj_property name="ElementShortName">bram_conv_data_5[7:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_conv_data_5[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/bram_conv_rts" type="logic">
+         <obj_property name="ElementShortName">bram_conv_rts</obj_property>
+         <obj_property name="ObjectShortName">bram_conv_rts</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/bram_write_data" type="array">
+         <obj_property name="ElementShortName">bram_write_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">bram_write_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/addr" type="array">
+         <obj_property name="ElementShortName">addr[9:0]</obj_property>
+         <obj_property name="ObjectShortName">addr[9:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/ena_0" type="logic">
+         <obj_property name="ElementShortName">ena_0</obj_property>
+         <obj_property name="ObjectShortName">ena_0</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/ena_1" type="logic">
+         <obj_property name="ElementShortName">ena_1</obj_property>
+         <obj_property name="ObjectShortName">ena_1</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/ena_2" type="logic">
+         <obj_property name="ElementShortName">ena_2</obj_property>
+         <obj_property name="ObjectShortName">ena_2</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/ena_3" type="logic">
+         <obj_property name="ElementShortName">ena_3</obj_property>
+         <obj_property name="ObjectShortName">ena_3</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/ena_4" type="logic">
+         <obj_property name="ElementShortName">ena_4</obj_property>
+         <obj_property name="ObjectShortName">ena_4</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/ena_5" type="logic">
+         <obj_property name="ElementShortName">ena_5</obj_property>
+         <obj_property name="ObjectShortName">ena_5</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/wena_0" type="array">
+         <obj_property name="ElementShortName">wena_0[0:0]</obj_property>
+         <obj_property name="ObjectShortName">wena_0[0:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/wena_1" type="array">
+         <obj_property name="ElementShortName">wena_1[0:0]</obj_property>
+         <obj_property name="ObjectShortName">wena_1[0:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/wena_2" type="array">
+         <obj_property name="ElementShortName">wena_2[0:0]</obj_property>
+         <obj_property name="ObjectShortName">wena_2[0:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/wena_3" type="array">
+         <obj_property name="ElementShortName">wena_3[0:0]</obj_property>
+         <obj_property name="ObjectShortName">wena_3[0:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/wena_4" type="array">
+         <obj_property name="ElementShortName">wena_4[0:0]</obj_property>
+         <obj_property name="ObjectShortName">wena_4[0:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/wena_5" type="array">
+         <obj_property name="ElementShortName">wena_5[0:0]</obj_property>
+         <obj_property name="ObjectShortName">wena_5[0:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/data_0" type="array">
+         <obj_property name="ElementShortName">data_0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_0[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/data_1" type="array">
+         <obj_property name="ElementShortName">data_1[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_1[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/data_2" type="array">
+         <obj_property name="ElementShortName">data_2[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_2[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/data_3" type="array">
+         <obj_property name="ElementShortName">data_3[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_3[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/data_4" type="array">
+         <obj_property name="ElementShortName">data_4[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_4[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/data_5" type="array">
+         <obj_property name="ElementShortName">data_5[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_5[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/bram_addr" type="other">
+         <obj_property name="ElementShortName">bram_addr</obj_property>
+         <obj_property name="ObjectShortName">bram_addr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/bram_counter" type="other">
+         <obj_property name="ElementShortName">bram_counter</obj_property>
+         <obj_property name="ObjectShortName">bram_counter</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/bram_controller_v2_0/inst/state" type="other">
+         <obj_property name="ElementShortName">state</obj_property>
+         <obj_property name="ObjectShortName">state</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group429" type="group">
+      <obj_property name="label">SOP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/out_val_ap_vld" type="logic">
+         <obj_property name="ElementShortName">out_val_ap_vld</obj_property>
+         <obj_property name="ObjectShortName">out_val_ap_vld</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/ap_clk" type="logic">
+         <obj_property name="ElementShortName">ap_clk</obj_property>
+         <obj_property name="ObjectShortName">ap_clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/ap_rst" type="logic">
+         <obj_property name="ElementShortName">ap_rst</obj_property>
+         <obj_property name="ObjectShortName">ap_rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/ap_start" type="logic">
+         <obj_property name="ElementShortName">ap_start</obj_property>
+         <obj_property name="ObjectShortName">ap_start</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/ap_idle" type="logic">
+         <obj_property name="ElementShortName">ap_idle</obj_property>
+         <obj_property name="ObjectShortName">ap_idle</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/ap_ready" type="logic">
+         <obj_property name="ElementShortName">ap_ready</obj_property>
+         <obj_property name="ObjectShortName">ap_ready</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_0" type="array">
+         <obj_property name="ElementShortName">kernel_patch_0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_0[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_1" type="array">
+         <obj_property name="ElementShortName">kernel_patch_1[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_1[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_2" type="array">
+         <obj_property name="ElementShortName">kernel_patch_2[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_2[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_3" type="array">
+         <obj_property name="ElementShortName">kernel_patch_3[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_3[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_4" type="array">
+         <obj_property name="ElementShortName">kernel_patch_4[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_4[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_5" type="array">
+         <obj_property name="ElementShortName">kernel_patch_5[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_5[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_6" type="array">
+         <obj_property name="ElementShortName">kernel_patch_6[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_6[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_7" type="array">
+         <obj_property name="ElementShortName">kernel_patch_7[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_7[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_8" type="array">
+         <obj_property name="ElementShortName">kernel_patch_8[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_8[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_9" type="array">
+         <obj_property name="ElementShortName">kernel_patch_9[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_9[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_10" type="array">
+         <obj_property name="ElementShortName">kernel_patch_10[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_10[7:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_11" type="array">
+         <obj_property name="ElementShortName">kernel_patch_11[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_11[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_12" type="array">
+         <obj_property name="ElementShortName">kernel_patch_12[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_12[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_13" type="array">
+         <obj_property name="ElementShortName">kernel_patch_13[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_13[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_14" type="array">
+         <obj_property name="ElementShortName">kernel_patch_14[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_14[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_15" type="array">
+         <obj_property name="ElementShortName">kernel_patch_15[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_15[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_16" type="array">
+         <obj_property name="ElementShortName">kernel_patch_16[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_16[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_17" type="array">
+         <obj_property name="ElementShortName">kernel_patch_17[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_17[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_18" type="array">
+         <obj_property name="ElementShortName">kernel_patch_18[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_18[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_19" type="array">
+         <obj_property name="ElementShortName">kernel_patch_19[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_19[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_20" type="array">
+         <obj_property name="ElementShortName">kernel_patch_20[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_20[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_21" type="array">
+         <obj_property name="ElementShortName">kernel_patch_21[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_21[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_22" type="array">
+         <obj_property name="ElementShortName">kernel_patch_22[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_22[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_23" type="array">
+         <obj_property name="ElementShortName">kernel_patch_23[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_23[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_24" type="array">
+         <obj_property name="ElementShortName">kernel_patch_24[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_24[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_25" type="array">
+         <obj_property name="ElementShortName">kernel_patch_25[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_25[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_26" type="array">
+         <obj_property name="ElementShortName">kernel_patch_26[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_26[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_27" type="array">
+         <obj_property name="ElementShortName">kernel_patch_27[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_27[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_28" type="array">
+         <obj_property name="ElementShortName">kernel_patch_28[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_28[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_29" type="array">
+         <obj_property name="ElementShortName">kernel_patch_29[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_29[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_30" type="array">
+         <obj_property name="ElementShortName">kernel_patch_30[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_30[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_31" type="array">
+         <obj_property name="ElementShortName">kernel_patch_31[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_31[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_32" type="array">
+         <obj_property name="ElementShortName">kernel_patch_32[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_32[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_33" type="array">
+         <obj_property name="ElementShortName">kernel_patch_33[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_33[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_34" type="array">
+         <obj_property name="ElementShortName">kernel_patch_34[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_34[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_35" type="array">
+         <obj_property name="ElementShortName">kernel_patch_35[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_35[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_36" type="array">
+         <obj_property name="ElementShortName">kernel_patch_36[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_36[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_37" type="array">
+         <obj_property name="ElementShortName">kernel_patch_37[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_37[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_38" type="array">
+         <obj_property name="ElementShortName">kernel_patch_38[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_38[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_39" type="array">
+         <obj_property name="ElementShortName">kernel_patch_39[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_39[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_40" type="array">
+         <obj_property name="ElementShortName">kernel_patch_40[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_40[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_41" type="array">
+         <obj_property name="ElementShortName">kernel_patch_41[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_41[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_42" type="array">
+         <obj_property name="ElementShortName">kernel_patch_42[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_42[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_43" type="array">
+         <obj_property name="ElementShortName">kernel_patch_43[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_43[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_44" type="array">
+         <obj_property name="ElementShortName">kernel_patch_44[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_44[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_45" type="array">
+         <obj_property name="ElementShortName">kernel_patch_45[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_45[7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_46" type="array">
+         <obj_property name="ElementShortName">kernel_patch_46[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_46[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_47" type="array">
+         <obj_property name="ElementShortName">kernel_patch_47[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_47[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/kernel_patch_48" type="array">
+         <obj_property name="ElementShortName">kernel_patch_48[7:0]</obj_property>
+         <obj_property name="ObjectShortName">kernel_patch_48[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="divider" fp_name="divider1557">
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_0" type="array">
+         <obj_property name="ElementShortName">pixel_window_0[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_0[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_1" type="array">
+         <obj_property name="ElementShortName">pixel_window_1[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_1[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_2" type="array">
+         <obj_property name="ElementShortName">pixel_window_2[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_2[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_3" type="array">
+         <obj_property name="ElementShortName">pixel_window_3[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_3[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_4" type="array">
+         <obj_property name="ElementShortName">pixel_window_4[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_4[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_5" type="array">
+         <obj_property name="ElementShortName">pixel_window_5[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_5[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_6" type="array">
+         <obj_property name="ElementShortName">pixel_window_6[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_6[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_7" type="array">
+         <obj_property name="ElementShortName">pixel_window_7[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_7[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_8" type="array">
+         <obj_property name="ElementShortName">pixel_window_8[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_8[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_9" type="array">
+         <obj_property name="ElementShortName">pixel_window_9[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_9[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_10" type="array">
+         <obj_property name="ElementShortName">pixel_window_10[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_10[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_11" type="array">
+         <obj_property name="ElementShortName">pixel_window_11[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_11[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_12" type="array">
+         <obj_property name="ElementShortName">pixel_window_12[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_12[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_13" type="array">
+         <obj_property name="ElementShortName">pixel_window_13[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_13[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_14" type="array">
+         <obj_property name="ElementShortName">pixel_window_14[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_14[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_15" type="array">
+         <obj_property name="ElementShortName">pixel_window_15[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_15[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_16" type="array">
+         <obj_property name="ElementShortName">pixel_window_16[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_16[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_17" type="array">
+         <obj_property name="ElementShortName">pixel_window_17[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_17[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_18" type="array">
+         <obj_property name="ElementShortName">pixel_window_18[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_18[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_19" type="array">
+         <obj_property name="ElementShortName">pixel_window_19[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_19[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_20" type="array">
+         <obj_property name="ElementShortName">pixel_window_20[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_20[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_21" type="array">
+         <obj_property name="ElementShortName">pixel_window_21[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_21[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_22" type="array">
+         <obj_property name="ElementShortName">pixel_window_22[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_22[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_23" type="array">
+         <obj_property name="ElementShortName">pixel_window_23[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_23[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_24" type="array">
+         <obj_property name="ElementShortName">pixel_window_24[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_24[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_25" type="array">
+         <obj_property name="ElementShortName">pixel_window_25[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_25[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_26" type="array">
+         <obj_property name="ElementShortName">pixel_window_26[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_26[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_27" type="array">
+         <obj_property name="ElementShortName">pixel_window_27[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_27[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_28" type="array">
+         <obj_property name="ElementShortName">pixel_window_28[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_28[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_29" type="array">
+         <obj_property name="ElementShortName">pixel_window_29[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_29[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_30" type="array">
+         <obj_property name="ElementShortName">pixel_window_30[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_30[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_31" type="array">
+         <obj_property name="ElementShortName">pixel_window_31[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_31[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_32" type="array">
+         <obj_property name="ElementShortName">pixel_window_32[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_32[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_33" type="array">
+         <obj_property name="ElementShortName">pixel_window_33[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_33[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_34" type="array">
+         <obj_property name="ElementShortName">pixel_window_34[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_34[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_35" type="array">
+         <obj_property name="ElementShortName">pixel_window_35[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_35[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_36" type="array">
+         <obj_property name="ElementShortName">pixel_window_36[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_36[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_37" type="array">
+         <obj_property name="ElementShortName">pixel_window_37[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_37[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_38" type="array">
+         <obj_property name="ElementShortName">pixel_window_38[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_38[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_39" type="array">
+         <obj_property name="ElementShortName">pixel_window_39[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_39[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_40" type="array">
+         <obj_property name="ElementShortName">pixel_window_40[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_40[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_41" type="array">
+         <obj_property name="ElementShortName">pixel_window_41[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_41[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_42" type="array">
+         <obj_property name="ElementShortName">pixel_window_42[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_42[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_43" type="array">
+         <obj_property name="ElementShortName">pixel_window_43[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_43[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_44" type="array">
+         <obj_property name="ElementShortName">pixel_window_44[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_44[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_45" type="array">
+         <obj_property name="ElementShortName">pixel_window_45[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_45[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_46" type="array">
+         <obj_property name="ElementShortName">pixel_window_46[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_46[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_47" type="array">
+         <obj_property name="ElementShortName">pixel_window_47[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_47[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/pixel_window_48" type="array">
+         <obj_property name="ElementShortName">pixel_window_48[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_window_48[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/out_val" type="array">
+         <obj_property name="ElementShortName">out_val[15:0]</obj_property>
+         <obj_property name="ObjectShortName">out_val[15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/master_controller_v2_0/inst/rx_counter" type="other">
+         <obj_property name="ElementShortName">rx_counter</obj_property>
+         <obj_property name="ObjectShortName">rx_counter</obj_property>
+      </wvobject>
+      <wvobject fp_name="/final_test/fpga/top_i/fp_sop_0/ap_done" type="logic">
+         <obj_property name="ElementShortName">ap_done</obj_property>
+         <obj_property name="ObjectShortName">ap_done</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

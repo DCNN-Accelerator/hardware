@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Thu Apr 30 13:00:42 2020
+-- Date        : Sun May  3 23:06:00 2020
 -- Host        : DESKTOP-BJ5EQ9A running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               C:/Users/hkhaj/Documents/senior-project/hardware/518/518/BUILD/dccn_proj/bdprj.srcs/sources_1/bd/top/ip/top_uart_0_0/top_uart_0_0_sim_netlist.vhdl
@@ -34,7 +34,7 @@ architecture STRUCTURE of top_uart_0_0_STD_FIFO is
   signal delay : STD_LOGIC;
   signal delay_i_1_n_0 : STD_LOGIC;
   signal fifo_rtr_i_1_n_0 : STD_LOGIC;
-  signal fifo_rts_i_2_n_0 : STD_LOGIC;
+  signal fifo_rts_i_1_n_0 : STD_LOGIC;
   signal \fifo_x_data[0]_i_2_n_0\ : STD_LOGIC;
   signal \fifo_x_data[0]_i_3_n_0\ : STD_LOGIC;
   signal \fifo_x_data[1]_i_2_n_0\ : STD_LOGIC;
@@ -49,9 +49,8 @@ architecture STRUCTURE of top_uart_0_0_STD_FIFO is
   signal \fifo_x_data[5]_i_3_n_0\ : STD_LOGIC;
   signal \fifo_x_data[6]_i_2_n_0\ : STD_LOGIC;
   signal \fifo_x_data[6]_i_3_n_0\ : STD_LOGIC;
-  signal \fifo_x_data[7]_i_1_n_0\ : STD_LOGIC;
-  signal \fifo_x_data[7]_i_4_n_0\ : STD_LOGIC;
   signal \fifo_x_data[7]_i_5_n_0\ : STD_LOGIC;
+  signal \fifo_x_data[7]_i_6_n_0\ : STD_LOGIC;
   signal head : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal \head[0]_i_1_n_0\ : STD_LOGIC;
   signal \head[1]_i_1_n_0\ : STD_LOGIC;
@@ -79,26 +78,22 @@ architecture STRUCTURE of top_uart_0_0_STD_FIFO is
   signal \memory_reg[6]\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \memory_reg[7]\ : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal p_0_in : STD_LOGIC;
+  signal p_1_in : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal tail : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal \tail[0]_i_1_n_0\ : STD_LOGIC;
-  signal \tail[1]_i_1_n_0\ : STD_LOGIC;
-  signal \tail[2]_i_1_n_0\ : STD_LOGIC;
   signal tail_0 : STD_LOGIC;
   signal \^uart_fifo_rtr\ : STD_LOGIC;
   signal \^uart_x_rts\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of fifo_rtr_i_1 : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of fifo_rts_i_2 : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \fifo_x_data[7]_i_3\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \head[0]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \head[1]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \head[2]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \head[2]_i_2\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of looped_i_2 : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of looped_i_3 : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of fifo_rtr_i_1 : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \head[0]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \head[1]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \head[2]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \head[2]_i_2\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of looped_i_2 : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of looped_i_3 : label is "soft_lutpair14";
   attribute SOFT_HLUTNM of \tail[0]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \tail[1]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \tail[2]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \tail[1]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \tail[2]_i_1__0\ : label is "soft_lutpair13";
 begin
   uart_fifo_rtr <= \^uart_fifo_rtr\;
   uart_x_rts <= \^uart_x_rts\;
@@ -137,33 +132,20 @@ fifo_rtr_reg: unisim.vcomponents.FDRE
       Q => \^uart_fifo_rtr\,
       R => '0'
     );
-fifo_rts_i_2: unisim.vcomponents.LUT2
+fifo_rts_i_1: unisim.vcomponents.LUT2
     generic map(
       INIT => X"E"
     )
         port map (
       I0 => looped,
       I1 => p_0_in,
-      O => fifo_rts_i_2_n_0
-    );
-fifo_rts_i_3: unisim.vcomponents.LUT6
-    generic map(
-      INIT => X"6FF6FFFFFFFF6FF6"
-    )
-        port map (
-      I0 => tail(1),
-      I1 => head(1),
-      I2 => head(0),
-      I3 => tail(0),
-      I4 => head(2),
-      I5 => tail(2),
-      O => p_0_in
+      O => fifo_rts_i_1_n_0
     );
 fifo_rts_reg: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => '1',
-      D => fifo_rts_i_2_n_0,
+      D => fifo_rts_i_1_n_0,
       Q => \^uart_x_rts\,
       R => SR(0)
     );
@@ -349,16 +331,7 @@ fifo_rts_reg: unisim.vcomponents.FDRE
       I5 => \memory_reg[4]\(6),
       O => \fifo_x_data[6]_i_3_n_0\
     );
-\fifo_x_data[7]_i_1\: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"7"
-    )
-        port map (
-      I0 => rst,
-      I1 => tail_0,
-      O => \fifo_x_data[7]_i_1_n_0\
-    );
-\fifo_x_data[7]_i_3\: unisim.vcomponents.LUT5
+\fifo_x_data[7]_i_2\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00E00000"
     )
@@ -372,6 +345,19 @@ fifo_rts_reg: unisim.vcomponents.FDRE
     );
 \fifo_x_data[7]_i_4\: unisim.vcomponents.LUT6
     generic map(
+      INIT => X"6FF6FFFFFFFF6FF6"
+    )
+        port map (
+      I0 => tail(1),
+      I1 => head(1),
+      I2 => head(0),
+      I3 => tail(0),
+      I4 => head(2),
+      I5 => tail(2),
+      O => p_0_in
+    );
+\fifo_x_data[7]_i_5\: unisim.vcomponents.LUT6
+    generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
         port map (
@@ -381,9 +367,9 @@ fifo_rts_reg: unisim.vcomponents.FDRE
       I3 => \memory_reg[1]\(7),
       I4 => tail(0),
       I5 => \memory_reg[0]\(7),
-      O => \fifo_x_data[7]_i_4_n_0\
+      O => \fifo_x_data[7]_i_5_n_0\
     );
-\fifo_x_data[7]_i_5\: unisim.vcomponents.LUT6
+\fifo_x_data[7]_i_6\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -394,15 +380,15 @@ fifo_rts_reg: unisim.vcomponents.FDRE
       I3 => \memory_reg[5]\(7),
       I4 => tail(0),
       I5 => \memory_reg[4]\(7),
-      O => \fifo_x_data[7]_i_5_n_0\
+      O => \fifo_x_data[7]_i_6_n_0\
     );
 \fifo_x_data_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail_0,
       D => \memory[7]_14\(0),
       Q => uart_x_data(0),
-      R => \fifo_x_data[7]_i_1_n_0\
+      R => SR(0)
     );
 \fifo_x_data_reg[0]_i_1\: unisim.vcomponents.MUXF7
      port map (
@@ -414,10 +400,10 @@ fifo_rts_reg: unisim.vcomponents.FDRE
 \fifo_x_data_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail_0,
       D => \memory[7]_14\(1),
       Q => uart_x_data(1),
-      R => \fifo_x_data[7]_i_1_n_0\
+      R => SR(0)
     );
 \fifo_x_data_reg[1]_i_1\: unisim.vcomponents.MUXF7
      port map (
@@ -429,10 +415,10 @@ fifo_rts_reg: unisim.vcomponents.FDRE
 \fifo_x_data_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail_0,
       D => \memory[7]_14\(2),
       Q => uart_x_data(2),
-      R => \fifo_x_data[7]_i_1_n_0\
+      R => SR(0)
     );
 \fifo_x_data_reg[2]_i_1\: unisim.vcomponents.MUXF7
      port map (
@@ -444,10 +430,10 @@ fifo_rts_reg: unisim.vcomponents.FDRE
 \fifo_x_data_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail_0,
       D => \memory[7]_14\(3),
       Q => uart_x_data(3),
-      R => \fifo_x_data[7]_i_1_n_0\
+      R => SR(0)
     );
 \fifo_x_data_reg[3]_i_1\: unisim.vcomponents.MUXF7
      port map (
@@ -459,10 +445,10 @@ fifo_rts_reg: unisim.vcomponents.FDRE
 \fifo_x_data_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail_0,
       D => \memory[7]_14\(4),
       Q => uart_x_data(4),
-      R => \fifo_x_data[7]_i_1_n_0\
+      R => SR(0)
     );
 \fifo_x_data_reg[4]_i_1\: unisim.vcomponents.MUXF7
      port map (
@@ -474,10 +460,10 @@ fifo_rts_reg: unisim.vcomponents.FDRE
 \fifo_x_data_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail_0,
       D => \memory[7]_14\(5),
       Q => uart_x_data(5),
-      R => \fifo_x_data[7]_i_1_n_0\
+      R => SR(0)
     );
 \fifo_x_data_reg[5]_i_1\: unisim.vcomponents.MUXF7
      port map (
@@ -489,10 +475,10 @@ fifo_rts_reg: unisim.vcomponents.FDRE
 \fifo_x_data_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail_0,
       D => \memory[7]_14\(6),
       Q => uart_x_data(6),
-      R => \fifo_x_data[7]_i_1_n_0\
+      R => SR(0)
     );
 \fifo_x_data_reg[6]_i_1\: unisim.vcomponents.MUXF7
      port map (
@@ -504,15 +490,15 @@ fifo_rts_reg: unisim.vcomponents.FDRE
 \fifo_x_data_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail_0,
       D => \memory[7]_14\(7),
       Q => uart_x_data(7),
-      R => \fifo_x_data[7]_i_1_n_0\
+      R => SR(0)
     );
-\fifo_x_data_reg[7]_i_2\: unisim.vcomponents.MUXF7
+\fifo_x_data_reg[7]_i_3\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \fifo_x_data[7]_i_4_n_0\,
-      I1 => \fifo_x_data[7]_i_5_n_0\,
+      I0 => \fifo_x_data[7]_i_5_n_0\,
+      I1 => \fifo_x_data[7]_i_6_n_0\,
       O => \memory[7]_14\(7),
       S => tail(2)
     );
@@ -599,9 +585,9 @@ looped_i_2: unisim.vcomponents.LUT3
       INIT => X"7F"
     )
         port map (
-      I0 => tail(1),
-      I1 => tail(0),
-      I2 => tail(2),
+      I0 => tail(2),
+      I1 => tail(1),
+      I2 => tail(0),
       O => looped_i_2_n_0
     );
 looped_i_3: unisim.vcomponents.LUT2
@@ -1221,57 +1207,54 @@ looped_reg: unisim.vcomponents.FDRE
       Q => \memory_reg[7]\(7),
       R => SR(0)
     );
-\tail[0]_i_1\: unisim.vcomponents.LUT2
+\tail[0]_i_1\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => tail(0),
+      O => p_1_in(0)
+    );
+\tail[1]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
         port map (
-      I0 => tail_0,
-      I1 => tail(0),
-      O => \tail[0]_i_1_n_0\
-    );
-\tail[1]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"78"
-    )
-        port map (
       I0 => tail(0),
-      I1 => tail_0,
-      I2 => tail(1),
-      O => \tail[1]_i_1_n_0\
+      I1 => tail(1),
+      O => p_1_in(1)
     );
-\tail[2]_i_1\: unisim.vcomponents.LUT4
+\tail[2]_i_1__0\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"7F80"
+      INIT => X"6A"
     )
         port map (
-      I0 => tail(1),
-      I1 => tail(0),
-      I2 => tail_0,
-      I3 => tail(2),
-      O => \tail[2]_i_1_n_0\
+      I0 => tail(2),
+      I1 => tail(1),
+      I2 => tail(0),
+      O => p_1_in(2)
     );
 \tail_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \tail[0]_i_1_n_0\,
+      CE => tail_0,
+      D => p_1_in(0),
       Q => tail(0),
       R => SR(0)
     );
 \tail_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \tail[1]_i_1_n_0\,
+      CE => tail_0,
+      D => p_1_in(1),
       Q => tail(1),
       R => SR(0)
     );
 \tail_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \tail[2]_i_1_n_0\,
+      CE => tail_0,
+      D => p_1_in(2),
       Q => tail(2),
       R => SR(0)
     );
@@ -1318,9 +1301,8 @@ architecture STRUCTURE of top_uart_0_0_STD_FIFO_0 is
   signal \fifo_x_data[5]_i_3__0_n_0\ : STD_LOGIC;
   signal \fifo_x_data[6]_i_2__0_n_0\ : STD_LOGIC;
   signal \fifo_x_data[6]_i_3__0_n_0\ : STD_LOGIC;
-  signal \fifo_x_data[7]_i_1__0_n_0\ : STD_LOGIC;
-  signal \fifo_x_data[7]_i_3__0_n_0\ : STD_LOGIC;
-  signal \fifo_x_data[7]_i_4__0_n_0\ : STD_LOGIC;
+  signal \fifo_x_data[7]_i_2__0_n_0\ : STD_LOGIC;
+  signal \fifo_x_data[7]_i_3_n_0\ : STD_LOGIC;
   signal \head[0]_i_1_n_0\ : STD_LOGIC;
   signal \head[1]_i_1_n_0\ : STD_LOGIC;
   signal \head[2]_i_1_n_0\ : STD_LOGIC;
@@ -1406,26 +1388,24 @@ architecture STRUCTURE of top_uart_0_0_STD_FIFO_0 is
   signal \memory_reg_n_0_[7][6]\ : STD_LOGIC;
   signal \memory_reg_n_0_[7][7]\ : STD_LOGIC;
   signal tail : STD_LOGIC;
-  signal \tail[0]_i_1_n_0\ : STD_LOGIC;
-  signal \tail[1]_i_1_n_0\ : STD_LOGIC;
-  signal \tail[2]_i_1_n_0\ : STD_LOGIC;
+  signal \tail[0]_i_1__0_n_0\ : STD_LOGIC;
+  signal \tail[1]_i_1__0_n_0\ : STD_LOGIC;
+  signal \tail[2]_i_2_n_0\ : STD_LOGIC;
   signal \tail_reg_n_0_[0]\ : STD_LOGIC;
   signal \tail_reg_n_0_[1]\ : STD_LOGIC;
   signal \tail_reg_n_0_[2]\ : STD_LOGIC;
   signal \^x_uart_rtr\ : STD_LOGIC;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \fifo_rtr_i_1__0\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \fifo_rts_i_1__0\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \head[0]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \head[1]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \head[2]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \head[2]_i_2__0\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \looped_i_2__0\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \looped_i_3__0\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \tail[0]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \tail[1]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \tail[2]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \tail[2]_i_2\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \fifo_rtr_i_1__0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \head[0]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \head[1]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \head[2]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \head[2]_i_2__0\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \looped_i_2__0\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \looped_i_3__0\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \tail[0]_i_1__0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \tail[1]_i_1__0\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \tail[2]_i_2\ : label is "soft_lutpair18";
 begin
   SR(0) <= \^sr\(0);
   fifo_uart_rts <= \^fifo_uart_rts\;
@@ -1477,14 +1457,6 @@ fifo_rtr_reg: unisim.vcomponents.FDRE
       D => \fifo_rtr_i_1__0_n_0\,
       Q => \^x_uart_rtr\,
       R => '0'
-    );
-fifo_rts_i_1: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => rst,
-      O => \^sr\(0)
     );
 \fifo_rts_i_1__0\: unisim.vcomponents.LUT2
     generic map(
@@ -1685,16 +1657,15 @@ fifo_rts_reg: unisim.vcomponents.FDRE
       I5 => \memory_reg_n_0_[4][6]\,
       O => \fifo_x_data[6]_i_3__0_n_0\
     );
-\fifo_x_data[7]_i_1__0\: unisim.vcomponents.LUT2
+\fifo_x_data[7]_i_1\: unisim.vcomponents.LUT1
     generic map(
-      INIT => X"7"
+      INIT => X"1"
     )
         port map (
       I0 => rst,
-      I1 => tail,
-      O => \fifo_x_data[7]_i_1__0_n_0\
+      O => \^sr\(0)
     );
-\fifo_x_data[7]_i_3__0\: unisim.vcomponents.LUT6
+\fifo_x_data[7]_i_2__0\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1705,9 +1676,9 @@ fifo_rts_reg: unisim.vcomponents.FDRE
       I3 => \memory_reg_n_0_[1][7]\,
       I4 => \tail_reg_n_0_[0]\,
       I5 => \memory_reg_n_0_[0][7]\,
-      O => \fifo_x_data[7]_i_3__0_n_0\
+      O => \fifo_x_data[7]_i_2__0_n_0\
     );
-\fifo_x_data[7]_i_4__0\: unisim.vcomponents.LUT6
+\fifo_x_data[7]_i_3\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"AFA0CFCFAFA0C0C0"
     )
@@ -1718,15 +1689,15 @@ fifo_rts_reg: unisim.vcomponents.FDRE
       I3 => \memory_reg_n_0_[5][7]\,
       I4 => \tail_reg_n_0_[0]\,
       I5 => \memory_reg_n_0_[4][7]\,
-      O => \fifo_x_data[7]_i_4__0_n_0\
+      O => \fifo_x_data[7]_i_3_n_0\
     );
 \fifo_x_data_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail,
       D => \memory[7]_15\(0),
       Q => Q(0),
-      R => \fifo_x_data[7]_i_1__0_n_0\
+      R => \^sr\(0)
     );
 \fifo_x_data_reg[0]_i_1__0\: unisim.vcomponents.MUXF7
      port map (
@@ -1738,10 +1709,10 @@ fifo_rts_reg: unisim.vcomponents.FDRE
 \fifo_x_data_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail,
       D => \memory[7]_15\(1),
       Q => Q(1),
-      R => \fifo_x_data[7]_i_1__0_n_0\
+      R => \^sr\(0)
     );
 \fifo_x_data_reg[1]_i_1__0\: unisim.vcomponents.MUXF7
      port map (
@@ -1753,10 +1724,10 @@ fifo_rts_reg: unisim.vcomponents.FDRE
 \fifo_x_data_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail,
       D => \memory[7]_15\(2),
       Q => Q(2),
-      R => \fifo_x_data[7]_i_1__0_n_0\
+      R => \^sr\(0)
     );
 \fifo_x_data_reg[2]_i_1__0\: unisim.vcomponents.MUXF7
      port map (
@@ -1768,10 +1739,10 @@ fifo_rts_reg: unisim.vcomponents.FDRE
 \fifo_x_data_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail,
       D => \memory[7]_15\(3),
       Q => Q(3),
-      R => \fifo_x_data[7]_i_1__0_n_0\
+      R => \^sr\(0)
     );
 \fifo_x_data_reg[3]_i_1__0\: unisim.vcomponents.MUXF7
      port map (
@@ -1783,10 +1754,10 @@ fifo_rts_reg: unisim.vcomponents.FDRE
 \fifo_x_data_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail,
       D => \memory[7]_15\(4),
       Q => Q(4),
-      R => \fifo_x_data[7]_i_1__0_n_0\
+      R => \^sr\(0)
     );
 \fifo_x_data_reg[4]_i_1__0\: unisim.vcomponents.MUXF7
      port map (
@@ -1798,10 +1769,10 @@ fifo_rts_reg: unisim.vcomponents.FDRE
 \fifo_x_data_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail,
       D => \memory[7]_15\(5),
       Q => Q(5),
-      R => \fifo_x_data[7]_i_1__0_n_0\
+      R => \^sr\(0)
     );
 \fifo_x_data_reg[5]_i_1__0\: unisim.vcomponents.MUXF7
      port map (
@@ -1813,10 +1784,10 @@ fifo_rts_reg: unisim.vcomponents.FDRE
 \fifo_x_data_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail,
       D => \memory[7]_15\(6),
       Q => Q(6),
-      R => \fifo_x_data[7]_i_1__0_n_0\
+      R => \^sr\(0)
     );
 \fifo_x_data_reg[6]_i_1__0\: unisim.vcomponents.MUXF7
      port map (
@@ -1828,15 +1799,15 @@ fifo_rts_reg: unisim.vcomponents.FDRE
 \fifo_x_data_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
+      CE => tail,
       D => \memory[7]_15\(7),
       Q => Q(7),
-      R => \fifo_x_data[7]_i_1__0_n_0\
+      R => \^sr\(0)
     );
-\fifo_x_data_reg[7]_i_2__0\: unisim.vcomponents.MUXF7
+\fifo_x_data_reg[7]_i_1\: unisim.vcomponents.MUXF7
      port map (
-      I0 => \fifo_x_data[7]_i_3__0_n_0\,
-      I1 => \fifo_x_data[7]_i_4__0_n_0\,
+      I0 => \fifo_x_data[7]_i_2__0_n_0\,
+      I1 => \fifo_x_data[7]_i_3_n_0\,
       O => \memory[7]_15\(7),
       S => \tail_reg_n_0_[2]\
     );
@@ -2545,37 +2516,24 @@ looped_reg: unisim.vcomponents.FDRE
       Q => \memory_reg_n_0_[7][7]\,
       R => \^sr\(0)
     );
-\tail[0]_i_1\: unisim.vcomponents.LUT2
+\tail[0]_i_1__0\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \tail_reg_n_0_[0]\,
+      O => \tail[0]_i_1__0_n_0\
+    );
+\tail[1]_i_1__0\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
     )
         port map (
-      I0 => tail,
-      I1 => \tail_reg_n_0_[0]\,
-      O => \tail[0]_i_1_n_0\
-    );
-\tail[1]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"78"
-    )
-        port map (
       I0 => \tail_reg_n_0_[0]\,
-      I1 => tail,
-      I2 => \tail_reg_n_0_[1]\,
-      O => \tail[1]_i_1_n_0\
+      I1 => \tail_reg_n_0_[1]\,
+      O => \tail[1]_i_1__0_n_0\
     );
-\tail[2]_i_1\: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"7F80"
-    )
-        port map (
-      I0 => \tail_reg_n_0_[1]\,
-      I1 => \tail_reg_n_0_[0]\,
-      I2 => tail,
-      I3 => \tail_reg_n_0_[2]\,
-      O => \tail[2]_i_1_n_0\
-    );
-\tail[2]_i_2\: unisim.vcomponents.LUT5
+\tail[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"0000E000"
     )
@@ -2587,27 +2545,37 @@ looped_reg: unisim.vcomponents.FDRE
       I4 => delay,
       O => tail
     );
+\tail[2]_i_2\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"6A"
+    )
+        port map (
+      I0 => \tail_reg_n_0_[2]\,
+      I1 => \tail_reg_n_0_[1]\,
+      I2 => \tail_reg_n_0_[0]\,
+      O => \tail[2]_i_2_n_0\
+    );
 \tail_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \tail[0]_i_1_n_0\,
+      CE => tail,
+      D => \tail[0]_i_1__0_n_0\,
       Q => \tail_reg_n_0_[0]\,
       R => \^sr\(0)
     );
 \tail_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \tail[1]_i_1_n_0\,
+      CE => tail,
+      D => \tail[1]_i_1__0_n_0\,
       Q => \tail_reg_n_0_[1]\,
       R => \^sr\(0)
     );
 \tail_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
-      CE => '1',
-      D => \tail[2]_i_1_n_0\,
+      CE => tail,
+      D => \tail[2]_i_2_n_0\,
       Q => \tail_reg_n_0_[2]\,
       R => \^sr\(0)
     );
@@ -4017,9 +3985,9 @@ architecture STRUCTURE of top_uart_0_0 is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
-  attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
 inst: entity work.top_uart_0_0_uart
      port map (

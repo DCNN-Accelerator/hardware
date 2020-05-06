@@ -90,10 +90,10 @@ module top_bram_controller_v2_0_0 (
   data_5
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *)
 input wire clk;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *)
 input wire rst;
 input wire [7 : 0] conv_bram_data;
@@ -107,7 +107,7 @@ output wire [7 : 0] bram_conv_data_4;
 output wire [7 : 0] bram_conv_data_5;
 output wire bram_conv_rts;
 output wire [7 : 0] bram_write_data;
-output wire [8 : 0] addr;
+output wire [9 : 0] addr;
 output wire ena_0;
 output wire ena_1;
 output wire ena_2;

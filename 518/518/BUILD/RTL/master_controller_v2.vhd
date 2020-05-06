@@ -130,7 +130,7 @@ begin
                 when wait4rx =>
                     --checks to see if all bytes have been received from 
                     --UART_RX and UART_TX is not done
-                    if(rx_counter = (518 * 518 - 1) and tx_counter /= (518 * 518 - 1)) then
+                    if(rx_counter >= (518 * 518 - 1) and tx_counter /= (518 * 518 - 1)) then
                         --all bytes sent, toggle fake_sopu_rts
                         fake_sopu_rts <= '1';
                         uart_sopu_rtr <= '1';
@@ -205,7 +205,7 @@ begin
                 --sends data to UART_TX
                 when wait4tx =>
                     --checks to see if enough values have been read to make output valid
-                    if(rx_counter >= (518*3 + 4)) then
+                    if(rx_counter >= (518*6 + 7)) then
                         --enough values sent, begin to send fp_sop_data out
                         --checks to see if it should send data out
                         if(sopu_uart_rts_int = '1' and sopu_uart_rtr = '1') then

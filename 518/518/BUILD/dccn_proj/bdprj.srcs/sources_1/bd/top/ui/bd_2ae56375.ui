@@ -1,32 +1,32 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.192593",
-   "Default View_TopLeft":"-4284,-10",
+   "Default View_ScaleFactor":"1.16629",
+   "Default View_TopLeft":"189,2511",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.21  2019-05-29 bk=1.5064 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
 preplace port RX -pg 1 -lvl 0 -x 0 -y 1600 -defaultsOSRD
+preplace port TX -pg 1 -lvl 7 -x 2800 -y 1550 -defaultsOSRD
 preplace port cts -pg 1 -lvl 0 -x 0 -y 1630 -defaultsOSRD
 preplace port reset -pg 1 -lvl 0 -x 0 -y 1350 -defaultsOSRD
+preplace port rts -pg 1 -lvl 7 -x 2800 -y 1520 -defaultsOSRD
 preplace port sys_clock -pg 1 -lvl 0 -x 0 -y 1380 -defaultsOSRD
-preplace port TX -pg 1 -lvl 7 -x 2810 -y 1550 -defaultsOSRD
-preplace port rts -pg 1 -lvl 7 -x 2810 -y 1520 -defaultsOSRD
-preplace inst bram_controller_v2_0 -pg 1 -lvl 2 -x 660 -y 1070 -defaultsOSRD
-preplace inst fp_sop_0 -pg 1 -lvl 4 -x 1690 -y 2700 -defaultsOSRD
-preplace inst img_window_v2_0 -pg 1 -lvl 3 -x 1290 -y 3230 -defaultsOSRD
-preplace inst kernel_bank_v2_0 -pg 1 -lvl 2 -x 660 -y 2240 -defaultsOSRD
-preplace inst master_controller_v2_0 -pg 1 -lvl 5 -x 2180 -y 1350 -defaultsOSRD
-preplace inst uart_0 -pg 1 -lvl 6 -x 2610 -y 1510 -defaultsOSRD
-preplace inst blk_mem_gen_0 -pg 1 -lvl 3 -x 1290 -y 110 -defaultsOSRD
-preplace inst blk_mem_gen_1 -pg 1 -lvl 3 -x 1290 -y 330 -defaultsOSRD
-preplace inst blk_mem_gen_2 -pg 1 -lvl 3 -x 1290 -y 550 -defaultsOSRD
-preplace inst blk_mem_gen_3 -pg 1 -lvl 3 -x 1290 -y 770 -defaultsOSRD
-preplace inst blk_mem_gen_4 -pg 1 -lvl 3 -x 1290 -y 990 -defaultsOSRD
-preplace inst blk_mem_gen_5 -pg 1 -lvl 3 -x 1290 -y 1210 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 3 -x 1310 -y 110 -defaultsOSRD
+preplace inst blk_mem_gen_1 -pg 1 -lvl 3 -x 1310 -y 330 -defaultsOSRD
+preplace inst blk_mem_gen_2 -pg 1 -lvl 3 -x 1310 -y 550 -defaultsOSRD
+preplace inst blk_mem_gen_3 -pg 1 -lvl 3 -x 1310 -y 770 -defaultsOSRD
+preplace inst blk_mem_gen_4 -pg 1 -lvl 3 -x 1310 -y 990 -defaultsOSRD
+preplace inst blk_mem_gen_5 -pg 1 -lvl 3 -x 1310 -y 1210 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 200 -y 1370 -defaultsOSRD
+preplace inst fp_sop_0 -pg 1 -lvl 4 -x 1720 -y 2700 -defaultsOSRD
+preplace inst img_window_v2_0 -pg 1 -lvl 3 -x 1310 -y 3230 -defaultsOSRD
+preplace inst kernel_bank_v2_0 -pg 1 -lvl 2 -x 660 -y 2240 -defaultsOSRD
 preplace inst proc_sys_reset_0 -pg 1 -lvl 1 -x 200 -y 1520 -defaultsOSRD
-preplace netloc Net 1 1 5 430 2790 1090 1580 NJ 1580 NJ 1580 2380
-preplace netloc RX_1 1 0 6 30J 1620 NJ 1620 1030J 1590 NJ 1590 NJ 1590 2410J
+preplace inst bram_controller_v2_0 -pg 1 -lvl 2 -x 660 -y 1070 -defaultsOSRD
+preplace inst master_controller_v2_0 -pg 1 -lvl 5 -x 2160 -y 1350 -defaultsOSRD
+preplace inst uart_0 -pg 1 -lvl 6 -x 2590 -y 1510 -defaultsOSRD
+preplace netloc Net 1 1 5 430 2790 1090 1580 NJ 1580 NJ 1580 2360
+preplace netloc RX_1 1 0 6 30J 1620 NJ 1620 1030J 1590 NJ 1590 NJ 1590 2390J
 preplace netloc blk_mem_gen_0_douta 1 1 2 410 130 NJ
 preplace netloc blk_mem_gen_1_douta 1 1 2 420 350 NJ
 preplace netloc blk_mem_gen_2_douta 1 1 2 430 570 NJ
@@ -40,9 +40,9 @@ preplace netloc bram_controller_v2_0_bram_conv_data_2 1 2 3 980 1380 NJ 1380 NJ
 preplace netloc bram_controller_v2_0_bram_conv_data_3 1 2 3 950 1400 NJ 1400 NJ
 preplace netloc bram_controller_v2_0_bram_conv_data_4 1 2 3 920 1420 NJ 1420 NJ
 preplace netloc bram_controller_v2_0_bram_conv_data_5 1 2 3 890 1440 NJ 1440 NJ
-preplace netloc bram_controller_v2_0_bram_conv_rts 1 2 3 970 1390 NJ 1390 1910
+preplace netloc bram_controller_v2_0_bram_conv_rts 1 2 3 970 1390 NJ 1390 1930
 preplace netloc bram_controller_v2_0_bram_write_data 1 2 1 1120 110n
-preplace netloc bram_controller_v2_0_conv_bram_rtr 1 2 3 1090J 1330 NJ 1330 1890
+preplace netloc bram_controller_v2_0_conv_bram_rtr 1 2 3 1090J 1330 NJ 1330 1910
 preplace netloc bram_controller_v2_0_ena_0 1 2 1 840 150n
 preplace netloc bram_controller_v2_0_ena_1 1 2 1 860 370n
 preplace netloc bram_controller_v2_0_ena_2 1 2 1 880 590n
@@ -55,10 +55,10 @@ preplace netloc bram_controller_v2_0_wena_2 1 2 1 930 610n
 preplace netloc bram_controller_v2_0_wena_3 1 2 1 990 830n
 preplace netloc bram_controller_v2_0_wena_4 1 2 1 1050 1050n
 preplace netloc bram_controller_v2_0_wena_5 1 2 1 1080 1270n
-preplace netloc clk_1 1 1 5 370 1380 940 1560 1480 1560 1880 1560 2360
-preplace netloc cts_1 1 0 6 NJ 1630 NJ 1630 1040J 1600 NJ 1600 NJ 1600 2420J
-preplace netloc fp_sop_0_out_val_V 1 4 1 1940 1500n
-preplace netloc fp_sop_0_out_val_V_ap_vld 1 4 1 1910 1480n
+preplace netloc clk_1 1 1 5 370 1380 940 1560 1500 1560 1900 1560 2340
+preplace netloc cts_1 1 0 6 NJ 1630 NJ 1630 1040J 1600 NJ 1600 NJ 1600 2400J
+preplace netloc fp_sop_0_out_val_V 1 4 1 1960 1500n
+preplace netloc fp_sop_0_out_val_V_ap_vld 1 4 1 1930 1480n
 preplace netloc img_window_v2_0_img_wd_reg0 1 3 1 N 2750
 preplace netloc img_window_v2_0_img_wd_reg1 1 3 1 N 2770
 preplace netloc img_window_v2_0_img_wd_reg2 1 3 1 N 2790
@@ -155,26 +155,26 @@ preplace netloc kernel_bank_v2_0_kernel_reg42 1 2 2 NJ 2610 N
 preplace netloc kernel_bank_v2_0_kernel_reg43 1 2 2 NJ 2630 N
 preplace netloc kernel_bank_v2_0_kernel_reg44 1 2 2 NJ 2650 N
 preplace netloc kernel_bank_v2_0_kernel_reg45 1 2 2 NJ 2670 N
-preplace netloc kernel_bank_v2_0_kernel_reg46 1 2 2 1060J 2660 1490
-preplace netloc kernel_bank_v2_0_kernel_reg47 1 2 2 1070J 2680 1470
-preplace netloc kernel_bank_v2_0_kernel_reg48 1 2 2 1080J 2690 1460
-preplace netloc master_controller_v2_0_fake_sopu_rts 1 2 4 1120 1410 1490J 1120 NJ 1120 2360
-preplace netloc master_controller_v2_0_fp_enable 1 3 3 1500 1620 NJ 1620 2350
-preplace netloc master_controller_v2_0_sopu_ilb_data 1 1 5 390 1360 900J 1350 1460J 1130 NJ 1130 2370
-preplace netloc master_controller_v2_0_sopu_ilb_rts 1 1 5 400 1370 NJ 1370 1500J 1140 NJ 1140 2350
-preplace netloc master_controller_v2_0_sopu_uart_data 1 5 1 2390 1350n
-preplace netloc master_controller_v2_0_sopu_uart_rts 1 5 1 2410 1330n
-preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 5 380 1570 1020 1570 NJ 1570 1900 1570 2400J
-preplace netloc proc_sys_reset_0_peripheral_reset 1 1 3 NJ 1520 NJ 1520 1460
+preplace netloc kernel_bank_v2_0_kernel_reg46 1 2 2 1060J 2660 1510
+preplace netloc kernel_bank_v2_0_kernel_reg47 1 2 2 1070J 2680 1490
+preplace netloc kernel_bank_v2_0_kernel_reg48 1 2 2 1080J 2690 1480
+preplace netloc master_controller_v2_0_fake_sopu_rts 1 2 4 1120 1410 1510J 1120 NJ 1120 2340
+preplace netloc master_controller_v2_0_fp_enable 1 3 3 1520 1620 NJ 1620 2330
+preplace netloc master_controller_v2_0_sopu_ilb_data 1 1 5 390 1360 900J 1350 1480J 1130 NJ 1130 2350
+preplace netloc master_controller_v2_0_sopu_ilb_rts 1 1 5 400 1370 NJ 1370 1520J 1140 NJ 1140 2330
+preplace netloc master_controller_v2_0_sopu_uart_data 1 5 1 2370 1350n
+preplace netloc master_controller_v2_0_sopu_uart_rts 1 5 1 2390 1330n
+preplace netloc proc_sys_reset_0_peripheral_aresetn 1 1 5 380 1570 1020 1570 NJ 1570 1920 1570 2380J
+preplace netloc proc_sys_reset_0_peripheral_reset 1 1 3 NJ 1520 NJ 1520 1480
 preplace netloc reset_1 1 0 1 20 1350n
 preplace netloc sys_clock_1 1 0 1 30 1380n
 preplace netloc uart_0_TX 1 6 1 NJ 1550
-preplace netloc uart_0_rts 1 6 1 2790J 1520n
-preplace netloc uart_0_uart_x_data 1 1 6 440 2800 1100 2640 1490J 1630 1930 1630 NJ 1630 2780
-preplace netloc uart_0_uart_x_rts 1 1 6 420 2810 1110 2580 1470J 1610 1920 1640 NJ 1640 2770
-preplace netloc uart_0_x_uart_rtr 1 4 3 1950 1650 NJ 1650 2760
-levelinfo -pg 1 0 200 660 1290 1690 2180 2610 2810
-pagesize -pg 1 -db -bbox -sgen -110 -10 2880 3770
+preplace netloc uart_0_rts 1 6 1 2770J 1520n
+preplace netloc uart_0_uart_x_data 1 1 6 440 2800 1100 2640 1510J 1630 1950 1630 NJ 1630 2760
+preplace netloc uart_0_uart_x_rts 1 1 6 420 2810 1110 2580 1490J 1610 1940 1640 NJ 1640 2750
+preplace netloc uart_0_x_uart_rtr 1 4 3 1970 1650 NJ 1650 2740
+levelinfo -pg 1 0 200 660 1310 1720 2160 2590 2800
+pagesize -pg 1 -db -bbox -sgen -110 -10 2870 3770
 "
 }
-
+0

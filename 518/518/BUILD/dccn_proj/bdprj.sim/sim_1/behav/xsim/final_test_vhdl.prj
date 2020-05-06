@@ -1,0 +1,15 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../RTL/bram_controller_v2.vhd" \
+"../../../../../RTL/img_window_v2.vhd" \
+"../../../../../RTL/kernel_bank_v2.vhd" \
+"../../../../../RTL/master_controller_v2.vhd" \
+"../../../../../RTL/STD_FIFO.vhd" \
+"../../../../../RTL/uart_rx.vhd" \
+"../../../../../RTL/uart_tx.vhd" \
+"../../../../../RTL/uart.vhd" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_proc_sys_reset_0_0/sim/top_proc_sys_reset_0_0.vhd" \
+"../../../../bdprj.srcs/sim_1/imports/Simulation/final_test.vhd" \
+
+# Do not sort compile order
+nosort

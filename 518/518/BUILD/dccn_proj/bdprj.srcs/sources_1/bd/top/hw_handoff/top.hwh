@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Apr 30 12:58:15 2020" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun May  3 23:00:00 2020" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="top" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -7,6 +7,11 @@
     <PORT DIR="I" NAME="RX" SIGIS="undef" SIGNAME="External_Ports_RX">
       <CONNECTIONS>
         <CONNECTION INSTANCE="uart_0" PORT="RX"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="TX" SIGIS="undef" SIGNAME="uart_0_TX">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="uart_0" PORT="TX"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="cts" SIGIS="undef" SIGNAME="External_Ports_cts">
@@ -20,20 +25,15 @@
         <CONNECTION INSTANCE="proc_sys_reset_0" PORT="ext_reset_in"/>
       </CONNECTIONS>
     </PORT>
+    <PORT DIR="O" NAME="rts" SIGIS="undef" SIGNAME="uart_0_rts">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="uart_0" PORT="rts"/>
+      </CONNECTIONS>
+    </PORT>
     <PORT CLKFREQUENCY="100000000" DIR="I" NAME="sys_clock" SIGIS="clk" SIGNAME="External_Ports_sys_clock">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
         <CONNECTION INSTANCE="proc_sys_reset_0" PORT="slowest_sync_clk"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="TX" SIGIS="undef" SIGNAME="uart_0_TX">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="uart_0" PORT="TX"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" NAME="rts" SIGIS="undef" SIGNAME="uart_0_rts">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="uart_0" PORT="rts"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -1355,7 +1355,7 @@
             <CONNECTION INSTANCE="blk_mem_gen_5" PORT="dina"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="8" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="bram_controller_v2_0_addr">
+        <PORT DIR="O" LEFT="9" NAME="addr" RIGHT="0" SIGIS="undef" SIGNAME="bram_controller_v2_0_addr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addra"/>
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="addra"/>
@@ -2048,36 +2048,36 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_out1" SIGIS="clk" SIGNAME="clk_wiz_0_clk_out1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_controller_v2_0" PORT="clk"/>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="ap_clk"/>
-            <CONNECTION INSTANCE="img_window_v2_0" PORT="clk"/>
-            <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="clk"/>
-            <CONNECTION INSTANCE="master_controller_v2_0" PORT="clk"/>
-            <CONNECTION INSTANCE="uart_0" PORT="clk"/>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clka"/>
             <CONNECTION INSTANCE="blk_mem_gen_1" PORT="clka"/>
             <CONNECTION INSTANCE="blk_mem_gen_2" PORT="clka"/>
             <CONNECTION INSTANCE="blk_mem_gen_3" PORT="clka"/>
             <CONNECTION INSTANCE="blk_mem_gen_4" PORT="clka"/>
             <CONNECTION INSTANCE="blk_mem_gen_5" PORT="clka"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="ap_clk"/>
+            <CONNECTION INSTANCE="img_window_v2_0" PORT="clk"/>
+            <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="clk"/>
+            <CONNECTION INSTANCE="bram_controller_v2_0" PORT="clk"/>
+            <CONNECTION INSTANCE="master_controller_v2_0" PORT="clk"/>
+            <CONNECTION INSTANCE="uart_0" PORT="clk"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="2004071123" FULLNAME="/fp_sop_0" HWVERSION="1.0" INSTANCE="fp_sop_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="fp_sop" VLNV="xilinx.com:hls:fp_sop:1.0">
+    <MODULE COREREVISION="2005022247" FULLNAME="/fp_sop_0" HWVERSION="1.0" INSTANCE="fp_sop_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="fp_sop" VLNV="xilinx.com:hls:fp_sop:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="top_fp_sop_0_0"/>
         <PARAMETER NAME="clk_period" VALUE="10"/>
         <PARAMETER NAME="machine" VALUE="64"/>
         <PARAMETER NAME="combinational" VALUE="0"/>
-        <PARAMETER NAME="latency" VALUE="24"/>
+        <PARAMETER NAME="latency" VALUE="3"/>
         <PARAMETER NAME="II" VALUE="1"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="O" NAME="out_val_V_ap_vld" SIGIS="undef" SIGNAME="fp_sop_0_out_val_V_ap_vld">
+        <PORT DIR="O" NAME="out_val_ap_vld" SIGIS="undef" SIGNAME="fp_sop_0_out_val_ap_vld">
           <CONNECTIONS>
             <CONNECTION INSTANCE="master_controller_v2_0" PORT="fp_out_valid"/>
           </CONNECTIONS>
@@ -2100,497 +2100,497 @@
         <PORT DIR="O" NAME="ap_done" SIGIS="undef"/>
         <PORT DIR="O" NAME="ap_idle" SIGIS="undef"/>
         <PORT DIR="O" NAME="ap_ready" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_0_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg0">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_0" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_1_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg1">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_1" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_2_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg2">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_2" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_3_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg3">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_3" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_4_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg4">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_4" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg4">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg4"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_5_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg5">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_5" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg5">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg5"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_6_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg6">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_6" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg6">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg6"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_7_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg7">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_7" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg7">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg7"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_8_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg8">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_8" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg8">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg8"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_9_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg9">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_9" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg9">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg9"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_10_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg10">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_10" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg10">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg10"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_11_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg11">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_11" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg11">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg11"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_12_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg12">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_12" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg12">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg12"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_13_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg13">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_13" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg13">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg13"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_14_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg14">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_14" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg14">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg14"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_15_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg15">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_15" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg15">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg15"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_16_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg16">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_16" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg16">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg16"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_17_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg17">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_17" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg17">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg17"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_18_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg18">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_18" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg18">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg18"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_19_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg19">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_19" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg19">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg19"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_20_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg20">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_20" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg20">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg20"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_21_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg21">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_21" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg21">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg21"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_22_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg22">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_22" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg22">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg22"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_23_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg23">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_23" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg23">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg23"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_24_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg24">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_24" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg24">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg24"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_25_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg25">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_25" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg25">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg25"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_26_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg26">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_26" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg26">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg26"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_27_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg27">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_27" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg27">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg27"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_28_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg28">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_28" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg28">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg28"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_29_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg29">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_29" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg29">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg29"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_30_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg30">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_30" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg30">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg30"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_31_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg31">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_31" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg31">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg31"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_32_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg32">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_32" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg32">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg32"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_33_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg33">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_33" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg33">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg33"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_34_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg34">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_34" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg34">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg34"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_35_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg35">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_35" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg35">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg35"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_36_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg36">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_36" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg36">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg36"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_37_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg37">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_37" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg37">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg37"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_38_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg38">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_38" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg38">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg38"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_39_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg39">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_39" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg39">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg39"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_40_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg40">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_40" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg40">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg40"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_41_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg41">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_41" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg41">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg41"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_42_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg42">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_42" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg42">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg42"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_43_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg43">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_43" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg43">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg43"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_44_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg44">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_44" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg44">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg44"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_45_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg45">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_45" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg45">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg45"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_46_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg46">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_46" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg46">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg46"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_47_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg47">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_47" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg47">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg47"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="kernel_patch_48_V" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg48">
+        <PORT DIR="I" LEFT="7" NAME="kernel_patch_48" RIGHT="0" SIGIS="data" SIGNAME="kernel_bank_v2_0_kernel_reg48">
           <CONNECTIONS>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="kernel_reg48"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_0_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg0">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_0" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg0">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_1_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg1">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_1" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg1">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg1"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_2_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg2">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_2" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg2">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg2"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_3_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg3">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_3" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg3">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg3"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_4_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg4">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_4" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg4">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg4"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_5_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg5">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_5" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg5">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg5"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_6_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg6">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_6" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg6">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg6"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_7_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg7">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_7" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg7">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg7"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_8_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg8">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_8" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg8">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg8"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_9_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg9">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_9" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg9">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg9"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_10_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg10">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_10" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg10">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg10"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_11_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg11">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_11" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg11">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg11"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_12_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg12">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_12" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg12">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg12"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_13_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg13">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_13" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg13">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg13"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_14_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg14">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_14" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg14">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg14"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_15_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg15">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_15" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg15">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg15"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_16_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg16">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_16" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg16">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg16"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_17_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg17">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_17" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg17">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg17"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_18_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg18">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_18" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg18">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg18"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_19_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg19">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_19" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg19">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg19"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_20_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg20">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_20" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg20">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg20"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_21_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg21">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_21" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg21">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg21"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_22_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg22">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_22" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg22">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg22"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_23_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg23">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_23" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg23">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg23"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_24_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg24">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_24" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg24">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg24"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_25_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg25">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_25" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg25">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg25"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_26_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg26">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_26" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg26">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg26"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_27_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg27">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_27" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg27">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg27"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_28_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg28">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_28" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg28">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg28"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_29_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg29">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_29" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg29">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg29"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_30_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg30">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_30" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg30">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg30"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_31_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg31">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_31" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg31">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg31"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_32_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg32">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_32" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg32">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg32"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_33_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg33">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_33" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg33">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg33"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_34_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg34">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_34" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg34">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg34"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_35_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg35">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_35" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg35">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg35"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_36_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg36">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_36" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg36">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg36"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_37_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg37">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_37" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg37">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg37"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_38_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg38">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_38" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg38">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg38"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_39_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg39">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_39" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg39">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg39"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_40_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg40">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_40" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg40">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg40"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_41_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg41">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_41" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg41">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg41"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_42_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg42">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_42" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg42">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg42"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_43_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg43">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_43" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg43">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg43"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_44_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg44">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_44" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg44">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg44"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_45_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg45">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_45" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg45">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg45"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_46_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg46">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_46" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg46">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg46"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_47_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg47">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_47" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg47">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg47"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="7" NAME="pixel_window_48_V" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg48">
+        <PORT DIR="I" LEFT="7" NAME="pixel_window_48" RIGHT="0" SIGIS="data" SIGNAME="img_window_v2_0_img_wd_reg48">
           <CONNECTIONS>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="img_wd_reg48"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="out_val_V" RIGHT="0" SIGIS="data" SIGNAME="fp_sop_0_out_val_V">
+        <PORT DIR="O" LEFT="15" NAME="out_val" RIGHT="0" SIGIS="data" SIGNAME="fp_sop_0_out_val">
           <CONNECTIONS>
             <CONNECTION INSTANCE="master_controller_v2_0" PORT="fp_out_data"/>
           </CONNECTIONS>
@@ -2598,7 +2598,6 @@
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="__NOC__" NAME="ap_ctrl" TYPE="TARGET" VLNV="xilinx.com:interface:acc_handshake:1.0">
-          <PARAMETER NAME="LAYERED_METADATA" VALUE="xilinx.com:interface:datatypes:1.0 {start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} idle {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}"/>
           <PORTMAPS>
             <PORTMAP LOGICAL="start" PHYSICAL="ap_start"/>
             <PORTMAP LOGICAL="done" PHYSICAL="ap_done"/>
@@ -2687,247 +2686,247 @@
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg0" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_0_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg1" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_1_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg2" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_2_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg3" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg3">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_3_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_3"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg4" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_4_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg5" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg5">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_5_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_5"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg6" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg6">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_6_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_6"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg7" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg7">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_7_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_7"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg8" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg8">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_8_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_8"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg9" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg9">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_9_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_9"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg10" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg10">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_10_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_10"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg11" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg11">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_11_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_11"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg12" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg12">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_12_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_12"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg13" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg13">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_13_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_13"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg14" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg14">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_14_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_14"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg15" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg15">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_15_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_15"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg16" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg16">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_16_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_16"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg17" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg17">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_17_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_17"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg18" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg18">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_18_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_18"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg19" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg19">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_19_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_19"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg20" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg20">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_20_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_20"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg21" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg21">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_21_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_21"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg22" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg22">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_22_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_22"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg23" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg23">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_23_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_23"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg24" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg24">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_24_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_24"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg25" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg25">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_25_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_25"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg26" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg26">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_26_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_26"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg27" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg27">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_27_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_27"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg28" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg28">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_28_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_28"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg29" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg29">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_29_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_29"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg30" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg30">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_30_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_30"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg31" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg31">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_31_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_31"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg32" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg32">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_32_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_32"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg33" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg33">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_33_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_33"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg34" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg34">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_34_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_34"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg35" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg35">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_35_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_35"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg36" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg36">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_36_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_36"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg37" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg37">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_37_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_37"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg38" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg38">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_38_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_38"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg39" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg39">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_39_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_39"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg40" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg40">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_40_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_40"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg41" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg41">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_41_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_41"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg42" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg42">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_42_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_42"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg43" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg43">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_43_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_43"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg44" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg44">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_44_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_44"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg45" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg45">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_45_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_45"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg46" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg46">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_46_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_46"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg47" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg47">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_47_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_47"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="img_wd_reg48" RIGHT="0" SIGIS="undef" SIGNAME="img_window_v2_0_img_wd_reg48">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_48_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="pixel_window_48"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -2973,247 +2972,247 @@
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg0" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_0_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_0"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg1" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg1">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_1_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_1"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg2" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg2">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_2_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_2"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg3" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg3">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_3_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_3"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg4" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg4">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_4_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_4"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg5" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg5">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_5_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_5"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg6" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg6">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_6_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_6"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg7" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg7">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_7_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_7"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg8" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg8">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_8_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_8"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg9" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg9">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_9_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_9"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg10" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg10">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_10_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_10"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg11" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg11">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_11_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_11"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg12" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg12">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_12_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_12"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg13" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg13">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_13_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_13"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg14" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg14">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_14_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_14"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg15" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg15">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_15_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_15"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg16" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg16">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_16_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_16"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg17" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg17">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_17_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_17"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg18" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg18">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_18_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_18"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg19" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg19">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_19_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_19"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg20" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg20">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_20_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_20"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg21" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg21">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_21_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_21"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg22" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg22">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_22_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_22"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg23" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg23">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_23_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_23"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg24" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg24">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_24_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_24"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg25" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg25">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_25_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_25"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg26" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg26">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_26_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_26"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg27" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg27">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_27_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_27"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg28" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg28">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_28_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_28"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg29" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg29">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_29_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_29"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg30" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg30">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_30_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_30"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg31" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg31">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_31_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_31"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg32" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg32">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_32_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_32"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg33" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg33">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_33_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_33"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg34" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg34">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_34_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_34"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg35" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg35">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_35_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_35"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg36" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg36">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_36_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_36"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg37" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg37">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_37_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_37"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg38" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg38">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_38_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_38"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg39" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg39">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_39_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_39"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg40" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg40">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_40_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_40"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg41" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg41">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_41_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_41"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg42" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg42">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_42_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_42"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg43" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg43">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_43_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_43"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg44" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg44">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_44_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_44"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg45" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg45">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_45_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_45"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg46" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg46">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_46_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_46"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg47" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg47">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_47_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_47"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="7" NAME="kernel_reg48" RIGHT="0" SIGIS="undef" SIGNAME="kernel_bank_v2_0_kernel_reg48">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_48_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="kernel_patch_48"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -3333,14 +3332,14 @@
             <CONNECTION INSTANCE="fp_sop_0" PORT="ap_start"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="fp_out_valid" SIGIS="undef" SIGNAME="fp_sop_0_out_val_V_ap_vld">
+        <PORT DIR="I" NAME="fp_out_valid" SIGIS="undef" SIGNAME="fp_sop_0_out_val_ap_vld">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="out_val_V_ap_vld"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="out_val_ap_vld"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="fp_out_data" RIGHT="0" SIGIS="undef" SIGNAME="fp_sop_0_out_val_V">
+        <PORT DIR="I" LEFT="15" NAME="fp_out_data" RIGHT="0" SIGIS="undef" SIGNAME="fp_sop_0_out_val">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="fp_sop_0" PORT="out_val_V"/>
+            <CONNECTION INSTANCE="fp_sop_0" PORT="out_val"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -3389,9 +3388,9 @@
         <PORT DIR="O" LEFT="0" NAME="interconnect_aresetn" RIGHT="0" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="bram_controller_v2_0" PORT="rst"/>
             <CONNECTION INSTANCE="img_window_v2_0" PORT="rst"/>
             <CONNECTION INSTANCE="kernel_bank_v2_0" PORT="rst"/>
+            <CONNECTION INSTANCE="bram_controller_v2_0" PORT="rst"/>
             <CONNECTION INSTANCE="master_controller_v2_0" PORT="rst"/>
             <CONNECTION INSTANCE="uart_0" PORT="rst"/>
           </CONNECTIONS>

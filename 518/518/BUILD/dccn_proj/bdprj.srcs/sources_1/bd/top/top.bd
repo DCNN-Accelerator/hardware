@@ -9,12 +9,6 @@
       "validated": "true"
     },
     "design_tree": {
-      "bram_controller_v2_0": "",
-      "fp_sop_0": "",
-      "img_window_v2_0": "",
-      "kernel_bank_v2_0": "",
-      "master_controller_v2_0": "",
-      "uart_0": "",
       "blk_mem_gen_0": "",
       "blk_mem_gen_1": "",
       "blk_mem_gen_2": "",
@@ -22,11 +16,20 @@
       "blk_mem_gen_4": "",
       "blk_mem_gen_5": "",
       "clk_wiz_0": "",
-      "proc_sys_reset_0": ""
+      "fp_sop_0": "",
+      "img_window_v2_0": "",
+      "kernel_bank_v2_0": "",
+      "proc_sys_reset_0": "",
+      "bram_controller_v2_0": "",
+      "master_controller_v2_0": "",
+      "uart_0": ""
     },
     "ports": {
       "RX": {
         "direction": "I"
+      },
+      "TX": {
+        "direction": "O"
       },
       "cts": {
         "direction": "I"
@@ -44,6 +47,9 @@
             "value_src": "default"
           }
         }
+      },
+      "rts": {
+        "direction": "O"
       },
       "sys_clock": {
         "type": "clk",
@@ -65,187 +71,237 @@
             "value_src": "default"
           }
         }
-      },
-      "TX": {
-        "direction": "O"
-      },
-      "rts": {
-        "direction": "O"
       }
     },
     "components": {
-      "bram_controller_v2_0": {
-        "vlnv": "xilinx.com:module_ref:bram_controller_v2:1.0",
-        "xci_name": "top_bram_controller_v2_0_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "bram_controller_v2",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "ASSOCIATED_RESET": {
-                "value": "rst",
-                "value_src": "constant"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              },
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              }
-            }
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "top_blk_mem_gen_0_0",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
           },
-          "rst": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "const_prop"
-              }
-            }
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
           },
-          "conv_bram_data": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
+          "Operating_Mode_A": {
+            "value": "READ_FIRST"
           },
-          "conv_bram_rtr": {
-            "direction": "O"
+          "Read_Width_A": {
+            "value": "8"
           },
-          "conv_bram_rts": {
-            "direction": "I"
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
           },
-          "bram_conv_data_0": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
+          "Use_Byte_Write_Enable": {
+            "value": "false"
           },
-          "bram_conv_data_1": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
+          "Use_RSTA_Pin": {
+            "value": "false"
           },
-          "bram_conv_data_2": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
+          "Write_Depth_A": {
+            "value": "518"
           },
-          "bram_conv_data_3": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
+          "Write_Width_A": {
+            "value": "8"
           },
-          "bram_conv_data_4": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "blk_mem_gen_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "top_blk_mem_gen_1_0",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
           },
-          "bram_conv_data_5": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
           },
-          "bram_conv_rts": {
-            "direction": "O"
+          "Operating_Mode_A": {
+            "value": "READ_FIRST"
           },
-          "bram_write_data": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
+          "Read_Width_A": {
+            "value": "8"
           },
-          "addr": {
-            "direction": "O",
-            "left": "8",
-            "right": "0"
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
           },
-          "ena_0": {
-            "direction": "O"
+          "Use_Byte_Write_Enable": {
+            "value": "false"
           },
-          "ena_1": {
-            "direction": "O"
+          "Use_RSTA_Pin": {
+            "value": "false"
           },
-          "ena_2": {
-            "direction": "O"
+          "Write_Depth_A": {
+            "value": "518"
           },
-          "ena_3": {
-            "direction": "O"
+          "Write_Width_A": {
+            "value": "8"
           },
-          "ena_4": {
-            "direction": "O"
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "blk_mem_gen_2": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "top_blk_mem_gen_2_0",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
           },
-          "ena_5": {
-            "direction": "O"
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
           },
-          "wena_0": {
-            "direction": "O",
-            "left": "0",
-            "right": "0"
+          "Operating_Mode_A": {
+            "value": "READ_FIRST"
           },
-          "wena_1": {
-            "direction": "O",
-            "left": "0",
-            "right": "0"
+          "Read_Width_A": {
+            "value": "8"
           },
-          "wena_2": {
-            "direction": "O",
-            "left": "0",
-            "right": "0"
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
           },
-          "wena_3": {
-            "direction": "O",
-            "left": "0",
-            "right": "0"
+          "Use_Byte_Write_Enable": {
+            "value": "false"
           },
-          "wena_4": {
-            "direction": "O",
-            "left": "0",
-            "right": "0"
+          "Use_RSTA_Pin": {
+            "value": "false"
           },
-          "wena_5": {
-            "direction": "O",
-            "left": "0",
-            "right": "0"
+          "Write_Depth_A": {
+            "value": "518"
           },
-          "data_0": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
+          "Write_Width_A": {
+            "value": "8"
           },
-          "data_1": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "blk_mem_gen_3": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "top_blk_mem_gen_3_0",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
           },
-          "data_2": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
           },
-          "data_3": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
+          "Operating_Mode_A": {
+            "value": "READ_FIRST"
           },
-          "data_4": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
+          "Read_Width_A": {
+            "value": "8"
           },
-          "data_5": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "518"
+          },
+          "Write_Width_A": {
+            "value": "8"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "blk_mem_gen_4": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "top_blk_mem_gen_4_0",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Operating_Mode_A": {
+            "value": "READ_FIRST"
+          },
+          "Read_Width_A": {
+            "value": "8"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "518"
+          },
+          "Write_Width_A": {
+            "value": "8"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "blk_mem_gen_5": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "top_blk_mem_gen_5_0",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Fill_Remaining_Memory_Locations": {
+            "value": "true"
+          },
+          "Operating_Mode_A": {
+            "value": "READ_FIRST"
+          },
+          "Read_Width_A": {
+            "value": "8"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "518"
+          },
+          "Write_Width_A": {
+            "value": "8"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "top_clk_wiz_0_0",
+        "parameters": {
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "USE_LOCKED": {
+            "value": "false"
           }
         }
       },
@@ -893,6 +949,185 @@
           }
         }
       },
+      "proc_sys_reset_0": {
+        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
+        "xci_name": "top_proc_sys_reset_0_0"
+      },
+      "bram_controller_v2_0": {
+        "vlnv": "xilinx.com:module_ref:bram_controller_v2:1.0",
+        "xci_name": "top_bram_controller_v2_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "bram_controller_v2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "rst",
+                "value_src": "constant"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              },
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "const_prop"
+              }
+            }
+          },
+          "conv_bram_data": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "conv_bram_rtr": {
+            "direction": "O"
+          },
+          "conv_bram_rts": {
+            "direction": "I"
+          },
+          "bram_conv_data_0": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "bram_conv_data_1": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "bram_conv_data_2": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "bram_conv_data_3": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "bram_conv_data_4": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "bram_conv_data_5": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "bram_conv_rts": {
+            "direction": "O"
+          },
+          "bram_write_data": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "addr": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "ena_0": {
+            "direction": "O"
+          },
+          "ena_1": {
+            "direction": "O"
+          },
+          "ena_2": {
+            "direction": "O"
+          },
+          "ena_3": {
+            "direction": "O"
+          },
+          "ena_4": {
+            "direction": "O"
+          },
+          "ena_5": {
+            "direction": "O"
+          },
+          "wena_0": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "wena_1": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "wena_2": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "wena_3": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "wena_4": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "wena_5": {
+            "direction": "O",
+            "left": "0",
+            "right": "0"
+          },
+          "data_0": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_1": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_2": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_3": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_4": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_5": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
       "master_controller_v2_0": {
         "vlnv": "xilinx.com:module_ref:master_controller_v2:1.0",
         "xci_name": "top_master_controller_v2_0_0",
@@ -1018,8 +1253,8 @@
             "right": "0",
             "parameters": {
               "LAYERED_METADATA": {
-                "value": "xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}",
-                "value_src": "const_prop"
+                "value": "undef",
+                "value_src": "default_prop"
               }
             }
           }
@@ -1101,241 +1336,6 @@
             "direction": "I"
           }
         }
-      },
-      "blk_mem_gen_0": {
-        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "top_blk_mem_gen_0_0",
-        "parameters": {
-          "Enable_32bit_Address": {
-            "value": "false"
-          },
-          "Fill_Remaining_Memory_Locations": {
-            "value": "true"
-          },
-          "Operating_Mode_A": {
-            "value": "READ_FIRST"
-          },
-          "Read_Width_A": {
-            "value": "8"
-          },
-          "Register_PortA_Output_of_Memory_Primitives": {
-            "value": "true"
-          },
-          "Use_Byte_Write_Enable": {
-            "value": "false"
-          },
-          "Use_RSTA_Pin": {
-            "value": "false"
-          },
-          "Write_Depth_A": {
-            "value": "518"
-          },
-          "Write_Width_A": {
-            "value": "8"
-          },
-          "use_bram_block": {
-            "value": "Stand_Alone"
-          }
-        }
-      },
-      "blk_mem_gen_1": {
-        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "top_blk_mem_gen_1_0",
-        "parameters": {
-          "Enable_32bit_Address": {
-            "value": "false"
-          },
-          "Fill_Remaining_Memory_Locations": {
-            "value": "true"
-          },
-          "Operating_Mode_A": {
-            "value": "READ_FIRST"
-          },
-          "Read_Width_A": {
-            "value": "8"
-          },
-          "Register_PortA_Output_of_Memory_Primitives": {
-            "value": "true"
-          },
-          "Use_Byte_Write_Enable": {
-            "value": "false"
-          },
-          "Use_RSTA_Pin": {
-            "value": "false"
-          },
-          "Write_Depth_A": {
-            "value": "518"
-          },
-          "Write_Width_A": {
-            "value": "8"
-          },
-          "use_bram_block": {
-            "value": "Stand_Alone"
-          }
-        }
-      },
-      "blk_mem_gen_2": {
-        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "top_blk_mem_gen_2_0",
-        "parameters": {
-          "Enable_32bit_Address": {
-            "value": "false"
-          },
-          "Fill_Remaining_Memory_Locations": {
-            "value": "true"
-          },
-          "Operating_Mode_A": {
-            "value": "READ_FIRST"
-          },
-          "Read_Width_A": {
-            "value": "8"
-          },
-          "Register_PortA_Output_of_Memory_Primitives": {
-            "value": "true"
-          },
-          "Use_Byte_Write_Enable": {
-            "value": "false"
-          },
-          "Use_RSTA_Pin": {
-            "value": "false"
-          },
-          "Write_Depth_A": {
-            "value": "518"
-          },
-          "Write_Width_A": {
-            "value": "8"
-          },
-          "use_bram_block": {
-            "value": "Stand_Alone"
-          }
-        }
-      },
-      "blk_mem_gen_3": {
-        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "top_blk_mem_gen_3_0",
-        "parameters": {
-          "Enable_32bit_Address": {
-            "value": "false"
-          },
-          "Fill_Remaining_Memory_Locations": {
-            "value": "true"
-          },
-          "Operating_Mode_A": {
-            "value": "READ_FIRST"
-          },
-          "Read_Width_A": {
-            "value": "8"
-          },
-          "Register_PortA_Output_of_Memory_Primitives": {
-            "value": "true"
-          },
-          "Use_Byte_Write_Enable": {
-            "value": "false"
-          },
-          "Use_RSTA_Pin": {
-            "value": "false"
-          },
-          "Write_Depth_A": {
-            "value": "518"
-          },
-          "Write_Width_A": {
-            "value": "8"
-          },
-          "use_bram_block": {
-            "value": "Stand_Alone"
-          }
-        }
-      },
-      "blk_mem_gen_4": {
-        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "top_blk_mem_gen_4_0",
-        "parameters": {
-          "Enable_32bit_Address": {
-            "value": "false"
-          },
-          "Fill_Remaining_Memory_Locations": {
-            "value": "true"
-          },
-          "Operating_Mode_A": {
-            "value": "READ_FIRST"
-          },
-          "Read_Width_A": {
-            "value": "8"
-          },
-          "Register_PortA_Output_of_Memory_Primitives": {
-            "value": "true"
-          },
-          "Use_Byte_Write_Enable": {
-            "value": "false"
-          },
-          "Use_RSTA_Pin": {
-            "value": "false"
-          },
-          "Write_Depth_A": {
-            "value": "518"
-          },
-          "Write_Width_A": {
-            "value": "8"
-          },
-          "use_bram_block": {
-            "value": "Stand_Alone"
-          }
-        }
-      },
-      "blk_mem_gen_5": {
-        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "top_blk_mem_gen_5_0",
-        "parameters": {
-          "Enable_32bit_Address": {
-            "value": "false"
-          },
-          "Fill_Remaining_Memory_Locations": {
-            "value": "true"
-          },
-          "Operating_Mode_A": {
-            "value": "READ_FIRST"
-          },
-          "Read_Width_A": {
-            "value": "8"
-          },
-          "Register_PortA_Output_of_Memory_Primitives": {
-            "value": "true"
-          },
-          "Use_Byte_Write_Enable": {
-            "value": "false"
-          },
-          "Use_RSTA_Pin": {
-            "value": "false"
-          },
-          "Write_Depth_A": {
-            "value": "518"
-          },
-          "Write_Width_A": {
-            "value": "8"
-          },
-          "use_bram_block": {
-            "value": "Stand_Alone"
-          }
-        }
-      },
-      "clk_wiz_0": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "top_clk_wiz_0_0",
-        "parameters": {
-          "RESET_PORT": {
-            "value": "resetn"
-          },
-          "RESET_TYPE": {
-            "value": "ACTIVE_LOW"
-          },
-          "USE_LOCKED": {
-            "value": "false"
-          }
-        }
-      },
-      "proc_sys_reset_0": {
-        "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
-        "xci_name": "top_proc_sys_reset_0_0"
       }
     },
     "nets": {
@@ -1541,18 +1541,18 @@
       "clk_1": {
         "ports": [
           "clk_wiz_0/clk_out1",
-          "bram_controller_v2_0/clk",
-          "fp_sop_0/ap_clk",
-          "img_window_v2_0/clk",
-          "kernel_bank_v2_0/clk",
-          "master_controller_v2_0/clk",
-          "uart_0/clk",
           "blk_mem_gen_0/clka",
           "blk_mem_gen_1/clka",
           "blk_mem_gen_2/clka",
           "blk_mem_gen_3/clka",
           "blk_mem_gen_4/clka",
-          "blk_mem_gen_5/clka"
+          "blk_mem_gen_5/clka",
+          "fp_sop_0/ap_clk",
+          "img_window_v2_0/clk",
+          "kernel_bank_v2_0/clk",
+          "bram_controller_v2_0/clk",
+          "master_controller_v2_0/clk",
+          "uart_0/clk"
         ]
       },
       "cts_1": {
@@ -1563,308 +1563,308 @@
       },
       "fp_sop_0_out_val_V": {
         "ports": [
-          "fp_sop_0/out_val_V",
+          "fp_sop_0/out_val",
           "master_controller_v2_0/fp_out_data"
         ]
       },
       "fp_sop_0_out_val_V_ap_vld": {
         "ports": [
-          "fp_sop_0/out_val_V_ap_vld",
+          "fp_sop_0/out_val_ap_vld",
           "master_controller_v2_0/fp_out_valid"
         ]
       },
       "img_window_v2_0_img_wd_reg0": {
         "ports": [
           "img_window_v2_0/img_wd_reg0",
-          "fp_sop_0/pixel_window_0_V"
+          "fp_sop_0/pixel_window_0"
         ]
       },
       "img_window_v2_0_img_wd_reg1": {
         "ports": [
           "img_window_v2_0/img_wd_reg1",
-          "fp_sop_0/pixel_window_1_V"
+          "fp_sop_0/pixel_window_1"
         ]
       },
       "img_window_v2_0_img_wd_reg2": {
         "ports": [
           "img_window_v2_0/img_wd_reg2",
-          "fp_sop_0/pixel_window_2_V"
+          "fp_sop_0/pixel_window_2"
         ]
       },
       "img_window_v2_0_img_wd_reg3": {
         "ports": [
           "img_window_v2_0/img_wd_reg3",
-          "fp_sop_0/pixel_window_3_V"
+          "fp_sop_0/pixel_window_3"
         ]
       },
       "img_window_v2_0_img_wd_reg4": {
         "ports": [
           "img_window_v2_0/img_wd_reg4",
-          "fp_sop_0/pixel_window_4_V"
+          "fp_sop_0/pixel_window_4"
         ]
       },
       "img_window_v2_0_img_wd_reg5": {
         "ports": [
           "img_window_v2_0/img_wd_reg5",
-          "fp_sop_0/pixel_window_5_V"
+          "fp_sop_0/pixel_window_5"
         ]
       },
       "img_window_v2_0_img_wd_reg6": {
         "ports": [
           "img_window_v2_0/img_wd_reg6",
-          "fp_sop_0/pixel_window_6_V"
+          "fp_sop_0/pixel_window_6"
         ]
       },
       "img_window_v2_0_img_wd_reg7": {
         "ports": [
           "img_window_v2_0/img_wd_reg7",
-          "fp_sop_0/pixel_window_7_V"
+          "fp_sop_0/pixel_window_7"
         ]
       },
       "img_window_v2_0_img_wd_reg8": {
         "ports": [
           "img_window_v2_0/img_wd_reg8",
-          "fp_sop_0/pixel_window_8_V"
+          "fp_sop_0/pixel_window_8"
         ]
       },
       "img_window_v2_0_img_wd_reg9": {
         "ports": [
           "img_window_v2_0/img_wd_reg9",
-          "fp_sop_0/pixel_window_9_V"
+          "fp_sop_0/pixel_window_9"
         ]
       },
       "img_window_v2_0_img_wd_reg10": {
         "ports": [
           "img_window_v2_0/img_wd_reg10",
-          "fp_sop_0/pixel_window_10_V"
+          "fp_sop_0/pixel_window_10"
         ]
       },
       "img_window_v2_0_img_wd_reg11": {
         "ports": [
           "img_window_v2_0/img_wd_reg11",
-          "fp_sop_0/pixel_window_11_V"
+          "fp_sop_0/pixel_window_11"
         ]
       },
       "img_window_v2_0_img_wd_reg12": {
         "ports": [
           "img_window_v2_0/img_wd_reg12",
-          "fp_sop_0/pixel_window_12_V"
+          "fp_sop_0/pixel_window_12"
         ]
       },
       "img_window_v2_0_img_wd_reg13": {
         "ports": [
           "img_window_v2_0/img_wd_reg13",
-          "fp_sop_0/pixel_window_13_V"
+          "fp_sop_0/pixel_window_13"
         ]
       },
       "img_window_v2_0_img_wd_reg14": {
         "ports": [
           "img_window_v2_0/img_wd_reg14",
-          "fp_sop_0/pixel_window_14_V"
+          "fp_sop_0/pixel_window_14"
         ]
       },
       "img_window_v2_0_img_wd_reg15": {
         "ports": [
           "img_window_v2_0/img_wd_reg15",
-          "fp_sop_0/pixel_window_15_V"
+          "fp_sop_0/pixel_window_15"
         ]
       },
       "img_window_v2_0_img_wd_reg16": {
         "ports": [
           "img_window_v2_0/img_wd_reg16",
-          "fp_sop_0/pixel_window_16_V"
+          "fp_sop_0/pixel_window_16"
         ]
       },
       "img_window_v2_0_img_wd_reg17": {
         "ports": [
           "img_window_v2_0/img_wd_reg17",
-          "fp_sop_0/pixel_window_17_V"
+          "fp_sop_0/pixel_window_17"
         ]
       },
       "img_window_v2_0_img_wd_reg18": {
         "ports": [
           "img_window_v2_0/img_wd_reg18",
-          "fp_sop_0/pixel_window_18_V"
+          "fp_sop_0/pixel_window_18"
         ]
       },
       "img_window_v2_0_img_wd_reg19": {
         "ports": [
           "img_window_v2_0/img_wd_reg19",
-          "fp_sop_0/pixel_window_19_V"
+          "fp_sop_0/pixel_window_19"
         ]
       },
       "img_window_v2_0_img_wd_reg20": {
         "ports": [
           "img_window_v2_0/img_wd_reg20",
-          "fp_sop_0/pixel_window_20_V"
+          "fp_sop_0/pixel_window_20"
         ]
       },
       "img_window_v2_0_img_wd_reg21": {
         "ports": [
           "img_window_v2_0/img_wd_reg21",
-          "fp_sop_0/pixel_window_21_V"
+          "fp_sop_0/pixel_window_21"
         ]
       },
       "img_window_v2_0_img_wd_reg22": {
         "ports": [
           "img_window_v2_0/img_wd_reg22",
-          "fp_sop_0/pixel_window_22_V"
+          "fp_sop_0/pixel_window_22"
         ]
       },
       "img_window_v2_0_img_wd_reg23": {
         "ports": [
           "img_window_v2_0/img_wd_reg23",
-          "fp_sop_0/pixel_window_23_V"
+          "fp_sop_0/pixel_window_23"
         ]
       },
       "img_window_v2_0_img_wd_reg24": {
         "ports": [
           "img_window_v2_0/img_wd_reg24",
-          "fp_sop_0/pixel_window_24_V"
+          "fp_sop_0/pixel_window_24"
         ]
       },
       "img_window_v2_0_img_wd_reg25": {
         "ports": [
           "img_window_v2_0/img_wd_reg25",
-          "fp_sop_0/pixel_window_25_V"
+          "fp_sop_0/pixel_window_25"
         ]
       },
       "img_window_v2_0_img_wd_reg26": {
         "ports": [
           "img_window_v2_0/img_wd_reg26",
-          "fp_sop_0/pixel_window_26_V"
+          "fp_sop_0/pixel_window_26"
         ]
       },
       "img_window_v2_0_img_wd_reg27": {
         "ports": [
           "img_window_v2_0/img_wd_reg27",
-          "fp_sop_0/pixel_window_27_V"
+          "fp_sop_0/pixel_window_27"
         ]
       },
       "img_window_v2_0_img_wd_reg28": {
         "ports": [
           "img_window_v2_0/img_wd_reg28",
-          "fp_sop_0/pixel_window_28_V"
+          "fp_sop_0/pixel_window_28"
         ]
       },
       "img_window_v2_0_img_wd_reg29": {
         "ports": [
           "img_window_v2_0/img_wd_reg29",
-          "fp_sop_0/pixel_window_29_V"
+          "fp_sop_0/pixel_window_29"
         ]
       },
       "img_window_v2_0_img_wd_reg30": {
         "ports": [
           "img_window_v2_0/img_wd_reg30",
-          "fp_sop_0/pixel_window_30_V"
+          "fp_sop_0/pixel_window_30"
         ]
       },
       "img_window_v2_0_img_wd_reg31": {
         "ports": [
           "img_window_v2_0/img_wd_reg31",
-          "fp_sop_0/pixel_window_31_V"
+          "fp_sop_0/pixel_window_31"
         ]
       },
       "img_window_v2_0_img_wd_reg32": {
         "ports": [
           "img_window_v2_0/img_wd_reg32",
-          "fp_sop_0/pixel_window_32_V"
+          "fp_sop_0/pixel_window_32"
         ]
       },
       "img_window_v2_0_img_wd_reg33": {
         "ports": [
           "img_window_v2_0/img_wd_reg33",
-          "fp_sop_0/pixel_window_33_V"
+          "fp_sop_0/pixel_window_33"
         ]
       },
       "img_window_v2_0_img_wd_reg34": {
         "ports": [
           "img_window_v2_0/img_wd_reg34",
-          "fp_sop_0/pixel_window_34_V"
+          "fp_sop_0/pixel_window_34"
         ]
       },
       "img_window_v2_0_img_wd_reg35": {
         "ports": [
           "img_window_v2_0/img_wd_reg35",
-          "fp_sop_0/pixel_window_35_V"
+          "fp_sop_0/pixel_window_35"
         ]
       },
       "img_window_v2_0_img_wd_reg36": {
         "ports": [
           "img_window_v2_0/img_wd_reg36",
-          "fp_sop_0/pixel_window_36_V"
+          "fp_sop_0/pixel_window_36"
         ]
       },
       "img_window_v2_0_img_wd_reg37": {
         "ports": [
           "img_window_v2_0/img_wd_reg37",
-          "fp_sop_0/pixel_window_37_V"
+          "fp_sop_0/pixel_window_37"
         ]
       },
       "img_window_v2_0_img_wd_reg38": {
         "ports": [
           "img_window_v2_0/img_wd_reg38",
-          "fp_sop_0/pixel_window_38_V"
+          "fp_sop_0/pixel_window_38"
         ]
       },
       "img_window_v2_0_img_wd_reg39": {
         "ports": [
           "img_window_v2_0/img_wd_reg39",
-          "fp_sop_0/pixel_window_39_V"
+          "fp_sop_0/pixel_window_39"
         ]
       },
       "img_window_v2_0_img_wd_reg40": {
         "ports": [
           "img_window_v2_0/img_wd_reg40",
-          "fp_sop_0/pixel_window_40_V"
+          "fp_sop_0/pixel_window_40"
         ]
       },
       "img_window_v2_0_img_wd_reg41": {
         "ports": [
           "img_window_v2_0/img_wd_reg41",
-          "fp_sop_0/pixel_window_41_V"
+          "fp_sop_0/pixel_window_41"
         ]
       },
       "img_window_v2_0_img_wd_reg42": {
         "ports": [
           "img_window_v2_0/img_wd_reg42",
-          "fp_sop_0/pixel_window_42_V"
+          "fp_sop_0/pixel_window_42"
         ]
       },
       "img_window_v2_0_img_wd_reg43": {
         "ports": [
           "img_window_v2_0/img_wd_reg43",
-          "fp_sop_0/pixel_window_43_V"
+          "fp_sop_0/pixel_window_43"
         ]
       },
       "img_window_v2_0_img_wd_reg44": {
         "ports": [
           "img_window_v2_0/img_wd_reg44",
-          "fp_sop_0/pixel_window_44_V"
+          "fp_sop_0/pixel_window_44"
         ]
       },
       "img_window_v2_0_img_wd_reg45": {
         "ports": [
           "img_window_v2_0/img_wd_reg45",
-          "fp_sop_0/pixel_window_45_V"
+          "fp_sop_0/pixel_window_45"
         ]
       },
       "img_window_v2_0_img_wd_reg46": {
         "ports": [
           "img_window_v2_0/img_wd_reg46",
-          "fp_sop_0/pixel_window_46_V"
+          "fp_sop_0/pixel_window_46"
         ]
       },
       "img_window_v2_0_img_wd_reg47": {
         "ports": [
           "img_window_v2_0/img_wd_reg47",
-          "fp_sop_0/pixel_window_47_V"
+          "fp_sop_0/pixel_window_47"
         ]
       },
       "img_window_v2_0_img_wd_reg48": {
         "ports": [
           "img_window_v2_0/img_wd_reg48",
-          "fp_sop_0/pixel_window_48_V"
+          "fp_sop_0/pixel_window_48"
         ]
       },
       "kernel_bank_v2_0_kernel_full": {
@@ -1877,295 +1877,295 @@
       "kernel_bank_v2_0_kernel_reg0": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg0",
-          "fp_sop_0/kernel_patch_0_V"
+          "fp_sop_0/kernel_patch_0"
         ]
       },
       "kernel_bank_v2_0_kernel_reg1": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg1",
-          "fp_sop_0/kernel_patch_1_V"
+          "fp_sop_0/kernel_patch_1"
         ]
       },
       "kernel_bank_v2_0_kernel_reg2": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg2",
-          "fp_sop_0/kernel_patch_2_V"
+          "fp_sop_0/kernel_patch_2"
         ]
       },
       "kernel_bank_v2_0_kernel_reg3": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg3",
-          "fp_sop_0/kernel_patch_3_V"
+          "fp_sop_0/kernel_patch_3"
         ]
       },
       "kernel_bank_v2_0_kernel_reg4": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg4",
-          "fp_sop_0/kernel_patch_4_V"
+          "fp_sop_0/kernel_patch_4"
         ]
       },
       "kernel_bank_v2_0_kernel_reg5": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg5",
-          "fp_sop_0/kernel_patch_5_V"
+          "fp_sop_0/kernel_patch_5"
         ]
       },
       "kernel_bank_v2_0_kernel_reg6": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg6",
-          "fp_sop_0/kernel_patch_6_V"
+          "fp_sop_0/kernel_patch_6"
         ]
       },
       "kernel_bank_v2_0_kernel_reg7": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg7",
-          "fp_sop_0/kernel_patch_7_V"
+          "fp_sop_0/kernel_patch_7"
         ]
       },
       "kernel_bank_v2_0_kernel_reg8": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg8",
-          "fp_sop_0/kernel_patch_8_V"
+          "fp_sop_0/kernel_patch_8"
         ]
       },
       "kernel_bank_v2_0_kernel_reg9": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg9",
-          "fp_sop_0/kernel_patch_9_V"
+          "fp_sop_0/kernel_patch_9"
         ]
       },
       "kernel_bank_v2_0_kernel_reg10": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg10",
-          "fp_sop_0/kernel_patch_10_V"
+          "fp_sop_0/kernel_patch_10"
         ]
       },
       "kernel_bank_v2_0_kernel_reg11": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg11",
-          "fp_sop_0/kernel_patch_11_V"
+          "fp_sop_0/kernel_patch_11"
         ]
       },
       "kernel_bank_v2_0_kernel_reg12": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg12",
-          "fp_sop_0/kernel_patch_12_V"
+          "fp_sop_0/kernel_patch_12"
         ]
       },
       "kernel_bank_v2_0_kernel_reg13": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg13",
-          "fp_sop_0/kernel_patch_13_V"
+          "fp_sop_0/kernel_patch_13"
         ]
       },
       "kernel_bank_v2_0_kernel_reg14": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg14",
-          "fp_sop_0/kernel_patch_14_V"
+          "fp_sop_0/kernel_patch_14"
         ]
       },
       "kernel_bank_v2_0_kernel_reg15": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg15",
-          "fp_sop_0/kernel_patch_15_V"
+          "fp_sop_0/kernel_patch_15"
         ]
       },
       "kernel_bank_v2_0_kernel_reg16": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg16",
-          "fp_sop_0/kernel_patch_16_V"
+          "fp_sop_0/kernel_patch_16"
         ]
       },
       "kernel_bank_v2_0_kernel_reg17": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg17",
-          "fp_sop_0/kernel_patch_17_V"
+          "fp_sop_0/kernel_patch_17"
         ]
       },
       "kernel_bank_v2_0_kernel_reg18": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg18",
-          "fp_sop_0/kernel_patch_18_V"
+          "fp_sop_0/kernel_patch_18"
         ]
       },
       "kernel_bank_v2_0_kernel_reg19": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg19",
-          "fp_sop_0/kernel_patch_19_V"
+          "fp_sop_0/kernel_patch_19"
         ]
       },
       "kernel_bank_v2_0_kernel_reg20": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg20",
-          "fp_sop_0/kernel_patch_20_V"
+          "fp_sop_0/kernel_patch_20"
         ]
       },
       "kernel_bank_v2_0_kernel_reg21": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg21",
-          "fp_sop_0/kernel_patch_21_V"
+          "fp_sop_0/kernel_patch_21"
         ]
       },
       "kernel_bank_v2_0_kernel_reg22": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg22",
-          "fp_sop_0/kernel_patch_22_V"
+          "fp_sop_0/kernel_patch_22"
         ]
       },
       "kernel_bank_v2_0_kernel_reg23": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg23",
-          "fp_sop_0/kernel_patch_23_V"
+          "fp_sop_0/kernel_patch_23"
         ]
       },
       "kernel_bank_v2_0_kernel_reg24": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg24",
-          "fp_sop_0/kernel_patch_24_V"
+          "fp_sop_0/kernel_patch_24"
         ]
       },
       "kernel_bank_v2_0_kernel_reg25": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg25",
-          "fp_sop_0/kernel_patch_25_V"
+          "fp_sop_0/kernel_patch_25"
         ]
       },
       "kernel_bank_v2_0_kernel_reg26": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg26",
-          "fp_sop_0/kernel_patch_26_V"
+          "fp_sop_0/kernel_patch_26"
         ]
       },
       "kernel_bank_v2_0_kernel_reg27": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg27",
-          "fp_sop_0/kernel_patch_27_V"
+          "fp_sop_0/kernel_patch_27"
         ]
       },
       "kernel_bank_v2_0_kernel_reg28": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg28",
-          "fp_sop_0/kernel_patch_28_V"
+          "fp_sop_0/kernel_patch_28"
         ]
       },
       "kernel_bank_v2_0_kernel_reg29": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg29",
-          "fp_sop_0/kernel_patch_29_V"
+          "fp_sop_0/kernel_patch_29"
         ]
       },
       "kernel_bank_v2_0_kernel_reg30": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg30",
-          "fp_sop_0/kernel_patch_30_V"
+          "fp_sop_0/kernel_patch_30"
         ]
       },
       "kernel_bank_v2_0_kernel_reg31": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg31",
-          "fp_sop_0/kernel_patch_31_V"
+          "fp_sop_0/kernel_patch_31"
         ]
       },
       "kernel_bank_v2_0_kernel_reg32": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg32",
-          "fp_sop_0/kernel_patch_32_V"
+          "fp_sop_0/kernel_patch_32"
         ]
       },
       "kernel_bank_v2_0_kernel_reg33": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg33",
-          "fp_sop_0/kernel_patch_33_V"
+          "fp_sop_0/kernel_patch_33"
         ]
       },
       "kernel_bank_v2_0_kernel_reg34": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg34",
-          "fp_sop_0/kernel_patch_34_V"
+          "fp_sop_0/kernel_patch_34"
         ]
       },
       "kernel_bank_v2_0_kernel_reg35": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg35",
-          "fp_sop_0/kernel_patch_35_V"
+          "fp_sop_0/kernel_patch_35"
         ]
       },
       "kernel_bank_v2_0_kernel_reg36": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg36",
-          "fp_sop_0/kernel_patch_36_V"
+          "fp_sop_0/kernel_patch_36"
         ]
       },
       "kernel_bank_v2_0_kernel_reg37": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg37",
-          "fp_sop_0/kernel_patch_37_V"
+          "fp_sop_0/kernel_patch_37"
         ]
       },
       "kernel_bank_v2_0_kernel_reg38": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg38",
-          "fp_sop_0/kernel_patch_38_V"
+          "fp_sop_0/kernel_patch_38"
         ]
       },
       "kernel_bank_v2_0_kernel_reg39": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg39",
-          "fp_sop_0/kernel_patch_39_V"
+          "fp_sop_0/kernel_patch_39"
         ]
       },
       "kernel_bank_v2_0_kernel_reg40": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg40",
-          "fp_sop_0/kernel_patch_40_V"
+          "fp_sop_0/kernel_patch_40"
         ]
       },
       "kernel_bank_v2_0_kernel_reg41": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg41",
-          "fp_sop_0/kernel_patch_41_V"
+          "fp_sop_0/kernel_patch_41"
         ]
       },
       "kernel_bank_v2_0_kernel_reg42": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg42",
-          "fp_sop_0/kernel_patch_42_V"
+          "fp_sop_0/kernel_patch_42"
         ]
       },
       "kernel_bank_v2_0_kernel_reg43": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg43",
-          "fp_sop_0/kernel_patch_43_V"
+          "fp_sop_0/kernel_patch_43"
         ]
       },
       "kernel_bank_v2_0_kernel_reg44": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg44",
-          "fp_sop_0/kernel_patch_44_V"
+          "fp_sop_0/kernel_patch_44"
         ]
       },
       "kernel_bank_v2_0_kernel_reg45": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg45",
-          "fp_sop_0/kernel_patch_45_V"
+          "fp_sop_0/kernel_patch_45"
         ]
       },
       "kernel_bank_v2_0_kernel_reg46": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg46",
-          "fp_sop_0/kernel_patch_46_V"
+          "fp_sop_0/kernel_patch_46"
         ]
       },
       "kernel_bank_v2_0_kernel_reg47": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg47",
-          "fp_sop_0/kernel_patch_47_V"
+          "fp_sop_0/kernel_patch_47"
         ]
       },
       "kernel_bank_v2_0_kernel_reg48": {
         "ports": [
           "kernel_bank_v2_0/kernel_reg48",
-          "fp_sop_0/kernel_patch_48_V"
+          "fp_sop_0/kernel_patch_48"
         ]
       },
       "master_controller_v2_0_fake_sopu_rts": {
@@ -2207,9 +2207,9 @@
       "proc_sys_reset_0_peripheral_aresetn": {
         "ports": [
           "proc_sys_reset_0/peripheral_aresetn",
-          "bram_controller_v2_0/rst",
           "img_window_v2_0/rst",
           "kernel_bank_v2_0/rst",
+          "bram_controller_v2_0/rst",
           "master_controller_v2_0/rst",
           "uart_0/rst"
         ]

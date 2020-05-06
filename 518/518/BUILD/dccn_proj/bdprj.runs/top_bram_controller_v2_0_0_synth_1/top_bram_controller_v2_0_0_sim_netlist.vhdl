@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Thu Apr 30 12:59:37 2020
+-- Date        : Sun May  3 16:30:49 2020
 -- Host        : DESKTOP-BJ5EQ9A running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ top_bram_controller_v2_0_0_sim_netlist.vhdl
@@ -23,7 +23,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_controller_v2 is
     bram_conv_data_4 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     bram_conv_data_5 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     bram_write_data : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    addr : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    addr : out STD_LOGIC_VECTOR ( 9 downto 0 );
     wena_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
     wena_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
     wena_2 : out STD_LOGIC_VECTOR ( 0 to 0 );
@@ -56,16 +56,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_control
   signal \bram_addr[8]_i_2_n_0\ : STD_LOGIC;
   signal \bram_addr[9]_i_2_n_0\ : STD_LOGIC;
   signal \bram_addr[9]_i_3_n_0\ : STD_LOGIC;
-  signal \bram_addr_reg_n_0_[0]\ : STD_LOGIC;
-  signal \bram_addr_reg_n_0_[1]\ : STD_LOGIC;
-  signal \bram_addr_reg_n_0_[2]\ : STD_LOGIC;
-  signal \bram_addr_reg_n_0_[3]\ : STD_LOGIC;
-  signal \bram_addr_reg_n_0_[4]\ : STD_LOGIC;
-  signal \bram_addr_reg_n_0_[5]\ : STD_LOGIC;
-  signal \bram_addr_reg_n_0_[6]\ : STD_LOGIC;
-  signal \bram_addr_reg_n_0_[7]\ : STD_LOGIC;
-  signal \bram_addr_reg_n_0_[8]\ : STD_LOGIC;
-  signal \bram_addr_reg_n_0_[9]\ : STD_LOGIC;
+  signal bram_addr_0 : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal \bram_conv_data_0[0]_i_2_n_0\ : STD_LOGIC;
   signal \bram_conv_data_0[0]_i_3_n_0\ : STD_LOGIC;
   signal \bram_conv_data_0[0]_i_4_n_0\ : STD_LOGIC;
@@ -91,7 +82,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_control
   signal \bram_conv_data_0[7]_i_3_n_0\ : STD_LOGIC;
   signal \bram_conv_data_0[7]_i_4_n_0\ : STD_LOGIC;
   signal \bram_conv_data_0[7]_i_5_n_0\ : STD_LOGIC;
-  signal bram_conv_data_0_2 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal bram_conv_data_0_3 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \bram_conv_data_1[0]_i_2_n_0\ : STD_LOGIC;
   signal \bram_conv_data_1[0]_i_3_n_0\ : STD_LOGIC;
   signal \bram_conv_data_1[0]_i_4_n_0\ : STD_LOGIC;
@@ -116,11 +107,11 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_control
   signal \bram_conv_data_1[7]_i_2_n_0\ : STD_LOGIC;
   signal \bram_conv_data_1[7]_i_3_n_0\ : STD_LOGIC;
   signal \bram_conv_data_1[7]_i_4_n_0\ : STD_LOGIC;
-  signal bram_conv_data_1_5 : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal bram_conv_data_2_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal bram_conv_data_3_4 : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal bram_conv_data_4_0 : STD_LOGIC_VECTOR ( 7 downto 0 );
-  signal bram_conv_data_5_3 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal bram_conv_data_1_6 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal bram_conv_data_2_2 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal bram_conv_data_3_5 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal bram_conv_data_4_1 : STD_LOGIC_VECTOR ( 7 downto 0 );
+  signal bram_conv_data_5_4 : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal \^bram_conv_rts\ : STD_LOGIC;
   signal bram_conv_rts_i_1_n_0 : STD_LOGIC;
   signal \bram_counter[0]_i_1_n_0\ : STD_LOGIC;
@@ -269,7 +260,7 @@ begin
      port map (
       C => clk,
       CE => \bram_write_data[7]_i_1_n_0\,
-      D => \bram_addr_reg_n_0_[0]\,
+      D => bram_addr(0),
       Q => addr(0),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -277,7 +268,7 @@ begin
      port map (
       C => clk,
       CE => \bram_write_data[7]_i_1_n_0\,
-      D => \bram_addr_reg_n_0_[1]\,
+      D => bram_addr(1),
       Q => addr(1),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -285,7 +276,7 @@ begin
      port map (
       C => clk,
       CE => \bram_write_data[7]_i_1_n_0\,
-      D => \bram_addr_reg_n_0_[2]\,
+      D => bram_addr(2),
       Q => addr(2),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -293,7 +284,7 @@ begin
      port map (
       C => clk,
       CE => \bram_write_data[7]_i_1_n_0\,
-      D => \bram_addr_reg_n_0_[3]\,
+      D => bram_addr(3),
       Q => addr(3),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -301,7 +292,7 @@ begin
      port map (
       C => clk,
       CE => \bram_write_data[7]_i_1_n_0\,
-      D => \bram_addr_reg_n_0_[4]\,
+      D => bram_addr(4),
       Q => addr(4),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -309,7 +300,7 @@ begin
      port map (
       C => clk,
       CE => \bram_write_data[7]_i_1_n_0\,
-      D => \bram_addr_reg_n_0_[5]\,
+      D => bram_addr(5),
       Q => addr(5),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -317,7 +308,7 @@ begin
      port map (
       C => clk,
       CE => \bram_write_data[7]_i_1_n_0\,
-      D => \bram_addr_reg_n_0_[6]\,
+      D => bram_addr(6),
       Q => addr(6),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -325,7 +316,7 @@ begin
      port map (
       C => clk,
       CE => \bram_write_data[7]_i_1_n_0\,
-      D => \bram_addr_reg_n_0_[7]\,
+      D => bram_addr(7),
       Q => addr(7),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -333,8 +324,16 @@ begin
      port map (
       C => clk,
       CE => \bram_write_data[7]_i_1_n_0\,
-      D => \bram_addr_reg_n_0_[8]\,
+      D => bram_addr(8),
       Q => addr(8),
+      R => \bram_conv_data_0[7]_i_1_n_0\
+    );
+\addr_reg[9]\: unisim.vcomponents.FDRE
+     port map (
+      C => clk,
+      CE => \bram_write_data[7]_i_1_n_0\,
+      D => bram_addr(9),
+      Q => addr(9),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
 \bram_addr[0]_i_1\: unisim.vcomponents.LUT1
@@ -342,68 +341,68 @@ begin
       INIT => X"1"
     )
         port map (
-      I0 => \bram_addr_reg_n_0_[0]\,
-      O => bram_addr(0)
+      I0 => bram_addr(0),
+      O => bram_addr_0(0)
     );
 \bram_addr[1]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"00FFDF00"
     )
         port map (
-      I0 => \bram_addr_reg_n_0_[9]\,
+      I0 => bram_addr(9),
       I1 => \bram_addr[9]_i_2_n_0\,
-      I2 => \bram_addr_reg_n_0_[2]\,
-      I3 => \bram_addr_reg_n_0_[0]\,
-      I4 => \bram_addr_reg_n_0_[1]\,
-      O => bram_addr(1)
+      I2 => bram_addr(2),
+      I3 => bram_addr(0),
+      I4 => bram_addr(1),
+      O => bram_addr_0(1)
     );
 \bram_addr[2]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"51FFAA00"
     )
         port map (
-      I0 => \bram_addr_reg_n_0_[1]\,
-      I1 => \bram_addr_reg_n_0_[9]\,
+      I0 => bram_addr(1),
+      I1 => bram_addr(9),
       I2 => \bram_addr[9]_i_2_n_0\,
-      I3 => \bram_addr_reg_n_0_[0]\,
-      I4 => \bram_addr_reg_n_0_[2]\,
-      O => bram_addr(2)
+      I3 => bram_addr(0),
+      I4 => bram_addr(2),
+      O => bram_addr_0(2)
     );
 \bram_addr[3]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"7F80"
     )
         port map (
-      I0 => \bram_addr_reg_n_0_[1]\,
-      I1 => \bram_addr_reg_n_0_[0]\,
-      I2 => \bram_addr_reg_n_0_[2]\,
-      I3 => \bram_addr_reg_n_0_[3]\,
-      O => bram_addr(3)
+      I0 => bram_addr(1),
+      I1 => bram_addr(0),
+      I2 => bram_addr(2),
+      I3 => bram_addr(3),
+      O => bram_addr_0(3)
     );
 \bram_addr[4]_i_1\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"7FFF8000"
     )
         port map (
-      I0 => \bram_addr_reg_n_0_[3]\,
-      I1 => \bram_addr_reg_n_0_[2]\,
-      I2 => \bram_addr_reg_n_0_[0]\,
-      I3 => \bram_addr_reg_n_0_[1]\,
-      I4 => \bram_addr_reg_n_0_[4]\,
-      O => bram_addr(4)
+      I0 => bram_addr(3),
+      I1 => bram_addr(2),
+      I2 => bram_addr(0),
+      I3 => bram_addr(1),
+      I4 => bram_addr(4),
+      O => bram_addr_0(4)
     );
 \bram_addr[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"7FFFFFFF80000000"
     )
         port map (
-      I0 => \bram_addr_reg_n_0_[2]\,
-      I1 => \bram_addr_reg_n_0_[0]\,
-      I2 => \bram_addr_reg_n_0_[1]\,
-      I3 => \bram_addr_reg_n_0_[3]\,
-      I4 => \bram_addr_reg_n_0_[4]\,
-      I5 => \bram_addr_reg_n_0_[5]\,
-      O => bram_addr(5)
+      I0 => bram_addr(2),
+      I1 => bram_addr(0),
+      I2 => bram_addr(1),
+      I3 => bram_addr(3),
+      I4 => bram_addr(4),
+      I5 => bram_addr(5),
+      O => bram_addr_0(5)
     );
 \bram_addr[6]_i_1\: unisim.vcomponents.LUT5
     generic map(
@@ -411,11 +410,11 @@ begin
     )
         port map (
       I0 => \bram_addr[7]_i_2_n_0\,
-      I1 => \bram_addr_reg_n_0_[4]\,
-      I2 => \bram_addr_reg_n_0_[3]\,
-      I3 => \bram_addr_reg_n_0_[5]\,
-      I4 => \bram_addr_reg_n_0_[6]\,
-      O => bram_addr(6)
+      I1 => bram_addr(4),
+      I2 => bram_addr(3),
+      I3 => bram_addr(5),
+      I4 => bram_addr(6),
+      O => bram_addr_0(6)
     );
 \bram_addr[7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -423,21 +422,21 @@ begin
     )
         port map (
       I0 => \bram_addr[7]_i_2_n_0\,
-      I1 => \bram_addr_reg_n_0_[5]\,
-      I2 => \bram_addr_reg_n_0_[3]\,
-      I3 => \bram_addr_reg_n_0_[4]\,
-      I4 => \bram_addr_reg_n_0_[6]\,
-      I5 => \bram_addr_reg_n_0_[7]\,
-      O => bram_addr(7)
+      I1 => bram_addr(5),
+      I2 => bram_addr(3),
+      I3 => bram_addr(4),
+      I4 => bram_addr(6),
+      I5 => bram_addr(7),
+      O => bram_addr_0(7)
     );
 \bram_addr[7]_i_2\: unisim.vcomponents.LUT3
     generic map(
       INIT => X"7F"
     )
         port map (
-      I0 => \bram_addr_reg_n_0_[2]\,
-      I1 => \bram_addr_reg_n_0_[0]\,
-      I2 => \bram_addr_reg_n_0_[1]\,
+      I0 => bram_addr(2),
+      I1 => bram_addr(0),
+      I2 => bram_addr(1),
       O => \bram_addr[7]_i_2_n_0\
     );
 \bram_addr[8]_i_1\: unisim.vcomponents.LUT5
@@ -445,23 +444,23 @@ begin
       INIT => X"FF7F0080"
     )
         port map (
-      I0 => \bram_addr_reg_n_0_[2]\,
-      I1 => \bram_addr_reg_n_0_[0]\,
-      I2 => \bram_addr_reg_n_0_[1]\,
+      I0 => bram_addr(2),
+      I1 => bram_addr(0),
+      I2 => bram_addr(1),
       I3 => \bram_addr[8]_i_2_n_0\,
-      I4 => \bram_addr_reg_n_0_[8]\,
-      O => bram_addr(8)
+      I4 => bram_addr(8),
+      O => bram_addr_0(8)
     );
 \bram_addr[8]_i_2\: unisim.vcomponents.LUT5
     generic map(
       INIT => X"7FFFFFFF"
     )
         port map (
-      I0 => \bram_addr_reg_n_0_[6]\,
-      I1 => \bram_addr_reg_n_0_[4]\,
-      I2 => \bram_addr_reg_n_0_[3]\,
-      I3 => \bram_addr_reg_n_0_[5]\,
-      I4 => \bram_addr_reg_n_0_[7]\,
+      I0 => bram_addr(6),
+      I1 => bram_addr(4),
+      I2 => bram_addr(3),
+      I3 => bram_addr(5),
+      I4 => bram_addr(7),
       O => \bram_addr[8]_i_2_n_0\
     );
 \bram_addr[9]_i_1\: unisim.vcomponents.LUT6
@@ -470,24 +469,24 @@ begin
     )
         port map (
       I0 => \bram_addr[9]_i_2_n_0\,
-      I1 => \bram_addr_reg_n_0_[9]\,
-      I2 => \bram_addr_reg_n_0_[2]\,
-      I3 => \bram_addr_reg_n_0_[0]\,
-      I4 => \bram_addr_reg_n_0_[1]\,
+      I1 => bram_addr(9),
+      I2 => bram_addr(2),
+      I3 => bram_addr(0),
+      I4 => bram_addr(1),
       I5 => \bram_addr[9]_i_3_n_0\,
-      O => bram_addr(9)
+      O => bram_addr_0(9)
     );
 \bram_addr[9]_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => \bram_addr_reg_n_0_[7]\,
-      I1 => \bram_addr_reg_n_0_[8]\,
-      I2 => \bram_addr_reg_n_0_[5]\,
-      I3 => \bram_addr_reg_n_0_[6]\,
-      I4 => \bram_addr_reg_n_0_[4]\,
-      I5 => \bram_addr_reg_n_0_[3]\,
+      I0 => bram_addr(7),
+      I1 => bram_addr(8),
+      I2 => bram_addr(5),
+      I3 => bram_addr(6),
+      I4 => bram_addr(4),
+      I5 => bram_addr(3),
       O => \bram_addr[9]_i_2_n_0\
     );
 \bram_addr[9]_i_3\: unisim.vcomponents.LUT6
@@ -495,92 +494,92 @@ begin
       INIT => X"7FFFFFFFFFFFFFFF"
     )
         port map (
-      I0 => \bram_addr_reg_n_0_[7]\,
-      I1 => \bram_addr_reg_n_0_[5]\,
-      I2 => \bram_addr_reg_n_0_[3]\,
-      I3 => \bram_addr_reg_n_0_[4]\,
-      I4 => \bram_addr_reg_n_0_[6]\,
-      I5 => \bram_addr_reg_n_0_[8]\,
+      I0 => bram_addr(7),
+      I1 => bram_addr(5),
+      I2 => bram_addr(3),
+      I3 => bram_addr(4),
+      I4 => bram_addr(6),
+      I5 => bram_addr(8),
       O => \bram_addr[9]_i_3_n_0\
     );
 \bram_addr_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_addr(0),
-      Q => \bram_addr_reg_n_0_[0]\,
+      D => bram_addr_0(0),
+      Q => bram_addr(0),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
 \bram_addr_reg[1]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_addr(1),
-      Q => \bram_addr_reg_n_0_[1]\,
+      D => bram_addr_0(1),
+      Q => bram_addr(1),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
 \bram_addr_reg[2]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_addr(2),
-      Q => \bram_addr_reg_n_0_[2]\,
+      D => bram_addr_0(2),
+      Q => bram_addr(2),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
 \bram_addr_reg[3]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_addr(3),
-      Q => \bram_addr_reg_n_0_[3]\,
+      D => bram_addr_0(3),
+      Q => bram_addr(3),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
 \bram_addr_reg[4]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_addr(4),
-      Q => \bram_addr_reg_n_0_[4]\,
+      D => bram_addr_0(4),
+      Q => bram_addr(4),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
 \bram_addr_reg[5]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_addr(5),
-      Q => \bram_addr_reg_n_0_[5]\,
+      D => bram_addr_0(5),
+      Q => bram_addr(5),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
 \bram_addr_reg[6]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_addr(6),
-      Q => \bram_addr_reg_n_0_[6]\,
+      D => bram_addr_0(6),
+      Q => bram_addr(6),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
 \bram_addr_reg[7]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_addr(7),
-      Q => \bram_addr_reg_n_0_[7]\,
+      D => bram_addr_0(7),
+      Q => bram_addr(7),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
 \bram_addr_reg[8]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_addr(8),
-      Q => \bram_addr_reg_n_0_[8]\,
+      D => bram_addr_0(8),
+      Q => bram_addr(8),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
 \bram_addr_reg[9]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_addr(9),
-      Q => \bram_addr_reg_n_0_[9]\,
+      D => bram_addr_0(9),
+      Q => bram_addr(9),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
 \bram_conv_data_0[0]_i_1\: unisim.vcomponents.LUT6
@@ -594,7 +593,7 @@ begin
       I3 => \bram_conv_data_0[0]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[0]_i_4_n_0\,
-      O => bram_conv_data_0_2(0)
+      O => bram_conv_data_0_3(0)
     );
 \bram_conv_data_0[0]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -637,7 +636,7 @@ begin
       I3 => \bram_conv_data_0[1]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[1]_i_4_n_0\,
-      O => bram_conv_data_0_2(1)
+      O => bram_conv_data_0_3(1)
     );
 \bram_conv_data_0[1]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -680,7 +679,7 @@ begin
       I3 => \bram_conv_data_0[2]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[2]_i_4_n_0\,
-      O => bram_conv_data_0_2(2)
+      O => bram_conv_data_0_3(2)
     );
 \bram_conv_data_0[2]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -723,7 +722,7 @@ begin
       I3 => \bram_conv_data_0[3]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[3]_i_4_n_0\,
-      O => bram_conv_data_0_2(3)
+      O => bram_conv_data_0_3(3)
     );
 \bram_conv_data_0[3]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -766,7 +765,7 @@ begin
       I3 => \bram_conv_data_0[4]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[4]_i_4_n_0\,
-      O => bram_conv_data_0_2(4)
+      O => bram_conv_data_0_3(4)
     );
 \bram_conv_data_0[4]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -809,7 +808,7 @@ begin
       I3 => \bram_conv_data_0[5]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[5]_i_4_n_0\,
-      O => bram_conv_data_0_2(5)
+      O => bram_conv_data_0_3(5)
     );
 \bram_conv_data_0[5]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -852,7 +851,7 @@ begin
       I3 => \bram_conv_data_0[6]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[6]_i_4_n_0\,
-      O => bram_conv_data_0_2(6)
+      O => bram_conv_data_0_3(6)
     );
 \bram_conv_data_0[6]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -903,7 +902,7 @@ begin
       I3 => \bram_conv_data_0[7]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[7]_i_5_n_0\,
-      O => bram_conv_data_0_2(7)
+      O => bram_conv_data_0_3(7)
     );
 \bram_conv_data_0[7]_i_3\: unisim.vcomponents.LUT3
     generic map(
@@ -939,7 +938,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_0_2(0),
+      D => bram_conv_data_0_3(0),
       Q => bram_conv_data_0(0),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -947,7 +946,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_0_2(1),
+      D => bram_conv_data_0_3(1),
       Q => bram_conv_data_0(1),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -955,7 +954,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_0_2(2),
+      D => bram_conv_data_0_3(2),
       Q => bram_conv_data_0(2),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -963,7 +962,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_0_2(3),
+      D => bram_conv_data_0_3(3),
       Q => bram_conv_data_0(3),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -971,7 +970,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_0_2(4),
+      D => bram_conv_data_0_3(4),
       Q => bram_conv_data_0(4),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -979,7 +978,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_0_2(5),
+      D => bram_conv_data_0_3(5),
       Q => bram_conv_data_0(5),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -987,7 +986,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_0_2(6),
+      D => bram_conv_data_0_3(6),
       Q => bram_conv_data_0(6),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -995,7 +994,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_0_2(7),
+      D => bram_conv_data_0_3(7),
       Q => bram_conv_data_0(7),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1010,7 +1009,7 @@ begin
       I3 => \bram_conv_data_1[0]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[0]_i_4_n_0\,
-      O => bram_conv_data_1_5(0)
+      O => bram_conv_data_1_6(0)
     );
 \bram_conv_data_1[0]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -1053,7 +1052,7 @@ begin
       I3 => \bram_conv_data_1[1]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[1]_i_4_n_0\,
-      O => bram_conv_data_1_5(1)
+      O => bram_conv_data_1_6(1)
     );
 \bram_conv_data_1[1]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -1096,7 +1095,7 @@ begin
       I3 => \bram_conv_data_1[2]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[2]_i_4_n_0\,
-      O => bram_conv_data_1_5(2)
+      O => bram_conv_data_1_6(2)
     );
 \bram_conv_data_1[2]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -1139,7 +1138,7 @@ begin
       I3 => \bram_conv_data_1[3]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[3]_i_4_n_0\,
-      O => bram_conv_data_1_5(3)
+      O => bram_conv_data_1_6(3)
     );
 \bram_conv_data_1[3]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -1182,7 +1181,7 @@ begin
       I3 => \bram_conv_data_1[4]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[4]_i_4_n_0\,
-      O => bram_conv_data_1_5(4)
+      O => bram_conv_data_1_6(4)
     );
 \bram_conv_data_1[4]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -1225,7 +1224,7 @@ begin
       I3 => \bram_conv_data_1[5]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[5]_i_4_n_0\,
-      O => bram_conv_data_1_5(5)
+      O => bram_conv_data_1_6(5)
     );
 \bram_conv_data_1[5]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -1268,7 +1267,7 @@ begin
       I3 => \bram_conv_data_1[6]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[6]_i_4_n_0\,
-      O => bram_conv_data_1_5(6)
+      O => bram_conv_data_1_6(6)
     );
 \bram_conv_data_1[6]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -1311,7 +1310,7 @@ begin
       I3 => \bram_conv_data_1[7]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[7]_i_4_n_0\,
-      O => bram_conv_data_1_5(7)
+      O => bram_conv_data_1_6(7)
     );
 \bram_conv_data_1[7]_i_2\: unisim.vcomponents.LUT3
     generic map(
@@ -1347,7 +1346,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_1_5(0),
+      D => bram_conv_data_1_6(0),
       Q => bram_conv_data_1(0),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1355,7 +1354,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_1_5(1),
+      D => bram_conv_data_1_6(1),
       Q => bram_conv_data_1(1),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1363,7 +1362,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_1_5(2),
+      D => bram_conv_data_1_6(2),
       Q => bram_conv_data_1(2),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1371,7 +1370,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_1_5(3),
+      D => bram_conv_data_1_6(3),
       Q => bram_conv_data_1(3),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1379,7 +1378,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_1_5(4),
+      D => bram_conv_data_1_6(4),
       Q => bram_conv_data_1(4),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1387,7 +1386,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_1_5(5),
+      D => bram_conv_data_1_6(5),
       Q => bram_conv_data_1(5),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1395,7 +1394,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_1_5(6),
+      D => bram_conv_data_1_6(6),
       Q => bram_conv_data_1(6),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1403,7 +1402,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_1_5(7),
+      D => bram_conv_data_1_6(7),
       Q => bram_conv_data_1(7),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1418,7 +1417,7 @@ begin
       I3 => \bram_conv_data_0[0]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[0]_i_3_n_0\,
-      O => bram_conv_data_2_1(0)
+      O => bram_conv_data_2_2(0)
     );
 \bram_conv_data_2[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1431,7 +1430,7 @@ begin
       I3 => \bram_conv_data_0[1]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[1]_i_3_n_0\,
-      O => bram_conv_data_2_1(1)
+      O => bram_conv_data_2_2(1)
     );
 \bram_conv_data_2[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1444,7 +1443,7 @@ begin
       I3 => \bram_conv_data_0[2]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[2]_i_3_n_0\,
-      O => bram_conv_data_2_1(2)
+      O => bram_conv_data_2_2(2)
     );
 \bram_conv_data_2[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1457,7 +1456,7 @@ begin
       I3 => \bram_conv_data_0[3]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[3]_i_3_n_0\,
-      O => bram_conv_data_2_1(3)
+      O => bram_conv_data_2_2(3)
     );
 \bram_conv_data_2[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1470,7 +1469,7 @@ begin
       I3 => \bram_conv_data_0[4]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[4]_i_3_n_0\,
-      O => bram_conv_data_2_1(4)
+      O => bram_conv_data_2_2(4)
     );
 \bram_conv_data_2[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1483,7 +1482,7 @@ begin
       I3 => \bram_conv_data_0[5]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[5]_i_3_n_0\,
-      O => bram_conv_data_2_1(5)
+      O => bram_conv_data_2_2(5)
     );
 \bram_conv_data_2[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1496,7 +1495,7 @@ begin
       I3 => \bram_conv_data_0[6]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[6]_i_3_n_0\,
-      O => bram_conv_data_2_1(6)
+      O => bram_conv_data_2_2(6)
     );
 \bram_conv_data_2[7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1509,13 +1508,13 @@ begin
       I3 => \bram_conv_data_0[7]_i_3_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[7]_i_4_n_0\,
-      O => bram_conv_data_2_1(7)
+      O => bram_conv_data_2_2(7)
     );
 \bram_conv_data_2_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_2_1(0),
+      D => bram_conv_data_2_2(0),
       Q => bram_conv_data_2(0),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1523,7 +1522,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_2_1(1),
+      D => bram_conv_data_2_2(1),
       Q => bram_conv_data_2(1),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1531,7 +1530,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_2_1(2),
+      D => bram_conv_data_2_2(2),
       Q => bram_conv_data_2(2),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1539,7 +1538,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_2_1(3),
+      D => bram_conv_data_2_2(3),
       Q => bram_conv_data_2(3),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1547,7 +1546,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_2_1(4),
+      D => bram_conv_data_2_2(4),
       Q => bram_conv_data_2(4),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1555,7 +1554,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_2_1(5),
+      D => bram_conv_data_2_2(5),
       Q => bram_conv_data_2(5),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1563,7 +1562,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_2_1(6),
+      D => bram_conv_data_2_2(6),
       Q => bram_conv_data_2(6),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1571,7 +1570,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_2_1(7),
+      D => bram_conv_data_2_2(7),
       Q => bram_conv_data_2(7),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1586,7 +1585,7 @@ begin
       I3 => \bram_conv_data_1[0]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[0]_i_3_n_0\,
-      O => bram_conv_data_3_4(0)
+      O => bram_conv_data_3_5(0)
     );
 \bram_conv_data_3[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1599,7 +1598,7 @@ begin
       I3 => \bram_conv_data_1[1]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[1]_i_3_n_0\,
-      O => bram_conv_data_3_4(1)
+      O => bram_conv_data_3_5(1)
     );
 \bram_conv_data_3[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1612,7 +1611,7 @@ begin
       I3 => \bram_conv_data_1[2]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[2]_i_3_n_0\,
-      O => bram_conv_data_3_4(2)
+      O => bram_conv_data_3_5(2)
     );
 \bram_conv_data_3[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1625,7 +1624,7 @@ begin
       I3 => \bram_conv_data_1[3]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[3]_i_3_n_0\,
-      O => bram_conv_data_3_4(3)
+      O => bram_conv_data_3_5(3)
     );
 \bram_conv_data_3[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1638,7 +1637,7 @@ begin
       I3 => \bram_conv_data_1[4]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[4]_i_3_n_0\,
-      O => bram_conv_data_3_4(4)
+      O => bram_conv_data_3_5(4)
     );
 \bram_conv_data_3[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1651,7 +1650,7 @@ begin
       I3 => \bram_conv_data_1[5]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[5]_i_3_n_0\,
-      O => bram_conv_data_3_4(5)
+      O => bram_conv_data_3_5(5)
     );
 \bram_conv_data_3[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1664,7 +1663,7 @@ begin
       I3 => \bram_conv_data_1[6]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[6]_i_3_n_0\,
-      O => bram_conv_data_3_4(6)
+      O => bram_conv_data_3_5(6)
     );
 \bram_conv_data_3[7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1677,13 +1676,13 @@ begin
       I3 => \bram_conv_data_1[7]_i_2_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[7]_i_3_n_0\,
-      O => bram_conv_data_3_4(7)
+      O => bram_conv_data_3_5(7)
     );
 \bram_conv_data_3_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_3_4(0),
+      D => bram_conv_data_3_5(0),
       Q => bram_conv_data_3(0),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1691,7 +1690,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_3_4(1),
+      D => bram_conv_data_3_5(1),
       Q => bram_conv_data_3(1),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1699,7 +1698,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_3_4(2),
+      D => bram_conv_data_3_5(2),
       Q => bram_conv_data_3(2),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1707,7 +1706,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_3_4(3),
+      D => bram_conv_data_3_5(3),
       Q => bram_conv_data_3(3),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1715,7 +1714,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_3_4(4),
+      D => bram_conv_data_3_5(4),
       Q => bram_conv_data_3(4),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1723,7 +1722,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_3_4(5),
+      D => bram_conv_data_3_5(5),
       Q => bram_conv_data_3(5),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1731,7 +1730,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_3_4(6),
+      D => bram_conv_data_3_5(6),
       Q => bram_conv_data_3(6),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1739,7 +1738,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_3_4(7),
+      D => bram_conv_data_3_5(7),
       Q => bram_conv_data_3(7),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1754,7 +1753,7 @@ begin
       I3 => \bram_conv_data_0[0]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[0]_i_2_n_0\,
-      O => bram_conv_data_4_0(0)
+      O => bram_conv_data_4_1(0)
     );
 \bram_conv_data_4[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1767,7 +1766,7 @@ begin
       I3 => \bram_conv_data_0[1]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[1]_i_2_n_0\,
-      O => bram_conv_data_4_0(1)
+      O => bram_conv_data_4_1(1)
     );
 \bram_conv_data_4[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1780,7 +1779,7 @@ begin
       I3 => \bram_conv_data_0[2]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[2]_i_2_n_0\,
-      O => bram_conv_data_4_0(2)
+      O => bram_conv_data_4_1(2)
     );
 \bram_conv_data_4[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1793,7 +1792,7 @@ begin
       I3 => \bram_conv_data_0[3]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[3]_i_2_n_0\,
-      O => bram_conv_data_4_0(3)
+      O => bram_conv_data_4_1(3)
     );
 \bram_conv_data_4[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1806,7 +1805,7 @@ begin
       I3 => \bram_conv_data_0[4]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[4]_i_2_n_0\,
-      O => bram_conv_data_4_0(4)
+      O => bram_conv_data_4_1(4)
     );
 \bram_conv_data_4[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1819,7 +1818,7 @@ begin
       I3 => \bram_conv_data_0[5]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[5]_i_2_n_0\,
-      O => bram_conv_data_4_0(5)
+      O => bram_conv_data_4_1(5)
     );
 \bram_conv_data_4[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1832,7 +1831,7 @@ begin
       I3 => \bram_conv_data_0[6]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[6]_i_2_n_0\,
-      O => bram_conv_data_4_0(6)
+      O => bram_conv_data_4_1(6)
     );
 \bram_conv_data_4[7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1845,13 +1844,13 @@ begin
       I3 => \bram_conv_data_0[7]_i_5_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_0[7]_i_3_n_0\,
-      O => bram_conv_data_4_0(7)
+      O => bram_conv_data_4_1(7)
     );
 \bram_conv_data_4_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_4_0(0),
+      D => bram_conv_data_4_1(0),
       Q => bram_conv_data_4(0),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1859,7 +1858,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_4_0(1),
+      D => bram_conv_data_4_1(1),
       Q => bram_conv_data_4(1),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1867,7 +1866,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_4_0(2),
+      D => bram_conv_data_4_1(2),
       Q => bram_conv_data_4(2),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1875,7 +1874,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_4_0(3),
+      D => bram_conv_data_4_1(3),
       Q => bram_conv_data_4(3),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1883,7 +1882,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_4_0(4),
+      D => bram_conv_data_4_1(4),
       Q => bram_conv_data_4(4),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1891,7 +1890,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_4_0(5),
+      D => bram_conv_data_4_1(5),
       Q => bram_conv_data_4(5),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1899,7 +1898,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_4_0(6),
+      D => bram_conv_data_4_1(6),
       Q => bram_conv_data_4(6),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1907,7 +1906,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_4_0(7),
+      D => bram_conv_data_4_1(7),
       Q => bram_conv_data_4(7),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -1922,7 +1921,7 @@ begin
       I3 => \bram_conv_data_1[0]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[0]_i_2_n_0\,
-      O => bram_conv_data_5_3(0)
+      O => bram_conv_data_5_4(0)
     );
 \bram_conv_data_5[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1935,7 +1934,7 @@ begin
       I3 => \bram_conv_data_1[1]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[1]_i_2_n_0\,
-      O => bram_conv_data_5_3(1)
+      O => bram_conv_data_5_4(1)
     );
 \bram_conv_data_5[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1948,7 +1947,7 @@ begin
       I3 => \bram_conv_data_1[2]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[2]_i_2_n_0\,
-      O => bram_conv_data_5_3(2)
+      O => bram_conv_data_5_4(2)
     );
 \bram_conv_data_5[3]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1961,7 +1960,7 @@ begin
       I3 => \bram_conv_data_1[3]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[3]_i_2_n_0\,
-      O => bram_conv_data_5_3(3)
+      O => bram_conv_data_5_4(3)
     );
 \bram_conv_data_5[4]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1974,7 +1973,7 @@ begin
       I3 => \bram_conv_data_1[4]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[4]_i_2_n_0\,
-      O => bram_conv_data_5_3(4)
+      O => bram_conv_data_5_4(4)
     );
 \bram_conv_data_5[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -1987,7 +1986,7 @@ begin
       I3 => \bram_conv_data_1[5]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[5]_i_2_n_0\,
-      O => bram_conv_data_5_3(5)
+      O => bram_conv_data_5_4(5)
     );
 \bram_conv_data_5[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2000,7 +1999,7 @@ begin
       I3 => \bram_conv_data_1[6]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[6]_i_2_n_0\,
-      O => bram_conv_data_5_3(6)
+      O => bram_conv_data_5_4(6)
     );
 \bram_conv_data_5[7]_i_1\: unisim.vcomponents.LUT6
     generic map(
@@ -2013,13 +2012,13 @@ begin
       I3 => \bram_conv_data_1[7]_i_4_n_0\,
       I4 => \bram_counter_reg_n_0_[1]\,
       I5 => \bram_conv_data_1[7]_i_2_n_0\,
-      O => bram_conv_data_5_3(7)
+      O => bram_conv_data_5_4(7)
     );
 \bram_conv_data_5_reg[0]\: unisim.vcomponents.FDRE
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_5_3(0),
+      D => bram_conv_data_5_4(0),
       Q => bram_conv_data_5(0),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -2027,7 +2026,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_5_3(1),
+      D => bram_conv_data_5_4(1),
       Q => bram_conv_data_5(1),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -2035,7 +2034,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_5_3(2),
+      D => bram_conv_data_5_4(2),
       Q => bram_conv_data_5(2),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -2043,7 +2042,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_5_3(3),
+      D => bram_conv_data_5_4(3),
       Q => bram_conv_data_5(3),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -2051,7 +2050,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_5_3(4),
+      D => bram_conv_data_5_4(4),
       Q => bram_conv_data_5(4),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -2059,7 +2058,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_5_3(5),
+      D => bram_conv_data_5_4(5),
       Q => bram_conv_data_5(5),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -2067,7 +2066,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_5_3(6),
+      D => bram_conv_data_5_4(6),
       Q => bram_conv_data_5(6),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -2075,7 +2074,7 @@ begin
      port map (
       C => clk,
       CE => \FSM_onehot_state_reg_n_0_[3]\,
-      D => bram_conv_data_5_3(7),
+      D => bram_conv_data_5_4(7),
       Q => bram_conv_data_5(7),
       R => \bram_conv_data_0[7]_i_1_n_0\
     );
@@ -2103,8 +2102,8 @@ bram_conv_rts_reg: unisim.vcomponents.FDRE
     )
         port map (
       I0 => \bram_addr[9]_i_2_n_0\,
-      I1 => \bram_addr_reg_n_0_[9]\,
-      I2 => \bram_addr_reg_n_0_[1]\,
+      I1 => bram_addr(9),
+      I2 => bram_addr(1),
       I3 => \FSM_onehot_state_reg_n_0_[3]\,
       I4 => \bram_counter[0]_i_2_n_0\,
       I5 => \bram_counter_reg_n_0_[0]\,
@@ -2115,8 +2114,8 @@ bram_conv_rts_reg: unisim.vcomponents.FDRE
       INIT => X"7"
     )
         port map (
-      I0 => \bram_addr_reg_n_0_[0]\,
-      I1 => \bram_addr_reg_n_0_[2]\,
+      I0 => bram_addr(0),
+      I1 => bram_addr(2),
       O => \bram_counter[0]_i_2_n_0\
     );
 \bram_counter[1]_i_1\: unisim.vcomponents.LUT6
@@ -2127,7 +2126,7 @@ bram_conv_rts_reg: unisim.vcomponents.FDRE
       I0 => \bram_counter_reg_n_0_[2]\,
       I1 => \bram_counter_reg_n_0_[0]\,
       I2 => \bram_counter[2]_i_2_n_0\,
-      I3 => \bram_addr_reg_n_0_[9]\,
+      I3 => bram_addr(9),
       I4 => \bram_addr[9]_i_2_n_0\,
       I5 => \bram_counter_reg_n_0_[1]\,
       O => \bram_counter[1]_i_1_n_0\
@@ -2140,7 +2139,7 @@ bram_conv_rts_reg: unisim.vcomponents.FDRE
       I0 => \bram_counter_reg_n_0_[0]\,
       I1 => \bram_counter_reg_n_0_[1]\,
       I2 => \bram_counter[2]_i_2_n_0\,
-      I3 => \bram_addr_reg_n_0_[9]\,
+      I3 => bram_addr(9),
       I4 => \bram_addr[9]_i_2_n_0\,
       I5 => \bram_counter_reg_n_0_[2]\,
       O => \bram_counter[2]_i_1_n_0\
@@ -2150,10 +2149,10 @@ bram_conv_rts_reg: unisim.vcomponents.FDRE
       INIT => X"4000"
     )
         port map (
-      I0 => \bram_addr_reg_n_0_[1]\,
+      I0 => bram_addr(1),
       I1 => \FSM_onehot_state_reg_n_0_[3]\,
-      I2 => \bram_addr_reg_n_0_[2]\,
-      I3 => \bram_addr_reg_n_0_[0]\,
+      I2 => bram_addr(2),
+      I3 => bram_addr(0),
       O => \bram_counter[2]_i_2_n_0\
     );
 \bram_counter_reg[0]\: unisim.vcomponents.FDRE
@@ -2400,7 +2399,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     bram_conv_data_5 : out STD_LOGIC_VECTOR ( 7 downto 0 );
     bram_conv_rts : out STD_LOGIC;
     bram_write_data : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    addr : out STD_LOGIC_VECTOR ( 8 downto 0 );
+    addr : out STD_LOGIC_VECTOR ( 9 downto 0 );
     ena_0 : out STD_LOGIC;
     ena_1 : out STD_LOGIC;
     ena_2 : out STD_LOGIC;
@@ -2438,9 +2437,9 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
-  attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
   conv_bram_rtr <= \<const1>\;
   ena_0 <= \^ena_5\;
@@ -2455,7 +2454,7 @@ VCC: unisim.vcomponents.VCC
     );
 inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_bram_controller_v2
      port map (
-      addr(8 downto 0) => addr(8 downto 0),
+      addr(9 downto 0) => addr(9 downto 0),
       bram_conv_data_0(7 downto 0) => bram_conv_data_0(7 downto 0),
       bram_conv_data_1(7 downto 0) => bram_conv_data_1(7 downto 0),
       bram_conv_data_2(7 downto 0) => bram_conv_data_2(7 downto 0),

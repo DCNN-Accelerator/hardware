@@ -159,11 +159,12 @@ begin
         variable checkstatus    : file_open_status;
         variable read_delay_1   : std_logic := '0';
         variable read_delay_2   : std_logic := '0';
+        variable temp_int : integer := 0; 
     begin
         if(receive_counter /= 518 * 518 * 2) then
             --opens the text files
-            file_open(readstatus, file_read, "C:/Users/ryanm/Downloads/testing/BUILD/matlab/uart_input_bytes.txt", READ_MODE);
-            file_open(checkstatus, file_check, "C:/Users/ryanm/Desktop/checkFile.txt", WRITE_MODE);
+            file_open(readstatus, file_read, "C:\Users\hkhaj\Documents\senior-project\deploy\uart_input_bytes.txt", READ_MODE);
+            file_open(checkstatus, file_check, "C:/Users/hkhaj/Documents/senior-project/deploy/checkFile.txt", WRITE_MODE);
             --continues to process until  all bytes have been written back
             while (receive_counter < 518*518*2) loop
                 wait until clock = '1';
@@ -181,9 +182,10 @@ begin
                         if not ENDFILE(file_read) then
                             --reads in a value from the file
                             readline(file_read, line_read);
-                            hread(line_read, temp_read);
+--                            hread(line_read, temp_read);
+                            read(line_read, temp_int); 
                             --set the data to match that in the file
-                            pc_uart_data <= std_logic_vector(temp_read);
+                            pc_uart_data <= std_logic_vector(to_unsigned(temp_int,8));
                         else
                             --read file is empty, set data to 0's
                             pc_uart_data <= (others => '0');

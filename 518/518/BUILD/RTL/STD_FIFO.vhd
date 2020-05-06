@@ -87,12 +87,12 @@ begin
                     end if;
                 else 
                     --no data in FIFO, send out 0's
-                    fifo_x_data <= (others => '0');
+--                    fifo_x_data <= (others => '0');
                     delay <= '0';
                 end if;
             else 
                 --no data in FIFO, send out 0's
-                fifo_x_data <= (others => '0');
+                --fifo_x_data <= (others => '0');
                 delay <= '0';
             end if;
             

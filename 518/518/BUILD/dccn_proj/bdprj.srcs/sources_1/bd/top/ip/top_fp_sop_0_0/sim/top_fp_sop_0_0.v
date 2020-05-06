@@ -48,126 +48,126 @@
 
 
 // IP VLNV: xilinx.com:hls:fp_sop:1.0
-// IP Revision: 2004071123
+// IP Revision: 2005022247
 
 `timescale 1ns/1ps
 
 (* IP_DEFINITION_SOURCE = "HLS" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module top_fp_sop_0_0 (
-  out_val_V_ap_vld,
+  out_val_ap_vld,
   ap_clk,
   ap_rst,
   ap_start,
   ap_done,
   ap_idle,
   ap_ready,
-  kernel_patch_0_V,
-  kernel_patch_1_V,
-  kernel_patch_2_V,
-  kernel_patch_3_V,
-  kernel_patch_4_V,
-  kernel_patch_5_V,
-  kernel_patch_6_V,
-  kernel_patch_7_V,
-  kernel_patch_8_V,
-  kernel_patch_9_V,
-  kernel_patch_10_V,
-  kernel_patch_11_V,
-  kernel_patch_12_V,
-  kernel_patch_13_V,
-  kernel_patch_14_V,
-  kernel_patch_15_V,
-  kernel_patch_16_V,
-  kernel_patch_17_V,
-  kernel_patch_18_V,
-  kernel_patch_19_V,
-  kernel_patch_20_V,
-  kernel_patch_21_V,
-  kernel_patch_22_V,
-  kernel_patch_23_V,
-  kernel_patch_24_V,
-  kernel_patch_25_V,
-  kernel_patch_26_V,
-  kernel_patch_27_V,
-  kernel_patch_28_V,
-  kernel_patch_29_V,
-  kernel_patch_30_V,
-  kernel_patch_31_V,
-  kernel_patch_32_V,
-  kernel_patch_33_V,
-  kernel_patch_34_V,
-  kernel_patch_35_V,
-  kernel_patch_36_V,
-  kernel_patch_37_V,
-  kernel_patch_38_V,
-  kernel_patch_39_V,
-  kernel_patch_40_V,
-  kernel_patch_41_V,
-  kernel_patch_42_V,
-  kernel_patch_43_V,
-  kernel_patch_44_V,
-  kernel_patch_45_V,
-  kernel_patch_46_V,
-  kernel_patch_47_V,
-  kernel_patch_48_V,
-  pixel_window_0_V,
-  pixel_window_1_V,
-  pixel_window_2_V,
-  pixel_window_3_V,
-  pixel_window_4_V,
-  pixel_window_5_V,
-  pixel_window_6_V,
-  pixel_window_7_V,
-  pixel_window_8_V,
-  pixel_window_9_V,
-  pixel_window_10_V,
-  pixel_window_11_V,
-  pixel_window_12_V,
-  pixel_window_13_V,
-  pixel_window_14_V,
-  pixel_window_15_V,
-  pixel_window_16_V,
-  pixel_window_17_V,
-  pixel_window_18_V,
-  pixel_window_19_V,
-  pixel_window_20_V,
-  pixel_window_21_V,
-  pixel_window_22_V,
-  pixel_window_23_V,
-  pixel_window_24_V,
-  pixel_window_25_V,
-  pixel_window_26_V,
-  pixel_window_27_V,
-  pixel_window_28_V,
-  pixel_window_29_V,
-  pixel_window_30_V,
-  pixel_window_31_V,
-  pixel_window_32_V,
-  pixel_window_33_V,
-  pixel_window_34_V,
-  pixel_window_35_V,
-  pixel_window_36_V,
-  pixel_window_37_V,
-  pixel_window_38_V,
-  pixel_window_39_V,
-  pixel_window_40_V,
-  pixel_window_41_V,
-  pixel_window_42_V,
-  pixel_window_43_V,
-  pixel_window_44_V,
-  pixel_window_45_V,
-  pixel_window_46_V,
-  pixel_window_47_V,
-  pixel_window_48_V,
-  out_val_V
+  kernel_patch_0,
+  kernel_patch_1,
+  kernel_patch_2,
+  kernel_patch_3,
+  kernel_patch_4,
+  kernel_patch_5,
+  kernel_patch_6,
+  kernel_patch_7,
+  kernel_patch_8,
+  kernel_patch_9,
+  kernel_patch_10,
+  kernel_patch_11,
+  kernel_patch_12,
+  kernel_patch_13,
+  kernel_patch_14,
+  kernel_patch_15,
+  kernel_patch_16,
+  kernel_patch_17,
+  kernel_patch_18,
+  kernel_patch_19,
+  kernel_patch_20,
+  kernel_patch_21,
+  kernel_patch_22,
+  kernel_patch_23,
+  kernel_patch_24,
+  kernel_patch_25,
+  kernel_patch_26,
+  kernel_patch_27,
+  kernel_patch_28,
+  kernel_patch_29,
+  kernel_patch_30,
+  kernel_patch_31,
+  kernel_patch_32,
+  kernel_patch_33,
+  kernel_patch_34,
+  kernel_patch_35,
+  kernel_patch_36,
+  kernel_patch_37,
+  kernel_patch_38,
+  kernel_patch_39,
+  kernel_patch_40,
+  kernel_patch_41,
+  kernel_patch_42,
+  kernel_patch_43,
+  kernel_patch_44,
+  kernel_patch_45,
+  kernel_patch_46,
+  kernel_patch_47,
+  kernel_patch_48,
+  pixel_window_0,
+  pixel_window_1,
+  pixel_window_2,
+  pixel_window_3,
+  pixel_window_4,
+  pixel_window_5,
+  pixel_window_6,
+  pixel_window_7,
+  pixel_window_8,
+  pixel_window_9,
+  pixel_window_10,
+  pixel_window_11,
+  pixel_window_12,
+  pixel_window_13,
+  pixel_window_14,
+  pixel_window_15,
+  pixel_window_16,
+  pixel_window_17,
+  pixel_window_18,
+  pixel_window_19,
+  pixel_window_20,
+  pixel_window_21,
+  pixel_window_22,
+  pixel_window_23,
+  pixel_window_24,
+  pixel_window_25,
+  pixel_window_26,
+  pixel_window_27,
+  pixel_window_28,
+  pixel_window_29,
+  pixel_window_30,
+  pixel_window_31,
+  pixel_window_32,
+  pixel_window_33,
+  pixel_window_34,
+  pixel_window_35,
+  pixel_window_36,
+  pixel_window_37,
+  pixel_window_38,
+  pixel_window_39,
+  pixel_window_40,
+  pixel_window_41,
+  pixel_window_42,
+  pixel_window_43,
+  pixel_window_44,
+  pixel_window_45,
+  pixel_window_46,
+  pixel_window_47,
+  pixel_window_48,
+  out_val
 );
 
-output wire out_val_V_ap_vld;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_RESET ap_rst, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *)
+output wire out_val_ap_vld;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_clk, ASSOCIATED_RESET ap_rst, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 ap_clk CLK" *)
 input wire ap_clk;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst, POLARITY ACTIVE_HIGH, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_rst, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 ap_rst RST" *)
 input wire ap_rst;
 (* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl start" *)
@@ -176,514 +176,412 @@ input wire ap_start;
 output wire ap_done;
 (* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl idle" *)
 output wire ap_idle;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ap_ctrl, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {start {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} done {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum \
-{}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}} idle {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long\
- minimum {} maximum {}} value 0}}} ready {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:acc_handshake:1.0 ap_ctrl ready" *)
 output wire ap_ready;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_0_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_0_V DATA" *)
-input wire [7 : 0] kernel_patch_0_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_1_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_1_V DATA" *)
-input wire [7 : 0] kernel_patch_1_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_2_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_2_V DATA" *)
-input wire [7 : 0] kernel_patch_2_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_3_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_3_V DATA" *)
-input wire [7 : 0] kernel_patch_3_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_4_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_4_V DATA" *)
-input wire [7 : 0] kernel_patch_4_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_5_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_5_V DATA" *)
-input wire [7 : 0] kernel_patch_5_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_6_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_6_V DATA" *)
-input wire [7 : 0] kernel_patch_6_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_7_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_7_V DATA" *)
-input wire [7 : 0] kernel_patch_7_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_8_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_8_V DATA" *)
-input wire [7 : 0] kernel_patch_8_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_9_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_9_V DATA" *)
-input wire [7 : 0] kernel_patch_9_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_10_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_10_V DATA" *)
-input wire [7 : 0] kernel_patch_10_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_11_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_11_V DATA" *)
-input wire [7 : 0] kernel_patch_11_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_12_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_12_V DATA" *)
-input wire [7 : 0] kernel_patch_12_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_13_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_13_V DATA" *)
-input wire [7 : 0] kernel_patch_13_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_14_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_14_V DATA" *)
-input wire [7 : 0] kernel_patch_14_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_15_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_15_V DATA" *)
-input wire [7 : 0] kernel_patch_15_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_16_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_16_V DATA" *)
-input wire [7 : 0] kernel_patch_16_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_17_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_17_V DATA" *)
-input wire [7 : 0] kernel_patch_17_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_18_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_18_V DATA" *)
-input wire [7 : 0] kernel_patch_18_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_19_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_19_V DATA" *)
-input wire [7 : 0] kernel_patch_19_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_20_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_20_V DATA" *)
-input wire [7 : 0] kernel_patch_20_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_21_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_21_V DATA" *)
-input wire [7 : 0] kernel_patch_21_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_22_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_22_V DATA" *)
-input wire [7 : 0] kernel_patch_22_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_23_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_23_V DATA" *)
-input wire [7 : 0] kernel_patch_23_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_24_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_24_V DATA" *)
-input wire [7 : 0] kernel_patch_24_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_25_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_25_V DATA" *)
-input wire [7 : 0] kernel_patch_25_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_26_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_26_V DATA" *)
-input wire [7 : 0] kernel_patch_26_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_27_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_27_V DATA" *)
-input wire [7 : 0] kernel_patch_27_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_28_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_28_V DATA" *)
-input wire [7 : 0] kernel_patch_28_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_29_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_29_V DATA" *)
-input wire [7 : 0] kernel_patch_29_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_30_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_30_V DATA" *)
-input wire [7 : 0] kernel_patch_30_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_31_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_31_V DATA" *)
-input wire [7 : 0] kernel_patch_31_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_32_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_32_V DATA" *)
-input wire [7 : 0] kernel_patch_32_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_33_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_33_V DATA" *)
-input wire [7 : 0] kernel_patch_33_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_34_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_34_V DATA" *)
-input wire [7 : 0] kernel_patch_34_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_35_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_35_V DATA" *)
-input wire [7 : 0] kernel_patch_35_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_36_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_36_V DATA" *)
-input wire [7 : 0] kernel_patch_36_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_37_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_37_V DATA" *)
-input wire [7 : 0] kernel_patch_37_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_38_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_38_V DATA" *)
-input wire [7 : 0] kernel_patch_38_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_39_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_39_V DATA" *)
-input wire [7 : 0] kernel_patch_39_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_40_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_40_V DATA" *)
-input wire [7 : 0] kernel_patch_40_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_41_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_41_V DATA" *)
-input wire [7 : 0] kernel_patch_41_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_42_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_42_V DATA" *)
-input wire [7 : 0] kernel_patch_42_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_43_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_43_V DATA" *)
-input wire [7 : 0] kernel_patch_43_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_44_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_44_V DATA" *)
-input wire [7 : 0] kernel_patch_44_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_45_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_45_V DATA" *)
-input wire [7 : 0] kernel_patch_45_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_46_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_46_V DATA" *)
-input wire [7 : 0] kernel_patch_46_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_47_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_47_V DATA" *)
-input wire [7 : 0] kernel_patch_47_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_48_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 7} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_48_V DATA" *)
-input wire [7 : 0] kernel_patch_48_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_0_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_0_V DATA" *)
-input wire [7 : 0] pixel_window_0_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_1_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_1_V DATA" *)
-input wire [7 : 0] pixel_window_1_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_2_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_2_V DATA" *)
-input wire [7 : 0] pixel_window_2_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_3_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_3_V DATA" *)
-input wire [7 : 0] pixel_window_3_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_4_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_4_V DATA" *)
-input wire [7 : 0] pixel_window_4_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_5_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_5_V DATA" *)
-input wire [7 : 0] pixel_window_5_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_6_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_6_V DATA" *)
-input wire [7 : 0] pixel_window_6_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_7_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_7_V DATA" *)
-input wire [7 : 0] pixel_window_7_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_8_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_8_V DATA" *)
-input wire [7 : 0] pixel_window_8_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_9_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} m\
-aximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_9_V DATA" *)
-input wire [7 : 0] pixel_window_9_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_10_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_10_V DATA" *)
-input wire [7 : 0] pixel_window_10_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_11_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_11_V DATA" *)
-input wire [7 : 0] pixel_window_11_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_12_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_12_V DATA" *)
-input wire [7 : 0] pixel_window_12_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_13_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_13_V DATA" *)
-input wire [7 : 0] pixel_window_13_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_14_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_14_V DATA" *)
-input wire [7 : 0] pixel_window_14_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_15_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_15_V DATA" *)
-input wire [7 : 0] pixel_window_15_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_16_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_16_V DATA" *)
-input wire [7 : 0] pixel_window_16_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_17_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_17_V DATA" *)
-input wire [7 : 0] pixel_window_17_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_18_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_18_V DATA" *)
-input wire [7 : 0] pixel_window_18_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_19_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_19_V DATA" *)
-input wire [7 : 0] pixel_window_19_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_20_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_20_V DATA" *)
-input wire [7 : 0] pixel_window_20_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_21_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_21_V DATA" *)
-input wire [7 : 0] pixel_window_21_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_22_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_22_V DATA" *)
-input wire [7 : 0] pixel_window_22_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_23_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_23_V DATA" *)
-input wire [7 : 0] pixel_window_23_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_24_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_24_V DATA" *)
-input wire [7 : 0] pixel_window_24_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_25_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_25_V DATA" *)
-input wire [7 : 0] pixel_window_25_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_26_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_26_V DATA" *)
-input wire [7 : 0] pixel_window_26_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_27_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_27_V DATA" *)
-input wire [7 : 0] pixel_window_27_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_28_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_28_V DATA" *)
-input wire [7 : 0] pixel_window_28_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_29_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_29_V DATA" *)
-input wire [7 : 0] pixel_window_29_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_30_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_30_V DATA" *)
-input wire [7 : 0] pixel_window_30_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_31_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_31_V DATA" *)
-input wire [7 : 0] pixel_window_31_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_32_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_32_V DATA" *)
-input wire [7 : 0] pixel_window_32_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_33_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_33_V DATA" *)
-input wire [7 : 0] pixel_window_33_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_34_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_34_V DATA" *)
-input wire [7 : 0] pixel_window_34_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_35_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_35_V DATA" *)
-input wire [7 : 0] pixel_window_35_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_36_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_36_V DATA" *)
-input wire [7 : 0] pixel_window_36_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_37_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_37_V DATA" *)
-input wire [7 : 0] pixel_window_37_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_38_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_38_V DATA" *)
-input wire [7 : 0] pixel_window_38_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_39_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_39_V DATA" *)
-input wire [7 : 0] pixel_window_39_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_40_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_40_V DATA" *)
-input wire [7 : 0] pixel_window_40_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_41_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_41_V DATA" *)
-input wire [7 : 0] pixel_window_41_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_42_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_42_V DATA" *)
-input wire [7 : 0] pixel_window_42_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_43_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_43_V DATA" *)
-input wire [7 : 0] pixel_window_43_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_44_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_44_V DATA" *)
-input wire [7 : 0] pixel_window_44_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_45_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_45_V DATA" *)
-input wire [7 : 0] pixel_window_45_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_46_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_46_V DATA" *)
-input wire [7 : 0] pixel_window_46_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_47_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_47_V DATA" *)
-input wire [7 : 0] pixel_window_47_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_48_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 8} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} \
-maximum {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_48_V DATA" *)
-input wire [7 : 0] pixel_window_48_V;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME out_val_V, LAYERED_METADATA xilinx.com:interface:datatypes:1.0 {DATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 16} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} real {fixed {fractwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum\
- {}} value 0} signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value true}}}}}}" *)
-(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 out_val_V DATA" *)
-output wire [15 : 0] out_val_V;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_0, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_0 DATA" *)
+input wire [7 : 0] kernel_patch_0;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_1, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_1 DATA" *)
+input wire [7 : 0] kernel_patch_1;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_2, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_2 DATA" *)
+input wire [7 : 0] kernel_patch_2;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_3, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_3 DATA" *)
+input wire [7 : 0] kernel_patch_3;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_4, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_4 DATA" *)
+input wire [7 : 0] kernel_patch_4;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_5, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_5 DATA" *)
+input wire [7 : 0] kernel_patch_5;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_6, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_6 DATA" *)
+input wire [7 : 0] kernel_patch_6;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_7, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_7 DATA" *)
+input wire [7 : 0] kernel_patch_7;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_8, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_8 DATA" *)
+input wire [7 : 0] kernel_patch_8;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_9, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_9 DATA" *)
+input wire [7 : 0] kernel_patch_9;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_10, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_10 DATA" *)
+input wire [7 : 0] kernel_patch_10;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_11, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_11 DATA" *)
+input wire [7 : 0] kernel_patch_11;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_12, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_12 DATA" *)
+input wire [7 : 0] kernel_patch_12;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_13, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_13 DATA" *)
+input wire [7 : 0] kernel_patch_13;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_14, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_14 DATA" *)
+input wire [7 : 0] kernel_patch_14;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_15, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_15 DATA" *)
+input wire [7 : 0] kernel_patch_15;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_16, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_16 DATA" *)
+input wire [7 : 0] kernel_patch_16;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_17, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_17 DATA" *)
+input wire [7 : 0] kernel_patch_17;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_18, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_18 DATA" *)
+input wire [7 : 0] kernel_patch_18;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_19, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_19 DATA" *)
+input wire [7 : 0] kernel_patch_19;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_20, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_20 DATA" *)
+input wire [7 : 0] kernel_patch_20;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_21, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_21 DATA" *)
+input wire [7 : 0] kernel_patch_21;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_22, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_22 DATA" *)
+input wire [7 : 0] kernel_patch_22;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_23, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_23 DATA" *)
+input wire [7 : 0] kernel_patch_23;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_24, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_24 DATA" *)
+input wire [7 : 0] kernel_patch_24;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_25, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_25 DATA" *)
+input wire [7 : 0] kernel_patch_25;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_26, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_26 DATA" *)
+input wire [7 : 0] kernel_patch_26;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_27, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_27 DATA" *)
+input wire [7 : 0] kernel_patch_27;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_28, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_28 DATA" *)
+input wire [7 : 0] kernel_patch_28;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_29, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_29 DATA" *)
+input wire [7 : 0] kernel_patch_29;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_30, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_30 DATA" *)
+input wire [7 : 0] kernel_patch_30;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_31, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_31 DATA" *)
+input wire [7 : 0] kernel_patch_31;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_32, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_32 DATA" *)
+input wire [7 : 0] kernel_patch_32;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_33, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_33 DATA" *)
+input wire [7 : 0] kernel_patch_33;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_34, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_34 DATA" *)
+input wire [7 : 0] kernel_patch_34;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_35, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_35 DATA" *)
+input wire [7 : 0] kernel_patch_35;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_36, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_36 DATA" *)
+input wire [7 : 0] kernel_patch_36;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_37, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_37 DATA" *)
+input wire [7 : 0] kernel_patch_37;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_38, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_38 DATA" *)
+input wire [7 : 0] kernel_patch_38;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_39, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_39 DATA" *)
+input wire [7 : 0] kernel_patch_39;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_40, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_40 DATA" *)
+input wire [7 : 0] kernel_patch_40;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_41, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_41 DATA" *)
+input wire [7 : 0] kernel_patch_41;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_42, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_42 DATA" *)
+input wire [7 : 0] kernel_patch_42;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_43, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_43 DATA" *)
+input wire [7 : 0] kernel_patch_43;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_44, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_44 DATA" *)
+input wire [7 : 0] kernel_patch_44;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_45, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_45 DATA" *)
+input wire [7 : 0] kernel_patch_45;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_46, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_46 DATA" *)
+input wire [7 : 0] kernel_patch_46;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_47, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_47 DATA" *)
+input wire [7 : 0] kernel_patch_47;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME kernel_patch_48, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 kernel_patch_48 DATA" *)
+input wire [7 : 0] kernel_patch_48;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_0, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_0 DATA" *)
+input wire [7 : 0] pixel_window_0;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_1, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_1 DATA" *)
+input wire [7 : 0] pixel_window_1;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_2, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_2 DATA" *)
+input wire [7 : 0] pixel_window_2;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_3, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_3 DATA" *)
+input wire [7 : 0] pixel_window_3;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_4, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_4 DATA" *)
+input wire [7 : 0] pixel_window_4;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_5, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_5 DATA" *)
+input wire [7 : 0] pixel_window_5;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_6, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_6 DATA" *)
+input wire [7 : 0] pixel_window_6;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_7, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_7 DATA" *)
+input wire [7 : 0] pixel_window_7;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_8, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_8 DATA" *)
+input wire [7 : 0] pixel_window_8;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_9, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_9 DATA" *)
+input wire [7 : 0] pixel_window_9;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_10, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_10 DATA" *)
+input wire [7 : 0] pixel_window_10;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_11, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_11 DATA" *)
+input wire [7 : 0] pixel_window_11;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_12, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_12 DATA" *)
+input wire [7 : 0] pixel_window_12;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_13, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_13 DATA" *)
+input wire [7 : 0] pixel_window_13;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_14, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_14 DATA" *)
+input wire [7 : 0] pixel_window_14;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_15, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_15 DATA" *)
+input wire [7 : 0] pixel_window_15;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_16, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_16 DATA" *)
+input wire [7 : 0] pixel_window_16;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_17, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_17 DATA" *)
+input wire [7 : 0] pixel_window_17;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_18, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_18 DATA" *)
+input wire [7 : 0] pixel_window_18;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_19, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_19 DATA" *)
+input wire [7 : 0] pixel_window_19;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_20, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_20 DATA" *)
+input wire [7 : 0] pixel_window_20;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_21, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_21 DATA" *)
+input wire [7 : 0] pixel_window_21;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_22, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_22 DATA" *)
+input wire [7 : 0] pixel_window_22;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_23, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_23 DATA" *)
+input wire [7 : 0] pixel_window_23;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_24, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_24 DATA" *)
+input wire [7 : 0] pixel_window_24;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_25, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_25 DATA" *)
+input wire [7 : 0] pixel_window_25;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_26, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_26 DATA" *)
+input wire [7 : 0] pixel_window_26;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_27, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_27 DATA" *)
+input wire [7 : 0] pixel_window_27;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_28, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_28 DATA" *)
+input wire [7 : 0] pixel_window_28;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_29, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_29 DATA" *)
+input wire [7 : 0] pixel_window_29;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_30, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_30 DATA" *)
+input wire [7 : 0] pixel_window_30;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_31, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_31 DATA" *)
+input wire [7 : 0] pixel_window_31;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_32, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_32 DATA" *)
+input wire [7 : 0] pixel_window_32;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_33, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_33 DATA" *)
+input wire [7 : 0] pixel_window_33;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_34, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_34 DATA" *)
+input wire [7 : 0] pixel_window_34;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_35, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_35 DATA" *)
+input wire [7 : 0] pixel_window_35;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_36, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_36 DATA" *)
+input wire [7 : 0] pixel_window_36;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_37, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_37 DATA" *)
+input wire [7 : 0] pixel_window_37;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_38, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_38 DATA" *)
+input wire [7 : 0] pixel_window_38;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_39, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_39 DATA" *)
+input wire [7 : 0] pixel_window_39;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_40, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_40 DATA" *)
+input wire [7 : 0] pixel_window_40;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_41, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_41 DATA" *)
+input wire [7 : 0] pixel_window_41;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_42, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_42 DATA" *)
+input wire [7 : 0] pixel_window_42;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_43, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_43 DATA" *)
+input wire [7 : 0] pixel_window_43;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_44, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_44 DATA" *)
+input wire [7 : 0] pixel_window_44;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_45, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_45 DATA" *)
+input wire [7 : 0] pixel_window_45;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_46, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_46 DATA" *)
+input wire [7 : 0] pixel_window_46;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_47, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_47 DATA" *)
+input wire [7 : 0] pixel_window_47;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pixel_window_48, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 pixel_window_48 DATA" *)
+input wire [7 : 0] pixel_window_48;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME out_val, LAYERED_METADATA undef" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:data:1.0 out_val DATA" *)
+output wire [15 : 0] out_val;
 
   fp_sop inst (
-    .out_val_V_ap_vld(out_val_V_ap_vld),
+    .out_val_ap_vld(out_val_ap_vld),
     .ap_clk(ap_clk),
     .ap_rst(ap_rst),
     .ap_start(ap_start),
     .ap_done(ap_done),
     .ap_idle(ap_idle),
     .ap_ready(ap_ready),
-    .kernel_patch_0_V(kernel_patch_0_V),
-    .kernel_patch_1_V(kernel_patch_1_V),
-    .kernel_patch_2_V(kernel_patch_2_V),
-    .kernel_patch_3_V(kernel_patch_3_V),
-    .kernel_patch_4_V(kernel_patch_4_V),
-    .kernel_patch_5_V(kernel_patch_5_V),
-    .kernel_patch_6_V(kernel_patch_6_V),
-    .kernel_patch_7_V(kernel_patch_7_V),
-    .kernel_patch_8_V(kernel_patch_8_V),
-    .kernel_patch_9_V(kernel_patch_9_V),
-    .kernel_patch_10_V(kernel_patch_10_V),
-    .kernel_patch_11_V(kernel_patch_11_V),
-    .kernel_patch_12_V(kernel_patch_12_V),
-    .kernel_patch_13_V(kernel_patch_13_V),
-    .kernel_patch_14_V(kernel_patch_14_V),
-    .kernel_patch_15_V(kernel_patch_15_V),
-    .kernel_patch_16_V(kernel_patch_16_V),
-    .kernel_patch_17_V(kernel_patch_17_V),
-    .kernel_patch_18_V(kernel_patch_18_V),
-    .kernel_patch_19_V(kernel_patch_19_V),
-    .kernel_patch_20_V(kernel_patch_20_V),
-    .kernel_patch_21_V(kernel_patch_21_V),
-    .kernel_patch_22_V(kernel_patch_22_V),
-    .kernel_patch_23_V(kernel_patch_23_V),
-    .kernel_patch_24_V(kernel_patch_24_V),
-    .kernel_patch_25_V(kernel_patch_25_V),
-    .kernel_patch_26_V(kernel_patch_26_V),
-    .kernel_patch_27_V(kernel_patch_27_V),
-    .kernel_patch_28_V(kernel_patch_28_V),
-    .kernel_patch_29_V(kernel_patch_29_V),
-    .kernel_patch_30_V(kernel_patch_30_V),
-    .kernel_patch_31_V(kernel_patch_31_V),
-    .kernel_patch_32_V(kernel_patch_32_V),
-    .kernel_patch_33_V(kernel_patch_33_V),
-    .kernel_patch_34_V(kernel_patch_34_V),
-    .kernel_patch_35_V(kernel_patch_35_V),
-    .kernel_patch_36_V(kernel_patch_36_V),
-    .kernel_patch_37_V(kernel_patch_37_V),
-    .kernel_patch_38_V(kernel_patch_38_V),
-    .kernel_patch_39_V(kernel_patch_39_V),
-    .kernel_patch_40_V(kernel_patch_40_V),
-    .kernel_patch_41_V(kernel_patch_41_V),
-    .kernel_patch_42_V(kernel_patch_42_V),
-    .kernel_patch_43_V(kernel_patch_43_V),
-    .kernel_patch_44_V(kernel_patch_44_V),
-    .kernel_patch_45_V(kernel_patch_45_V),
-    .kernel_patch_46_V(kernel_patch_46_V),
-    .kernel_patch_47_V(kernel_patch_47_V),
-    .kernel_patch_48_V(kernel_patch_48_V),
-    .pixel_window_0_V(pixel_window_0_V),
-    .pixel_window_1_V(pixel_window_1_V),
-    .pixel_window_2_V(pixel_window_2_V),
-    .pixel_window_3_V(pixel_window_3_V),
-    .pixel_window_4_V(pixel_window_4_V),
-    .pixel_window_5_V(pixel_window_5_V),
-    .pixel_window_6_V(pixel_window_6_V),
-    .pixel_window_7_V(pixel_window_7_V),
-    .pixel_window_8_V(pixel_window_8_V),
-    .pixel_window_9_V(pixel_window_9_V),
-    .pixel_window_10_V(pixel_window_10_V),
-    .pixel_window_11_V(pixel_window_11_V),
-    .pixel_window_12_V(pixel_window_12_V),
-    .pixel_window_13_V(pixel_window_13_V),
-    .pixel_window_14_V(pixel_window_14_V),
-    .pixel_window_15_V(pixel_window_15_V),
-    .pixel_window_16_V(pixel_window_16_V),
-    .pixel_window_17_V(pixel_window_17_V),
-    .pixel_window_18_V(pixel_window_18_V),
-    .pixel_window_19_V(pixel_window_19_V),
-    .pixel_window_20_V(pixel_window_20_V),
-    .pixel_window_21_V(pixel_window_21_V),
-    .pixel_window_22_V(pixel_window_22_V),
-    .pixel_window_23_V(pixel_window_23_V),
-    .pixel_window_24_V(pixel_window_24_V),
-    .pixel_window_25_V(pixel_window_25_V),
-    .pixel_window_26_V(pixel_window_26_V),
-    .pixel_window_27_V(pixel_window_27_V),
-    .pixel_window_28_V(pixel_window_28_V),
-    .pixel_window_29_V(pixel_window_29_V),
-    .pixel_window_30_V(pixel_window_30_V),
-    .pixel_window_31_V(pixel_window_31_V),
-    .pixel_window_32_V(pixel_window_32_V),
-    .pixel_window_33_V(pixel_window_33_V),
-    .pixel_window_34_V(pixel_window_34_V),
-    .pixel_window_35_V(pixel_window_35_V),
-    .pixel_window_36_V(pixel_window_36_V),
-    .pixel_window_37_V(pixel_window_37_V),
-    .pixel_window_38_V(pixel_window_38_V),
-    .pixel_window_39_V(pixel_window_39_V),
-    .pixel_window_40_V(pixel_window_40_V),
-    .pixel_window_41_V(pixel_window_41_V),
-    .pixel_window_42_V(pixel_window_42_V),
-    .pixel_window_43_V(pixel_window_43_V),
-    .pixel_window_44_V(pixel_window_44_V),
-    .pixel_window_45_V(pixel_window_45_V),
-    .pixel_window_46_V(pixel_window_46_V),
-    .pixel_window_47_V(pixel_window_47_V),
-    .pixel_window_48_V(pixel_window_48_V),
-    .out_val_V(out_val_V)
+    .kernel_patch_0(kernel_patch_0),
+    .kernel_patch_1(kernel_patch_1),
+    .kernel_patch_2(kernel_patch_2),
+    .kernel_patch_3(kernel_patch_3),
+    .kernel_patch_4(kernel_patch_4),
+    .kernel_patch_5(kernel_patch_5),
+    .kernel_patch_6(kernel_patch_6),
+    .kernel_patch_7(kernel_patch_7),
+    .kernel_patch_8(kernel_patch_8),
+    .kernel_patch_9(kernel_patch_9),
+    .kernel_patch_10(kernel_patch_10),
+    .kernel_patch_11(kernel_patch_11),
+    .kernel_patch_12(kernel_patch_12),
+    .kernel_patch_13(kernel_patch_13),
+    .kernel_patch_14(kernel_patch_14),
+    .kernel_patch_15(kernel_patch_15),
+    .kernel_patch_16(kernel_patch_16),
+    .kernel_patch_17(kernel_patch_17),
+    .kernel_patch_18(kernel_patch_18),
+    .kernel_patch_19(kernel_patch_19),
+    .kernel_patch_20(kernel_patch_20),
+    .kernel_patch_21(kernel_patch_21),
+    .kernel_patch_22(kernel_patch_22),
+    .kernel_patch_23(kernel_patch_23),
+    .kernel_patch_24(kernel_patch_24),
+    .kernel_patch_25(kernel_patch_25),
+    .kernel_patch_26(kernel_patch_26),
+    .kernel_patch_27(kernel_patch_27),
+    .kernel_patch_28(kernel_patch_28),
+    .kernel_patch_29(kernel_patch_29),
+    .kernel_patch_30(kernel_patch_30),
+    .kernel_patch_31(kernel_patch_31),
+    .kernel_patch_32(kernel_patch_32),
+    .kernel_patch_33(kernel_patch_33),
+    .kernel_patch_34(kernel_patch_34),
+    .kernel_patch_35(kernel_patch_35),
+    .kernel_patch_36(kernel_patch_36),
+    .kernel_patch_37(kernel_patch_37),
+    .kernel_patch_38(kernel_patch_38),
+    .kernel_patch_39(kernel_patch_39),
+    .kernel_patch_40(kernel_patch_40),
+    .kernel_patch_41(kernel_patch_41),
+    .kernel_patch_42(kernel_patch_42),
+    .kernel_patch_43(kernel_patch_43),
+    .kernel_patch_44(kernel_patch_44),
+    .kernel_patch_45(kernel_patch_45),
+    .kernel_patch_46(kernel_patch_46),
+    .kernel_patch_47(kernel_patch_47),
+    .kernel_patch_48(kernel_patch_48),
+    .pixel_window_0(pixel_window_0),
+    .pixel_window_1(pixel_window_1),
+    .pixel_window_2(pixel_window_2),
+    .pixel_window_3(pixel_window_3),
+    .pixel_window_4(pixel_window_4),
+    .pixel_window_5(pixel_window_5),
+    .pixel_window_6(pixel_window_6),
+    .pixel_window_7(pixel_window_7),
+    .pixel_window_8(pixel_window_8),
+    .pixel_window_9(pixel_window_9),
+    .pixel_window_10(pixel_window_10),
+    .pixel_window_11(pixel_window_11),
+    .pixel_window_12(pixel_window_12),
+    .pixel_window_13(pixel_window_13),
+    .pixel_window_14(pixel_window_14),
+    .pixel_window_15(pixel_window_15),
+    .pixel_window_16(pixel_window_16),
+    .pixel_window_17(pixel_window_17),
+    .pixel_window_18(pixel_window_18),
+    .pixel_window_19(pixel_window_19),
+    .pixel_window_20(pixel_window_20),
+    .pixel_window_21(pixel_window_21),
+    .pixel_window_22(pixel_window_22),
+    .pixel_window_23(pixel_window_23),
+    .pixel_window_24(pixel_window_24),
+    .pixel_window_25(pixel_window_25),
+    .pixel_window_26(pixel_window_26),
+    .pixel_window_27(pixel_window_27),
+    .pixel_window_28(pixel_window_28),
+    .pixel_window_29(pixel_window_29),
+    .pixel_window_30(pixel_window_30),
+    .pixel_window_31(pixel_window_31),
+    .pixel_window_32(pixel_window_32),
+    .pixel_window_33(pixel_window_33),
+    .pixel_window_34(pixel_window_34),
+    .pixel_window_35(pixel_window_35),
+    .pixel_window_36(pixel_window_36),
+    .pixel_window_37(pixel_window_37),
+    .pixel_window_38(pixel_window_38),
+    .pixel_window_39(pixel_window_39),
+    .pixel_window_40(pixel_window_40),
+    .pixel_window_41(pixel_window_41),
+    .pixel_window_42(pixel_window_42),
+    .pixel_window_43(pixel_window_43),
+    .pixel_window_44(pixel_window_44),
+    .pixel_window_45(pixel_window_45),
+    .pixel_window_46(pixel_window_46),
+    .pixel_window_47(pixel_window_47),
+    .pixel_window_48(pixel_window_48),
+    .out_val(out_val)
   );
 endmodule

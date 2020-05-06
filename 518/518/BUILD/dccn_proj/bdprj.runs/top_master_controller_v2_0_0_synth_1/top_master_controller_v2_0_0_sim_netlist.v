@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Thu Apr 30 13:00:41 2020
+// Date        : Sun May  3 22:52:29 2020
 // Host        : DESKTOP-BJ5EQ9A running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ top_master_controller_v2_0_0_sim_netlist.v
@@ -13,33 +13,33 @@
 `timescale 1 ps / 1 ps
 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
-   (sopu_uart_rts_int_reg_0,
-    sopu_uart_data,
+   (sopu_uart_data,
     sopu_ilb_data,
+    sopu_uart_rts_int_reg_0,
     fake_sopu_rts,
     uart_sopu_rtr,
     sopu_ilb_rts,
     fp_enable,
-    sopu_uart_rtr,
     clk,
     fp_out_data,
     uart_sopu_data,
+    sopu_uart_rtr,
     uart_sopu_rts,
     rst,
     kernel_full,
     ilb_sopu_rts,
     fp_out_valid);
-  output sopu_uart_rts_int_reg_0;
   output [7:0]sopu_uart_data;
   output [7:0]sopu_ilb_data;
+  output sopu_uart_rts_int_reg_0;
   output fake_sopu_rts;
   output uart_sopu_rtr;
   output sopu_ilb_rts;
   output fp_enable;
-  input sopu_uart_rtr;
   input clk;
   input [15:0]fp_out_data;
   input [7:0]uart_sopu_data;
+  input sopu_uart_rtr;
   input uart_sopu_rts;
   input rst;
   input kernel_full;
@@ -50,7 +50,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
   wire \FSM_onehot_state[5]_i_1_n_0 ;
   wire \FSM_onehot_state[5]_i_2_n_0 ;
   wire \FSM_onehot_state[5]_i_3_n_0 ;
-  wire \FSM_onehot_state[5]_i_4_n_0 ;
   wire \FSM_onehot_state[5]_i_5_n_0 ;
   wire \FSM_onehot_state_reg_n_0_[0] ;
   wire \FSM_onehot_state_reg_n_0_[1] ;
@@ -79,6 +78,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
   wire fp_enable_i_1_n_0;
   wire [15:0]fp_out_data;
   wire fp_out_valid;
+  wire fp_sop_counter;
   wire fp_sop_counter_i_1_n_0;
   wire fp_sop_counter_reg_n_0;
   wire [15:0]fp_sop_data;
@@ -140,7 +140,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
   wire sopu_uart_rts_int_i_5_n_0;
   wire sopu_uart_rts_int_i_6_n_0;
   wire sopu_uart_rts_int_i_7_n_0;
-  wire sopu_uart_rts_int_i_8_n_0;
   wire sopu_uart_rts_int_reg_0;
   wire tx_counter;
   wire \tx_counter[0]_i_3_n_0 ;
@@ -202,42 +201,42 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .I1(\FSM_onehot_state_reg_n_0_[0] ),
         .O(\FSM_onehot_state[1]_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'hF4F4FFF4)) 
+    .INIT(32'hFFFF88F8)) 
     \FSM_onehot_state[5]_i_1 
-       (.I0(\FSM_onehot_state[5]_i_2_n_0 ),
-        .I1(\FSM_onehot_state_reg_n_0_[5] ),
-        .I2(\FSM_onehot_state[5]_i_3_n_0 ),
-        .I3(\FSM_onehot_state_reg_n_0_[1] ),
-        .I4(fake_sopu_rts_i_3_n_0),
+       (.I0(fake_sopu_rts_i_3_n_0),
+        .I1(\FSM_onehot_state_reg_n_0_[1] ),
+        .I2(\FSM_onehot_state_reg_n_0_[5] ),
+        .I3(\FSM_onehot_state[5]_i_2_n_0 ),
+        .I4(\FSM_onehot_state[5]_i_3_n_0 ),
         .O(\FSM_onehot_state[5]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFEFFEEEEEEEEEEEE)) 
+    .INIT(64'hFEFEFEFEFFFEFFFF)) 
     \FSM_onehot_state[5]_i_2 
-       (.I0(sopu_uart_rts_int_i_8_n_0),
-        .I1(sopu_uart_rts_int_i_7_n_0),
-        .I2(sopu_uart_rts_int_i_6_n_0),
-        .I3(sopu_uart_rts_int_i_5_n_0),
-        .I4(rx_counter_reg[9]),
-        .I5(rx_counter_reg[10]),
+       (.I0(rx_counter_reg[12]),
+        .I1(rx_counter_reg[18]),
+        .I2(fake_sopu_rts_i_5_n_0),
+        .I3(sopu_uart_rts_int_i_6_n_0),
+        .I4(sopu_uart_rts_int_i_5_n_0),
+        .I5(sopu_uart_rts_int_i_4_n_0),
         .O(\FSM_onehot_state[5]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hFFF4F4F4F4F4F4F4)) 
+    .INIT(64'hFFF8F8F8F8F8F8F8)) 
     \FSM_onehot_state[5]_i_3 
-       (.I0(\FSM_onehot_state[5]_i_4_n_0 ),
+       (.I0(fp_sop_counter),
         .I1(fp_sop_counter_reg_n_0),
         .I2(\FSM_onehot_state[5]_i_5_n_0 ),
         .I3(\FSM_onehot_state_reg_n_0_[1] ),
         .I4(uart_sopu_rts),
         .I5(uart_sopu_rtr_int_reg_n_0),
         .O(\FSM_onehot_state[5]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
-    .INIT(8'h7F)) 
+    .INIT(8'h80)) 
     \FSM_onehot_state[5]_i_4 
-       (.I0(sopu_uart_rts_int_reg_0),
-        .I1(sopu_uart_rtr),
-        .I2(\FSM_onehot_state_reg_n_0_[5] ),
-        .O(\FSM_onehot_state[5]_i_4_n_0 ));
+       (.I0(\FSM_onehot_state_reg_n_0_[5] ),
+        .I1(sopu_uart_rts_int_reg_0),
+        .I2(sopu_uart_rtr),
+        .O(fp_sop_counter));
   LUT6 #(
     .INIT(64'hFFFFFEEEFEEEFEEE)) 
     \FSM_onehot_state[5]_i_5 
@@ -303,17 +302,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .Q(\FSM_onehot_state_reg_n_0_[5] ),
         .R(fake_sopu_rts_i_1_n_0));
   LUT6 #(
-    .INIT(64'h03030300A8AA0000)) 
+    .INIT(64'h030000000303A8AA)) 
     delay_i_1
        (.I0(\FSM_onehot_state_reg_n_0_[5] ),
         .I1(fp_sop_data_0),
         .I2(sopu_uart_rts_int_i_2_n_0),
         .I3(sopu_uart_rts_int_i_3_n_0),
-        .I4(delay_i_2_n_0),
-        .I5(delay),
+        .I4(delay),
+        .I5(delay_i_2_n_0),
         .O(delay_i_1_n_0));
   LUT2 #(
-    .INIT(4'h7)) 
+    .INIT(4'h8)) 
     delay_i_2
        (.I0(sopu_uart_rtr),
         .I1(sopu_uart_rts_int_reg_0),
@@ -330,98 +329,96 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
        (.I0(rst),
         .O(fake_sopu_rts_i_1_n_0));
   LUT4 #(
-    .INIT(16'hFFDF)) 
+    .INIT(16'hFFEF)) 
     fake_sopu_rts_i_10
-       (.I0(tx_counter_reg[0]),
-        .I1(tx_counter_reg[16]),
-        .I2(tx_counter_reg[1]),
-        .I3(tx_counter_reg[7]),
+       (.I0(tx_counter_reg[10]),
+        .I1(tx_counter_reg[9]),
+        .I2(tx_counter_reg[5]),
+        .I3(tx_counter_reg[14]),
         .O(fake_sopu_rts_i_10_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT3 #(
-    .INIT(8'hFE)) 
+  LUT4 #(
+    .INIT(16'hDFFF)) 
     fake_sopu_rts_i_11
-       (.I0(rx_counter_reg[6]),
-        .I1(rx_counter_reg[8]),
-        .I2(rx_counter_reg[7]),
+       (.I0(tx_counter_reg[11]),
+        .I1(tx_counter_reg[17]),
+        .I2(tx_counter_reg[1]),
+        .I3(tx_counter_reg[18]),
         .O(fake_sopu_rts_i_11_n_0));
   LUT4 #(
-    .INIT(16'hEFFF)) 
+    .INIT(16'hFFEF)) 
     fake_sopu_rts_i_12
-       (.I0(rx_counter_reg[2]),
-        .I1(rx_counter_reg[3]),
-        .I2(rx_counter_reg[11]),
-        .I3(rx_counter_reg[18]),
+       (.I0(tx_counter_reg[4]),
+        .I1(tx_counter_reg[3]),
+        .I2(tx_counter_reg[0]),
+        .I3(tx_counter_reg[15]),
         .O(fake_sopu_rts_i_12_n_0));
   LUT4 #(
-    .INIT(16'h7530)) 
+    .INIT(16'hD5C0)) 
     fake_sopu_rts_i_2
        (.I0(\FSM_onehot_state_reg_n_0_[2] ),
         .I1(fake_sopu_rts_i_3_n_0),
         .I2(\FSM_onehot_state_reg_n_0_[1] ),
         .I3(fake_sopu_rts),
         .O(fake_sopu_rts_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT4 #(
-    .INIT(16'hFFF4)) 
+  LUT5 #(
+    .INIT(32'h0000FF80)) 
     fake_sopu_rts_i_3
        (.I0(fake_sopu_rts_i_4_n_0),
-        .I1(fake_sopu_rts_i_5_n_0),
-        .I2(fake_sopu_rts_i_6_n_0),
-        .I3(fake_sopu_rts_i_7_n_0),
+        .I1(rx_counter_reg[11]),
+        .I2(rx_counter_reg[12]),
+        .I3(fake_sopu_rts_i_5_n_0),
+        .I4(fake_sopu_rts_i_6_n_0),
         .O(fake_sopu_rts_i_3_n_0));
-  LUT5 #(
-    .INIT(32'hFFFFFFDF)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFFFECCCC)) 
     fake_sopu_rts_i_4
-       (.I0(tx_counter_reg[12]),
-        .I1(tx_counter_reg[17]),
-        .I2(tx_counter_reg[18]),
-        .I3(fake_sopu_rts_i_8_n_0),
-        .I4(fake_sopu_rts_i_9_n_0),
+       (.I0(fake_sopu_rts_i_7_n_0),
+        .I1(rx_counter_reg[10]),
+        .I2(rx_counter_reg[4]),
+        .I3(rx_counter_reg[3]),
+        .I4(rx_counter_reg[5]),
+        .I5(sopu_uart_rts_int_i_6_n_0),
         .O(fake_sopu_rts_i_4_n_0));
   LUT5 #(
-    .INIT(32'h00000001)) 
+    .INIT(32'hFFFFFFFE)) 
     fake_sopu_rts_i_5
-       (.I0(tx_counter_reg[2]),
-        .I1(tx_counter_reg[3]),
-        .I2(tx_counter_reg[14]),
-        .I3(tx_counter_reg[10]),
-        .I4(fake_sopu_rts_i_10_n_0),
+       (.I0(rx_counter_reg[16]),
+        .I1(rx_counter_reg[17]),
+        .I2(rx_counter_reg[14]),
+        .I3(rx_counter_reg[13]),
+        .I4(rx_counter_reg[15]),
         .O(fake_sopu_rts_i_5_n_0));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFFFEFF)) 
+    .INIT(64'h5555555555555557)) 
     fake_sopu_rts_i_6
-       (.I0(sopu_uart_rts_int_i_7_n_0),
-        .I1(rx_counter_reg[10]),
-        .I2(rx_counter_reg[9]),
-        .I3(rx_counter_reg[0]),
-        .I4(rx_counter_reg[4]),
-        .I5(fake_sopu_rts_i_11_n_0),
+       (.I0(rx_counter_reg[18]),
+        .I1(fake_sopu_rts_i_8_n_0),
+        .I2(fake_sopu_rts_i_9_n_0),
+        .I3(fake_sopu_rts_i_10_n_0),
+        .I4(fake_sopu_rts_i_11_n_0),
+        .I5(fake_sopu_rts_i_12_n_0),
         .O(fake_sopu_rts_i_6_n_0));
-  LUT5 #(
-    .INIT(32'hFFFFBFFF)) 
+  LUT3 #(
+    .INIT(8'hEA)) 
     fake_sopu_rts_i_7
-       (.I0(rx_counter_reg[15]),
-        .I1(rx_counter_reg[5]),
-        .I2(rx_counter_reg[1]),
-        .I3(rx_counter_reg[12]),
-        .I4(fake_sopu_rts_i_12_n_0),
+       (.I0(rx_counter_reg[2]),
+        .I1(rx_counter_reg[1]),
+        .I2(rx_counter_reg[0]),
         .O(fake_sopu_rts_i_7_n_0));
-  LUT4 #(
-    .INIT(16'hFFFD)) 
+  LUT3 #(
+    .INIT(8'hFB)) 
     fake_sopu_rts_i_8
-       (.I0(tx_counter_reg[5]),
-        .I1(tx_counter_reg[13]),
-        .I2(tx_counter_reg[8]),
-        .I3(tx_counter_reg[4]),
+       (.I0(tx_counter_reg[2]),
+        .I1(tx_counter_reg[12]),
+        .I2(tx_counter_reg[16]),
         .O(fake_sopu_rts_i_8_n_0));
   LUT4 #(
-    .INIT(16'hFFEF)) 
+    .INIT(16'hFFFE)) 
     fake_sopu_rts_i_9
-       (.I0(tx_counter_reg[9]),
+       (.I0(tx_counter_reg[7]),
         .I1(tx_counter_reg[6]),
-        .I2(tx_counter_reg[11]),
-        .I3(tx_counter_reg[15]),
+        .I2(tx_counter_reg[13]),
+        .I3(tx_counter_reg[8]),
         .O(fake_sopu_rts_i_9_n_0));
   FDRE fake_sopu_rts_reg
        (.C(clk),
@@ -444,7 +441,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .Q(fp_enable),
         .R(fake_sopu_rts_i_1_n_0));
   LUT6 #(
-    .INIT(64'h2222222F22222220)) 
+    .INIT(64'h8888888F88888880)) 
     fp_sop_counter_i_1
        (.I0(\FSM_onehot_state_reg_n_0_[5] ),
         .I1(delay_i_2_n_0),
@@ -564,9 +561,9 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
   LUT3 #(
     .INIT(8'h80)) 
     \rx_counter[0]_i_1 
-       (.I0(sopu_uart_rts_int_i_2_n_0),
-        .I1(uart_sopu_rts),
-        .I2(uart_sopu_rtr_int_reg_n_0),
+       (.I0(uart_sopu_rts),
+        .I1(uart_sopu_rtr_int_reg_n_0),
+        .I2(sopu_uart_rts_int_i_2_n_0),
         .O(rx_counter));
   LUT1 #(
     .INIT(2'h1)) 
@@ -783,7 +780,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .D(sopu_ilb_rts_i_1_n_0),
         .Q(sopu_ilb_rts),
         .R(fake_sopu_rts_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \sopu_uart_data[0]_i_1 
@@ -791,7 +788,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .I1(fp_sop_counter_reg_n_0),
         .I2(fp_sop_data[8]),
         .O(p_1_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \sopu_uart_data[1]_i_1 
@@ -799,7 +796,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .I1(fp_sop_counter_reg_n_0),
         .I2(fp_sop_data[9]),
         .O(p_1_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \sopu_uart_data[2]_i_1 
@@ -807,7 +804,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .I1(fp_sop_counter_reg_n_0),
         .I2(fp_sop_data[10]),
         .O(p_1_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \sopu_uart_data[3]_i_1 
@@ -815,7 +812,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .I1(fp_sop_counter_reg_n_0),
         .I2(fp_sop_data[11]),
         .O(p_1_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \sopu_uart_data[4]_i_1 
@@ -823,7 +820,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .I1(fp_sop_counter_reg_n_0),
         .I2(fp_sop_data[12]),
         .O(p_1_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \sopu_uart_data[5]_i_1 
@@ -831,7 +828,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .I1(fp_sop_counter_reg_n_0),
         .I2(fp_sop_data[13]),
         .O(p_1_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \sopu_uart_data[6]_i_1 
@@ -840,14 +837,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .I2(fp_sop_data[14]),
         .O(p_1_in[6]));
   LUT4 #(
-    .INIT(16'h002A)) 
+    .INIT(16'h0070)) 
     \sopu_uart_data[7]_i_1 
-       (.I0(delay),
-        .I1(sopu_uart_rtr),
-        .I2(sopu_uart_rts_int_reg_0),
+       (.I0(sopu_uart_rtr),
+        .I1(sopu_uart_rts_int_reg_0),
+        .I2(delay),
         .I3(sopu_uart_rts_int_i_3_n_0),
         .O(\sopu_uart_data[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     \sopu_uart_data[7]_i_2 
@@ -913,15 +910,15 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .I4(sopu_uart_rts_int_reg_0),
         .I5(sopu_uart_rtr),
         .O(sopu_uart_rts_int_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'hA8A8AAA8)) 
+  LUT6 #(
+    .INIT(64'h888A8A8A8A8A8A8A)) 
     sopu_uart_rts_int_i_2
        (.I0(\FSM_onehot_state_reg_n_0_[1] ),
-        .I1(fake_sopu_rts_i_7_n_0),
-        .I2(fake_sopu_rts_i_6_n_0),
-        .I3(fake_sopu_rts_i_5_n_0),
-        .I4(fake_sopu_rts_i_4_n_0),
+        .I1(fake_sopu_rts_i_6_n_0),
+        .I2(fake_sopu_rts_i_5_n_0),
+        .I3(rx_counter_reg[12]),
+        .I4(rx_counter_reg[11]),
+        .I5(fake_sopu_rts_i_4_n_0),
         .O(sopu_uart_rts_int_i_2_n_0));
   LUT6 #(
     .INIT(64'h555555555555DDFD)) 
@@ -930,48 +927,39 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .I1(sopu_uart_rts_int_i_4_n_0),
         .I2(sopu_uart_rts_int_i_5_n_0),
         .I3(sopu_uart_rts_int_i_6_n_0),
-        .I4(sopu_uart_rts_int_i_7_n_0),
-        .I5(sopu_uart_rts_int_i_8_n_0),
+        .I4(fake_sopu_rts_i_5_n_0),
+        .I5(sopu_uart_rts_int_i_7_n_0),
         .O(sopu_uart_rts_int_i_3_n_0));
   LUT2 #(
     .INIT(4'h7)) 
     sopu_uart_rts_int_i_4
-       (.I0(rx_counter_reg[9]),
-        .I1(rx_counter_reg[10]),
+       (.I0(rx_counter_reg[10]),
+        .I1(rx_counter_reg[11]),
         .O(sopu_uart_rts_int_i_4_n_0));
-  LUT4 #(
-    .INIT(16'h15FF)) 
+  LUT6 #(
+    .INIT(64'h001500FFFFFFFFFF)) 
     sopu_uart_rts_int_i_5
-       (.I0(rx_counter_reg[3]),
-        .I1(rx_counter_reg[2]),
-        .I2(rx_counter_reg[1]),
+       (.I0(rx_counter_reg[2]),
+        .I1(rx_counter_reg[1]),
+        .I2(rx_counter_reg[0]),
         .I3(rx_counter_reg[4]),
+        .I4(rx_counter_reg[3]),
+        .I5(rx_counter_reg[5]),
         .O(sopu_uart_rts_int_i_5_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     sopu_uart_rts_int_i_6
-       (.I0(rx_counter_reg[5]),
-        .I1(rx_counter_reg[7]),
-        .I2(rx_counter_reg[8]),
-        .I3(rx_counter_reg[6]),
+       (.I0(rx_counter_reg[7]),
+        .I1(rx_counter_reg[8]),
+        .I2(rx_counter_reg[6]),
+        .I3(rx_counter_reg[9]),
         .O(sopu_uart_rts_int_i_6_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
+  LUT2 #(
+    .INIT(4'hE)) 
     sopu_uart_rts_int_i_7
-       (.I0(rx_counter_reg[14]),
-        .I1(rx_counter_reg[13]),
-        .I2(rx_counter_reg[17]),
-        .I3(rx_counter_reg[16]),
-        .O(sopu_uart_rts_int_i_7_n_0));
-  LUT4 #(
-    .INIT(16'hFFFE)) 
-    sopu_uart_rts_int_i_8
        (.I0(rx_counter_reg[12]),
         .I1(rx_counter_reg[18]),
-        .I2(rx_counter_reg[11]),
-        .I3(rx_counter_reg[15]),
-        .O(sopu_uart_rts_int_i_8_n_0));
+        .O(sopu_uart_rts_int_i_7_n_0));
   FDRE sopu_uart_rts_int_reg
        (.C(clk),
         .CE(1'b1),
@@ -984,7 +972,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
        (.I0(fp_sop_counter_reg_n_0),
         .I1(\tx_counter[0]_i_3_n_0 ),
         .O(tx_counter));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \tx_counter[0]_i_3 
@@ -1147,7 +1135,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .Q(tx_counter_reg[9]),
         .R(fake_sopu_rts_i_1_n_0));
   LUT6 #(
-    .INIT(64'hDDDDCC0FDDDDCC00)) 
+    .INIT(64'hBBBB330FBBBB3300)) 
     uart_sopu_rtr_i_1
        (.I0(fake_sopu_rts_i_3_n_0),
         .I1(uart_sopu_rtr_i_2_n_0),
@@ -1157,7 +1145,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
         .I5(uart_sopu_rtr),
         .O(uart_sopu_rtr_i_1_n_0));
   LUT2 #(
-    .INIT(4'h7)) 
+    .INIT(4'h8)) 
     uart_sopu_rtr_i_2
        (.I0(uart_sopu_rtr_int_reg_n_0),
         .I1(uart_sopu_rts),
@@ -1213,8 +1201,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
     fp_enable,
     fp_out_valid,
     fp_out_data);
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *) input clk;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW" *) input rst;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *) input clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 rst RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input rst;
   input uart_sopu_rts;
   output fake_sopu_rts;
   output uart_sopu_rtr;

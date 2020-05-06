@@ -1,0 +1,27 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../bdprj.srcs/sources_1/bd/top/ipshared/4fba" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_blk_mem_gen_0_0/sim/top_blk_mem_gen_0_0.v" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_blk_mem_gen_1_0/sim/top_blk_mem_gen_1_0.v" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_blk_mem_gen_2_0/sim/top_blk_mem_gen_2_0.v" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_blk_mem_gen_3_0/sim/top_blk_mem_gen_3_0.v" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_blk_mem_gen_4_0/sim/top_blk_mem_gen_4_0.v" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_blk_mem_gen_5_0/sim/top_blk_mem_gen_5_0.v" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_bram_controller_v2_0_0/sim/top_bram_controller_v2_0_0.v" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0_clk_wiz.v" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_clk_wiz_0_0/top_clk_wiz_0_0.v" \
+"../../../../bdprj.srcs/sources_1/bd/top/ipshared/1065/hdl/verilog/fp_sop_mac_muladdbkb.v" \
+"../../../../bdprj.srcs/sources_1/bd/top/ipshared/1065/hdl/verilog/fp_sop_mac_muladdcud.v" \
+"../../../../bdprj.srcs/sources_1/bd/top/ipshared/1065/hdl/verilog/fp_sop.v" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_fp_sop_0_0/sim/top_fp_sop_0_0.v" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_img_window_v2_0_0/sim/top_img_window_v2_0_0.v" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_kernel_bank_v2_0_0/sim/top_kernel_bank_v2_0_0.v" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_master_controller_v2_0_0/sim/top_master_controller_v2_0_0.v" \
+"../../../../bdprj.ip_user_files/bd/top/ip/top_uart_0_0/sim/top_uart_0_0.v" \
+"../../../../bdprj.ip_user_files/bd/top/sim/top.v" \
+"../../../../bdprj.srcs/sources_1/bd/top/hdl/top_wrapper.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

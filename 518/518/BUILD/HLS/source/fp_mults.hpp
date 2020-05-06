@@ -2,15 +2,25 @@
 #define fp_mults_h
 
 #include "ap_fixed.h"
+#include "stdint.h"
+// Refactored all datatypes to be signed integers
 
-typedef ap_fixed  <8,1,  AP_RND, AP_SAT> kernel_t;
+/*
+typedef ap_fixed  <8,8,  AP_RND, AP_SAT> kernel_t;
 typedef ap_ufixed <8,8, AP_RND>  pixel_t;
-
 typedef ap_fixed  <16,16, AP_RND,AP_SAT>  fm_t;
+typedef ap_fixed  <16,16, AP_RND, AP_SAT> mult_t;
+typedef ap_fixed  <32,32, AP_RND, AP_SAT> acc_t;
+*/
 
-typedef ap_fixed  <16,9, AP_RND, AP_SAT> mult_t;
 
-typedef ap_fixed  <32,16, AP_RND, AP_SAT> acc_t;
+typedef int8_t kernel_t;
+typedef uint8_t pixel_t;
+
+typedef int16_t fm_t;
+typedef int16_t mult_t;
+
+typedef int16_t acc_t;
 
 
 void fp_test (kernel_t test_kernel, pixel_t test_pixel, fm_t &output_val);

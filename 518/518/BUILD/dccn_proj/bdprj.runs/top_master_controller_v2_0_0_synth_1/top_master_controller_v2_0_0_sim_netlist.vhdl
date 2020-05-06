@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
--- Date        : Thu Apr 30 13:00:41 2020
+-- Date        : Sun May  3 22:52:29 2020
 -- Host        : DESKTOP-BJ5EQ9A running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ top_master_controller_v2_0_0_sim_netlist.vhdl
@@ -16,17 +16,17 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2 is
   port (
-    sopu_uart_rts_int_reg_0 : out STD_LOGIC;
     sopu_uart_data : out STD_LOGIC_VECTOR ( 7 downto 0 );
     sopu_ilb_data : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    sopu_uart_rts_int_reg_0 : out STD_LOGIC;
     fake_sopu_rts : out STD_LOGIC;
     uart_sopu_rtr : out STD_LOGIC;
     sopu_ilb_rts : out STD_LOGIC;
     fp_enable : out STD_LOGIC;
-    sopu_uart_rtr : in STD_LOGIC;
     clk : in STD_LOGIC;
     fp_out_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
     uart_sopu_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    sopu_uart_rtr : in STD_LOGIC;
     uart_sopu_rts : in STD_LOGIC;
     rst : in STD_LOGIC;
     kernel_full : in STD_LOGIC;
@@ -40,7 +40,6 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_contr
   signal \FSM_onehot_state[5]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state[5]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state[5]_i_3_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_state[5]_i_4_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state[5]_i_5_n_0\ : STD_LOGIC;
   signal \FSM_onehot_state_reg_n_0_[0]\ : STD_LOGIC;
   signal \FSM_onehot_state_reg_n_0_[1]\ : STD_LOGIC;
@@ -66,6 +65,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_contr
   signal fake_sopu_rts_i_9_n_0 : STD_LOGIC;
   signal \^fp_enable\ : STD_LOGIC;
   signal fp_enable_i_1_n_0 : STD_LOGIC;
+  signal fp_sop_counter : STD_LOGIC;
   signal fp_sop_counter_i_1_n_0 : STD_LOGIC;
   signal fp_sop_counter_reg_n_0 : STD_LOGIC;
   signal fp_sop_data : STD_LOGIC_VECTOR ( 15 downto 0 );
@@ -121,7 +121,6 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_contr
   signal sopu_uart_rts_int_i_5_n_0 : STD_LOGIC;
   signal sopu_uart_rts_int_i_6_n_0 : STD_LOGIC;
   signal sopu_uart_rts_int_i_7_n_0 : STD_LOGIC;
-  signal sopu_uart_rts_int_i_8_n_0 : STD_LOGIC;
   signal \^sopu_uart_rts_int_reg_0\ : STD_LOGIC;
   signal tx_counter : STD_LOGIC;
   signal \tx_counter[0]_i_3_n_0\ : STD_LOGIC;
@@ -174,7 +173,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_contr
   signal \NLW_tx_counter_reg[16]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   signal \NLW_tx_counter_reg[16]_i_1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_state[5]_i_4\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \FSM_onehot_state[5]_i_4\ : label is "soft_lutpair4";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[0]\ : label is "wait4kernel:000001,wait4rx:000010,send_ilb:000100,wait4ilb:001000,wait4fp:010000,wait4tx:100000,";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[1]\ : label is "wait4kernel:000001,wait4rx:000010,send_ilb:000100,wait4ilb:001000,wait4fp:010000,wait4tx:100000,";
@@ -182,19 +181,15 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_contr
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[3]\ : label is "wait4kernel:000001,wait4rx:000010,send_ilb:000100,wait4ilb:001000,wait4fp:010000,wait4tx:100000,";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[4]\ : label is "wait4kernel:000001,wait4rx:000010,send_ilb:000100,wait4ilb:001000,wait4fp:010000,wait4tx:100000,";
   attribute FSM_ENCODED_STATES of \FSM_onehot_state_reg[5]\ : label is "wait4kernel:000001,wait4rx:000010,send_ilb:000100,wait4ilb:001000,wait4fp:010000,wait4tx:100000,";
-  attribute SOFT_HLUTNM of fake_sopu_rts_i_11 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of fake_sopu_rts_i_3 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \sopu_uart_data[0]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \sopu_uart_data[1]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \sopu_uart_data[2]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \sopu_uart_data[3]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \sopu_uart_data[4]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \sopu_uart_data[5]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \sopu_uart_data[6]_i_1\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \sopu_uart_data[7]_i_2\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of sopu_uart_rts_int_i_2 : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of sopu_uart_rts_int_i_6 : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \tx_counter[0]_i_3\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \sopu_uart_data[0]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \sopu_uart_data[1]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \sopu_uart_data[2]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \sopu_uart_data[3]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \sopu_uart_data[4]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \sopu_uart_data[5]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \sopu_uart_data[6]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \sopu_uart_data[7]_i_2\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \tx_counter[0]_i_3\ : label is "soft_lutpair4";
 begin
   fake_sopu_rts <= \^fake_sopu_rts\;
   fp_enable <= \^fp_enable\;
@@ -212,35 +207,35 @@ begin
     );
 \FSM_onehot_state[5]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"F4F4FFF4"
+      INIT => X"FFFF88F8"
     )
         port map (
-      I0 => \FSM_onehot_state[5]_i_2_n_0\,
-      I1 => \FSM_onehot_state_reg_n_0_[5]\,
-      I2 => \FSM_onehot_state[5]_i_3_n_0\,
-      I3 => \FSM_onehot_state_reg_n_0_[1]\,
-      I4 => fake_sopu_rts_i_3_n_0,
+      I0 => fake_sopu_rts_i_3_n_0,
+      I1 => \FSM_onehot_state_reg_n_0_[1]\,
+      I2 => \FSM_onehot_state_reg_n_0_[5]\,
+      I3 => \FSM_onehot_state[5]_i_2_n_0\,
+      I4 => \FSM_onehot_state[5]_i_3_n_0\,
       O => \FSM_onehot_state[5]_i_1_n_0\
     );
 \FSM_onehot_state[5]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FEFFEEEEEEEEEEEE"
+      INIT => X"FEFEFEFEFFFEFFFF"
     )
         port map (
-      I0 => sopu_uart_rts_int_i_8_n_0,
-      I1 => sopu_uart_rts_int_i_7_n_0,
-      I2 => sopu_uart_rts_int_i_6_n_0,
-      I3 => sopu_uart_rts_int_i_5_n_0,
-      I4 => rx_counter_reg(9),
-      I5 => rx_counter_reg(10),
+      I0 => rx_counter_reg(12),
+      I1 => rx_counter_reg(18),
+      I2 => fake_sopu_rts_i_5_n_0,
+      I3 => sopu_uart_rts_int_i_6_n_0,
+      I4 => sopu_uart_rts_int_i_5_n_0,
+      I5 => sopu_uart_rts_int_i_4_n_0,
       O => \FSM_onehot_state[5]_i_2_n_0\
     );
 \FSM_onehot_state[5]_i_3\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFF4F4F4F4F4F4F4"
+      INIT => X"FFF8F8F8F8F8F8F8"
     )
         port map (
-      I0 => \FSM_onehot_state[5]_i_4_n_0\,
+      I0 => fp_sop_counter,
       I1 => fp_sop_counter_reg_n_0,
       I2 => \FSM_onehot_state[5]_i_5_n_0\,
       I3 => \FSM_onehot_state_reg_n_0_[1]\,
@@ -250,13 +245,13 @@ begin
     );
 \FSM_onehot_state[5]_i_4\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"7F"
+      INIT => X"80"
     )
         port map (
-      I0 => \^sopu_uart_rts_int_reg_0\,
-      I1 => sopu_uart_rtr,
-      I2 => \FSM_onehot_state_reg_n_0_[5]\,
-      O => \FSM_onehot_state[5]_i_4_n_0\
+      I0 => \FSM_onehot_state_reg_n_0_[5]\,
+      I1 => \^sopu_uart_rts_int_reg_0\,
+      I2 => sopu_uart_rtr,
+      O => fp_sop_counter
     );
 \FSM_onehot_state[5]_i_5\: unisim.vcomponents.LUT6
     generic map(
@@ -339,20 +334,20 @@ begin
     );
 delay_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"03030300A8AA0000"
+      INIT => X"030000000303A8AA"
     )
         port map (
       I0 => \FSM_onehot_state_reg_n_0_[5]\,
       I1 => fp_sop_data_0,
       I2 => sopu_uart_rts_int_i_2_n_0,
       I3 => sopu_uart_rts_int_i_3_n_0,
-      I4 => delay_i_2_n_0,
-      I5 => delay,
+      I4 => delay,
+      I5 => delay_i_2_n_0,
       O => delay_i_1_n_0
     );
 delay_i_2: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"7"
+      INIT => X"8"
     )
         port map (
       I0 => sopu_uart_rtr,
@@ -377,39 +372,40 @@ fake_sopu_rts_i_1: unisim.vcomponents.LUT1
     );
 fake_sopu_rts_i_10: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFDF"
+      INIT => X"FFEF"
     )
         port map (
-      I0 => tx_counter_reg(0),
-      I1 => tx_counter_reg(16),
-      I2 => tx_counter_reg(1),
-      I3 => tx_counter_reg(7),
+      I0 => tx_counter_reg(10),
+      I1 => tx_counter_reg(9),
+      I2 => tx_counter_reg(5),
+      I3 => tx_counter_reg(14),
       O => fake_sopu_rts_i_10_n_0
     );
-fake_sopu_rts_i_11: unisim.vcomponents.LUT3
+fake_sopu_rts_i_11: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FE"
+      INIT => X"DFFF"
     )
         port map (
-      I0 => rx_counter_reg(6),
-      I1 => rx_counter_reg(8),
-      I2 => rx_counter_reg(7),
+      I0 => tx_counter_reg(11),
+      I1 => tx_counter_reg(17),
+      I2 => tx_counter_reg(1),
+      I3 => tx_counter_reg(18),
       O => fake_sopu_rts_i_11_n_0
     );
 fake_sopu_rts_i_12: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"EFFF"
+      INIT => X"FFEF"
     )
         port map (
-      I0 => rx_counter_reg(2),
-      I1 => rx_counter_reg(3),
-      I2 => rx_counter_reg(11),
-      I3 => rx_counter_reg(18),
+      I0 => tx_counter_reg(4),
+      I1 => tx_counter_reg(3),
+      I2 => tx_counter_reg(0),
+      I3 => tx_counter_reg(15),
       O => fake_sopu_rts_i_12_n_0
     );
 fake_sopu_rts_i_2: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"7530"
+      INIT => X"D5C0"
     )
         port map (
       I0 => \FSM_onehot_state_reg_n_0_[2]\,
@@ -418,86 +414,85 @@ fake_sopu_rts_i_2: unisim.vcomponents.LUT4
       I3 => \^fake_sopu_rts\,
       O => fake_sopu_rts_i_2_n_0
     );
-fake_sopu_rts_i_3: unisim.vcomponents.LUT4
+fake_sopu_rts_i_3: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFF4"
+      INIT => X"0000FF80"
     )
         port map (
       I0 => fake_sopu_rts_i_4_n_0,
-      I1 => fake_sopu_rts_i_5_n_0,
-      I2 => fake_sopu_rts_i_6_n_0,
-      I3 => fake_sopu_rts_i_7_n_0,
+      I1 => rx_counter_reg(11),
+      I2 => rx_counter_reg(12),
+      I3 => fake_sopu_rts_i_5_n_0,
+      I4 => fake_sopu_rts_i_6_n_0,
       O => fake_sopu_rts_i_3_n_0
     );
-fake_sopu_rts_i_4: unisim.vcomponents.LUT5
+fake_sopu_rts_i_4: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFDF"
+      INIT => X"FFFFFFFFFFFECCCC"
     )
         port map (
-      I0 => tx_counter_reg(12),
-      I1 => tx_counter_reg(17),
-      I2 => tx_counter_reg(18),
-      I3 => fake_sopu_rts_i_8_n_0,
-      I4 => fake_sopu_rts_i_9_n_0,
+      I0 => fake_sopu_rts_i_7_n_0,
+      I1 => rx_counter_reg(10),
+      I2 => rx_counter_reg(4),
+      I3 => rx_counter_reg(3),
+      I4 => rx_counter_reg(5),
+      I5 => sopu_uart_rts_int_i_6_n_0,
       O => fake_sopu_rts_i_4_n_0
     );
 fake_sopu_rts_i_5: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"00000001"
+      INIT => X"FFFFFFFE"
     )
         port map (
-      I0 => tx_counter_reg(2),
-      I1 => tx_counter_reg(3),
-      I2 => tx_counter_reg(14),
-      I3 => tx_counter_reg(10),
-      I4 => fake_sopu_rts_i_10_n_0,
+      I0 => rx_counter_reg(16),
+      I1 => rx_counter_reg(17),
+      I2 => rx_counter_reg(14),
+      I3 => rx_counter_reg(13),
+      I4 => rx_counter_reg(15),
       O => fake_sopu_rts_i_5_n_0
     );
 fake_sopu_rts_i_6: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFFFFFFFFFFFEFF"
+      INIT => X"5555555555555557"
     )
         port map (
-      I0 => sopu_uart_rts_int_i_7_n_0,
-      I1 => rx_counter_reg(10),
-      I2 => rx_counter_reg(9),
-      I3 => rx_counter_reg(0),
-      I4 => rx_counter_reg(4),
-      I5 => fake_sopu_rts_i_11_n_0,
+      I0 => rx_counter_reg(18),
+      I1 => fake_sopu_rts_i_8_n_0,
+      I2 => fake_sopu_rts_i_9_n_0,
+      I3 => fake_sopu_rts_i_10_n_0,
+      I4 => fake_sopu_rts_i_11_n_0,
+      I5 => fake_sopu_rts_i_12_n_0,
       O => fake_sopu_rts_i_6_n_0
     );
-fake_sopu_rts_i_7: unisim.vcomponents.LUT5
+fake_sopu_rts_i_7: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"FFFFBFFF"
+      INIT => X"EA"
     )
         port map (
-      I0 => rx_counter_reg(15),
-      I1 => rx_counter_reg(5),
-      I2 => rx_counter_reg(1),
-      I3 => rx_counter_reg(12),
-      I4 => fake_sopu_rts_i_12_n_0,
+      I0 => rx_counter_reg(2),
+      I1 => rx_counter_reg(1),
+      I2 => rx_counter_reg(0),
       O => fake_sopu_rts_i_7_n_0
     );
-fake_sopu_rts_i_8: unisim.vcomponents.LUT4
+fake_sopu_rts_i_8: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"FFFD"
+      INIT => X"FB"
     )
         port map (
-      I0 => tx_counter_reg(5),
-      I1 => tx_counter_reg(13),
-      I2 => tx_counter_reg(8),
-      I3 => tx_counter_reg(4),
+      I0 => tx_counter_reg(2),
+      I1 => tx_counter_reg(12),
+      I2 => tx_counter_reg(16),
       O => fake_sopu_rts_i_8_n_0
     );
 fake_sopu_rts_i_9: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFEF"
+      INIT => X"FFFE"
     )
         port map (
-      I0 => tx_counter_reg(9),
+      I0 => tx_counter_reg(7),
       I1 => tx_counter_reg(6),
-      I2 => tx_counter_reg(11),
-      I3 => tx_counter_reg(15),
+      I2 => tx_counter_reg(13),
+      I3 => tx_counter_reg(8),
       O => fake_sopu_rts_i_9_n_0
     );
 fake_sopu_rts_reg: unisim.vcomponents.FDRE
@@ -529,7 +524,7 @@ fp_enable_reg: unisim.vcomponents.FDRE
     );
 fp_sop_counter_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"2222222F22222220"
+      INIT => X"8888888F88888880"
     )
         port map (
       I0 => \FSM_onehot_state_reg_n_0_[5]\,
@@ -690,9 +685,9 @@ fp_sop_counter_reg: unisim.vcomponents.FDRE
       INIT => X"80"
     )
         port map (
-      I0 => sopu_uart_rts_int_i_2_n_0,
-      I1 => uart_sopu_rts,
-      I2 => uart_sopu_rtr_int_reg_n_0,
+      I0 => uart_sopu_rts,
+      I1 => uart_sopu_rtr_int_reg_n_0,
+      I2 => sopu_uart_rts_int_i_2_n_0,
       O => rx_counter
     );
 \rx_counter[0]_i_3\: unisim.vcomponents.LUT1
@@ -1085,12 +1080,12 @@ sopu_ilb_rts_reg: unisim.vcomponents.FDRE
     );
 \sopu_uart_data[7]_i_1\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"002A"
+      INIT => X"0070"
     )
         port map (
-      I0 => delay,
-      I1 => sopu_uart_rtr,
-      I2 => \^sopu_uart_rts_int_reg_0\,
+      I0 => sopu_uart_rtr,
+      I1 => \^sopu_uart_rts_int_reg_0\,
+      I2 => delay,
       I3 => sopu_uart_rts_int_i_3_n_0,
       O => \sopu_uart_data[7]_i_1_n_0\
     );
@@ -1181,16 +1176,17 @@ sopu_uart_rts_int_i_1: unisim.vcomponents.LUT6
       I5 => sopu_uart_rtr,
       O => sopu_uart_rts_int_i_1_n_0
     );
-sopu_uart_rts_int_i_2: unisim.vcomponents.LUT5
+sopu_uart_rts_int_i_2: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"A8A8AAA8"
+      INIT => X"888A8A8A8A8A8A8A"
     )
         port map (
       I0 => \FSM_onehot_state_reg_n_0_[1]\,
-      I1 => fake_sopu_rts_i_7_n_0,
-      I2 => fake_sopu_rts_i_6_n_0,
-      I3 => fake_sopu_rts_i_5_n_0,
-      I4 => fake_sopu_rts_i_4_n_0,
+      I1 => fake_sopu_rts_i_6_n_0,
+      I2 => fake_sopu_rts_i_5_n_0,
+      I3 => rx_counter_reg(12),
+      I4 => rx_counter_reg(11),
+      I5 => fake_sopu_rts_i_4_n_0,
       O => sopu_uart_rts_int_i_2_n_0
     );
 sopu_uart_rts_int_i_3: unisim.vcomponents.LUT6
@@ -1202,8 +1198,8 @@ sopu_uart_rts_int_i_3: unisim.vcomponents.LUT6
       I1 => sopu_uart_rts_int_i_4_n_0,
       I2 => sopu_uart_rts_int_i_5_n_0,
       I3 => sopu_uart_rts_int_i_6_n_0,
-      I4 => sopu_uart_rts_int_i_7_n_0,
-      I5 => sopu_uart_rts_int_i_8_n_0,
+      I4 => fake_sopu_rts_i_5_n_0,
+      I5 => sopu_uart_rts_int_i_7_n_0,
       O => sopu_uart_rts_int_i_3_n_0
     );
 sopu_uart_rts_int_i_4: unisim.vcomponents.LUT2
@@ -1211,19 +1207,21 @@ sopu_uart_rts_int_i_4: unisim.vcomponents.LUT2
       INIT => X"7"
     )
         port map (
-      I0 => rx_counter_reg(9),
-      I1 => rx_counter_reg(10),
+      I0 => rx_counter_reg(10),
+      I1 => rx_counter_reg(11),
       O => sopu_uart_rts_int_i_4_n_0
     );
-sopu_uart_rts_int_i_5: unisim.vcomponents.LUT4
+sopu_uart_rts_int_i_5: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"15FF"
+      INIT => X"001500FFFFFFFFFF"
     )
         port map (
-      I0 => rx_counter_reg(3),
-      I1 => rx_counter_reg(2),
-      I2 => rx_counter_reg(1),
+      I0 => rx_counter_reg(2),
+      I1 => rx_counter_reg(1),
+      I2 => rx_counter_reg(0),
       I3 => rx_counter_reg(4),
+      I4 => rx_counter_reg(3),
+      I5 => rx_counter_reg(5),
       O => sopu_uart_rts_int_i_5_n_0
     );
 sopu_uart_rts_int_i_6: unisim.vcomponents.LUT4
@@ -1231,33 +1229,20 @@ sopu_uart_rts_int_i_6: unisim.vcomponents.LUT4
       INIT => X"FFFE"
     )
         port map (
-      I0 => rx_counter_reg(5),
-      I1 => rx_counter_reg(7),
-      I2 => rx_counter_reg(8),
-      I3 => rx_counter_reg(6),
+      I0 => rx_counter_reg(7),
+      I1 => rx_counter_reg(8),
+      I2 => rx_counter_reg(6),
+      I3 => rx_counter_reg(9),
       O => sopu_uart_rts_int_i_6_n_0
     );
-sopu_uart_rts_int_i_7: unisim.vcomponents.LUT4
+sopu_uart_rts_int_i_7: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"FFFE"
-    )
-        port map (
-      I0 => rx_counter_reg(14),
-      I1 => rx_counter_reg(13),
-      I2 => rx_counter_reg(17),
-      I3 => rx_counter_reg(16),
-      O => sopu_uart_rts_int_i_7_n_0
-    );
-sopu_uart_rts_int_i_8: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"FFFE"
+      INIT => X"E"
     )
         port map (
       I0 => rx_counter_reg(12),
       I1 => rx_counter_reg(18),
-      I2 => rx_counter_reg(11),
-      I3 => rx_counter_reg(15),
-      O => sopu_uart_rts_int_i_8_n_0
+      O => sopu_uart_rts_int_i_7_n_0
     );
 sopu_uart_rts_int_reg: unisim.vcomponents.FDRE
      port map (
@@ -1524,7 +1509,7 @@ sopu_uart_rts_int_reg: unisim.vcomponents.FDRE
     );
 uart_sopu_rtr_i_1: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"DDDDCC0FDDDDCC00"
+      INIT => X"BBBB330FBBBB3300"
     )
         port map (
       I0 => fake_sopu_rts_i_3_n_0,
@@ -1537,7 +1522,7 @@ uart_sopu_rtr_i_1: unisim.vcomponents.LUT6
     );
 uart_sopu_rtr_i_2: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"7"
+      INIT => X"8"
     )
         port map (
       I0 => uart_sopu_rtr_int_reg_n_0,
@@ -1620,9 +1605,9 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME clk, ASSOCIATED_RESET rst, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of rst : signal is "xilinx.com:signal:reset:1.0 rst RST";
-  attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_PARAMETER of rst : signal is "XIL_INTERFACENAME rst, POLARITY ACTIVE_LOW, INSERT_VIP 0";
 begin
 inst: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_master_controller_v2
      port map (

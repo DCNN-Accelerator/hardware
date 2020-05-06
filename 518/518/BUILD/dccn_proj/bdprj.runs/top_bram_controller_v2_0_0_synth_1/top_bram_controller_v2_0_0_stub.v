@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
-// Date        : Thu Apr 30 12:59:37 2020
+// Date        : Sun May  3 16:30:49 2020
 // Host        : DESKTOP-BJ5EQ9A running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ top_bram_controller_v2_0_0_stub.v
@@ -19,7 +19,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(clk, rst, conv_bram_data, conv_
   bram_conv_data_4, bram_conv_data_5, bram_conv_rts, bram_write_data, addr, ena_0, ena_1, ena_2, 
   ena_3, ena_4, ena_5, wena_0, wena_1, wena_2, wena_3, wena_4, wena_5, data_0, data_1, data_2, data_3, 
   data_4, data_5)
-/* synthesis syn_black_box black_box_pad_pin="clk,rst,conv_bram_data[7:0],conv_bram_rtr,conv_bram_rts,bram_conv_data_0[7:0],bram_conv_data_1[7:0],bram_conv_data_2[7:0],bram_conv_data_3[7:0],bram_conv_data_4[7:0],bram_conv_data_5[7:0],bram_conv_rts,bram_write_data[7:0],addr[8:0],ena_0,ena_1,ena_2,ena_3,ena_4,ena_5,wena_0[0:0],wena_1[0:0],wena_2[0:0],wena_3[0:0],wena_4[0:0],wena_5[0:0],data_0[7:0],data_1[7:0],data_2[7:0],data_3[7:0],data_4[7:0],data_5[7:0]" */;
+/* synthesis syn_black_box black_box_pad_pin="clk,rst,conv_bram_data[7:0],conv_bram_rtr,conv_bram_rts,bram_conv_data_0[7:0],bram_conv_data_1[7:0],bram_conv_data_2[7:0],bram_conv_data_3[7:0],bram_conv_data_4[7:0],bram_conv_data_5[7:0],bram_conv_rts,bram_write_data[7:0],addr[9:0],ena_0,ena_1,ena_2,ena_3,ena_4,ena_5,wena_0[0:0],wena_1[0:0],wena_2[0:0],wena_3[0:0],wena_4[0:0],wena_5[0:0],data_0[7:0],data_1[7:0],data_2[7:0],data_3[7:0],data_4[7:0],data_5[7:0]" */;
   input clk;
   input rst;
   input [7:0]conv_bram_data;
@@ -33,7 +33,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix(clk, rst, conv_bram_data, conv_
   output [7:0]bram_conv_data_5;
   output bram_conv_rts;
   output [7:0]bram_write_data;
-  output [8:0]addr;
+  output [9:0]addr;
   output ena_0;
   output ena_1;
   output ena_2;
